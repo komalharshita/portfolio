@@ -1,0 +1,177 @@
+"use client"
+
+export default function About() {
+  const skills = [
+    { category: "Power BI", logo: "/public/logos/power-bi.png" },
+    { category: "SQL", logo: "/public/logos/sql.png" },
+    { category: "Python", logo: "/public/logos/python.png" },
+    { category: "Data Visualization", logo: "/public/logos/data-visualization.png" },
+    { category: "Excel", logo: "/public/logos/excel.png" },
+    { category: "Dashboard Design", logo: "/public/logos/dashboard-design.png" },
+  ]
+
+  const hobbies = [
+    { name: "Creative Writing", icon: "✍️" },
+    { name: "Poetry", icon: "📝" },
+    { name: "Guitar", icon: "🎸" },
+    { name: "Crocheting", icon: "🧶" },
+  ]
+
+  return (
+    <section id="about" className="py-20 px-4 max-w-6xl mx-auto">
+      <div className="grid md:grid-cols-2 gap-12 items-center">
+        {/* Left: Profile Picture */}
+        <div className="relative">
+          <div
+            className="relative w-full aspect-square rounded-3xl overflow-hidden glass-effect bubble-glow flex items-center justify-center"
+            style={{ background: "linear-gradient(to bottom right, #ffb6c1, #d9a7e0)" }}
+          >
+            <img
+              src="/images/design-mode/profile.jpg"
+              alt="Komal Harshita Profile"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          <div className="absolute -bottom-6 -right-6 glass-effect px-6 py-3 rounded-lg shadow-lg transform rotate-12 border border-white/40">
+            <p className="font-bold text-sm text-[#8b4a6d]">McKinsey</p>
+            <p className="text-xs text-[#8b4a6d]">Forward Learner</p>
+          </div>
+        </div>
+
+        {/* Right: Content */}
+        <div>
+          <h2 className="text-5xl font-serif font-bold mb-6 text-[#8b4a6d]">About Me</h2>
+
+          <p className="text-lg text-[#8b4a6d] mb-6 leading-relaxed">
+            I'm a Computer Science Engineering student at Savitribai Phule Pune University with a strong passion for
+            business intelligence and data analytics. I love transforming raw data into meaningful insights through
+            dashboards and visualizations.
+          </p>
+
+          <p className="text-lg text-[#8b4a6d] mb-8 leading-relaxed">
+            Currently, I'm a McKinsey Forward Learner and Google Student Ambassador for Gemini AI. I'm proficient in
+            Power BI, SQL, Python, and Excel, and I believe data should tell a story that inspires action and
+            understanding.
+          </p>
+
+          {/* Skills grid */}
+          <div className="mb-8">
+            <h3 className="text-xl font-semibold text-[#8b4a6d] mb-4">Technical Skills</h3>
+            <div className="grid grid-cols-2 gap-4">
+              {skills.map((skill) => (
+                <div
+                  key={skill.category}
+                  className="p-4 glass-effect rounded-2xl hover:border-[#ff4da6] transition-all flex flex-col items-center gap-2 group hover:shadow-lg hover:shadow-[#ff4da6]/20"
+                >
+                  <img
+                    src={skill.logo || "/placeholder.svg"}
+                    alt={skill.category}
+                    className="w-8 h-8 object-contain group-hover:scale-110 transition-transform"
+                  />
+                  <p className="font-semibold text-[#8b4a6d] text-sm text-center">{skill.category}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Hobbies section */}
+          <div>
+            <h3 className="text-xl font-semibold text-[#8b4a6d] mb-4">Beyond Tech</h3>
+            <div className="grid grid-cols-2 gap-3">
+              {hobbies.map((hobby) => (
+                <div
+                  key={hobby.name}
+                  className="glass-effect p-3 rounded-xl flex items-center gap-2 text-[#8b4a6d] hover:shadow-md hover:shadow-[#ffb6c1]/30 transition-all"
+                >
+                  <span className="text-2xl">{hobby.icon}</span>
+                  <span className="font-medium text-sm">{hobby.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-20 space-y-6">
+        <h3 className="text-3xl font-serif font-bold text-[#8b4a6d] mb-8">Education</h3>
+
+        {/* Savitribai Phule Pune University */}
+        <div className="glass-effect p-8 rounded-3xl border border-white/40 hover:shadow-lg hover:shadow-[#ff4da6]/10 transition-all">
+          <div className="flex items-start gap-4 mb-4">
+            <div className="w-12 h-12 glass-effect rounded-full flex items-center justify-center flex-shrink-0">
+              <span className="text-xl">🎓</span>
+            </div>
+            <div className="flex-1">
+              <p className="font-bold text-lg text-[#ff4da6]">Bachelor of Engineering - Computer Science</p>
+              <p className="text-[#8b4a6d] font-semibold">Savitribai Phule Pune University</p>
+              <p className="text-sm text-[#8b4a6d] opacity-80">Sep 2024 - Jun 2028</p>
+            </div>
+          </div>
+          <div className="ml-16 space-y-2 text-sm text-[#8b4a6d]">
+            <p>
+              <span className="font-semibold">Grade:</span> First Year CGPA: 9.05
+            </p>
+            <p>
+              <span className="font-semibold">Activities:</span> Google Student Ambassador Program
+            </p>
+          </div>
+        </div>
+
+        {/* Symbiosis Junior College */}
+        <div className="glass-effect p-8 rounded-3xl border border-white/40 hover:shadow-lg hover:shadow-[#ff4da6]/10 transition-all">
+          <div className="flex items-start gap-4 mb-4">
+            <div className="w-12 h-12 glass-effect rounded-full flex items-center justify-center flex-shrink-0">
+              <span className="text-xl">📚</span>
+            </div>
+            <div className="flex-1">
+              <p className="font-bold text-lg text-[#ff4da6]">Higher Secondary - Science</p>
+              <p className="text-[#8b4a6d] font-semibold">Symbiosis Junior College</p>
+              <p className="text-sm text-[#8b4a6d] opacity-80">Sep 2022 - Jun 2024</p>
+            </div>
+          </div>
+          <div className="ml-16 space-y-2 text-sm text-[#8b4a6d]">
+            <p>
+              <span className="font-semibold">Grade:</span> 80.67%
+            </p>
+            <p>
+              <span className="font-semibold">Activities:</span> Creative writing and essay competitions, Student Editor
+              for Symbi Tribe Magazine
+            </p>
+            <p>
+              <span className="font-semibold">Skills:</span> Magazine Design, Project Management
+            </p>
+          </div>
+        </div>
+
+        {/* Bharati Vidyapeeth English Medium School */}
+        <div className="glass-effect p-8 rounded-3xl border border-white/40 hover:shadow-lg hover:shadow-[#ff4da6]/10 transition-all">
+          <div className="flex items-start gap-4 mb-4">
+            <div className="w-12 h-12 glass-effect rounded-full flex items-center justify-center flex-shrink-0">
+              <span className="text-xl">✨</span>
+            </div>
+            <div className="flex-1">
+              <p className="font-bold text-lg text-[#ff4da6]">Secondary School - CBSE</p>
+              <p className="text-[#8b4a6d] font-semibold">Bharati Vidyapeeth English Medium School</p>
+              <p className="text-sm text-[#8b4a6d] opacity-80">Apr 2013 - Jul 2022</p>
+            </div>
+          </div>
+          <div className="ml-16 space-y-2 text-sm text-[#8b4a6d]">
+            <p>
+              <span className="font-semibold">Grade:</span> 92.2%
+            </p>
+            <p>
+              <span className="font-semibold">Activities:</span> Poetry Writing, Speech and Elocution Competitions
+            </p>
+            <p>
+              <span className="font-semibold">Awards:</span> Class 10th Board School Topper Award
+            </p>
+            <p>
+              <span className="font-semibold">Skills:</span> Poetry Writing, Communication Skills
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
