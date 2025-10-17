@@ -38,6 +38,10 @@ export default function Hero() {
           0%, 100% { transform: translateY(0px); }
           50% { transform: translateY(-30px); }
         }
+        @keyframes shimmer {
+          0%, 100% { text-shadow: 0 0 20px rgba(255, 77, 166, 0.5), 0 0 40px rgba(217, 167, 224, 0.3); }
+          50% { text-shadow: 0 0 30px rgba(255, 211, 182, 0.6), 0 0 50px rgba(255, 77, 166, 0.4); }
+        }
       `}</style>
 
       <div className="relative z-10 text-center px-4 max-w-4xl">
@@ -53,18 +57,14 @@ export default function Hero() {
         <h1
           className="text-6xl md:text-7xl font-serif font-bold mb-6 text-balance"
           style={{
-            background: "linear-gradient(to right, #ff4da6, #ffd3b6, #d9a7e0)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            backgroundClip: "text",
+            color: "#ff4da6",
+            filter: "drop-shadow(0 0 20px rgba(255, 77, 166, 0.3))",
           }}
         >
           Komal Harshita
         </h1>
 
-        <p className="text-xl md:text-2xl text-[#8b4a6d] mb-4 font-light text-balance">
-          CSE Sophomore at NMIET
-        </p>
+        <p className="text-xl md:text-2xl text-[#8b4a6d] mb-4 font-light text-balance">CSE Sophomore at NMIET</p>
 
         <p className="text-lg md:text-xl text-[#8b4a6d] mb-8 font-light text-balance max-w-2xl mx-auto">
           Business & Data Analytics| Google Student Ambassador – Gemini Program| Creative Writer & Poet

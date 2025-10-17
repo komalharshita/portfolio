@@ -130,6 +130,8 @@
   }
   body {
     background: linear-gradient(to bottom right, #fff6f9, #ffe8f0, #f0e6ff);
+    /* Add custom cursor image */
+    cursor: url("/images/cursor.png") 5 5, auto;
   }
 }
 

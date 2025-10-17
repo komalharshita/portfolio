@@ -1,6 +1,8 @@
 "use client"
 
 import { useState } from "react"
+import HolographicText from "./holographic-text"
+import GlassmorphicTooltip from "./glassmorphic-tooltip"
 
 export default function Projects() {
   const [hoveredId, setHoveredId] = useState<number | null>(null)
@@ -13,6 +15,7 @@ export default function Projects() {
       description:
         "Global 10-week learning initiative for young professionals. Growing professionally and personally while connecting with a diverse global network.",
       skills: "Problem Solving, Communication",
+      link: "https://www.mckinsey.com/careers/students",
     },
     {
       id: 2,
@@ -21,6 +24,7 @@ export default function Projects() {
       description:
         "Deloitte Data Analytics simulation covering data analysis, data modeling, and business insights. Completed Sep 2025.",
       skills: "Data Analysis, Data Modeling",
+      link: "https://www.deloitte.com/",
     },
     {
       id: 3,
@@ -29,6 +33,7 @@ export default function Projects() {
       description:
         "Helping students discover how Google Gemini AI can enhance their studies and creativity through campus events and activities.",
       skills: "AI Education, Community Building",
+      link: "https://www.google.com/",
     },
     {
       id: 4,
@@ -37,22 +42,15 @@ export default function Projects() {
       description:
         "Completed comprehensive PowerPoint training covering visual storytelling and presentation design. Credential ID: 593317",
       skills: "Visual Storytelling, Design",
+      link: "https://www.skillnation.com/",
     },
   ]
 
   return (
     <section id="projects" className="py-20 px-4 max-w-6xl mx-auto">
       <div className="text-center mb-16">
-        <h2
-          className="text-5xl font-serif font-bold mb-4"
-          style={{
-            background: "linear-gradient(to right, #ff4da6, #ffd3b6, #d9a7e0)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            backgroundClip: "text",
-          }}
-        >
-          Experience & Achievements
+        <h2 className="text-5xl font-serif font-bold mb-4 text-[#8b4a6d]">
+          <HolographicText>Experience & Achievements</HolographicText>
         </h2>
         <p className="text-lg text-[#8b4a6d]">Professional growth, certifications, and volunteer work</p>
       </div>
@@ -90,24 +88,36 @@ export default function Projects() {
                 style={{ background: "linear-gradient(to top, rgba(255, 77, 166, 0.9), transparent)" }}
               >
                 <p className="text-white font-semibold mb-4">Skills & Focus:</p>
-                <p className="text-white/90 text-sm mb-4">{project.skills}</p>
-                <button className="w-fit px-4 py-2 bg-white text-[#ff4da6] rounded-full font-semibold text-sm hover:bg-[#fff6f9] transition-colors">
-                  Learn More →
-                </button>
+                <GlassmorphicTooltip content="Key competencies for this role">
+                  <p className="text-white/90 text-sm mb-4">{project.skills}</p>
+                </GlassmorphicTooltip>
+              </div>
+
+              {/* Know More button */}
+              <div className="flex justify-end mt-4">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 bg-white/20 backdrop-blur-md text-[#ff4da6] rounded-full font-semibold text-sm hover:bg-white/40 transition-all border border-white/30"
+                >
+                  Know More →
+                </a>
               </div>
             </div>
           </div>
         ))}
       </div>
 
-      {/* CTA */}
       <div className="text-center mt-16">
-        <button
-          className="px-8 py-4 text-white rounded-full font-semibold hover:shadow-lg transition-all bubble-glow text-lg"
+        <a
+          href="/resume.pdf"
+          download
+          className="inline-block px-8 py-4 text-white rounded-full font-semibold hover:shadow-lg transition-all bubble-glow text-lg"
           style={{ background: "linear-gradient(to right, #ff4da6, #d9a7e0)" }}
         >
           View Full Resume
-        </button>
+        </a>
       </div>
     </section>
   )
