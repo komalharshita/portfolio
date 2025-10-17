@@ -154,7 +154,7 @@ export default function Contact() {
       {/* Footer */}
       <div className="mt-20 pt-12 border-t border-[#ffb6c1]/30 text-center">
         <p className="text-[#8b4a6d]">
-          © 2025 Komal Harshita. Crafted with data, creativity, and a touch of sparkle. ✨
+          © 2025 Komal Harshita
         </p>
       </div>
     </section>

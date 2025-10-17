@@ -2,12 +2,12 @@
 
 export default function About() {
   const skills = [
-    { category: "Power BI", logo: "/public/logos/power-bi.png" },
-    { category: "SQL", logo: "/public/logos/sql.png" },
-    { category: "Python", logo: "/public/logos/python.png" },
-    { category: "Data Visualization", logo: "/public/logos/data-visualization.png" },
-    { category: "Excel", logo: "/public/logos/excel.png" },
-    { category: "Dashboard Design", logo: "/public/logos/dashboard-design.png" },
+    { category: "Power BI", logo: "/power-bl.png" },
+    { category: "SQL", logo: "/database.png" },
+    { category: "Python", logo: "/python.png" },
+    { category: "Data Visualization", logo: "/data-visualization.png" },
+    { category: "Excel", logo: "/excel.png" },
+    { category: "Dashboard Design", logo: "/placeholder.jpg" },
   ]
 
   const hobbies = [
