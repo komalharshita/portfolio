@@ -7,7 +7,11 @@ export default function About() {
     { category: "Python", logo: "/python.png" },
     { category: "Data Visualization", logo: "/data-visualization.png" },
     { category: "Excel", logo: "/excel.png" },
+<<<<<<< HEAD
     { category: "Dashboard Design", logo: "/dashboard.png" },
+=======
+    { category: "Dashboard Design", logo: "" },
+>>>>>>> bfc7b837b75790002527837f4c24ef393940ffff
   ]
 
   const hobbies = [
