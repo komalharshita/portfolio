@@ -1,5 +1,9 @@
 "use client"
 
+import AnimatedDivider from "./animated-divider"
+import HolographicText from "./holographic-text"
+import GlassmorphicTooltip from "./glassmorphic-tooltip"
+
 export default function About() {
   const skills = [
     { category: "Power BI", logo: "/power-bl.png" },
@@ -7,15 +11,7 @@ export default function About() {
     { category: "Python", logo: "/python.png" },
     { category: "Data Visualization", logo: "/data-visualization.png" },
     { category: "Excel", logo: "/excel.png" },
-<<<<<<< HEAD
-<<<<<<< HEAD
-    { category: "Dashboard Design", logo: "/dashboard.png" },
-=======
-    { category: "Dashboard Design", logo: "" },
->>>>>>> bfc7b837b75790002527837f4c24ef393940ffff
-=======
-    { category: "Dashboard Design", logo: "/dashboard.png" },
->>>>>>> 57ed8eac1901f7fa45f68fcb8bfb325e212a02d1
+    { category: "Dashboard Design", logo: "/dash.png" },
   ]
 
   const hobbies = [
@@ -53,14 +49,14 @@ export default function About() {
 
           <p className="text-lg text-[#8b4a6d] mb-6 leading-relaxed">
             I'm a Computer Science Engineering student at Savitribai Phule Pune University with a strong passion for
-            business intelligence and data analytics. I love transforming raw data into meaningful insights through
-            dashboards and visualizations.
+            <HolographicText className="ml-1"> business intelligence and data analytics</HolographicText>. I love
+            transforming raw data into meaningful insights through dashboards and visualizations.
           </p>
 
           <p className="text-lg text-[#8b4a6d] mb-8 leading-relaxed">
-            Currently, I'm a McKinsey Forward Learner and Google Student Ambassador for Gemini AI. I'm proficient in
-            Power BI, SQL, Python, and Excel, and I believe data should tell a story that inspires action and
-            understanding.
+            Currently, I'm a <HolographicText>McKinsey Forward Learner</HolographicText> and{" "}
+            <HolographicText>Google Student Ambassador for Gemini AI</HolographicText>. I'm proficient in Power BI, SQL,
+            Python, and Excel, and I believe data should tell a story that inspires action and understanding.
           </p>
 
           {/* Skills grid */}
@@ -68,17 +64,16 @@ export default function About() {
             <h3 className="text-xl font-semibold text-[#8b4a6d] mb-4">Technical Skills</h3>
             <div className="grid grid-cols-2 gap-4">
               {skills.map((skill) => (
-                <div
-                  key={skill.category}
-                  className="p-4 glass-effect rounded-2xl hover:border-[#ff4da6] transition-all flex flex-col items-center gap-2 group hover:shadow-lg hover:shadow-[#ff4da6]/20"
-                >
-                  <img
-                    src={skill.logo || "/placeholder.svg"}
-                    alt={skill.category}
-                    className="w-8 h-8 object-contain group-hover:scale-110 transition-transform"
-                  />
-                  <p className="font-semibold text-[#8b4a6d] text-sm text-center">{skill.category}</p>
-                </div>
+                <GlassmorphicTooltip key={skill.category} content={`Proficient in ${skill.category}`}>
+                  <div className="p-4 glass-effect rounded-2xl hover:border-[#ff4da6] transition-all flex flex-col items-center gap-2 group hover:shadow-lg hover:shadow-[#ff4da6]/20">
+                    <img
+                      src={skill.logo || "/placeholder.svg"}
+                      alt={skill.category}
+                      className="w-8 h-8 object-contain group-hover:scale-110 transition-transform"
+                    />
+                    <p className="font-semibold text-[#8b4a6d] text-sm text-center">{skill.category}</p>
+                  </div>
+                </GlassmorphicTooltip>
               ))}
             </div>
           </div>
@@ -100,6 +95,8 @@ export default function About() {
           </div>
         </div>
       </div>
+
+      <AnimatedDivider />
 
       <div className="mt-20 space-y-6">
         <h3 className="text-3xl font-serif font-bold text-[#8b4a6d] mb-8">Education</h3>

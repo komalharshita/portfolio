@@ -1,8 +1,10 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
+import AnimatedDivider from "./animated-divider"
+import HolographicText from "./holographic-text"
+import GlassmorphicTooltip from "./glassmorphic-tooltip"
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -24,17 +26,11 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-20 px-4 max-w-4xl mx-auto">
+      <AnimatedDivider />
+
       <div className="text-center mb-12">
-        <h2
-          className="text-5xl font-serif font-bold mb-4"
-          style={{
-            background: "linear-gradient(to right, #ff4da6, #ffd3b6, #d9a7e0)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            backgroundClip: "text",
-          }}
-        >
-          Let's Connect
+        <h2 className="text-5xl font-serif font-bold mb-4 text-[#8b4a6d]">
+          <HolographicText>Let's Connect</HolographicText>
         </h2>
         <p className="text-lg text-[#8b4a6d]">
           Interested in data, storytelling, or collaboration? I'd love to hear from you.
@@ -54,23 +50,27 @@ export default function Contact() {
       <div className="grid md:grid-cols-2 gap-12">
         {/* Contact info */}
         <div className="space-y-8">
-          <div className="flex gap-4 items-start">
-            <div className="text-3xl">📧</div>
-            <div>
-              <p className="font-semibold text-[#8b4a6d]">Email</p>
-              <a href="mailto:komal.harshita@example.com" className="text-[#ff4da6] hover:underline">
-                komal.harshita@example.com
-              </a>
+          <GlassmorphicTooltip content="Send me an email anytime">
+            <div className="flex gap-4 items-start">
+              <div className="text-3xl">📧</div>
+              <div>
+                <p className="font-semibold text-[#8b4a6d]">Email</p>
+                <a href="mailto:komal.harshita@example.com" className="text-[#ff4da6] hover:underline">
+                  komal.harshita@example.com
+                </a>
+              </div>
             </div>
-          </div>
+          </GlassmorphicTooltip>
 
-          <div className="flex gap-4 items-start">
-            <div className="text-3xl">📍</div>
-            <div>
-              <p className="font-semibold text-[#8b4a6d]">Location</p>
-              <p className="text-[#ff4da6]">Pune, India</p>
+          <GlassmorphicTooltip content="Based in Pune, India">
+            <div className="flex gap-4 items-start">
+              <div className="text-3xl">📍</div>
+              <div>
+                <p className="font-semibold text-[#8b4a6d]">Location</p>
+                <p className="text-[#ff4da6]">Pune, India</p>
+              </div>
             </div>
-          </div>
+          </GlassmorphicTooltip>
 
           {/* Social links */}
           <div className="pt-8 border-t border-[#ffb6c1]/30">
@@ -153,9 +153,7 @@ export default function Contact() {
 
       {/* Footer */}
       <div className="mt-20 pt-12 border-t border-[#ffb6c1]/30 text-center">
-        <p className="text-[#8b4a6d]">
-          © 2025 Komal Harshita
-        </p>
+        <p className="text-[#8b4a6d]">© 2025 Komal Harshita</p>
       </div>
     </section>
   )
