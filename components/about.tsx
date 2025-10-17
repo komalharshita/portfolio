@@ -8,10 +8,14 @@ export default function About() {
     { category: "Data Visualization", logo: "/data-visualization.png" },
     { category: "Excel", logo: "/excel.png" },
 <<<<<<< HEAD
+<<<<<<< HEAD
     { category: "Dashboard Design", logo: "/dashboard.png" },
 =======
     { category: "Dashboard Design", logo: "" },
 >>>>>>> bfc7b837b75790002527837f4c24ef393940ffff
+=======
+    { category: "Dashboard Design", logo: "/dashboard.png" },
+>>>>>>> 57ed8eac1901f7fa45f68fcb8bfb325e212a02d1
   ]
 
   const hobbies = [
