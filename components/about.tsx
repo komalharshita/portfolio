@@ -6,12 +6,12 @@ import GlassmorphicTooltip from "./glassmorphic-tooltip"
 
 export default function About() {
   const skills = [
-    { category: "Power BI", logo: "/power-bl.png" },
-    { category: "SQL", logo: "/database.png" },
-    { category: "Python", logo: "/python.png" },
-    { category: "Data Visualization", logo: "/data-visualization.png" },
-    { category: "Excel", logo: "/excel.png" },
-    { category: "Dashboard Design", logo: "/dash.png" },
+    { category: "Power BI", logo: "/power-bl.png", hoverMessage: "BI the main character" },
+    { category: "SQL", logo: "/database.png", hoverMessage: "SQL me more about your data" },
+    { category: "Python", logo: "/python.png", hoverMessage: "Python? More like Py-THON of talent" },
+    { category: "Data Visualization", logo: "/data-visualization.png", hoverMessage: "Visualize this: I'm amazing" },
+    { category: "Excel", logo: "/excel.png", hoverMessage: "Excel-lent choice, bestie" },
+    { category: "Dashboard Design", logo: "/dash.png", hoverMessage: "Dashboard? More like Dash-SLAY" },
   ]
 
   const hobbies = [
@@ -64,7 +64,7 @@ export default function About() {
             <h3 className="text-xl font-semibold text-[#8b4a6d] mb-4">Technical Skills</h3>
             <div className="grid grid-cols-2 gap-4">
               {skills.map((skill) => (
-                <GlassmorphicTooltip key={skill.category} content={`Proficient in ${skill.category}`}>
+                <GlassmorphicTooltip key={skill.category} content={skill.hoverMessage}>
                   <div className="p-4 glass-effect rounded-2xl hover:border-[#ff4da6] transition-all flex flex-col items-center gap-2 group hover:shadow-lg hover:shadow-[#ff4da6]/20">
                     <img
                       src={skill.logo || "/placeholder.svg"}

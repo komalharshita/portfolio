@@ -56,7 +56,7 @@ export default function Contact() {
               <div>
                 <p className="font-semibold text-[#8b4a6d]">Email</p>
                 <a href="mailto:komal.harshita@example.com" className="text-[#ff4da6] hover:underline">
-                  komal.harshita@example.com
+                  {"komal.sony234@gmail.com    \n"}
                 </a>
               </div>
             </div>
@@ -64,11 +64,8 @@ export default function Contact() {
 
           <GlassmorphicTooltip content="Based in Pune, India">
             <div className="flex gap-4 items-start">
-              <div className="text-3xl">📍</div>
-              <div>
-                <p className="font-semibold text-[#8b4a6d]">Location</p>
-                <p className="text-[#ff4da6]">Pune, India</p>
-              </div>
+              
+              
             </div>
           </GlassmorphicTooltip>
 
@@ -90,11 +87,12 @@ export default function Contact() {
               >
                 GitHub
               </a>
+              
               <a
                 href="#"
                 className="px-4 py-2 bg-white/60 backdrop-blur rounded-full text-[#ff4da6] font-semibold hover:bg-[#ff4da6] hover:text-white transition-all inline-block w-fit"
               >
-                Twitter
+                {"Facebook"}
               </a>
             </div>
           </div>

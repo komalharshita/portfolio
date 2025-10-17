@@ -11,7 +11,7 @@ export default function Navigation() {
       <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
         <Link
           href="#"
-          className="text-2xl font-serif font-bold"
+          className="text-2xl font-serif font-bold bg-primary opacity-100 shadow-none text-zinc-50"
           style={{
             background: "linear-gradient(to right, #ff4da6, #ffd3b6, #d9a7e0)",
             WebkitBackgroundClip: "text",
@@ -19,7 +19,7 @@ export default function Navigation() {
             backgroundClip: "text",
           }}
         >
-          Komal
+          the-gilded-girl
         </Link>
 
         <div className="hidden md:flex gap-8">

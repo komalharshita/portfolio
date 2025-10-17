@@ -99,7 +99,7 @@ export default function Projects() {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 bg-white/20 backdrop-blur-md text-[#ff4da6] rounded-full font-semibold text-sm hover:bg-white/40 transition-all border border-white/30"
+                  className="px-4 py-2 backdrop-blur-md text-[#ff4da6] rounded-full font-semibold text-sm hover:bg-white/40 transition-all border border-white/30 bg-background"
                 >
                   Know More →
                 </a>
