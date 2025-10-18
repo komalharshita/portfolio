@@ -38,7 +38,7 @@ export default function About() {
 
         {/* Right: Content */}
         <div>
-          
+          <h2 className="text-5xl font-serif font-bold mb-6 text-[#8b4a6d]">About Me</h2>
 
           <p className="text-lg text-[#8b4a6d] mb-6 leading-relaxed">
             I'm a Computer Science Engineering student at Savitribai Phule Pune University with a strong passion for
