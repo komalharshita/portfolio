@@ -137,6 +137,58 @@
 
 /* Custom animations and effects */
 @layer utilities {
+  @keyframes ribbonFlow {
+    0%,
+    100% {
+      transform: translateX(-100%) skewY(-20deg);
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.4;
+    }
+  }
+
+  @keyframes meshShift {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    25% {
+      transform: translate(20px, -20px) scale(1.05);
+    }
+    50% {
+      transform: translate(-20px, 20px) scale(0.95);
+    }
+    75% {
+      transform: translate(20px, 20px) scale(1.05);
+    }
+  }
+
+  @keyframes sparkleFloat {
+    0%,
+    100% {
+      transform: translateY(0) translateX(0) scale(1);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100px) translateX(50px) scale(0);
+      opacity: 0;
+    }
+  }
+
+  @keyframes cursorGlow {
+    0%,
+    100% {
+      box-shadow: 0 0 20px rgba(255, 77, 166, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(255, 77, 166, 0.8);
+    }
+  }
+
   .glass-effect {
     @apply backdrop-blur-md bg-white/30 border border-white/20;
   }

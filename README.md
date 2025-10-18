@@ -40,7 +40,7 @@ Quick links (open these files)
 Quick start
 
 Development (pnpm recommended)
-```bash
+\`\`\`bash
 # Install dependencies
 pnpm install
 
