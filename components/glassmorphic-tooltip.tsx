@@ -13,7 +13,7 @@ export default function GlassmorphicTooltip({ content, children }: GlassmorphicT
   const [isVisible, setIsVisible] = useState(false)
 
   return (
-    <div className="relative inline-block">
+    <div className="relative inline-block text-card bg-card-foreground">
       <div onMouseEnter={() => setIsVisible(true)} onMouseLeave={() => setIsVisible(false)} className="cursor-help">
         {children}
       </div>
