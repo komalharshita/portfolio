@@ -54,6 +54,54 @@ export default function Hero() {
           ✨
         </div>
 
+        {/* Top left sticker */}
+        <img
+          src="/cute badges/sticker  (1).png"
+          alt="sticker"
+          className="absolute -top-8 -left-12 w-20 h-20 opacity-80 hover:opacity-100 transition-opacity"
+          style={{ transform: "rotate(-15deg)" }}
+        />
+
+        {/* Top right sticker */}
+        <img
+          src="/cute badges/sticker  (2).png"
+          alt="sticker"
+          className="absolute -top-6 -right-10 w-24 h-24 opacity-75 hover:opacity-100 transition-opacity"
+          style={{ transform: "rotate(20deg)" }}
+        />
+
+        {/* Left side sticker */}
+        <img
+          src="/cute badges/sticker  (3).png"
+          alt="sticker"
+          className="absolute top-1/3 -left-16 w-20 h-20 opacity-70 hover:opacity-100 transition-opacity"
+          style={{ transform: "rotate(-25deg)" }}
+        />
+
+        {/* Right side sticker */}
+        <img
+          src="/cute badges/sticker  (4).png"
+          alt="sticker"
+          className="absolute top-1/3 -right-14 w-24 h-24 opacity-75 hover:opacity-100 transition-opacity"
+          style={{ transform: "rotate(30deg)" }}
+        />
+
+        {/* Bottom left sticker */}
+        <img
+          src="/cute badges/sticker  (5).png"
+          alt="sticker"
+          className="absolute -bottom-8 -left-8 w-20 h-20 opacity-70 hover:opacity-100 transition-opacity"
+          style={{ transform: "rotate(15deg)" }}
+        />
+
+        {/* Bottom right sticker */}
+        <img
+          src="/cute badges/sticker  (6).png"
+          alt="sticker"
+          className="absolute -bottom-6 -right-12 w-24 h-24 opacity-80 hover:opacity-100 transition-opacity"
+          style={{ transform: "rotate(-20deg)" }}
+        />
+
         <h1
           className="text-6xl md:text-7xl font-serif font-bold mb-6 text-balance"
           style={{
