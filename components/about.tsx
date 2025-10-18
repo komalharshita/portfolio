@@ -26,15 +26,8 @@ export default function About() {
       <div className="grid md:grid-cols-2 gap-12 items-center">
         {/* Left: Profile Picture */}
         <div className="relative">
-          <div
-            className="relative w-full aspect-square rounded-3xl overflow-hidden glass-effect bubble-glow flex items-center justify-center"
-            style={{ background: "linear-gradient(to bottom right, #ffb6c1, #d9a7e0)" }}
-          >
-            <img
-              src="/images/design-mode/profile.jpg"
-              alt="Komal Harshita Profile"
-              className="w-full h-full object-cover"
-            />
+          <div className="relative w-full rounded-3xl overflow-hidden">
+            <img src="/about-me-image.png" alt="Komal Harshita About Me" className="w-full h-auto object-cover" />
           </div>
 
           <div className="absolute -bottom-6 -right-6 glass-effect px-6 py-3 rounded-lg shadow-lg transform rotate-12 border border-white/40">
