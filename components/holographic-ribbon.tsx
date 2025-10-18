@@ -5,10 +5,10 @@ export default function HolographicRibbon() {
     <>
       {/* Holographic Ribbon 1 */}
       <div
-        className="absolute top-1/4 left-0 w-96 h-32 opacity-40"
+        className="absolute top-1/4 left-0 w-150 h-50 opacity-40"
         style={{
           background: "linear-gradient(90deg, transparent, #ff4da6, #ffd3b6, #d9a7e0, transparent)",
-          filter: "blur(40px)",
+          filter: "blur(60px)",
           animation: "ribbonFlow 8s ease-in-out infinite",
           transform: "skewY(-20deg)",
         }}
