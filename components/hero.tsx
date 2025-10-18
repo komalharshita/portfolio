@@ -1,5 +1,7 @@
 "use client"
 
+import type React from "react"
+
 import { useEffect, useState } from "react"
 
 export default function Hero() {
@@ -33,75 +35,8 @@ export default function Hero() {
         />
       ))}
 
-      <style>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-30px); }
-        }
-        @keyframes shimmer {
-          0%, 100% { text-shadow: 0 0 20px rgba(255, 77, 166, 0.5), 0 0 40px rgba(217, 167, 224, 0.3); }
-          50% { text-shadow: 0 0 30px rgba(255, 211, 182, 0.6), 0 0 50px rgba(255, 77, 166, 0.4); }
-        }
-      `}</style>
-
+      {/* Sparkle decorations */}
       <div className="relative z-10 text-center px-4 max-w-4xl">
-        {/* Sparkle decorations */}
-        <div className="absolute -top-10 left-10 text-4xl opacity-60 animate-bounce">✨</div>
-        <div
-          className="absolute -bottom-10 right-10 text-4xl opacity-60 animate-bounce"
-          style={{ animationDelay: "0.5s" }}
-        >
-          ✨
-        </div>
-
-        {/* Top left sticker */}
-        <img
-          src="/cute badges/sticker  (1).png"
-          alt="sticker"
-          className="absolute -top-8 -left-12 w-20 h-20 opacity-80 hover:opacity-100 transition-opacity"
-          style={{ transform: "rotate(-15deg)" }}
-        />
-
-        {/* Top right sticker */}
-        <img
-          src="/cute badges/sticker  (2).png"
-          alt="sticker"
-          className="absolute -top-6 -right-10 w-24 h-24 opacity-75 hover:opacity-100 transition-opacity"
-          style={{ transform: "rotate(20deg)" }}
-        />
-
-        {/* Left side sticker */}
-        <img
-          src="/cute badges/sticker  (3).png"
-          alt="sticker"
-          className="absolute top-1/3 -left-16 w-20 h-20 opacity-70 hover:opacity-100 transition-opacity"
-          style={{ transform: "rotate(-25deg)" }}
-        />
-
-        {/* Right side sticker */}
-        <img
-          src="/cute badges/sticker  (4).png"
-          alt="sticker"
-          className="absolute top-1/3 -right-14 w-24 h-24 opacity-75 hover:opacity-100 transition-opacity"
-          style={{ transform: "rotate(30deg)" }}
-        />
-
-        {/* Bottom left sticker */}
-        <img
-          src="/cute badges/sticker  (5).png"
-          alt="sticker"
-          className="absolute -bottom-8 -left-8 w-20 h-20 opacity-70 hover:opacity-100 transition-opacity"
-          style={{ transform: "rotate(15deg)" }}
-        />
-
-        {/* Bottom right sticker */}
-        <img
-          src="/cute badges/sticker  (6).png"
-          alt="sticker"
-          className="absolute -bottom-6 -right-12 w-24 h-24 opacity-80 hover:opacity-100 transition-opacity"
-          style={{ transform: "rotate(-20deg)" }}
-        />
-
         <h1
           className="text-6xl md:text-7xl font-serif font-bold mb-6 text-balance"
           style={{
@@ -135,6 +70,109 @@ export default function Hero() {
           <div className="text-[#ff4da6] text-2xl">↓</div>
         </div>
       </div>
+
+      <style>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-30px); }
+        }
+        @keyframes shimmer {
+          0%, 100% { text-shadow: 0 0 20px rgba(255, 77, 166, 0.5), 0 0 40px rgba(217, 167, 224, 0.3); }
+          50% { text-shadow: 0 0 30px rgba(255, 211, 182, 0.6), 0 0 50px rgba(255, 77, 166, 0.4); }
+        }
+        @keyframes stickerFloat {
+          0%, 100% { transform: translateY(0px) rotate(var(--rotation)); }
+          50% { transform: translateY(-15px) rotate(calc(var(--rotation) + 5deg)); }
+        }
+        @keyframes stickerBounce {
+          0%, 100% { transform: scale(1) rotate(var(--rotation)); }
+          50% { transform: scale(1.1) rotate(calc(var(--rotation) + 3deg)); }
+        }
+      `}</style>
+
+      {/* Top left sticker */}
+      <img
+        src="/cute badges/sticker  (1).png"
+        alt="sticker"
+        className="absolute -top-12 -left-20 w-32 h-32 opacity-90 hover:opacity-100 transition-opacity"
+        style={
+          {
+            transform: "rotate(-15deg)",
+            "--rotation": "-15deg",
+            animation: "stickerFloat 4s ease-in-out infinite",
+          } as React.CSSProperties
+        }
+      />
+
+      {/* Top right sticker */}
+      <img
+        src="/cute badges/sticker  (2).png"
+        alt="sticker"
+        className="absolute -top-10 -right-16 w-40 h-40 opacity-85 hover:opacity-100 transition-opacity"
+        style={
+          {
+            transform: "rotate(20deg)",
+            "--rotation": "20deg",
+            animation: "stickerBounce 5s ease-in-out infinite",
+          } as React.CSSProperties
+        }
+      />
+
+      {/* Left side sticker */}
+      <img
+        src="/cute badges/sticker  (3).png"
+        alt="sticker"
+        className="absolute top-1/3 -left-24 w-32 h-32 opacity-80 hover:opacity-100 transition-opacity"
+        style={
+          {
+            transform: "rotate(-25deg)",
+            "--rotation": "-25deg",
+            animation: "stickerFloat 4.5s ease-in-out infinite 0.5s",
+          } as React.CSSProperties
+        }
+      />
+
+      {/* Right side sticker */}
+      <img
+        src="/cute badges/sticker  (4).png"
+        alt="sticker"
+        className="absolute top-1/3 -right-20 w-40 h-40 opacity-85 hover:opacity-100 transition-opacity"
+        style={
+          {
+            transform: "rotate(30deg)",
+            "--rotation": "30deg",
+            animation: "stickerBounce 5.5s ease-in-out infinite 0.3s",
+          } as React.CSSProperties
+        }
+      />
+
+      {/* Bottom left sticker */}
+      <img
+        src="/cute badges/sticker  (5).png"
+        alt="sticker"
+        className="absolute -bottom-12 -left-12 w-32 h-32 opacity-80 hover:opacity-100 transition-opacity"
+        style={
+          {
+            transform: "rotate(15deg)",
+            "--rotation": "15deg",
+            animation: "stickerFloat 4.2s ease-in-out infinite 0.7s",
+          } as React.CSSProperties
+        }
+      />
+
+      {/* Bottom right sticker */}
+      <img
+        src="/cute badges/sticker  (6).png"
+        alt="sticker"
+        className="absolute -bottom-10 -right-18 w-40 h-40 opacity-90 hover:opacity-100 transition-opacity"
+        style={
+          {
+            transform: "rotate(-20deg)",
+            "--rotation": "-20deg",
+            animation: "stickerBounce 4.8s ease-in-out infinite 0.4s",
+          } as React.CSSProperties
+        }
+      />
     </section>
   )
 }
