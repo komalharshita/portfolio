@@ -53,7 +53,7 @@ export default function Hero() {
 
       <div className="absolute bottom-32 left-1/2 transform -translate-x-1/2 flex gap-4 z-10">
         <button
-          onClick={() => scrollToSection("about")}
+          onClick={() => scrollToSection("projects")}
           className="px-8 py-3 bg-[#ff4da6]/80 backdrop-blur-md text-white rounded-full font-semibold hover:bg-[#ff4da6] transition-all duration-300 border border-[#ff4da6]/50 hover:scale-105"
         >
           Explore My Work
