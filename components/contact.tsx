@@ -82,14 +82,14 @@ export default function Contact() {
                 LinkedIn
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/komalharshita/"
                 className="px-4 py-2 bg-white/60 backdrop-blur rounded-full text-[#ff4da6] font-semibold hover:bg-[#ff4da6] hover:text-white transition-all inline-block w-fit"
               >
                 GitHub
               </a>
               
               <a
-                href="#"
+                href="https://www.facebook.com/komalxharshitaa/"
                 className="px-4 py-2 bg-white/60 backdrop-blur rounded-full text-[#ff4da6] font-semibold hover:bg-[#ff4da6] hover:text-white transition-all inline-block w-fit"
               >
                 {"Facebook"}
