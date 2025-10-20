@@ -29,19 +29,19 @@ export default function Hero() {
       <img
         src="/cute badges/sticker  (1).png"
         alt="sticker"
-        className="absolute top-32 left-20 w-20 h-20 animate-float"
+        className="absolute top-32 left-20 w-20 h-30 animate-float"
         style={{ animationDuration: "3s" }}
       />
       <img
         src="/cute badges/sticker  (3).png"
         alt="sticker"
-        className="absolute top-1/4 right-16 w-24 h-24 animate-bounce"
+        className="absolute top-1/4 right-16 w-34 h-34 animate-bounce"
         style={{ animationDuration: "3.5s" }}
       />
       <img
         src="/cute badges/sticker  (5).png"
         alt="sticker"
-        className="absolute bottom-40 left-1/4 w-20 h-20"
+        className="absolute bottom-40 left-1/4 w-40 h-50"
         style={{ animation: "float 4s ease-in-out infinite" }}
       />
       <img
