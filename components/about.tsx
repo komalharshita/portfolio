@@ -38,17 +38,17 @@ export default function About() {
 
         {/* Right: Content */}
         <div>
-          <h2 className="text-5xl font-serif font-bold mb-6 text-[#8b4a6d]">About Me</h2>
+          <h2 className="text-5xl font-serif font-bold mb-6 text-[#8b4a6d]">{""}</h2>
 
           <p className="text-lg text-[#8b4a6d] mb-6 leading-relaxed">
-            I'm a Computer Science Engineering student at Savitribai Phule Pune University with a strong passion for
+            I'm a Second year Computer Science Engineering student at NMIET, Pune with a strong passion for
             <HolographicText className="ml-1"> business intelligence and data analytics</HolographicText>. I love
             transforming raw data into meaningful insights through dashboards and visualizations.
           </p>
 
           <p className="text-lg text-[#8b4a6d] mb-8 leading-relaxed">
             Currently, I'm a <HolographicText>McKinsey Forward Learner</HolographicText> and{" "}
-            <HolographicText>Google Student Ambassador for Gemini AI</HolographicText>. I'm proficient in Power BI, SQL,
+            <HolographicText>Google Student Ambassador for Gemini AI</HolographicText>. I'm learning tools like Power BI, SQL,
             Python, and Excel, and I believe data should tell a story that inspires action and understanding.
           </p>
 
@@ -102,7 +102,7 @@ export default function About() {
             </div>
             <div className="flex-1">
               <p className="font-bold text-lg text-[#ff4da6]">Bachelor of Engineering - Computer Science</p>
-              <p className="text-[#8b4a6d] font-semibold">Savitribai Phule Pune University</p>
+              <p className="text-[#8b4a6d] font-semibold">NMIET, Pune</p>
               <p className="text-sm text-[#8b4a6d] opacity-80">Sep 2024 - Jun 2028</p>
             </div>
           </div>
@@ -146,7 +146,7 @@ export default function About() {
         <div className="glass-effect p-8 rounded-3xl border border-white/40 hover:shadow-lg hover:shadow-[#ff4da6]/10 transition-all">
           <div className="flex items-start gap-4 mb-4">
             <div className="w-12 h-12 glass-effect rounded-full flex items-center justify-center flex-shrink-0">
-              <span className="text-xl">✨</span>
+              <span className="text-xl">🏫</span>
             </div>
             <div className="flex-1">
               <p className="font-bold text-lg text-[#ff4da6]">Secondary School - CBSE</p>

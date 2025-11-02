@@ -24,7 +24,7 @@ export default function Projects() {
       description:
         "Deloitte Data Analytics simulation covering data analysis, data modeling, and business insights. Completed Sep 2025.",
       skills: "Data Analysis, Data Modeling",
-      link: "https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_4mtaiZhB6yJk3Nmt8_1758279128058_completion_certificate.pdf",
+      link: "https://www.deloitte.com/",
     },
     {
       id: 3,
@@ -33,7 +33,7 @@ export default function Projects() {
       description:
         "Helping students discover how Google Gemini AI can enhance their studies and creativity through campus events and activities.",
       skills: "AI Education, Community Building",
-      link: "https://www.linkedin.com/posts/komalharshita_google-googlegemini-googlestudentambassador-activity-7370335014271725568-EQjf?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAE3zy-oBwxdmzeYaYUiGfkj0x9atR_t2dtU",
+      link: "https://www.google.com/",
     },
     {
       id: 4,
@@ -42,7 +42,7 @@ export default function Projects() {
       description:
         "Completed comprehensive PowerPoint training covering visual storytelling and presentation design. Credential ID: 593317",
       skills: "Visual Storytelling, Design",
-      link: "https://excel.jatanshah.in/your-certificate/2D120D398754-2D120D3987BB-2D041AB9D39F/",
+      link: "https://www.skillnation.com/",
     },
   ]
 
