@@ -41,7 +41,7 @@ export default function Hero() {
       <img
         src="/cute badges/sticker  (5).png"
         alt="sticker"
-        className="absolute bottom-40 left-1/4 h-55 w-40"
+        className="absolute bottom-40 left-1/4 h-35 w-40"
         style={{ animation: "float 4s ease-in-out infinite" }}
       />
       <img
