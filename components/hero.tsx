@@ -7,16 +7,6 @@ export default function Hero() {
     const element = document.getElementById(sectionId)
     element?.scrollIntoView({ behavior: "smooth" })
   }
-  
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P9BXCC8PWG"></script>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-P9BXCC8PWG');
-  </script>
 
   return (
     <section
@@ -53,7 +43,7 @@ export default function Hero() {
       <img
         src="/cute badges/sticker  (5).png"
         alt="sticker"
-        className="absolute bottom-40 left-1/4 h-20 w-36"
+        className="absolute bottom-40 left-1/4 h-55 w-40"
         style={{ animation: "float 4s ease-in-out infinite" }}
       />
       <img
