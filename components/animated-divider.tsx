@@ -2,7 +2,7 @@
 
 export default function AnimatedDivider() {
   return (
-    <div className="relative h-24 flex items-center justify-center overflow-hidden">
+    <div className="relative flex items-center justify-center overflow-hidden h-7 w-auto border-0 leading-7 mx-0 my-0 py-0 px-0">
       <style>{`
         @keyframes gradientShift {
           0% { background-position: 0% 50%; }

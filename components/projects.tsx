@@ -113,7 +113,7 @@ export default function Projects() {
         <a
           href="/resume.pdf"
           download
-          className="inline-block px-8 py-4 text-white rounded-full font-semibold hover:shadow-lg transition-all bubble-glow text-lg"
+          className="inline-block text-white rounded-full font-semibold hover:shadow-lg transition-all bubble-glow text-lg px-9 py-4 my-0 mx-0"
           style={{ background: "linear-gradient(to right, #ff4da6, #d9a7e0)" }}
         >
           View Full Resume
