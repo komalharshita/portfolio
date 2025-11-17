@@ -8,10 +8,10 @@ export default function Navigation() {
 
   return (
     <nav className="fixed top-0 w-full z-50 glass-effect">
-      <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center text-sidebar-foreground">
         <Link
           href="#"
-          className="text-2xl font-serif font-bold bg-primary opacity-100 shadow-none text-zinc-50"
+          className="text-2xl font-serif font-bold opacity-100 shadow-none text-zinc-50 bg-sidebar-foreground"
           style={{
             background: "linear-gradient(to right, #ff4da6, #ffd3b6, #d9a7e0)",
             WebkitBackgroundClip: "text",
@@ -19,7 +19,7 @@ export default function Navigation() {
             backgroundClip: "text",
           }}
         >
-          the-gilded-girl
+          The Gilded Girl   
         </Link>
 
         <div className="hidden md:flex gap-8">
@@ -27,7 +27,7 @@ export default function Navigation() {
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-[#8b4a6d] hover:text-[#ff4da6] transition-colors font-medium"
+              className="text-[#8b4a6d] hover:text-[#ff4da6] transition-colors font-medium text-card-foreground"
             >
               {item}
             </a>

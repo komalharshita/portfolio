@@ -5,6 +5,9 @@ import Contact from "@/components/contact"
 import Navigation from "@/components/navigation"
 import GradientMeshBackground from "@/components/gradient-mesh-background"
 import FloatingShapes from "@/components/floating-shapes"
+import GithubProjects from "@/components/github-projects"
+import Certifications from "@/components/certifications"
+import Volunteering from "@/components/volunteering"
 
 export default function Home() {
   return (
@@ -16,6 +19,9 @@ export default function Home() {
       <Hero />
       <About />
       <Projects />
+      <GithubProjects />
+      <Certifications />
+      <Volunteering />
       <Contact />
     </main>
   )

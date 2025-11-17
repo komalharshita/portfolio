@@ -84,7 +84,7 @@ export default function Projects() {
 
               {/* Overlay on hover */}
               <div
-                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6"
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 text-[rgba(247,223,223,1)]"
                 style={{ background: "linear-gradient(to top, rgba(255, 77, 166, 0.9), transparent)" }}
               >
                 <p className="text-white font-semibold mb-4">Skills & Focus:</p>
