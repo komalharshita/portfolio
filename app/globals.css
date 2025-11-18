@@ -123,7 +123,8 @@
   }
   body {
     background: linear-gradient(to bottom right, #000000, #1a0a1a, #000000);
-    cursor: url("/cursor.png") 2 2, auto;
+    /* Removed custom cursor feature */
+    cursor: auto;
   }
 
   /* Ensure all text is white for visibility */
@@ -159,5 +160,9 @@
   .sparkle::before {
     content: "✨";
     @apply absolute text-lg opacity-60;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
   }
 }

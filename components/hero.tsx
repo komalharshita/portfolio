@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 
 export default function Hero() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
@@ -20,86 +21,190 @@ export default function Hero() {
 
   return (
     <section
-      className="min-h-screen flex items-center justify-between relative overflow-hidden pt-20 px-8 md:px-16"
-      style={{
-        background: "linear-gradient(135deg, #000000 0%, #1a0a1a 50%, #000000 100%)",
-      }}
+      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 px-8 md:px-16"
       onMouseMove={handleMouseMove}
     >
-      {/* Animated gradient mesh overlay */}
-      <div className="absolute inset-0 opacity-30 pointer-events-none">
-        <div
-          className="absolute w-96 h-96 rounded-full blur-3xl"
-          style={{
-            background: "radial-gradient(circle, #ff4da6/20, transparent)",
-            left: `${mousePos.x}%`,
-            top: `${mousePos.y}%`,
-            transition: "all 0.3s ease-out",
-          }}
-        />
+      <div className="absolute inset-0 z-0">
+        {/* Starfield background */}
+        <div className="absolute inset-0 bg-black">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `
+                radial-gradient(2px 2px at 20px 30px, #eee, rgba(255,255,255,.2) 1px, transparent 1px),
+                radial-gradient(2px 2px at 60px 70px, #fff, rgba(255,255,255,.3) 1px, transparent 1px),
+                radial-gradient(1px 1px at 50px 50px, #fff, rgba(255,255,255,.2) 1px, transparent 1px),
+                radial-gradient(1px 1px at 130px 80px, #fff, rgba(255,255,255,.2) 1px, transparent 1px),
+                radial-gradient(2px 2px at 90px 10px, #fff, rgba(255,255,255,.3) 1px, transparent 1px)
+              `,
+              backgroundSize: "200px 200px",
+              animation: "twinkle 5s ease-in-out infinite",
+            }}
+          />
+        </div>
+
+        <div className="absolute inset-0 overflow-hidden">
+          <div
+            className="absolute top-1/3 left-1/4 w-96 h-96 rounded-full blur-3xl opacity-30"
+            style={{
+              background: "radial-gradient(circle, #ff4da6, #d946ef, transparent)",
+            }}
+          />
+          <div
+            className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full blur-3xl opacity-25"
+            style={{
+              background: "radial-gradient(circle, #d946ef, #ff4da6, transparent)",
+            }}
+          />
+          <div
+            className="absolute top-1/2 right-1/3 w-72 h-72 rounded-full blur-3xl opacity-20"
+            style={{
+              background: "radial-gradient(circle, #ff1a7f, #d946ef, transparent)",
+            }}
+          />
+        </div>
+
+        <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-[#ff4da6]/15 via-[#d946ef]/10 to-transparent pointer-events-none" />
+
+        {/* Animated particle sparkles */}
+        <div className="absolute inset-0">
+          {[...Array(15)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute rounded-full bg-white/30"
+              style={{
+                width: Math.random() * 4 + 2 + "px",
+                height: Math.random() * 4 + 2 + "px",
+                left: Math.random() * 100 + "%",
+                top: Math.random() * 100 + "%",
+                animation: `float ${Math.random() * 6 + 4}s ease-in-out infinite`,
+                animationDelay: Math.random() * 2 + "s",
+              }}
+            />
+          ))}
+        </div>
       </div>
 
-      {/* Left side: Text content */}
-      <div className="relative z-10 flex-1 max-w-xl">
-        <div className="space-y-6">
-          <h1 className="text-6xl md:text-7xl font-serif font-bold text-white leading-tight">
-            Komal Harshita
+      <div className="relative z-10 w-full max-w-6xl mx-auto flex items-center justify-between gap-12">
+        {/* Left: Text content */}
+        <div className="flex-1 flex flex-col justify-center">
+          <h1 className="text-6xl md:text-8xl font-black text-white mb-4 tracking-wider relative">
+            <span
+              style={{
+                textShadow: `
+                  3px 3px 0px #ff4da6,
+                  6px 6px 0px rgba(255,77,166,0.5),
+                  -2px -2px 0px #ff1a7f,
+                  4px 4px 10px rgba(255,77,166,0.3)
+                `,
+                letterSpacing: "0.15em",
+              }}
+            >
+              KOMAL
+            </span>
+            <br />
+            <span
+              style={{
+                textShadow: `
+                  3px 3px 0px #ff4da6,
+                  6px 6px 0px rgba(255,77,166,0.5),
+                  -2px -2px 0px #ff1a7f,
+                  4px 4px 10px rgba(255,77,166,0.3)
+                `,
+                letterSpacing: "0.15em",
+              }}
+            >
+              HARSHITA
+            </span>
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 font-light">
-            CSE Sophomore @ NMIET | Aspiring Business & Data Analyst
+
+          {/* Subtitle */}
+          <p
+            className="text-2xl md:text-3xl font-bold text-white mb-3 tracking-widest"
+            style={{
+              textShadow: "0px 2px 8px rgba(255,77,166,0.4)",
+            }}
+          >
+            Portfolio 2025 — BLACKPINK Edition
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 pt-4">
+          {/* Tagline */}
+          <p className="text-lg md:text-xl text-white/90 mb-12 font-light">
+            CSE Sophomore at NMIET, Pune | Aspiring Data Analyst
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-6">
+            <a
+              href="/resume.pdf"
+              download
+              className="px-10 py-4 rounded-full font-bold text-lg text-white bg-white/20 backdrop-blur-md border border-white/40 hover:border-[#ff4da6] hover:bg-white/30 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-[#ff4da6]/50 animate-float relative overflow-hidden group w-fit"
+            >
+              <span className="relative z-10">Download Resume</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#ff4da6]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+            </a>
+
             <a
               href="https://www.linkedin.com/in/komalharshita/"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-3 bg-[#ff4da6] backdrop-blur-md text-white rounded-full font-semibold hover:bg-[#ff1a7f] transition-all duration-300 border border-[#ff4da6] hover:scale-105 text-center"
+              className="px-10 py-4 rounded-full font-bold text-lg text-black bg-[#ff4da6] backdrop-blur-md border border-[#ff4da6] hover:bg-[#ff1a7f] hover:border-[#ff1a7f] transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-[#ff4da6]/50 animate-float relative overflow-hidden group w-fit"
+              style={{ animationDelay: "0.2s" }}
             >
-              Connect on LinkedIn
+              <span className="relative z-10">Connect on LinkedIn</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             </a>
-            <button
-              onClick={() => scrollToSection("projects")}
-              className="px-8 py-3 bg-white/20 backdrop-blur-md text-white rounded-full font-semibold hover:bg-white/30 transition-all duration-300 border border-white/30 hover:scale-105"
-            >
-              View Projects
-            </button>
           </div>
         </div>
-      </div>
 
-      {/* Right side: Profile image */}
-      <div className="relative z-10 flex-1 flex justify-center items-center">
-        <div className="relative">
-          <div className="relative w-64 h-64 rounded-3xl overflow-hidden border-2 border-[#ff4da6]/50 shadow-lg shadow-[#ff4da6]/30">
-            <img
-              src="/about-me-image.png"
-              alt="Komal Harshita"
-              className="w-full h-full object-cover"
+        <div className="flex-1 flex items-center justify-center relative">
+          <div className="relative w-80 h-80 md:w-96 md:h-96">
+            {/* Avatar image */}
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Nov%2018%2C%202025%2C%2010_30_55%20AM-e4I5O7DElwryTgKjXM6SVqmzj4Fx4A.png"
+              alt="Komal Harshita Avatar"
+              fill
+              className="object-cover rounded-full"
+              priority
             />
-          </div>
 
-          <div className="absolute -bottom-6 -right-6 bg-[#ff4da6] px-6 py-3 rounded-xl border border-transparent opacity-85 bg-primary shadow-xl">
-            <p className="font-bold text-sm text-white">McKinsey</p>
-            <p className="text-xs text-white font-semibold">Forward Learner</p>
+            <div className="absolute -bottom-4 right-4 bg-white/20 backdrop-blur-md px-4 py-2 rounded-full border border-white/30 shadow-xl hover:shadow-2xl transition-all hover:bg-white/30">
+              <p className="font-bold text-sm text-white">McKinsey</p>
+              <p className="text-xs text-white font-semibold">Forward Learner</p>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Decorative elements */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-0">
-        <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-gradient-to-br from-[#ffb6c1]/20 to-[#d9a7e0]/20 blur-3xl animate-float"></div>
-        <div
-          className="absolute bottom-32 right-20 w-40 h-40 rounded-full bg-gradient-to-br from-[#ffd3b6]/15 to-[#ff4da6]/15 blur-3xl animate-bounce"
-          style={{ animationDuration: "4s" }}
-        ></div>
-      </div>
+      {/* CTA to projects - kept in same position */}
+      <button
+        onClick={() => scrollToSection("projects")}
+        className="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-white/80 hover:text-[#ff4da6] transition-colors flex flex-col items-center gap-2 animate-bounce"
+      >
+        <span className="text-sm tracking-widest">EXPLORE</span>
+        <span className="text-2xl">↓</span>
+      </button>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
-        <div className="text-white text-2xl">↓</div>
-      </div>
+      <style jsx>{`
+        @keyframes float {
+          0%,
+          100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-20px);
+          }
+        }
+
+        @keyframes twinkle {
+          0%,
+          100% {
+            opacity: 0.5;
+          }
+          50% {
+            opacity: 1;
+          }
+        }
+      `}</style>
     </section>
   )
 }
