@@ -7,6 +7,7 @@ import GradientMeshBackground from "@/components/gradient-mesh-background"
 import FloatingShapes from "@/components/floating-shapes"
 import Certifications from "@/components/certifications"
 import Volunteering from "@/components/volunteering"
+import BackToTop from "@/components/back-to-top"
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Certifications />
       <Volunteering />
       <Contact />
+      <BackToTop />
     </main>
   )
 }

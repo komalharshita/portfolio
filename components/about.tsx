@@ -56,7 +56,7 @@ export default function About() {
               <h3 className="text-2xl font-serif font-bold mb-6 text-white">My Skills</h3>
               <div className="grid grid-cols-2 gap-4">
                 {skills.map((skill) => (
-                  <GlassmorphicTooltip key={skill.category} message={skill.hoverMessage}>
+                  <GlassmorphicTooltip key={skill.category} content={skill.hoverMessage}>
                     <div className="group flex flex-col items-center justify-center p-4 glass-effect rounded-2xl hover:shadow-lg hover:shadow-[#ff4da6]/30 transition-all duration-300 cursor-pointer transform hover:scale-110">
                       <img
                         src={skill.logo || "/placeholder.svg"}

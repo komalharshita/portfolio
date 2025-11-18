@@ -53,12 +53,21 @@ export default function Certifications() {
   ]
 
   return (
-    <section id="certifications" className="py-20 px-4 max-w-6xl mx-auto">
-      <h2 className="text-5xl font-serif font-bold mb-12 text-foreground">Certifications</h2>
+    <section id="certifications" className="py-32 px-4 max-w-6xl mx-auto">
+      <div className="mb-20">
+        <div className="h-px w-24 bg-gradient-to-r from-[#ff4da6] to-transparent mb-8" />
+        <h2 className="text-5xl font-serif font-bold text-foreground">Certifications</h2>
+      </div>
 
-      <div className="grid md:grid-cols-2 gap-6">
-        {certifications.map((cert) => (
-          <div key={cert.title} className="glass-effect p-6 rounded-2xl border border-white/40 hover:shadow-lg hover:shadow-[#ff4da6]/10 transition-all">
+      <div className="grid md:grid-cols-2 gap-8">
+        {certifications.map((cert, index) => (
+          <div 
+            key={cert.title} 
+            className="glass-effect p-6 rounded-2xl border border-white/40 hover:shadow-lg hover:shadow-[#ff4da6]/20 transition-all duration-300 hover:scale-105 scroll-reveal"
+            style={{
+              animationDelay: `${index * 100}ms`
+            }}
+          >
             <h3 className="text-lg font-semibold text-accent mb-2">{cert.title}</h3>
             <p className="text-foreground/80 text-sm mb-3">{cert.issuer}</p>
             <p className="text-foreground/60 text-xs mb-3">{cert.date}</p>

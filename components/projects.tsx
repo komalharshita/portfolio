@@ -9,7 +9,7 @@ export default function Projects() {
   const caseStudies = [
     {
       id: 1,
-      title: "ProdigyFlow",
+      title: "Sales Performance Insights Dashboard",
       subtitle: "Python + Data Analytics Mini Workflow",
       description: "Data-driven workflow automation project showcasing end-to-end analytics pipeline",
       githubLink: "https://github.com/komalharshita/promigyflow",
@@ -26,7 +26,7 @@ export default function Projects() {
     },
     {
       id: 2,
-      title: "Excel Dashboards Showcase",
+      title: "Customer Behavior Analysis Using Excel & SQL",
       subtitle: "Business Intelligence & Reporting",
       description: "Comprehensive collection of professional dashboards demonstrating data visualization expertise",
       githubLink: "https://github.com/komalharshita/excel-dashboards",
@@ -43,7 +43,7 @@ export default function Projects() {
     },
     {
       id: 3,
-      title: "SQLLab",
+      title: "Product Trends & Insights Report",
       subtitle: "SQL Practice & Query Optimization",
       description: "Repository of optimized SQL queries and database design practices for data extraction",
       githubLink: "https://github.com/komalharshita/sqllab",
@@ -61,9 +61,9 @@ export default function Projects() {
   ]
 
   return (
-    <section id="projects" className="py-20 px-4 max-w-7xl mx-auto">
+    <section id="projects" className="py-32 px-4 max-w-7xl mx-auto">
       {/* Section Header */}
-      <div className="text-center mb-16">
+      <div className="text-center mb-20">
         <h2 className="text-5xl font-serif font-bold mb-4 text-white">
           <HolographicText>Projects & Case Studies</HolographicText>
         </h2>
@@ -71,7 +71,7 @@ export default function Projects() {
       </div>
 
       {/* Case Studies Grid */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-20">
         {caseStudies.map((study) => (
           <div
             key={study.id}
@@ -149,7 +149,7 @@ export default function Projects() {
       </div>
 
       {/* More Projects Coming Soon CTA */}
-      <div className="text-center py-16 px-8 bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 hover:border-[#ff4da6]/30 transition-all">
+      <div className="text-center py-20 px-8 bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 hover:border-[#ff4da6]/30 transition-all">
         <p className="text-white/80 text-lg mb-4">🚀 More detailed case studies and projects coming soon!</p>
         <p className="text-white/60 text-sm">
           The full case study breakdowns with visualizations, insights, and impact metrics are currently in development.
@@ -157,7 +157,7 @@ export default function Projects() {
       </div>
 
       {/* Bottom CTA */}
-      <div className="text-center mt-16">
+      <div className="text-center mt-20">
         <a
           href="https://github.com/komalharshita"
           target="_blank"

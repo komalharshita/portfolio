@@ -1,7 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Playfair_Display, Poppins } from 'next/font/google'
-import { Analytics } from "@vercel/analytics/next"
+import ScrollProgressBar from "@/components/scroll-progress-bar"
 import "./globals.css"
 
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-serif" })
@@ -21,8 +21,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`${playfair.variable} ${poppins.variable} font-sans antialiased`}>
+        <ScrollProgressBar />
         {children}
-        <Analytics />
       </body>
     </html>
   )
