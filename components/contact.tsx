@@ -71,7 +71,7 @@ export default function Contact() {
             {/* Social links */}
             <div className="pt-8 border-t border-white/20">
               <p className="font-semibold text-white mb-4">Connect With Me</p>
-              <div className="flex flex-col gap-3">
+              <div className="flex gap-3 tracking-normal leading-7 flex-row my-1 mx-0 py-1.5">
                 <a
                   href="https://www.linkedin.com/in/komalharshita/"
                   target="_blank"

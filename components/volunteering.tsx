@@ -3,7 +3,7 @@
 export default function Volunteering() {
   const volunteering = [
     {
-      title: "Google Student Ambassador 3",
+      title: "Google Student Ambassador",
       organization: "Gemini AI Program",
       duration: "Aug 2025 - Present",
       category: "Science and Technology",

@@ -132,7 +132,7 @@ export default function Hero() {
         {/* Left: Text content */}
         <div className="flex-1 flex flex-col justify-center">
           <h1 className="text-6xl md:text-8xl font-black text-white mb-4 tracking-wider relative">
-            <span className="text-6xl"
+            <span className="text-7xl"
               style={{
                 textShadow: `
                   3px 3px 0px #ff4da6,
@@ -146,7 +146,7 @@ export default function Hero() {
               KOMAL
             </span>
             <br />
-            <span className="text-6xl"
+            <span className="text-7xl"
               style={{
                 textShadow: `
                   3px 3px 0px #ff4da6,
@@ -187,7 +187,7 @@ export default function Hero() {
               }}
             >
               <span className="relative z-10">Download Resume</span>
-              <span className="absolute inset-0 rounded-full bg-[#ff4da6]/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <span className="absolute inset-0 rounded-full bg-[#ff4da6]/20 blur-lg group-hover:opacity-100 transition-opacity duration-300 opacity-0 text-destructive-foreground" />
             </a>
 
             <a
@@ -200,7 +200,7 @@ export default function Hero() {
                 transition: "transform 0.1s ease-out, all 0.3s ease",
               }}
             >
-              <span className="relative z-10">Connect on LinkedIn</span>
+              <span className="relative z-10 text-muted">Connect on LinkedIn</span>
               <span className="absolute inset-0 rounded-full bg-[#ff4da6]/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </a>
           </div>
@@ -217,7 +217,7 @@ export default function Hero() {
             
             {/* Avatar image */}
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/profileee-SWyeH9Ox1ITG6Q7DtucdP6GZ8syyyk.png"
+              src="/images/design-mode/profileee.png"
               alt="Komal Harshita Avatar"
               fill
               className="object-cover rounded-4xl opacity-90 relative z-10"
@@ -225,8 +225,8 @@ export default function Hero() {
             />
 
             <div className="absolute -bottom-4 right-4 bg-white/25 backdrop-blur-md px-4 py-2 rounded-full border border-white/40 shadow-xl hover:shadow-2xl transition-all hover:bg-white/35 z-20">
-              <p className="font-bold text-sm text-white">McKinsey</p>
-              <p className="text-xs text-white font-semibold">Forward Learner</p>
+              <p className="text-xs font-extralight text-muted">McKinsey</p>
+              <p className="text-xs font-semibold text-muted">Forward Learner</p>
             </div>
           </div>
         </div>
