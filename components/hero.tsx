@@ -85,11 +85,11 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="relative z-10 w-full max-w-6xl mx-auto flex items-center justify-between gap-12">
+      <div className="relative z-10 w-full max-w-6xl mx-auto flex items-center justify-between gap-12 py-36 pt-1">
         {/* Left: Text content */}
         <div className="flex-1 flex flex-col justify-center">
           <h1 className="text-6xl md:text-8xl font-black text-white mb-4 tracking-wider relative">
-            <span
+            <span className="text-6xl"
               style={{
                 textShadow: `
                   3px 3px 0px #ff4da6,
@@ -103,7 +103,7 @@ export default function Hero() {
               KOMAL
             </span>
             <br />
-            <span
+            <span className="text-6xl"
               style={{
                 textShadow: `
                   3px 3px 0px #ff4da6,
@@ -125,11 +125,11 @@ export default function Hero() {
               textShadow: "0px 2px 8px rgba(255,77,166,0.4)",
             }}
           >
-            Portfolio 2025 — BLACKPINK Edition
+            Portfolio
           </p>
 
           {/* Tagline */}
-          <p className="text-lg md:text-xl text-white/90 mb-12 font-light">
+          <p className="text-lg text-white/90 mb-12 font-light md:text-base">
             CSE Sophomore at NMIET, Pune | Aspiring Data Analyst
           </p>
 
@@ -139,8 +139,8 @@ export default function Hero() {
               download
               className="px-10 py-4 rounded-full font-bold text-lg text-white bg-white/20 backdrop-blur-md border border-white/40 hover:border-[#ff4da6] hover:bg-white/30 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-[#ff4da6]/50 animate-float relative overflow-hidden group w-fit"
             >
-              <span className="relative z-10">Download Resume</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#ff4da6]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <span className="relative z-10 text-sm">Download Resume</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#ff4da6]/30 to-transparent group-hover:opacity-100 transition-opacity opacity-70 border-background text-xl border-0 tracking-normal leading-7 pt-0.5 pb-1 pl-0.5 pr-1 mr-0 border-none" />
             </a>
 
             <a
@@ -150,7 +150,7 @@ export default function Hero() {
               className="px-10 py-4 rounded-full font-bold text-lg text-black bg-[#ff4da6] backdrop-blur-md border border-[#ff4da6] hover:bg-[#ff1a7f] hover:border-[#ff1a7f] transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-[#ff4da6]/50 animate-float relative overflow-hidden group w-fit"
               style={{ animationDelay: "0.2s" }}
             >
-              <span className="relative z-10">Connect on LinkedIn</span>
+              <span className="relative z-10 text-lg">Connect on LinkedIn</span>
               <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             </a>
           </div>
@@ -160,10 +160,10 @@ export default function Hero() {
           <div className="relative w-80 h-80 md:w-96 md:h-96">
             {/* Avatar image */}
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Nov%2018%2C%202025%2C%2010_30_55%20AM-e4I5O7DElwryTgKjXM6SVqmzj4Fx4A.png"
+              src="/images/design-mode/ChatGPT%20Image%20Nov%2018%2C%202025%2C%2010_30_55%20AM.png"
               alt="Komal Harshita Avatar"
               fill
-              className="object-cover rounded-full"
+              className="object-cover rounded-4xl opacity-95"
               priority
             />
 
