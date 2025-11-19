@@ -126,7 +126,7 @@ export default function Projects() {
         <div className="flex justify-center mb-6">
           <div className="h-1 w-32 bg-gradient-to-r from-[#ff4da6] to-[#ff1a7f] rounded-full" />
         </div>
-        <p className="text-xl text-white/80">Premium Magazine-Style Project Gallery</p>
+        
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20 min-h-[600px] relative z-10">

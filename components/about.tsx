@@ -63,7 +63,7 @@ export default function About() {
                         alt={skill.category}
                         className="w-12 h-12 mb-2 group-hover:brightness-125 transition-all"
                       />
-                      <p className="text-xs font-semibold text-white text-center">{skill.category}</p>
+                      <p className="text-xs font-semibold text-white group-hover:text-white/100 transition-colors text-center">{skill.category}</p>
                     </div>
                   </GlassmorphicTooltip>
                 ))}

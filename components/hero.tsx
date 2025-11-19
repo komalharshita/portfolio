@@ -263,7 +263,7 @@ export default function Hero() {
             <a
               href="/resume.pdf"
               download
-              className="px-6 py-2.5 rounded-full font-bold text-xs md:text-sm text-black bg-[#ff4da6] border-2 border-[#ff4da6] transition-all duration-300 shadow-lg w-fit relative group cta-button"
+              className="px-6 py-2.5 rounded-full font-bold text-xs md:text-sm text-black bg-[#ff4da6] border-2 border-[#ff4da6] transition-all duration-300 shadow-lg w-fit relative group cta-button bg-destructive"
               style={{
                 transform: `translate(${buttonAttract.left}px, ${buttonAttract.top}px)`,
                 transition: "transform 0.1s ease-out, all 0.3s ease",
@@ -276,7 +276,7 @@ export default function Hero() {
               href="https://www.linkedin.com/in/komalharshita/"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-2.5 rounded-full font-bold text-xs md:text-sm text-black bg-[#ff4da6] border-2 border-[#ff4da6] transition-all duration-300 shadow-lg w-fit relative group cta-button"
+              className="px-6 py-2.5 rounded-full font-bold text-xs md:text-sm bg-[#ff4da6] border-2 border-[#ff4da6] transition-all duration-300 shadow-lg w-fit relative group cta-button text-primary"
               style={{
                 transform: `translate(${buttonAttract.left}px, ${buttonAttract.top}px)`,
                 transition: "transform 0.1s ease-out, all 0.3s ease",
@@ -300,7 +300,7 @@ export default function Hero() {
               src="/images/design-mode/profileee.png"
               alt="Komal Harshita Avatar"
               fill
-              className="object-cover rounded-4xl opacity-90 relative z-10"
+              className="object-cover opacity-90 relative z-10 rounded-none"
               priority
             />
 
@@ -315,10 +315,10 @@ export default function Hero() {
       {/* CTA to projects - static position */}
       <button
         onClick={() => scrollToSection("projects")}
-        className="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-white/80 hover:text-[#ff4da6] transition-colors flex flex-col items-center gap-2"
+        className="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-white/80 hover:text-[#ff4da6] transition-colors flex flex-col items-center gap-2 animate-bounce-subtle"
       >
-        <span className="text-sm tracking-widest">EXPLORE</span>
-        <span className="text-2xl">↓</span>
+        <span className="text-sm tracking-widest animate-pulse-fade">EXPLORE</span>
+        <span className="text-2xl animate-bounce-subtle" style={{ animationDelay: "0.2s" }}>↓</span>
       </button>
 
       <style jsx>{`
@@ -400,6 +400,24 @@ export default function Hero() {
           to {
             opacity: 1;
             transform: translateY(0);
+          }
+        }
+
+        @keyframes animate-bounce-subtle {
+          0%, 100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
+        }
+
+        @keyframes animate-pulse-fade {
+          0%, 100% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0.8;
           }
         }
       `}</style>

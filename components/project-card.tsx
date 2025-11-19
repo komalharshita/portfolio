@@ -83,10 +83,9 @@ export default function ProjectCard({
         {/* Status Ribbon */}
         <div className="absolute top-0 right-0 w-40 h-40 overflow-hidden pointer-events-none">
           <div
-            className={`absolute top-0 right-0 w-48 h-12 ${statusColors[status]} ${ribbonTextColor[status]} font-bold text-xs flex items-center justify-center transition-all duration-300 shadow-lg z-20`}
+            className={`absolute top-0 right-0 w-48 h-12 ${statusColors[status]} ${ribbonTextColor[status]} font-bold text-xs md:text-sm flex items-center justify-center transition-all duration-300 shadow-lg z-20 whitespace-nowrap px-3`}
             style={{
               transform: "rotate(45deg) translate(24px, -24px)",
-              whiteSpace: "nowrap",
             }}
           >
             {status}

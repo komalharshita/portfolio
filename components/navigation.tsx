@@ -1,13 +1,39 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState("")
+  const [navGlow, setNavGlow] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ["about", "projects", "contact"]
+      const scrollPosition = window.scrollY + 100
+
+      for (const section of sections) {
+        const element = document.getElementById(section)
+        if (element) {
+          const { offsetTop, offsetHeight } = element
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(section)
+            setNavGlow(true)
+            break
+          }
+        }
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   return (
-    <nav className="fixed top-0 w-full z-50 glass-effect">
+    <nav className={`fixed top-0 w-full z-50 glass-effect transition-all duration-300 ${
+      navGlow ? "shadow-[0_0_30px_rgba(255,77,166,0.4)]" : ""
+    }`}>
       <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center text-sidebar-foreground">
         <Link
           href="#"
@@ -27,7 +53,11 @@ export default function Navigation() {
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-[#8b4a6d] hover:text-[#ff4da6] transition-colors font-medium text-card-foreground"
+              className={`transition-all duration-300 font-medium text-card-foreground ${
+                activeSection === item.toLowerCase()
+                  ? "text-[#ff4da6] shadow-[0_0_15px_rgba(255,77,166,0.5)]"
+                  : "text-[#8b4a6d] hover:text-[#ff4da6]"
+              }`}
             >
               {item}
             </a>

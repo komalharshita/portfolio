@@ -29,7 +29,7 @@ export default function Volunteering() {
         <h2 className="text-5xl font-serif font-bold text-foreground">Volunteering & Community</h2>
       </div>
 
-      <div className="space-y-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {volunteering.map((vol, index) => (
           <div 
             key={vol.title} 
@@ -38,14 +38,12 @@ export default function Volunteering() {
               animationDelay: `${index * 100}ms`
             }}
           >
-            <div className="flex items-start justify-between mb-4">
-              <div>
-                <h3 className="text-2xl font-semibold text-accent mb-2">{vol.title}</h3>
-                <p className="text-foreground/90 font-medium">{vol.organization}</p>
-              </div>
-              <p className="text-foreground/70 text-sm">{vol.duration}</p>
+            <div className="flex flex-col gap-3">
+              <h3 className="text-xl font-semibold text-accent">{vol.title}</h3>
+              <p className="text-foreground/90 font-medium text-sm">{vol.organization}</p>
+              <p className="text-foreground/70 text-xs">{vol.duration}</p>
+              <p className="text-foreground/80 text-xs">{vol.category}</p>
             </div>
-            <p className="text-foreground/80 text-sm">{vol.category}</p>
           </div>
         ))}
       </div>

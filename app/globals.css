@@ -263,6 +263,15 @@
   .cta-button:active {
     transform: scale(0.98);
   }
+
+  /* Added subtle bounce animations for hero elements */
+  .animate-bounce-subtle {
+    animation: bounceSoft 2s ease-in-out infinite;
+  }
+
+  .animate-pulse-fade {
+    animation: pulseFade 2s ease-in-out infinite;
+  }
 }
 
 /* Enhanced animations for premium page transitions */
@@ -326,5 +335,24 @@
   }
   100% {
     background-position: 100px 100px;
+  }
+}
+
+/* Added subtle bounce for hero explore button and arrow */
+@keyframes bounceSoft {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulseFade {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
   }
 }

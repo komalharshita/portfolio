@@ -8,7 +8,7 @@ const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-serif"
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--font-sans" })
 
 export const metadata: Metadata = {
-  title: "Creative Portfolio | Komal Harshita",
+  title: "Data Portfolio | Komal Harshita",
   description: "Aspring Data and Business Analyst - Soft Barbiecore Y2K Portfolio",
   generator: "v0.app",
 }
