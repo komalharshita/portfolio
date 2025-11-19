@@ -8,17 +8,52 @@ export default function Hero() {
   const [parallaxOffset, setParallaxOffset] = useState({ x: 0, y: 0 })
   const [buttonAttract, setButtonAttract] = useState({ left: 0, top: 0 })
   const [pageLoaded, setPageLoaded] = useState(false)
+  const [typedText, setTypedText] = useState('')
+  const [showFlicker, setShowFlicker] = useState(false)
+  const [trails, setTrails] = useState<Array<{ x: number; y: number; id: number }>>([])
   const sectionRef = useRef<HTMLDivElement>(null)
   const buttonsRef = useRef<HTMLDivElement>(null)
+  const trailIdRef = useRef(0)
+
+  const fullText = 'Aspiring Data Analyst | CSE Sophomore'
 
   useEffect(() => {
     setPageLoaded(true)
   }, [])
 
+  useEffect(() => {
+    if (!pageLoaded) return
+
+    let currentIndex = 0
+    let isDeleting = false
+
+    const typeInterval = setInterval(() => {
+      if (currentIndex <= fullText.length && !isDeleting) {
+        setTypedText(fullText.slice(0, currentIndex))
+        currentIndex++
+      } else if (currentIndex === fullText.length) {
+        isDeleting = false
+        setShowFlicker(true)
+        clearInterval(typeInterval)
+      }
+    }, 50)
+
+    return () => clearInterval(typeInterval)
+  }, [pageLoaded])
+
   const handleMouseMove = (e: React.MouseEvent) => {
     const rect = e.currentTarget.getBoundingClientRect()
     const x = e.clientX - rect.left
     const y = e.clientY - rect.top
+
+    setMousePos({ x: e.clientX, y: e.clientY })
+
+    if (Math.random() > 0.7) {
+      setTrails((prev) => [
+        ...prev.slice(-20),
+        { x: e.clientX, y: e.clientY, id: trailIdRef.current++ },
+      ])
+    }
 
     setParallaxOffset({
       x: (x - rect.width / 2) * 0.002,
@@ -50,6 +85,24 @@ export default function Hero() {
       onMouseMove={handleMouseMove}
     >
       <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 opacity-5 overflow-hidden">
+          <div
+            className="absolute inset-0 will-change-transform"
+            style={{
+              background: `
+                linear-gradient(90deg, 
+                  transparent 0%, 
+                  rgba(255, 77, 166, 0.4) 25%, 
+                  rgba(255, 26, 127, 0.3) 50%, 
+                  rgba(255, 77, 166, 0.4) 75%, 
+                  transparent 100%)
+              `,
+              animation: "auroraFlow 12s ease-in-out infinite",
+              filter: "blur(60px)",
+            }}
+          />
+        </div>
+
         {/* Starfield background */}
         <div className="absolute inset-0 bg-black">
           <div
@@ -109,19 +162,42 @@ export default function Hero() {
 
         <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-[#ff4da6]/8 via-[#d946ef]/5 to-transparent pointer-events-none" />
 
-        {/* Animated particle sparkles */}
-        <div className="absolute inset-0">
-          {[...Array(15)].map((_, i) => (
+        <div className="absolute inset-0 pointer-events-none">
+          {[...Array(12)].map((_, i) => (
             <div
-              key={i}
-              className="absolute rounded-full bg-white/30"
+              key={`particle-${i}`}
+              className="absolute rounded-full"
               style={{
-                width: Math.random() * 4 + 2 + "px",
-                height: Math.random() * 4 + 2 + "px",
+                width: Math.random() * 2 + 1 + "px",
+                height: Math.random() * 2 + 1 + "px",
                 left: Math.random() * 100 + "%",
                 top: Math.random() * 100 + "%",
-                animation: `float ${Math.random() * 6 + 4}s ease-in-out infinite`,
-                animationDelay: Math.random() * 2 + "s",
+                background: i % 3 === 0 ? "rgba(255, 77, 166, 0.6)" : "rgba(255, 255, 255, 0.4)",
+                boxShadow: i % 3 === 0 ? "0 0 6px rgba(255, 77, 166, 0.4)" : "0 0 4px rgba(255, 255, 255, 0.2)",
+                animation: `floatSlow ${Math.random() * 8 + 10}s ease-in-out infinite`,
+                animationDelay: Math.random() * 3 + "s",
+                opacity: 0.5,
+              }}
+            />
+          ))}
+        </div>
+
+        <div className="absolute inset-0 pointer-events-none">
+          {trails.map((trail, index) => (
+            <div
+              key={trail.id}
+              className="fixed rounded-full pointer-events-none"
+              style={{
+                left: trail.x,
+                top: trail.y,
+                width: "8px",
+                height: "8px",
+                background: index % 2 === 0 ? "rgba(255, 77, 166, 0.3)" : "rgba(200, 100, 200, 0.2)",
+                filter: "blur(2px)",
+                opacity: Math.max(0, 1 - index / 20),
+                boxShadow: `0 0 ${6 + index}px ${index % 2 === 0 ? "rgba(255, 77, 166, 0.3)" : "rgba(200, 100, 200, 0.2)"}`,
+                animation: "fadeOutTrail 0.8s ease-out forwards",
+                animationDelay: "0s",
               }}
             />
           ))}
@@ -171,37 +247,42 @@ export default function Hero() {
             Portfolio
           </p>
 
-          {/* Tagline */}
-          <p className="text-lg text-white/90 mb-12 font-light md:text-base">
-            CSE Sophomore at NMIET, Pune | Aspiring Data Analyst
+          <p className="text-lg text-white/90 mb-12 font-light md:text-base h-8">
+            <span
+              style={{
+                animation: showFlicker ? 'subtleFlicker 1.5s ease-in-out infinite' : 'none',
+                display: 'inline-block',
+              }}
+            >
+              {typedText}
+              <span className="animate-pulse">|</span>
+            </span>
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4" ref={buttonsRef}>
             <a
               href="/resume.pdf"
               download
-              className="px-6 py-2.5 rounded-full font-bold text-xs md:text-sm text-black bg-[#ff4da6] border border-[#ff4da6] hover:bg-[#ff1a7f] hover:border-[#ff1a7f] hover:shadow-xl hover:shadow-[#ff4da6]/50 transition-all duration-300 shadow-lg w-fit relative group"
+              className="px-6 py-2.5 rounded-full font-bold text-xs md:text-sm text-black bg-[#ff4da6] border-2 border-[#ff4da6] transition-all duration-300 shadow-lg w-fit relative group cta-button"
               style={{
                 transform: `translate(${buttonAttract.left}px, ${buttonAttract.top}px)`,
                 transition: "transform 0.1s ease-out, all 0.3s ease",
               }}
             >
               <span className="relative z-10">Download Resume</span>
-              <span className="absolute inset-0 rounded-full bg-[#ff4da6]/20 blur-lg group-hover:opacity-100 transition-opacity duration-300 opacity-0 text-destructive-foreground" />
             </a>
 
             <a
               href="https://www.linkedin.com/in/komalharshita/"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-2.5 rounded-full font-bold text-xs md:text-sm text-black bg-[#ff4da6] border border-[#ff4da6] hover:bg-[#ff1a7f] hover:border-[#ff1a7f] hover:shadow-xl hover:shadow-[#ff4da6]/50 transition-all duration-300 shadow-lg w-fit relative group"
+              className="px-6 py-2.5 rounded-full font-bold text-xs md:text-sm text-black bg-[#ff4da6] border-2 border-[#ff4da6] transition-all duration-300 shadow-lg w-fit relative group cta-button"
               style={{
                 transform: `translate(${buttonAttract.left}px, ${buttonAttract.top}px)`,
                 transition: "transform 0.1s ease-out, all 0.3s ease",
               }}
             >
-              <span className="relative z-10 text-muted">Connect on LinkedIn</span>
-              <span className="absolute inset-0 rounded-full bg-[#ff4da6]/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <span className="relative z-10">Connect on LinkedIn</span>
             </a>
           </div>
         </div>
@@ -214,8 +295,7 @@ export default function Hero() {
             }}
           >
             <div className="absolute inset-0 rounded-4xl blur-2xl opacity-40 bg-[#ff4da6]/40" />
-            
-            {/* Avatar image */}
+
             <Image
               src="/images/design-mode/profileee.png"
               alt="Komal Harshita Avatar"
@@ -224,7 +304,7 @@ export default function Hero() {
               priority
             />
 
-            <div className="absolute -bottom-4 right-4 bg-white/25 backdrop-blur-md px-4 py-2 rounded-full border border-white/40 shadow-xl hover:shadow-2xl transition-all hover:bg-white/35 z-20">
+            <div className="absolute -bottom-4 right-4 bg-white/25 backdrop-blur-md px-4 py-2 rounded-full border border-white/40 shadow-xl z-20">
               <p className="text-xs font-extralight text-muted">McKinsey</p>
               <p className="text-xs font-semibold text-muted">Forward Learner</p>
             </div>
@@ -242,14 +322,74 @@ export default function Hero() {
       </button>
 
       <style jsx>{`
+        @keyframes auroraFlow {
+          0% {
+            transform: translateY(0px) translateX(-100%);
+            opacity: 0.03;
+          }
+          50% {
+            transform: translateY(-40px) translateX(0px);
+            opacity: 0.06;
+          }
+          100% {
+            transform: translateY(0px) translateX(100%);
+            opacity: 0.03;
+          }
+        }
+
         @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
+          0%, 100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-20px);
+          }
+        }
+
+        @keyframes floatSlow {
+          0%, 100% {
+            transform: translateY(0px) translateX(0px);
+          }
+          25% {
+            transform: translateY(-15px) translateX(10px);
+          }
+          50% {
+            transform: translateY(-30px) translateX(0px);
+          }
+          75% {
+            transform: translateY(-15px) translateX(-10px);
+          }
         }
 
         @keyframes twinkle {
-          0%, 100% { opacity: 0.5; }
-          50% { opacity: 1; }
+          0%, 100% {
+            opacity: 0.5;
+          }
+          50% {
+            opacity: 1;
+          }
+        }
+
+        @keyframes subtleFlicker {
+          0%, 100% {
+            text-shadow: 0px 2px 8px rgba(255, 77, 166, 0.4);
+            opacity: 1;
+          }
+          50% {
+            text-shadow: 0px 2px 8px rgba(255, 77, 166, 0.2);
+            opacity: 0.95;
+          }
+        }
+
+        @keyframes fadeOutTrail {
+          from {
+            opacity: 1;
+            transform: scale(1);
+          }
+          to {
+            opacity: 0;
+            transform: scale(0.5);
+          }
         }
 
         @keyframes pageEnter {

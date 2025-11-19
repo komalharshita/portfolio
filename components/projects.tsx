@@ -2,162 +2,158 @@
 
 import { useState } from "react"
 import HolographicText from "./holographic-text"
+import ProjectCard from "./project-card"
+import CaseStudyModal from "./case-study-modal"
 
 export default function Projects() {
-  const [expandedId, setExpandedId] = useState<number | null>(null)
+  const [selectedProject, setSelectedProject] = useState<number | null>(null)
 
   const caseStudies = [
     {
       id: 1,
-      title: "Sales Performance Insights Dashboard",
+      title: "ProdigyFlow",
       subtitle: "Python + Data Analytics Mini Workflow",
-      description: "Data-driven workflow automation project showcasing end-to-end analytics pipeline",
+      description: "Automated data analytics workflow showcasing end-to-end pipeline development with Python and SQL.",
+      status: "In Progress" as const,
       githubLink: "https://github.com/komalharshita/promigyflow",
       sections: {
-        business: "Developed an automated data analytics workflow to streamline repetitive data processing tasks.",
-        tools: "Python, Pandas, Matplotlib, SQL",
-        cleaning: "Handled missing values, outliers, and data type conversions for consistency.",
-        exploratory: "Statistical analysis and pattern recognition in multi-dimensional datasets.",
-        visualizations: "Interactive dashboards and trend visualizations for insights discovery.",
-        insights: "Identified key performance indicators and optimization opportunities through data exploration.",
+        business:
+          "Developed an automated data analytics workflow to streamline repetitive data processing tasks and improve efficiency in analytical operations.",
+        tools: "Python, Pandas, Matplotlib, SQL, Jupyter Notebooks",
+        cleaning:
+          "Handled missing values using forward-fill and interpolation methods, detected and removed outliers using IQR method, normalized data types across datasets for consistency.",
+        exploratory:
+          "Statistical analysis including mean, median, standard deviation calculations. Pattern recognition in multi-dimensional datasets using correlation analysis and clustering techniques.",
+        visualizations:
+          "Interactive dashboards created with Matplotlib and Seaborn. Time-series trend visualizations, distribution plots, and heatmaps for insights discovery.",
+        insights:
+          "Identified key performance indicators and optimization opportunities. Uncovered seasonal patterns in data affecting business metrics.",
         impact:
-          "Reduced manual data processing time by 60% and improved data accuracy for decision-making.",
+          "Reduced manual data processing time by 60% and improved data accuracy for decision-making. Enabled faster insights generation for stakeholder reporting.",
       },
     },
     {
       id: 2,
-      title: "Customer Behavior Analysis Using Excel & SQL",
-      subtitle: "Business Intelligence & Reporting",
-      description: "Comprehensive collection of professional dashboards demonstrating data visualization expertise",
-      githubLink: "https://github.com/komalharshita/excel-dashboards",
+      title: "Kalakatha",
+      subtitle: "Google GenAI Exchange Hackathon ✨ A Portal for Local Artisans",
+      description: "A mission-driven marketplace platform empowering local artisans with digital tools to showcase and sell handmade goods.",
+      status: "Completed" as const,
+      githubLink: "https://github.com/komalharshita/kalakatha",
       sections: {
-        business: "Created executive-level dashboards for real-time business metrics monitoring and KPI tracking.",
-        tools: "Microsoft Excel, Advanced Formulas, Pivot Tables, Data Validation",
-        cleaning: "Cleansed multi-source data and normalized formats for dashboard integration.",
-        exploratory: "Analyzed business metrics across multiple dimensions for comprehensive insights.",
-        visualizations: "Developed 15+ dynamic charts with drill-down capabilities for detailed analysis.",
-        insights: "Uncovered seasonal trends and performance gaps leading to strategic recommendations.",
+        business:
+          "KalaKatha is a platform dedicated to empowering local artisans by providing them with a digital marketplace to showcase and sell their unique handmade goods. Our goal is to connect creators with customers, helping small businesses grow and thrive in the digital market. In a world dominated by mass production, our goal is to provide a dedicated space for unique, handmade goods.",
+        tools: "HTML, Supabase (Backend, Authentication, Database, Real-time Features), React, JavaScript",
+        cleaning:
+          "Data validation for product listings, user profile management, and transaction records. Implemented secure data handling for artisan and customer information.",
+        exploratory:
+          "Analyzed artisan profiles, product categories, sales trends, and customer engagement patterns. Explored community feedback to improve platform features and user experience.",
+        visualizations:
+          "Dashboard displaying top artisans, best-selling products, category performance. Real-time transaction tracking and community growth metrics visualizations.",
+        insights:
+          "KalaKatha empowers small-scale creators—from woodworkers to jewelers, ceramicists to textile artists—by giving them the tools and visibility they need to compete in the digital economy. By supporting local artists, we're not just making a purchase—we're investing in a community and preserving the art of handmade craftsmanship.",
         impact:
-          "Enabled stakeholders to make data-driven decisions, improving business efficiency by 40%.",
+          "Simplified the process of setting up an online shop, managing inventory, and connecting with customers, allowing artisans to focus on what they do best: creating. For customers, it offers a refreshing alternative to conventional shopping, providing a curated collection of authentic, high-quality items made with passion and skill. Every piece has a story.",
       },
     },
     {
       id: 3,
-      title: "Product Trends & Insights Report",
-      subtitle: "SQL Practice & Query Optimization",
-      description: "Repository of optimized SQL queries and database design practices for data extraction",
-      githubLink: "https://github.com/komalharshita/sqllab",
+      title: "Data Storytelling Project",
+      subtitle: "Advanced Analytics & Narrative",
+      description: "Coming Soon - Data storytelling project combining analytics with compelling business narratives.",
+      status: "Coming Soon" as const,
+      githubLink: "#",
       sections: {
-        business: "Built robust SQL solutions for complex data queries and efficient database management.",
-        tools: "SQL, Database Design, Query Optimization, SQLite/PostgreSQL",
-        cleaning: "Implemented data validation constraints and cleaning procedures within SQL scripts.",
-        exploratory: "Complex JOINs and aggregations to explore relationships across datasets.",
-        visualizations: "Generated SQL reports and data exports for further analysis and visualization.",
-        insights: "Discovered data quality issues and optimization opportunities through query analysis.",
-        impact:
-          "Optimized query performance by 70%, enabling faster data retrieval for analytical processes.",
+        business: "Transforming raw data into compelling business stories for executive stakeholder engagement.",
+        tools: "Power BI, Tableau, Python, Storytelling frameworks",
+        cleaning: "Advanced data preparation and quality assurance for narrative-driven insights.",
+        exploratory: "Deep exploratory analysis to uncover meaningful patterns and business stories.",
+        visualizations: "Custom visualizations designed specifically for narrative impact and audience engagement.",
+        insights: "Developing actionable insights that drive business strategy and decision-making.",
+        impact: "Enhanced communication of data insights leading to better strategic decisions and stakeholder alignment.",
+      },
+    },
+    {
+      id: 4,
+      title: "Excel Analytics Case Study",
+      subtitle: "Advanced Excel & Dashboard Design",
+      description: "Coming Soon - Advanced Excel case study showcasing complex formulas and interactive dashboards.",
+      status: "Coming Soon" as const,
+      githubLink: "#",
+      sections: {
+        business: "Building sophisticated Excel-based analytics solutions for enterprise reporting needs.",
+        tools: "Microsoft Excel, VBA, Power Query, Advanced Formulas",
+        cleaning: "Multi-sheet data consolidation and advanced data validation techniques.",
+        exploratory: "Complex analysis using advanced Excel functions and pivot table analytics.",
+        visualizations: "Interactive Excel dashboards with conditional formatting and dynamic charts.",
+        insights: "Leveraging Excel for predictive analytics and business intelligence.",
+        impact: "Democratizing data analytics across organizations through accessible Excel-based solutions.",
       },
     },
   ]
 
+  const selectedProjectData = caseStudies.find((p) => p.id === selectedProject)
+
   return (
-    <section id="projects" className="py-32 px-4 max-w-7xl mx-auto">
-      {/* Section Header */}
-      <div className="text-center mb-20">
+    <section id="projects" className="py-32 px-4 max-w-7xl mx-auto relative">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10">
+        {/* Particles */}
+        {[...Array(15)].map((_, i) => (
+          <div
+            key={`particle-${i}`}
+            className="absolute rounded-full will-change-transform"
+            style={{
+              width: Math.random() * 8 + 4 + "px",
+              height: Math.random() * 8 + 4 + "px",
+              left: Math.random() * 100 + "%",
+              top: Math.random() * 100 + "%",
+              background: i % 2 === 0 
+                ? "rgba(255, 77, 166, 0.4)" 
+                : "rgba(217, 70, 239, 0.3)",
+              animation: `drift ${Math.random() * 8 + 12}s ease-in-out infinite`,
+              animationDelay: Math.random() * 3 + "s",
+              boxShadow: i % 2 === 0 
+                ? "0 0 15px rgba(255, 77, 166, 0.3)" 
+                : "0 0 15px rgba(217, 70, 239, 0.2)",
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="text-center mb-20 relative z-10">
         <h2 className="text-5xl font-serif font-bold mb-4 text-white">
           <HolographicText>Projects & Case Studies</HolographicText>
         </h2>
-        <p className="text-xl text-white/80">More Projects Coming Soon</p>
+        <div className="flex justify-center mb-6">
+          <div className="h-1 w-32 bg-gradient-to-r from-[#ff4da6] to-[#ff1a7f] rounded-full" />
+        </div>
+        <p className="text-xl text-white/80">Premium Magazine-Style Project Gallery</p>
       </div>
 
-      {/* Case Studies Grid */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20 min-h-[600px] relative z-10">
         {caseStudies.map((study) => (
-          <div
-            key={study.id}
-            className="group relative overflow-hidden rounded-3xl cursor-pointer h-full"
-            onMouseEnter={() => setExpandedId(study.id)}
-            onMouseLeave={() => setExpandedId(null)}
-          >
-            <div
-              className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 h-full flex flex-col justify-between transition-all duration-300 hover:border-[#ff4da6]/50 hover:shadow-[0_0_40px_rgba(255,77,166,0.3)]"
-              style={{
-                background: "linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,77,166,0.05) 100%)",
-              }}
-            >
-              {/* Coming Soon Badge */}
-              <div className="absolute top-4 right-4 bg-[#ff4da6] text-black px-4 py-2 rounded-full text-xs font-bold shadow-lg">
-                Coming Soon
-              </div>
-
-              {/* Preview Content */}
-              <div className="mb-6">
-                {/* Screenshot Placeholder */}
-                <div className="w-full h-40 bg-gradient-to-br from-[#ff4da6]/20 to-black/50 rounded-2xl mb-4 flex items-center justify-center border border-white/10">
-                  <div className="text-center">
-                    <div className="text-white/40 text-sm">Screenshot Preview</div>
-                    <div className="text-white/20 text-xs mt-1">Coming Soon</div>
-                  </div>
-                </div>
-
-                {/* Chart Placeholder */}
-                <div className="w-full h-24 bg-gradient-to-r from-black/30 to-[#ff4da6]/10 rounded-xl flex items-center justify-center border border-white/5">
-                  <div className="text-white/30 text-xs">📊 Visualization Preview</div>
-                </div>
-              </div>
-
-              {/* Project Info */}
-              <div className="mb-6">
-                <h3 className="text-2xl font-bold text-white mb-1">{study.title}</h3>
-                <p className="text-[#ff4da6] text-sm font-semibold mb-3">{study.subtitle}</p>
-                <p className="text-white/70 text-sm leading-relaxed">{study.description}</p>
-              </div>
-
-              {/* Locked Content Preview */}
-              <div className="mb-6 p-4 bg-black/40 rounded-xl border border-white/5">
-                <p className="text-white/50 text-xs font-semibold mb-2">📋 Full Case Study Content (Locked):</p>
-                <ul className="text-white/30 text-xs space-y-1">
-                  <li>• Business Problem & Context</li>
-                  <li>• Tools & Technologies</li>
-                  <li>• Data Cleaning & Preparation</li>
-                  <li>• Exploratory Analysis</li>
-                  <li>• Visualizations & Insights</li>
-                  <li>• Impact & Recommendations</li>
-                </ul>
-              </div>
-
-              {/* Action Buttons */}
-              <div className="flex gap-3">
-                <a
-                  href={study.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 px-4 py-3 bg-[#ff4da6] text-black rounded-xl font-semibold text-sm hover:bg-[#ff4da6]/80 transition-all transform hover:scale-105 hover:shadow-[0_0_20px_rgba(255,77,166,0.4)]"
-                >
-                  View GitHub →
-                </a>
-                <button
-                  disabled
-                  className="flex-1 px-4 py-3 bg-white/5 text-white/50 rounded-xl font-semibold text-sm border border-white/10 cursor-not-allowed opacity-50"
-                >
-                  Full Case Study
-                </button>
-              </div>
-            </div>
+          <div key={study.id} className="h-full">
+            <ProjectCard
+              id={study.id}
+              title={study.title}
+              subtitle={study.subtitle}
+              description={study.description}
+              status={study.status}
+              onOpen={() => setSelectedProject(study.id)}
+            />
           </div>
         ))}
       </div>
 
-      {/* More Projects Coming Soon CTA */}
-      <div className="text-center py-20 px-8 bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 hover:border-[#ff4da6]/30 transition-all">
-        <p className="text-white/80 text-lg mb-4">🚀 More detailed case studies and projects coming soon!</p>
-        <p className="text-white/60 text-sm">
-          The full case study breakdowns with visualizations, insights, and impact metrics are currently in development.
-        </p>
-      </div>
+      {selectedProjectData && (
+        <CaseStudyModal
+          isOpen={selectedProject !== null}
+          onClose={() => setSelectedProject(null)}
+          data={selectedProjectData}
+        />
+      )}
 
       {/* Bottom CTA */}
-      <div className="text-center mt-20">
+      <div className="text-center mt-20 relative z-10">
         <a
           href="https://github.com/komalharshita"
           target="_blank"
@@ -167,6 +163,27 @@ export default function Projects() {
           Explore All GitHub Projects →
         </a>
       </div>
+
+      <style jsx>{`
+        @keyframes drift {
+          0%, 100% {
+            transform: translateY(0px) translateX(0px);
+            opacity: 0.3;
+          }
+          25% {
+            transform: translateY(-15px) translateX(8px);
+            opacity: 0.5;
+          }
+          50% {
+            transform: translateY(-30px) translateX(0px);
+            opacity: 0.4;
+          }
+          75% {
+            transform: translateY(-15px) translateX(-8px);
+            opacity: 0.5;
+          }
+        }
+      `}</style>
     </section>
   )
 }

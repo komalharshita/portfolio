@@ -125,6 +125,37 @@
     background: linear-gradient(to bottom right, #000000, #1a0a1a, #000000);
     /* Minimalist glowing pink dot cursor */
     cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Ccircle cx='12' cy='12' r='6' fill='%23ff4da6' opacity='0.8'/%3E%3Ccircle cx='12' cy='12' r='8' fill='%23ff4da6' opacity='0.3' filter='blur(4px)'/%3E%3C/svg%3E") 12 12, auto;
+    position: relative;
+  }
+
+  /* Add subtle animated gradient noise overlay to entire body */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 2px,
+        rgba(255, 77, 166, 0.02) 2px,
+        rgba(255, 77, 166, 0.02) 4px
+      ),
+      repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.02) 2px,
+        rgba(0, 0, 0, 0.02) 4px
+      );
+    animation: noiseShift 8s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+    mix-blend-mode: overlay;
+    opacity: 0.04;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -165,6 +196,11 @@
     animation: float 3s ease-in-out infinite;
   }
 
+  /* Added fade-in animation for modal */
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out forwards;
+  }
+
   /* Improved scroll reveal animations for content */
   .scroll-reveal {
     @apply opacity-0 translate-y-8;
@@ -191,6 +227,41 @@
 
   .stagger-3 {
     animation-delay: 0.3s;
+  }
+
+  /* Added premium liquid neon button hover effect for CTA buttons */
+  .cta-button {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ff4da6 0%, #ff1a7f 100%);
+  }
+
+  .cta-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .cta-button:hover::before {
+    left: 100%;
+  }
+
+  .cta-button:hover {
+    transform: scale(1.03);
+    box-shadow: 
+      0 0 20px rgba(255, 77, 166, 0.6),
+      0 0 40px rgba(255, 77, 166, 0.3),
+      inset 0 0 20px rgba(255, 255, 255, 0.1);
+    border-color: #ff1a7f;
+  }
+
+  .cta-button:active {
+    transform: scale(0.98);
   }
 }
 
@@ -236,4 +307,24 @@
   25% { transform: translateY(-30px) translateX(20px); }
   50% { transform: translateY(-60px) translateX(0px); }
   75% { transform: translateY(-30px) translateX(-20px); }
+}
+
+/* Added fade-in animation for modal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Added gradient noise animation to globals */
+@keyframes noiseShift {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100px 100px;
+  }
 }
