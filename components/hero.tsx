@@ -263,7 +263,7 @@ export default function Hero() {
             <a
               href="/resume.pdf"
               download
-              className="px-6 py-2.5 rounded-full font-bold text-xs md:text-sm text-black bg-[#ff4da6] border-2 border-[#ff4da6] transition-all duration-300 shadow-lg w-fit relative group cta-button bg-destructive"
+              className="px-6 py-2.5 rounded-full font-bold text-xs md:text-sm bg-[#ff4da6] border-2 border-[#ff4da6] transition-all duration-300 shadow-lg w-fit relative group cta-button bg-sidebar-ring text-card-foreground opacity-100"
               style={{
                 transform: `translate(${buttonAttract.left}px, ${buttonAttract.top}px)`,
                 transition: "transform 0.1s ease-out, all 0.3s ease",

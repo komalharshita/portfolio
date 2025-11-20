@@ -53,7 +53,7 @@ export default function Navigation() {
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className={`transition-all duration-300 font-medium text-card-foreground ${
+              className={`transition-all duration-300 font-medium text-primary ${
                 activeSection === item.toLowerCase()
                   ? "text-[#ff4da6] shadow-[0_0_15px_rgba(255,77,166,0.5)]"
                   : "text-[#8b4a6d] hover:text-[#ff4da6]"

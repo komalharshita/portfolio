@@ -130,7 +130,7 @@ export default function ProjectCard({
             onClick={onOpen}
             className="flex-1 px-4 py-3 bg-[#ff4da6] text-black rounded-xl font-semibold text-sm transition-all duration-300 cta-button"
           >
-            View Case Study →
+            View Project →
           </button>
         </div>
       </div>

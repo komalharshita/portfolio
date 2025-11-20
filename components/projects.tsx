@@ -15,7 +15,7 @@ export default function Projects() {
       subtitle: "Python + Data Analytics Mini Workflow",
       description: "Automated data analytics workflow showcasing end-to-end pipeline development with Python and SQL.",
       status: "In Progress" as const,
-      githubLink: "https://github.com/komalharshita/promigyflow",
+      githubLink: "https://github.com/komalharshita/prodigyflow",
       sections: {
         business:
           "Developed an automated data analytics workflow to streamline repetitive data processing tasks and improve efficiency in analytical operations.",
@@ -38,7 +38,7 @@ export default function Projects() {
       subtitle: "Google GenAI Exchange Hackathon ✨ A Portal for Local Artisans",
       description: "A mission-driven marketplace platform empowering local artisans with digital tools to showcase and sell handmade goods.",
       status: "Completed" as const,
-      githubLink: "https://github.com/komalharshita/kalakatha",
+      githubLink: "https://github.com/komalharshita/KalaKatha",
       sections: {
         business:
           "KalaKatha is a platform dedicated to empowering local artisans by providing them with a digital marketplace to showcase and sell their unique handmade goods. Our goal is to connect creators with customers, helping small businesses grow and thrive in the digital market. In a world dominated by mass production, our goal is to provide a dedicated space for unique, handmade goods.",
@@ -121,7 +121,7 @@ export default function Projects() {
 
       <div className="text-center mb-20 relative z-10">
         <h2 className="text-5xl font-serif font-bold mb-4 text-white">
-          <HolographicText>Projects & Case Studies</HolographicText>
+          <HolographicText>My Projects </HolographicText>
         </h2>
         <div className="flex justify-center mb-6">
           <div className="h-1 w-32 bg-gradient-to-r from-[#ff4da6] to-[#ff1a7f] rounded-full" />
