@@ -134,7 +134,6 @@
                 radial-gradient(circle at 80% 80%, rgba(205,239,240,0.10), transparent 45%),
                 #0E0E0F; /* Dark base */
     color: #eaeaea;
-    cursor: url("/cursor.png") 2 2, auto;
 }
 
   /* Add subtle animated gradient noise overlay to entire body */
