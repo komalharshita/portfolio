@@ -11,6 +11,14 @@
   --light-pink: #ff1a7f;
   --white: #ffffff;
 
+  --pink: #F7BEE6;
+  --lilac: #DCC7FF;
+  --mint: #CDEFF0;
+  --sky: #A7D5FF;
+  --charcoal: #0E0E0F;
+  --navy: #1A2340;
+  --graphite: #22385F;
+
   --background: #000000;
   --foreground: #ffffff;
   --card: #1a0a1a;
@@ -122,11 +130,12 @@
     @apply border-border outline-ring/50;
   }
   body {
-    background: linear-gradient(to bottom right, #000000, #1a0a1a, #000000);
-    /* Minimalist glowing pink dot cursor */
-    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Ccircle cx='12' cy='12' r='6' fill='%23ff4da6' opacity='0.8'/%3E%3Ccircle cx='12' cy='12' r='8' fill='%23ff4da6' opacity='0.3' filter='blur(4px)'/%3E%3C/svg%3E") 12 12, auto;
-    position: relative;
-  }
+    background: radial-gradient(circle at 10% 20%, rgba(247,190,230,0.12), transparent 40%),
+                radial-gradient(circle at 80% 80%, rgba(205,239,240,0.10), transparent 45%),
+                #0E0E0F; /* Dark base */
+    color: #eaeaea;
+    cursor: url("/cursor.png") 2 2, auto;
+}
 
   /* Add subtle animated gradient noise overlay to entire body */
   body::before {
