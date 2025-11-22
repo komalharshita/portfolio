@@ -182,11 +182,11 @@
   }
 
   .bubble-glow {
-    @apply shadow-[0_8px_32px_0_rgba(255,77,166,0.2)];
-  }
+    box-shadow: 0 8px 32px rgba(220, 199, 255, 0.25);
+}
 
   .gradient-text {
-    background: linear-gradient(to right, #ff4da6, #ff1a7f);
+    background: linear-gradient(90deg, #F7BEE6, #DCC7FF, #CDEFF0, #A7D5FF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

@@ -12,10 +12,11 @@ import BackToTop from "@/components/back-to-top"
 export default function Home() {
   return (
     <main className="min-h-screen relative">
-      <GradientMeshBackground />
-      <FloatingShapes />
+    <Navigation />
+  
+    <GradientMeshBackground />
+    <FloatingShapes />
 
-      <Navigation />
       <Hero />
       <About />
       <Projects />
