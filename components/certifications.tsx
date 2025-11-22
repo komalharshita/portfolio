@@ -8,7 +8,7 @@ export default function Certifications() {
       date: "Nov 2025",
       skills: ["Data Analytics"],
       link: "https://skillshop.credential.net/9e5b9ea7-0d04-4bb8-a209-5571b5798dca#acc.QA0SqCLu",
-      logo: "/public/GA4.png",   
+      logo: "/GA4.png",   
     },
     {
       title: "Data Analytics Job Simulation",
@@ -16,7 +16,7 @@ export default function Certifications() {
       date: "Sep 2025",
       skills: ["Critical Thinking", "Data Analytics"],
       link: "https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_4mtaiZhB6yJk3Nmt8_1758279128058_completion_certificate.pdf",
-      logo: "/public/DELOITTE-DA.png",
+      logo: "/DELOITTE-DA.png",
     },
     {
       title: "Data Analytics Essentials",
@@ -24,7 +24,7 @@ export default function Certifications() {
       date: "Aug 2025",
       skills: ["Analytical Skills", "Microsoft Excel"],
       link: "https://www.netacad.com/certificates?issuanceId=c61111c3-e658-47fc-8d74-96710254df2c",
-      logo: "/public/CISCO-DAE.png",
+      logo: "/CISCO-DAE.png",
     },
     {
       title: "Introduction to Data Analytics on Google Cloud",
@@ -32,7 +32,7 @@ export default function Certifications() {
       date: "Aug 2025",
       skills: ["Analytical Skills"],
       link: "https://www.cloudskillsboost.google/public_profiles/5f57da2d-f94b-4f3a-8ad8-2ea2d626af73/badges/17601736?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share",
-      logo: "/public/GCP-DA.png",
+      logo: "/GCP-DA.png",
     },
     {
       title: "Basic to Advanced PowerPoint",
@@ -40,7 +40,7 @@ export default function Certifications() {
       date: "Aug 2025",
       skills: ["Business Storytelling", "Microsoft PowerPoint"],
       link: "https://excel.jatanshah.in/your-certificate/2D120D398754-2D120D3987BB-2D041AB9D39F/",
-      logo: "/public/PPT-ADV.png",
+      logo: "/PPT-ADV.png",
     },
     {
       title: "Data Visualisation: Empowering Business with Effective Insights Job Simulation",
@@ -48,7 +48,7 @@ export default function Certifications() {
       date: "Jul 2025",
       skills: ["Microsoft Power BI", "Data Visualisation"],
       link: "https://www.theforage.com/simulations/tata/data-visualisation-p5xo",
-      logo: "/public/FORAGE-PBI.png",
+      logo: "/FORAGE-PBI.png",
     },
     {
       title: "Scrum Foundation: Scrum in Action",
@@ -56,7 +56,7 @@ export default function Certifications() {
       date: "Jul 2025",
       skills: ["Agile Project Management", "Scrum"],
       link: "https://skillsoft.digitalbadges.skillsoft.com/15c42d14-ea93-402e-bd12-540af6631328",
-      logo: "/public/SCRUM-SF.png",
+      logo: "/SCRUM-SF.png",
     },
     {
       title: "Business Analysis & Process Management",
@@ -64,7 +64,7 @@ export default function Certifications() {
       date: "Jun 2025",
       skills: ["Business Analysis", "Process Mapping"],
       link: "https://www.coursera.org/account/accomplishments/verify/VPCHRHR1Q8T7",
-      logo: "/public/COURSERA-BA.png",
+      logo: "/COURSERA-BA.png",
     },
   ]
 
