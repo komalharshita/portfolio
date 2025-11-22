@@ -94,7 +94,7 @@ export default function Certifications() {
             >
               {/* Image path convention: /cert-logos/{abbr}.png (place files in public/cert-logos/) */}
               <img
-                src={`/public/${cert.abbr}.png`}
+                src={`/public/{cert.abbr}.png`}
                 alt={`${cert.issuer} logo`}
                 onError={(e) => {
                   // If logo missing, hide broken image and leave fallback text — keep e.nativeEvent to avoid SSR issues
