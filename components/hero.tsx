@@ -264,10 +264,7 @@ export default function Hero() {
               href="/resume.pdf"
               download
               className="px-6 py-2.5 rounded-full font-bold text-xs md:text-sm bg-[#ff4da6] border-2 border-[#ff4da6] transition-all duration-300 shadow-lg w-fit relative group cta-button bg-sidebar-ring text-card-foreground opacity-100"
-              style={{
-                transform: `translate(${buttonAttract.left}px, ${buttonAttract.top}px)`,
-                transition: "transform 0.1s ease-out, all 0.3s ease",
-              }}
+              style={{}}
             >
               <span className="relative z-10">Download Resume</span>
             </a>
@@ -277,10 +274,7 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-2.5 rounded-full font-bold text-xs md:text-sm bg-[#ff4da6] border-2 border-[#ff4da6] transition-all duration-300 shadow-lg w-fit relative group cta-button text-primary"
-              style={{
-                transform: `translate(${buttonAttract.left}px, ${buttonAttract.top}px)`,
-                transition: "transform 0.1s ease-out, all 0.3s ease",
-              }}
+              style={{}}
             >
               <span className="relative z-10">Connect on LinkedIn</span>
             </a>
@@ -290,9 +284,7 @@ export default function Hero() {
         <div className="flex-1 flex items-center justify-center relative">
           <div
             className="relative w-72 h-72 md:w-80 md:h-80 transition-transform duration-200"
-            style={{
-              transform: `translate(${parallaxOffset.x * 100}px, ${parallaxOffset.y * 100}px)`,
-            }}
+            style={{}}
           >
             <div className="absolute inset-0 rounded-4xl blur-2xl opacity-40 bg-[#ff4da6]/40" />
 

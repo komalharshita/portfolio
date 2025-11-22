@@ -243,7 +243,7 @@
   .cta-button {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, #F7BEE6 0%, #DCC7FF 40%, #CDEFF0 100%);
+    background: linear-gradient(135deg, #f931bd 0%, #9c0070 40%, #CDEFF0 100%);
   }
 
   .cta-button::before {
