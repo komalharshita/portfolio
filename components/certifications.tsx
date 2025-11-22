@@ -88,7 +88,7 @@ export default function Certifications() {
                 href={cert.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className = "absolute top-4 right-4 w-16 h-16 rounded-md overflow-hidden flex items-center justify-center"
+                className = "absolute top-4 right-4 w-30 h-30 rounded-md overflow-hidden flex items-center justify-center"
               >
                 <img
                   src={cert.logo}
