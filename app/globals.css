@@ -151,8 +151,8 @@
         45deg,
         transparent,
         transparent 2px,
-        rgba(255, 77, 166, 0.02) 2px,
-        rgba(255, 77, 166, 0.02) 4px
+        rgba(220, 199, 255, 0.03) 2px,
+        rgba(220, 199, 255, 0.03) 4px
       ),
       repeating-linear-gradient(
         -45deg,
@@ -243,7 +243,7 @@
   .cta-button {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, #ff4da6 0%, #ff1a7f 100%);
+    background: linear-gradient(135deg, #F7BEE6 0%, #DCC7FF 40%, #CDEFF0 100%);
   }
 
   .cta-button::before {
@@ -263,11 +263,11 @@
 
   .cta-button:hover {
     transform: scale(1.03);
-    box-shadow: 
-      0 0 20px rgba(255, 77, 166, 0.6),
-      0 0 40px rgba(255, 77, 166, 0.3),
+    box-shadow:
+      0 0 20px rgba(220, 199, 255, 0.4),
+      0 0 40px rgba(205, 239, 240, 0.25),
       inset 0 0 20px rgba(255, 255, 255, 0.1);
-    border-color: #ff1a7f;
+    border-color: #DCC7FF;
   }
 
   .cta-button:active {
