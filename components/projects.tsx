@@ -170,6 +170,22 @@ export default function Projects() {
         <DashboardGallery />
       </div>
 
+      <div className="text-center mt-20 relative z-10">
+        <a
+          href="https://github.com/komalharshita"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block px-8 py-4 bg-[#ff4da6] text-black rounded-full font-bold text-lg hover:shadow-[0_0_30px_rgba(255,77,166,0.5)] transition-all transform hover:scale-105"
+        >
+          Explore All GitHub Projects →
+        </a>
+      </div>
+
+      {/* FIXED gallery */}
+      <div className="mt-24 relative z-20">
+        <DashboardGallery />
+      </div>
+
 
       <style jsx>{`
         @keyframes drift {
