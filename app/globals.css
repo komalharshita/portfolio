@@ -317,6 +317,113 @@
   .animate-pulse-fade {
     animation: pulseFade 2s ease-in-out infinite;
   }
+
+  /* =============================== */
+/* SPARKLE BACKGROUND (Pastel Glow) */
+/* =============================== */
+
+.sparkle-bg {
+  position: relative;
+  background: #0E0E0F;
+  overflow: hidden;
+}
+
+.sparkle-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='20' r='1' fill='%23ffffff40'/%3E%3Ccircle cx='150' cy='80' r='1' fill='%23f7bee640'/%3E%3Ccircle cx='80' cy='150' r='1' fill='%23dcc7ff40'/%3E%3Ccircle cx='120' cy='40' r='1' fill='%23cdeff040'/%3E%3C/svg%3E");
+  background-size: 250px 250px;
+  animation: sparkle-move 22s linear infinite;
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Sparkle animation */
+@keyframes sparkle-move {
+  from { transform: translateY(0); }
+  to { transform: translateY(250px); }
+}
+
+/* =============================== */
+/* SOFT NEON GRID (Tech Style)     */
+/* =============================== */
+.tech-grid {
+  position: relative;
+  background: #0E0E0F;
+  overflow: hidden;
+}
+
+.tech-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(255,77,166,0.075),
+      rgba(255,77,166,0.075) 1px,
+      transparent 1px,
+      transparent 80px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(205,239,240,0.07),
+      rgba(205,239,240,0.07) 1px,
+      transparent 1px,
+      transparent 80px
+    );
+  opacity: 0.45;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* =============================== */
+/* COMBO BACKGROUND (Grid + Sparkle) */
+/* =============================== */
+.grid-sparkle {
+  position: relative;
+  background: #0E0E0F;
+  overflow: hidden;
+}
+
+.grid-sparkle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(255,77,166,0.05),
+      rgba(255,77,166,0.05) 1px,
+      transparent 1px,
+      transparent 80px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(205,239,240,0.06),
+      rgba(205,239,240,0.06) 1px,
+      transparent 1px,
+      transparent 80px
+    );
+  opacity: 0.35;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.grid-sparkle::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='20' r='1' fill='%23ffffff30'/%3E%3Ccircle cx='150' cy='80' r='1' fill='%23f7bee630'/%3E%3Ccircle cx='80' cy='150' r='1' fill='%23dcc7ff30'/%3E%3Ccircle cx='120' cy='40' r='1' fill='%23cdeff030'/%3E%3C/svg%3E");
+  background-size: 240px 240px;
+  animation: sparkle-move 25s linear infinite;
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 0;
+  }
+
 }
 
 /* Enhanced animations for premium page transitions */

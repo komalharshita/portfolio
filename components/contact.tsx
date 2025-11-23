@@ -25,7 +25,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-32 px-4 max-w-4xl mx-auto relative">
+    <section id="contact" className="sparkle-bg py-32 px-4">
       <div className="absolute inset-0 opacity-5 pointer-events-none" style={{
         backgroundImage: `radial-gradient(circle at 1px 1px, #ff4da6 1px, transparent 1px)`,
         backgroundSize: '50px 50px'

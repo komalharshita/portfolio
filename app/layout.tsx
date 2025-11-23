@@ -9,7 +9,7 @@ const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600", "700
 
 export const metadata: Metadata = {
   title: "Data Portfolio | Komal Harshita",
-  description: "Aspring Data and Business Analyst - Soft Barbiecore Y2K Portfolio",
+  description: "Aspring Data and Business Analyst",
   generator: "v0.app",
 }
 
