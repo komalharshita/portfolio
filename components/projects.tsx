@@ -4,7 +4,7 @@ import { useState } from "react"
 import HolographicText from "./holographic-text"
 import ProjectCard from "./project-card"
 import CaseStudyModal from "./case-study-modal"
-import DashboardGallery from "/components/DashboardGallery.tsx"
+import DashboardGallery from "./components/DashboardGallery.tsx"
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<number | null>(null)
@@ -161,11 +161,15 @@ export default function Projects() {
           rel="noopener noreferrer"
           className="inline-block px-8 py-4 bg-[#ff4da6] text-black rounded-full font-bold text-lg hover:shadow-[0_0_30px_rgba(255,77,166,0.5)] transition-all transform hover:scale-105"
         >
-          Explore All GitHub Projects →
+        Explore All GitHub Projects →
         </a>
+      </div>
 
+      {/* Gallery section — outside CTA block */}
+      <div className="mt-24 relative z-20">
         <DashboardGallery />
       </div>
+
 
       <style jsx>{`
         @keyframes drift {
