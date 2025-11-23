@@ -163,12 +163,9 @@ export default function Projects() {
         >
           Explore All GitHub Projects →
         </a>
-      </div>
 
-      <div className="relative z-20">
         <DashboardGallery />
       </div>
-
 
       <style jsx>{`
         @keyframes drift {
