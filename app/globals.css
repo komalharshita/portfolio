@@ -84,6 +84,41 @@
   --sidebar-ring: #ff4da6;
 }
 
+/* Gradient swipe underline */
+.nav-swipe {
+  position: relative;
+}
+
+.nav-swipe::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, #f7bee6, #dcc7ff, #cdeff0, #a7d5ff);
+  transition: width 0.35s ease;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.6);
+}
+
+.nav-swipe:hover::after {
+  width: 100%;
+}
+
+/* ACTIVE link = white neon highlight */
+.nav-active {
+  color: #ffffff !important;
+  text-shadow: 0 0 10px #ffffff, 0 0 20px rgba(255,255,255,0.6);
+}
+
+.nav-active::after {
+  width: 100%;
+  background: white !important;
+  box-shadow: 0 0 15px white, 0 0 25px rgba(255,255,255,0.7);
+}
+
+
 @theme inline {
   --font-sans: "Poppins", "Poppins Fallback";
   --font-serif: "Playfair Display", "Playfair Display Fallback";

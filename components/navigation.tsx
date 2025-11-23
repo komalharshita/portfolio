@@ -49,19 +49,24 @@ export default function Navigation() {
         </Link>
 
         <div className="hidden md:flex gap-8">
-          {["About", "Projects", "Contact"].map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              className={`transition-all duration-300 font-medium text-primary ${
-                activeSection === item.toLowerCase()
-                  ? "text-[#ff4da6] shadow-[0_0_15px_rgba(255,77,166,0.5)]"
-                  : "text-[#8b4a6d] hover:text-[#ff4da6]"
-              }`}
-            >
-              {item}
-            </a>
-          ))}
+          {["About", "Projects", "Contact"].map((item) => {
+            const lower = item.toLowerCase();
+
+            return (
+              <a
+                key={item}
+                href={`#${lower}`}
+                className={`
+                  nav-swipe 
+                  transition-all duration-300 font-medium 
+                  ${activeSection === lower ? "nav-active" : "text-[#b78aa3] hover:text-[#ff4da6]"}
+                `}
+              >
+                {item}
+                </a>
+              );
+            })}
+
         </div>
 
         <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-[#ff4da6]">
