@@ -23,7 +23,7 @@ export default function Volunteering() {
   ]
 
   return (
-    <section id="volunteering" className="py-32 px-4 max-w-6xl mx-auto">
+    <section id="volunteering" className="galaxy-bg py-32 px-4 relative z-10">
       <div className="mb-20">
         <div className="h-px w-24 bg-gradient-to-r from-[#ff4da6] to-transparent mb-8" />
         <h2 className="text-5xl font-serif font-bold text-foreground">Volunteering & Community</h2>
