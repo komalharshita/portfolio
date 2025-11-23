@@ -3,31 +3,32 @@ import { motion } from "framer-motion"
 
 export default function DashboardGallery() {
   const dashboards = [
-    "/dashboards/dashboard1.png",
-    "/dashboards/dashboard2.png",
-    "/dashboards/dashboard3.png",
-    "/dashboards/dashboard4.png",
-    "/dashboards/dashboard5.png",
+    "/public/dashboard  (1).png",
+    "/public/dashboard  (2).png",
+    "/public/dashboard  (3).png",
+    "/public/dashboard  (4).png",
+    "/public/dashboard  (5).png",
   ]
 
   return (
-    <div className="mt-24 relative z-10">
+    <div className="mt-32 relative z-20">
       <h3 className="text-4xl font-serif font-bold text-white mb-8">
         Dashboard Gallery
       </h3>
 
-      <div className="horizontal-gallery flex gap-6 overflow-x-auto pb-6">
+      <div className="horizontal-gallery flex gap-6 overflow-x-auto snap-x snap-mandatory pb-6">
         {dashboards.map((src, idx) => (
           <motion.div
             key={idx}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
-            className="min-w-[350px]"
+            className="min-w-[360px] snap-start"
           >
             <img
               src={src}
               alt={`Dashboard ${idx + 1}`}
-              className="w-[350px] h-[220px] object-cover rounded-xl border border-white/20 glass-effect hover:shadow-xl hover:shadow-[#ff4da6]/30 transition-all"
+              className="w-[360px] h-[230px] rounded-xl object-cover border border-white/20 glass-effect 
+                         hover:shadow-xl hover:shadow-[#ff4da6]/40 transition-all"
             />
           </motion.div>
         ))}
@@ -35,3 +36,4 @@ export default function DashboardGallery() {
     </div>
   )
 }
+

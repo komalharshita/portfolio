@@ -504,17 +504,20 @@
 }
 
 .horizontal-gallery {
+  display: flex;
+  overflow-x: auto;
   scroll-snap-type: x mandatory;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
 }
 
 .horizontal-gallery::-webkit-scrollbar {
-  display: none; /* Chrome/Safari */
+  display: none;
 }
 
 .horizontal-gallery > * {
   scroll-snap-align: start;
 }
+
 
 
 }
