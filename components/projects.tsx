@@ -4,6 +4,7 @@ import { useState } from "react"
 import HolographicText from "./holographic-text"
 import ProjectCard from "./project-card"
 import CaseStudyModal from "./case-study-modal"
+import DashboardGallery from "./DashboardGallery"
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<number | null>(null)
@@ -184,6 +185,9 @@ export default function Projects() {
           }
         }
       `}</style>
+
+      <DashboardGallery />
+      
     </section>
   )
 }

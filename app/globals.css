@@ -503,6 +503,18 @@
   100% { transform: translateY(0px) translateX(0px); }
 }
 
+.horizontal-gallery {
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Firefox */
+}
+
+.horizontal-gallery::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.horizontal-gallery > * {
+  scroll-snap-align: start;
+}
 
 
 }
