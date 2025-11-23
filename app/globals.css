@@ -453,7 +453,7 @@
   background-image: url("data:image/svg+xml,%3Csvg width='220' height='220' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='20' r='1' fill='%23ffffff30'/%3E%3Ccircle cx='150' cy='80' r='1' fill='%23f7bee630'/%3E%3Ccircle cx='80' cy='150' r='1' fill='%23dcc7ff30'/%3E%3Ccircle cx='120' cy='40' r='1' fill='%23cdeff030'/%3E%3C/svg%3E");
   background-size: 240px 240px;
   animation: stardust-flow 20s linear infinite;
-  opacity: 0.55;
+  opacity: 0.7;
   pointer-events: none;
   z-index: 0;
 }
@@ -486,14 +486,14 @@
     radial-gradient(circle at 20% 30%, rgba(255,77,166,0.18), transparent 40%),
     radial-gradient(circle at 80% 70%, rgba(220,199,255,0.18), transparent 80%);
   filter: blur(50px);
-  opacity: 0.8;
-  animation: nebula-move 28s infinite linear;
+  opacity: 1;
+  animation: nebula-move 30s infinite linear;
   z-index: 0;
 }
 
 .nebula-bg::after {
   mix-blend-mode: screen;
-  opacity: 0.28;
+  opacity: 0.25;
 }
 
 /* slow haze drifting */
