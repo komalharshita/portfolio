@@ -21,7 +21,7 @@ export default function About() {
   ]
 
   return (
-    <section id="about" className="nebula-bg py-32 px-4 relative z-10">
+    <section id="about" className="nebula-bg py-32 px-20 relative z-10">
       <div className="space-y-12">
         <h2 className="text-5xl font-serif font-bold mb-8 text-white">About Me</h2>
 
