@@ -14,9 +14,10 @@ export default function About() {
   ]
 
   const hobbies = [
-    { name: "Poetry Writing", number: "1" },
-    { name: "Playing Guitar", number: "2" },
-    { name: "Crocheting", number: "3" },
+    { name: "Creative Writing", icon: "✍️" },
+    { name: "Poetry", icon: "📝" },
+    { name: "Guitar", icon: "🎸" },
+    { name: "Crocheting", icon: "🧶" },
   ]
 
   return (
@@ -51,50 +52,41 @@ export default function About() {
 
           {/* Right column: Skills and Hobbies */}
           <div className="space-y-8">
-            {/* Skills */}
-            <div>
-              <h3 className="text-2xl font-serif font-bold mb-6 text-white">My Skills</h3>
-              <div className="grid grid-cols-2 gap-4">
-                {skills.map((skill) => (
-                  <GlassmorphicTooltip
-                    key={skill.category}
-                    content={
-                      <span className="text-white font-medium">
-                        {skill.hoverMessage}
-                      </span>
-                    }
-                    tooltipClassName="backdrop-blur-md bg-[#ff4da6]/30 border border-[#ff4da6]/40 text-white shadow-lg shadow-[#ff4da6]/20 p-3 rounded-xl"
-                    >
-                    <div className="group flex flex-col items-center justify-center p-4 glass-effect rounded-2xl hover:shadow-lg hover:shadow-[#ff4da6]/30 transition-all duration-300 cursor-pointer transform hover:scale-110">
-                      <img
-                        src={skill.logo || '/placeholder.svg'}
-                        alt={skill.category}
-                        className="w-12 h-12 mb-2 group-hover:brightness-125 transition-all"
-                      />
-                      <p className="text-xs font-semibold text-white group-hover:text-white/100 transition-colors text-center">
-                        {skill.category}
-                      </p>
-                    </div>
-                  </GlassmorphicTooltip>
-                ))}
-              </div>
+      
+            {/* Skills grid */}
+          <div className="mb-8">
+            <h3 className="text-xl font-semibold text-[#8b4a6d] mb-4">Technical Skills</h3>
+            <div className="grid grid-cols-2 gap-4">
+              {skills.map((skill) => (
+                <GlassmorphicTooltip key={skill.category} content={skill.hoverMessage}>
+                  <div className="p-4 glass-effect rounded-2xl hover:border-[#ff4da6] transition-all flex flex-col items-center gap-2 group hover:shadow-lg hover:shadow-[#ff4da6]/20">
+                    <img
+                      src={skill.logo || "/placeholder.svg"}
+                      alt={skill.category}
+                      className="w-8 h-8 object-contain group-hover:scale-110 transition-transform"
+                    />
+                    <p className="font-semibold text-[#8b4a6d] text-sm text-center">{skill.category}</p>
+                  </div>
+                </GlassmorphicTooltip>
+              ))}
             </div>
+          </div>
 
             {/* Hobbies */}
             <div>
-              <h3 className="text-2xl font-serif font-bold mb-6 text-white">Hobbies</h3>
-              <div className="space-y-3">
-                {hobbies.map((hobby) => (
-                  <div
-                    key={hobby.name}
-                    className="glass-effect p-4 rounded-xl flex items-center gap-3 text-white hover:shadow-md hover:shadow-[#ff4da6]/30 transition-all"
-                  >
-                    <span className="text-2xl font-bold text-[#ff4da6]">{hobby.number}</span>
-                    <span className="font-medium">{hobby.name}</span>
-                  </div>
-                ))}
-              </div>
+            <h3 className="text-xl font-semibold text-[#8b4a6d] mb-4">Beyond Tech</h3>
+            <div className="grid grid-cols-2 gap-3">
+              {hobbies.map((hobby) => (
+                <div
+                  key={hobby.name}
+                  className="glass-effect p-3 rounded-xl flex items-center gap-2 text-[#8b4a6d] hover:shadow-md hover:shadow-[#ffb6c1]/30 transition-all"
+                >
+                  <span className="text-2xl">{hobby.icon}</span>
+                  <span className="font-medium text-sm">{hobby.name}</span>
+                </div>
+              ))}
             </div>
+          </div>
           </div>
         </div>
       </div>
