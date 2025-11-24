@@ -286,6 +286,12 @@ export default function Hero() {
             className="relative w-72 h-72 md:w-80 md:h-80 transition-transform duration-200"
             style={{}}
           >
+
+            <div className="absolute -bottom-6 -right-6 glass-effect px-6 py-3 rounded-lg shadow-lg transform rotate-12 border border-white/40">
+            <p className="font-bold text-sm text-[#8b4a6d]">McKinsey</p>
+            <p className="text-xs text-[#8b4a6d]">Forward Learner</p>
+            </div>
+
             <div className="absolute inset-0 rounded-4xl blur-2xl opacity-40 bg-[#ff4da6]/40" />
 
             <Image
@@ -296,10 +302,6 @@ export default function Hero() {
               priority
             />
 
-            <div className="absolute -bottom-6 -right-6 glass-effect px-6 py-3 rounded-lg shadow-lg transform rotate-12 border border-white/40">
-            <p className="font-bold text-sm text-[#8b4a6d]">McKinsey</p>
-            <p className="text-xs text-[#8b4a6d]">Forward Learner</p>
-          </div>
           </div>
         </div>
       </div>
