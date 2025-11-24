@@ -3,11 +3,11 @@ import { motion } from "framer-motion"
 
 export default function DashboardGallery() {
   const dashboards = [
-    "/public/dashboard  (1).png",
-    "/public/dashboard  (2).png",
-    "/public/dashboard  (3).png",
-    "/public/dashboard  (4).png",
-    "/public/dashboard  (5).png",
+    "/dashboard  (1).png",
+    "/dashboard  (2).png",
+    "/dashboard  (3).png",
+    "/dashboard  (4).png",
+    "/dashboard  (5).png",
   ]
 
   return (
