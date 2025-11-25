@@ -195,9 +195,7 @@ export default function Contact() {
         </div>
 
         {/* Footer */}
-        <div className="mt-20 pt-12 text-center border-t" style={{ borderColor: "rgba(211, 195, 227, 0.3)" }}>
-          <p style={{ color: "#b8a0b8" }}>© 2025 Komal Harshita</p>
-        </div>
+        
       </div>
     </section>
   )

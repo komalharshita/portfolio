@@ -49,7 +49,7 @@ export default function About() {
         
         {/* Education Block */}
         <div
-          className="rounded-lg p-6 transition-all duration-300"
+          className="rounded-lg p-6 transition-all duration-300 leading-10"
           style={{ backgroundColor: "#2e1637" }}
           onMouseEnter={(e) => {
             e.currentTarget.style.backgroundColor = "#351b42"
@@ -113,9 +113,7 @@ export default function About() {
             e.currentTarget.style.boxShadow = "none"
           }}
         >
-          <h3 className="text-2xl font-bold mb-6" style={{ color: "#f6a5c0" }}>
-            Skills
-          </h3>
+          
 
           <div className="space-y-6">
             
