@@ -15,7 +15,7 @@ export default function Hero() {
   const buttonsRef = useRef<HTMLDivElement>(null)
   const trailIdRef = useRef(0)
 
-  const fullText = 'Aspiring Data Analyst | CSE Sophomore'
+  const fullText = 'Aspiring Data Analyst | CSE Sophomore @ NMIET'
 
   useEffect(() => {
     setPageLoaded(true)

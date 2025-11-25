@@ -17,7 +17,6 @@ export default function Home() {
     <GradientMeshBackground />
     <FloatingShapes />
 
-      <div className="mx-auto max-w-6xl px-6 sm:px-8 lg:px-12">
           <Hero />
           <About />
           <Projects />
@@ -25,8 +24,7 @@ export default function Home() {
           <Volunteering />
           <Contact />
           <BackToTop />
-        </div>
-        
+
     </main>
   )
 }
