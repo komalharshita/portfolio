@@ -4,32 +4,20 @@ import type React from "react"
 
 interface HolographicTextProps {
   children: React.ReactNode
-  className?: string
 }
 
-export default function HolographicText({ children, className = "" }: HolographicTextProps) {
+export default function HolographicText({ children }: HolographicTextProps) {
   return (
-    <span
-      className={`relative inline-block ${className}`}
+    <span className="font-sans text-6xl"
       style={{
-        animation: "holographicShimmer 3s ease-in-out infinite",
+        background: "linear-gradient(45deg, #ff4da6, #d9a7e0, #ff4da6)",
+        backgroundSize: "200% 200%",
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent",
+        backgroundClip: "text",
+        animation: "gradient 3s ease infinite",
       }}
     >
-      <style>{`
-        @keyframes holographicShimmer {
-          0%, 100% {
-            text-shadow: 
-              0 0 10px rgba(255, 77, 166, 0.4),
-              0 0 20px rgba(255, 211, 182, 0.2);
-          }
-          50% {
-            text-shadow: 
-              0 0 20px rgba(217, 167, 224, 0.5),
-              0 0 30px rgba(255, 77, 166, 0.3),
-              0 0 40px rgba(255, 211, 182, 0.2);
-          }
-        }
-      `}</style>
       {children}
     </span>
   )

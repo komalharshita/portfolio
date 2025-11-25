@@ -1,103 +1,213 @@
 "use client"
 
-import AnimatedDivider from "./animated-divider"
-import GlassmorphicTooltip from "./glassmorphic-tooltip"
-
 export default function About() {
-  const skills = [
-    { category: "Power BI", logo: "/power-bl.png", hoverMessage: "BI the main character" },
-    { category: "SQL", logo: "/database.png", hoverMessage: "SQL me more about your data" },
-    { category: "Python", logo: "/python.png", hoverMessage: "Python? More like Py-THON of talent" },
-    { category: "Data Visualization", logo: "/data-visualization.png", hoverMessage: "Visualize this: I'm amazing" },
-    { category: "Excel", logo: "/excel.png", hoverMessage: "Excel-lent choice, bestie" },
-    { category: "Dashboard Design", logo: "/dash.png", hoverMessage: "Dashboard? More like Dash-SLAY" },
-  ]
-
-  const hobbies = [
-    { name: "Poetry Writing", number: "1" },
-    { name: "Playing Guitar", number: "2" },
-    { name: "Crocheting", number: "3" },
-  ]
-
   return (
-    <section id="about" className="nebula-bg py-32 px-30 relative z-10">
-      <div className="space-y-12">
-        <h2 className="text-5xl font-serif font-bold mb-8 text-white">About Me</h2>
+    <div id="about" className="max-w-7xl mx-auto px-6 sm:px-8 py-24">
+      <h2 className="font-bold mb-16 text-center text-5xl" style={{ color: "#f6a5c0" }}>
+        About Me
+      </h2>
 
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* Left column: About content */}
+      {/* Top Row: Portrait + Bio */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+        <div className="h-96 rounded-lg flex items-center justify-center overflow-hidden relative">
+          <img
+            src="/images/gemini-generated-image-xuq2r3xuq2r3xuq2.png"
+            alt="Komal Harshita"
+            className="h-full w-full object-cover"
+          />
+
+          {/* McKinsey Badge */}
+          <div
+            className="absolute top-6 left-6 glass-effect px-6 py-3 rounded-lg shadow-lg transform -rotate-6 border border-white/30 pl-6"
+            style={{ backgroundColor: "rgba(156, 82, 120, 0.7)" }}
+          >
+            <p className="font-bold text-sm text-white">McKinsey</p>
+            <p className="text-xs text-white">Forward Learner</p>
+          </div>
+        </div>
+
+        {/* Bio */}
+        <div className="flex flex-col justify-center space-y-4">
+          <p className="leading-relaxed text-lg" style={{ color: "#e0c3cc" }}>
+            Hi, I'm Komal — a Computer Science Engineering sophomore at NMIET, currently exploring Data and Business
+            Analytics. I'm building skills in SQL, Excel, Python (Pandas), and Power BI, and I enjoy identifying
+            patterns in data and solving analytical problems.
+          </p>
+          <p className="leading-relaxed text-lg" style={{ color: "#e0c3cc" }}>
+            I learn through consistent daily practice, small exercises, and hands-on exploration. I'm working toward
+            building dashboards, case-based analyses, and beginner-friendly analytical projects that reflect my growth.
+          </p>
+          <p className="leading-relaxed text-lg" style={{ color: "#e0c3cc" }}>
+            I'm also open to Summer Internship opportunities where I can apply my skills, work with real datasets, and
+            continue growing as an analyst.
+          </p>
+        </div>
+      </div>
+
+      {/* Bottom Row */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        
+        {/* Education Block */}
+        <div
+          className="rounded-lg p-6 transition-all duration-300"
+          style={{ backgroundColor: "#2e1637" }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = "#351b42"
+            e.currentTarget.style.boxShadow = "0 0 20px rgba(246,165,192,0.2)"
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = "#2e1637"
+            e.currentTarget.style.boxShadow = "none"
+          }}
+        >
+          <h3 className="text-2xl font-bold mb-6" style={{ color: "#f6a5c0" }}>
+            Education
+          </h3>
+
           <div className="space-y-6">
             <div>
-              <h3 className="text-lg font-semibold text-[#ff4da6] mb-2">Academic Focus</h3>
-              <p className="text-white/90 leading-relaxed">Currently a CSE Sophomore at NMIET.</p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-[#ff4da6] mb-2">Area of Interest</h3>
-              <p className="text-white/90 leading-relaxed">Exploring the dynamic fields of Data & Business Analytics.</p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-[#ff4da6] mb-2">Developing Skills</h3>
-              <p className="text-white/90 leading-relaxed">Building proficiency in SQL, Excel, Python (Pandas), and Power BI.</p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-[#ff4da6] mb-2">Current Activities</h3>
-              <p className="text-white/90 leading-relaxed">Engaging in daily practice, small exercises, and working on dashboards and case-based analysis projects.</p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-[#ff4da6] mb-2">Seeking Opportunities</h3>
-              <p className="text-white/90 leading-relaxed">Open to Summer Internship opportunities to apply skills and grow as an analyst.</p>
-            </div>
-          </div>
-
-          {/* Right column: Skills and Hobbies */}
-          <div className="space-y-8">
-            {/* Skills */}
-            <div>
-              <h3 className="text-2xl font-serif font-bold mb-6 text-white">My Skills</h3>
-              <div className="grid grid-cols-2 gap-4">
-                {skills.map((skill) => (
-                  <GlassmorphicTooltip
-                    key={skill.category}
-                    content={
-                      <span className="text-white font-medium">
-                        {skill.hoverMessage}
-                      </span>
-                    }
-                    tooltipClassName="backdrop-blur-md bg-[#ff4da6]/30 border border-[#ff4da6]/40 text-white shadow-lg shadow-[#ff4da6]/20 p-3 rounded-xl"
-                    >
-                    <div className="group flex flex-col items-center justify-center p-4 glass-effect rounded-2xl hover:shadow-lg hover:shadow-[#ff4da6]/30 transition-all duration-300 cursor-pointer transform hover:scale-110">
-                      <img
-                        src={skill.logo || '/placeholder.svg'}
-                        alt={skill.category}
-                        className="w-12 h-12 mb-2 group-hover:brightness-125 transition-all"
-                      />
-                      <p className="text-xs font-semibold text-white group-hover:text-white/100 transition-colors text-center">
-                        {skill.category}
-                      </p>
-                    </div>
-                  </GlassmorphicTooltip>
-                ))}
-              </div>
+              <h4 className="font-semibold mb-1" style={{ color: "#f6a5c0" }}>
+                Savitribai Phule Pune University
+              </h4>
+              <p className="text-sm" style={{ color: "#e0c3cc" }}>
+                Bachelor of Engineering (Computer Science)
+              </p>
+              <p className="text-sm mt-1" style={{ color: "#b8a0b8" }}>
+                Sep 2024 – Jun 2028
+              </p>
+              <p className="text-sm mt-2" style={{ color: "#f6a5c0" }}>
+                First Year CGPA: 9.05
+              </p>
             </div>
 
-            {/* Hobbies */}
             <div>
-              <h3 className="text-2xl font-serif font-bold mb-6 text-white">Hobbies</h3>
-              <div className="space-y-3">
-                {hobbies.map((hobby) => (
-                  <div
-                    key={hobby.name}
-                    className="glass-effect p-4 rounded-xl flex items-center gap-3 text-white hover:shadow-md hover:shadow-[#ff4da6]/30 transition-all"
-                  >
-                    <span className="text-2xl font-bold text-[#ff4da6]">{hobby.number}</span>
-                    <span className="font-medium">{hobby.name}</span>
-                  </div>
-                ))}
-              </div>
+              <h4 className="font-semibold mb-1" style={{ color: "#f6a5c0" }}>
+                Symbiosis Junior College
+              </h4>
+              <p className="text-sm" style={{ color: "#e0c3cc" }}>
+                Higher Secondary – Science
+              </p>
+              <p className="text-sm mt-1" style={{ color: "#b8a0b8" }}>
+                Sep 2022 – Jun 2024
+              </p>
+              <p className="text-sm mt-2" style={{ color: "#f6a5c0" }}>
+                Percentage: 80.67%
+              </p>
+              <p className="text-sm mt-2" style={{ color: "#b8a0b8" }}>
+                Activities: Creative writing, essay competitions, Student Editor of the Symbi Tribe Magazine
+              </p>
             </div>
           </div>
         </div>
+
+        {/* Skills Block */}
+        <div
+          className="rounded-lg p-6 transition-all duration-300"
+          style={{ backgroundColor: "#2e1637" }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = "#351b42"
+            e.currentTarget.style.boxShadow = "0 0 20px rgba(246,165,192,0.2)"
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = "#2e1637"
+            e.currentTarget.style.boxShadow = "none"
+          }}
+        >
+          <h3 className="text-2xl font-bold mb-6" style={{ color: "#f6a5c0" }}>
+            Skills
+          </h3>
+
+          <div className="space-y-6">
+            
+            {/* Tech Stack */}
+            <div>
+              <h4 className="font-semibold mb-3" style={{ color: "#f6a5c0" }}>
+                Tech Stack
+              </h4>
+
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+                {/* SQL */}
+                <div className="flex flex-col items-center">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png"
+                    alt="SQL Logo"
+                    className="w-12 h-12 object-contain"
+                  />
+                  <p className="text-sm mt-2" style={{ color: "#e0c3cc" }}>SQL</p>
+                </div>
+
+                {/* Python */}
+                <div className="flex flex-col items-center">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
+                    alt="Python Logo"
+                    className="w-12 h-12 object-contain"
+                  />
+                  <p className="text-sm mt-2" style={{ color: "#e0c3cc" }}>Python (Pandas)</p>
+                </div>
+
+                {/* Excel */}
+                <div className="flex flex-col items-center">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/8/87/Microsoft_Office_Excel_%282018%E2%80%93present%29.svg"
+                    alt="Excel Logo"
+                    className="w-12 h-12 object-contain"
+                  />
+                  <p className="text-sm mt-2" style={{ color: "#e0c3cc" }}>Excel</p>
+                </div>
+
+                {/* Power BI */}
+                <div className="flex flex-col items-center">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg"
+                    alt="Power BI Logo"
+                    className="w-12 h-12 object-contain"
+                  />
+                  <p className="text-sm mt-2" style={{ color: "#e0c3cc" }}>Power BI</p>
+                </div>
+
+                {/* Tableau */}
+                <div className="flex flex-col items-center">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Tableau_Logo.png"
+                    alt="Tableau Logo"
+                    className="w-12 h-12 object-contain"
+                  />
+                  <p className="text-sm mt-2" style={{ color: "#e0c3cc" }}>Tableau</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Analytics + Soft Skills Block (added exactly as requested) */}
+            <div className="grid grid-cols-2 gap-6">
+              
+              <div>
+                <h4 className="font-semibold mb-3" style={{ color: "#f6a5c0" }}>
+                  Analytics Skills
+                </h4>
+                <ul className="text-sm space-y-1" style={{ color: "#e0c3cc" }}>
+                  <li>• Data Visualisation</li>
+                  <li>• Data Analytics</li>
+                  <li>• Business Storytelling</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="font-semibold mb-3" style={{ color: "#f6a5c0" }}>
+                  Soft Skills
+                </h4>
+                <ul className="text-sm space-y-1" style={{ color: "#e0c3cc" }}>
+                  <li>• Critical Thinking</li>
+                  <li>• Communication</li>
+                  <li>• Storytelling</li>
+                </ul>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
   )
 }

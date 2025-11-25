@@ -1,25 +1,23 @@
-"use client"
-
 export default function AnimatedDivider() {
   return (
-    <div className="relative flex items-center justify-center overflow-hidden h-7 w-auto border-0 leading-7 mx-0 my-0 py-0 px-0">
-      <style>{`
-        @keyframes gradientShift {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-      `}</style>
-
+    <div className="relative h-px my-16 overflow-hidden">
       <div
-        className="w-full h-1 rounded-full"
+        className="absolute inset-0"
         style={{
-          background: "linear-gradient(90deg, #ff4da6, #ffd3b6, #d9a7e0, #ff4da6)",
-          backgroundSize: "200% 200%",
-          animation: "gradientShift 4s ease infinite",
-          boxShadow: "0 0 20px rgba(255, 77, 166, 0.4)",
+          background: "linear-gradient(to right, transparent, #ff4da6, transparent)",
+          animation: "shimmer 3s infinite",
         }}
       />
+      <style>{`
+        @keyframes shimmer {
+          0%, 100% {
+            opacity: 0.3;
+          }
+          50% {
+            opacity: 1;
+          }
+        }
+      `}</style>
     </div>
   )
 }
