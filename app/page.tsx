@@ -1,30 +1,23 @@
+import Header from "@/components/header"
 import Hero from "@/components/hero"
 import About from "@/components/about"
-import Projects from "@/components/projects"
+import Works from "@/components/works"
+import Experience from "@/components/experience"
 import Contact from "@/components/contact"
-import Navigation from "@/components/navigation"
-import GradientMeshBackground from "@/components/gradient-mesh-background"
-import FloatingShapes from "@/components/floating-shapes"
-import Certifications from "@/components/certifications"
-import Volunteering from "@/components/volunteering"
+import ScrollProgressBar from "@/components/scroll-progress-bar"
 import BackToTop from "@/components/back-to-top"
 
 export default function Home() {
   return (
-    <main className="min-h-screen relative overflow-x-hidden">
-    <Navigation />
-  
-    <GradientMeshBackground />
-    <FloatingShapes />
-
-          <Hero />
-          <About />
-          <Projects />
-          <Certifications />
-          <Volunteering />
-          <Contact />
-          <BackToTop />
-
-    </main>
+    <div className="min-h-screen bg-[#250e2c]">
+      <ScrollProgressBar />
+      <Header />
+      <Hero />
+      <About />
+      <Works />
+      <Experience />
+      <Contact />
+      <BackToTop />
+    </div>
   )
 }

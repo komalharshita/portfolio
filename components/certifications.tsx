@@ -69,7 +69,7 @@ export default function Certifications() {
   ]
 
   return (
-    <section id="certifications" className="grid-sparkle py-32 px-20">
+    <section id="certifications" className="grid-sparkle py-32 px-4">
       <div className="mb-20">
         <div className="h-px w-24 bg-gradient-to-r from-[#ff4da6] to-transparent mb-8" />
         <h2 className="text-5xl font-serif font-bold text-foreground">Certifications</h2>
