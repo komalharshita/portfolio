@@ -1,6 +1,7 @@
 import Header from "@/components/header"
 import Hero from "@/components/hero"
 import About from "@/components/about"
+import Skills from "@/components/skills"
 import Works from "@/components/works"
 import Experience from "@/components/experience"
 import Contact from "@/components/contact"
@@ -15,6 +16,7 @@ export default function Home() {
       <Header />
       <Hero />
       <About />
+      <Skills />
       <Works />
       <Experience />
       <Contact />
