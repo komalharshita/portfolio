@@ -119,92 +119,65 @@ export default function About() {
 
           <div className="space-y-6">
             
-            {/* Tech Stack */}
+                        {/* Hobbies Block */}
             <div>
-              <h4 className="font-semibold mb-3" style={{ color: "#f6a5c0" }}>
-                Tech Stack
+              <h3 className="text-2xl font-bold mb-6" style={{ color: "#f6a5c0" }}>
+                Hobbies & Creative Interests
+              </h3>
+
+              <p className="text-sm mb-4" style={{ color: "#e0c3cc" }}>
+                These hobbies keep me grounded, inspired, and connected to my creative side.
+              </p>
+
+              {/* Hobbies Pills */}
+              <div className="flex flex-wrap gap-3 mb-8">
+                {[
+                  { label: "Poetry", icon: "✨" },
+                  { label: "Writing", icon: "✍️" },
+                  { label: "Guitar", icon: "🎸" },
+                  { label: "Crocheting", icon: "🧵" },
+                  { label: "Reading", icon: "📖" },
+                  { label: "Journaling", icon: "📓" },
+                  { label: "Creative Coding", icon: "💻" },
+                ].map((item) => (
+                  <span
+                    key={item.label}
+                    className="px-4 py-2 rounded-full text-sm font-medium transition-all shadow-md"
+                    style={{
+                      background: "linear-gradient(90deg, #ff99c8, #c774b6, #8b5f9b)",
+                      color: "white",
+                    }}
+                  >
+                    {item.icon} {item.label}
+                  </span>
+                ))}
+              </div>
+
+              {/* Personality Traits */}
+              <h4 className="text-xl font-semibold mb-3" style={{ color: "#f6a5c0" }}>
+                Personal Traits
               </h4>
 
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
-                {/* SQL */}
-                <div className="flex flex-col items-center">
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png"
-                    alt="SQL Logo"
-                    className="w-12 h-12 object-contain"
-                  />
-                  <p className="text-sm mt-2" style={{ color: "#e0c3cc" }}>SQL</p>
-                </div>
-
-                {/* Python */}
-                <div className="flex flex-col items-center">
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
-                    alt="Python Logo"
-                    className="w-12 h-12 object-contain"
-                  />
-                  <p className="text-sm mt-2" style={{ color: "#e0c3cc" }}>Python (Pandas)</p>
-                </div>
-
-                {/* Excel */}
-                <div className="flex flex-col items-center">
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/8/87/Microsoft_Office_Excel_%282018%E2%80%93present%29.svg"
-                    alt="Excel Logo"
-                    className="w-12 h-12 object-contain"
-                  />
-                  <p className="text-sm mt-2" style={{ color: "#e0c3cc" }}>Excel</p>
-                </div>
-
-                {/* Power BI */}
-                <div className="flex flex-col items-center">
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg"
-                    alt="Power BI Logo"
-                    className="w-12 h-12 object-contain"
-                  />
-                  <p className="text-sm mt-2" style={{ color: "#e0c3cc" }}>Power BI</p>
-                </div>
-
-                {/* Tableau */}
-                <div className="flex flex-col items-center">
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Tableau_Logo.png"
-                    alt="Tableau Logo"
-                    className="w-12 h-12 object-contain"
-                  />
-                  <p className="text-sm mt-2" style={{ color: "#e0c3cc" }}>Tableau</p>
-                </div>
+              <div className="flex flex-wrap gap-3">
+                {[
+                  { label: "Creativity", icon: "🌟" },
+                  { label: "Empathy", icon: "💗" },
+                  { label: "Communication", icon: "🗣" },
+                  { label: "Leadership", icon: "🎯" },
+                ].map((trait) => (
+                  <span
+                    key={trait.label}
+                    className="px-4 py-2 rounded-full text-sm font-medium transition-all shadow-md"
+                    style={{
+                      background: "linear-gradient(90deg, #c774b6, #9c5fa7, #6d4b8a)",
+                      color: "white",
+                    }}
+                  >
+                    {trait.icon} {trait.label}
+                  </span>
+                ))}
               </div>
             </div>
-
-            {/* Analytics + Soft Skills Block (added exactly as requested) */}
-            <div className="grid grid-cols-2 gap-6">
-              
-              <div>
-                <h4 className="font-semibold mb-3" style={{ color: "#f6a5c0" }}>
-                  Analytics Skills
-                </h4>
-                <ul className="text-sm space-y-1" style={{ color: "#e0c3cc" }}>
-                  <li>• Data Visualisation</li>
-                  <li>• Data Analytics</li>
-                  <li>• Business Storytelling</li>
-                </ul>
-              </div>
-
-              <div>
-                <h4 className="font-semibold mb-3" style={{ color: "#f6a5c0" }}>
-                  Soft Skills
-                </h4>
-                <ul className="text-sm space-y-1" style={{ color: "#e0c3cc" }}>
-                  <li>• Critical Thinking</li>
-                  <li>• Communication</li>
-                  <li>• Storytelling</li>
-                </ul>
-              </div>
-
-            </div>
-
           </div>
         </div>
       </div>
