@@ -101,20 +101,20 @@ const Skills: React.FC = () => {
           className="p-6 rounded-2xl text-center transition-all duration-300"
           style={{ backgroundColor: "#2e1637" }}
         >
-          {/* Avatar Placeholder */}
           <div className="flex justify-center mb-6">
             <div
-              className="w-28 h-28 rounded-full"
+              className="w-28 h-28 rounded-full overflow-hidden"
               style={{
                 background: "rgba(246,165,192,0.2)",
                 border: "2px solid rgba(246,165,192,0.5)",
-                <img
-                    src="/images/p_working.png"  
-                    alt="Profile Avatar"
-                    className="w-full h-full object-cover"
-                />
               }}
-            ></div>
+            >
+              <img
+                src="/images/p_working.png"
+                alt="Profile Avatar"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
 
