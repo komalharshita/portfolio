@@ -95,7 +95,7 @@ export default function Projects() {
   const selectedProjectData = caseStudies.find((p) => p.id === selectedProject)
 
   return (
-    <section id="projects" className="tech-grid py-32">
+    <section id="projects" className="tech-grid py-32 px-4">
       <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10">
         {/* Particles */}
         {[...Array(15)].map((_, i) => (
