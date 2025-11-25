@@ -109,7 +109,7 @@ const Skills: React.FC = () => {
                 background: "rgba(246,165,192,0.2)",
                 border: "2px solid rgba(246,165,192,0.5)",
                 <img
-                    src="/public/images/p_working.png"  
+                    src="/images/p_working.png"  
                     alt="Profile Avatar"
                     className="w-full h-full object-cover"
                 />
