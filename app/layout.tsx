@@ -9,7 +9,7 @@ const poppins = Poppins({ weight: ["400", "600", "700"], subsets: ["latin"] })
 
 const metadata: Metadata = {
   title: "Komal Harshita - Portfolio",
-  description: "Luxurious portfolio showcasing design and development excellence",
+  description: "Data Analyst Portfolio",
   generator: "v0.app",
   viewport: {
     width: "device-width",
