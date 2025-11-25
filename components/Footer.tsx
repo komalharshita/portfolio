@@ -2,25 +2,57 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer>
-      <div className="footer-brand">K.H.</div>
-
-      <nav className="footer-nav">
-        <a href="#about">About</a>
-        <a href="#works">Skills</a>
-        <a href="#resume">Resume</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <div className="footer-socials">
-        <a href="#">f</a>
-        <a href="#">t</a>
-        <a href="#">ig</a>
-        <a href="#">in</a>
+    <footer
+      className="w-full mt-20 py-10 px-6 text-center"
+      style={{
+        background: "linear-gradient(180deg, #2e1637 0%, #250e2c 100%)",
+        borderTop: "1px solid rgba(246,165,192,0.2)",
+      }}
+    >
+      {/* BRAND */}
+      <div
+        className="text-4xl font-extrabold tracking-wider mb-6"
+        style={{
+          color: "#f6a5c0",
+          textShadow: "0 0 15px rgba(246,165,192,0.4)",
+          fontFamily: "'Poppins', sans-serif",
+        }}
+      >
+        K.H.
       </div>
 
-      <div className="footer-copy">@komalharshita 2025</div>
+      {/* NAVIGATION */}
+      <nav className="flex flex-wrap justify-center gap-6 mb-8 text-sm font-medium">
+        {[
+          { name: "About", href: "#about" },
+          { name: "Skills", href: "#skills" },
+          { name: "Resume", href: "#resume" },
+          { name: "Projects", href: "#projects" },
+          { name: "Contact", href: "#contact" },
+        ].map((item) => (
+          <a
+            key={item.name}
+            href={item.href}
+            className="transition-all"
+            style={{
+              color: "#e0c3cc",
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "#f6a5c0")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "#e0c3cc")}
+          >
+            {item.name}
+          </a>
+        ))}
+      </nav>
+
+
+      {/* COPYRIGHT */}
+      <div
+        className="text-xs tracking-wide"
+        style={{ color: "rgba(255,255,255,0.55)" }}
+      >
+        © 2025 komalharshita
+      </div>
     </footer>
   );
 };
