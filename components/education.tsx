@@ -22,41 +22,7 @@ export default function Education() {
 
   return (
     <section className="max-w-6xl mx-auto px-6 py-16">
-      {/* Tech Stack */}
-      <div className="mb-16">
-        <h2
-          className="text-4xl font-bold mb-12 font-sans"
-          style={{ color: "#250e2c", fontFamily: "'Poppins', sans-serif", fontWeight: 700, letterSpacing: "-1px" }}
-        >
-          Tech Stack
-        </h2>
-        <div className="flex flex-wrap gap-12 justify-start">
-          {techStack.map((tech) => (
-            <div key={tech.name} className="flex flex-col items-center gap-4 transition-all duration-300">
-              <div
-                className="w-24 h-24 rounded-2xl flex items-center justify-center transition-all duration-300 hover:shadow-[0_8px_24px_rgba(246,165,192,0.4)] hover:-translate-y-2 backdrop-blur-sm border border-white/10"
-                style={{ backgroundColor: "rgba(246, 165, 192, 0.12)" }}
-              >
-                <img
-                  src={tech.logo || "/placeholder.svg"}
-                  alt={tech.name}
-                  className="w-16 h-16 object-contain"
-                  onError={(e) => {
-                    e.currentTarget.style.display = "none"
-                  }}
-                />
-              </div>
-              <p
-                className="text-sm font-bold text-center"
-                style={{ color: "#250e2c", fontFamily: "'Poppins', sans-serif", fontWeight: 600 }}
-              >
-                {tech.name}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-
+      
       {/* Beyond Tech */}
       <div className="mt-16">
         <h3
@@ -102,7 +68,7 @@ export default function Education() {
           <p>User research, interviews, personas, testing</p>
         </div>
       </section>
-      
+
     </section>
   )
 }
