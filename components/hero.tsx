@@ -40,7 +40,7 @@ export default function Hero() {
           <div className="relative flex justify-center items-center">
             <div className="relative w-full max-w-sm">
               <img
-                src="/images/gemini-generated-image-bqxotnbqxotnbqxo.png"
+                src="/images/p_laptop.png"
                 alt="Komal Harshita - Avatar"
                 className="w-full h-auto object-cover rounded-2xl"
               />
@@ -65,7 +65,7 @@ export default function Hero() {
                 }}
               >
                 <p className="text-xs sm:text-sm font-medium" style={{ color: "#cc8db3" }}>
-                  🚀 Building Projects & Dashboards
+                  Building Projects & Dashboards 🚀 
                 </p>
               </div>
             </div>

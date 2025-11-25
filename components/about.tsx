@@ -11,7 +11,7 @@ export default function About() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
         <div className="h-96 rounded-lg flex items-center justify-center overflow-hidden relative">
           <img
-            src="/images/gemini-generated-image-xuq2r3xuq2r3xuq2.png"
+            src="/images/p_posing.png"
             alt="Komal Harshita"
             className="h-full w-full object-cover"
           />

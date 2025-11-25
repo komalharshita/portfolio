@@ -57,53 +57,6 @@ export default function Education() {
         </div>
       </div>
 
-      {/* Analytics Skills and Soft Skills - Two Columns */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-        {/* Analytics Skills */}
-        <div>
-          <h3
-            className="text-2xl font-bold mb-8"
-            style={{ color: "#250e2c", fontFamily: "'Poppins', sans-serif", fontWeight: 700 }}
-          >
-            Analytics Skills
-          </h3>
-          <div className="space-y-4">
-            {analyticsSkills.map((skill) => (
-              <div
-                key={skill}
-                className="flex items-center gap-3 p-3 rounded-lg transition-all hover:shadow-[0_0_15px_rgba(246,165,192,0.2)]"
-                style={{ backgroundColor: "rgba(46, 22, 55, 0.5)" }}
-              >
-                <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: "#f6a5c0" }}></div>
-                <p style={{ color: "#e0c3cc" }}>{skill}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Soft Skills */}
-        <div>
-          <h3
-            className="text-2xl font-bold mb-8"
-            style={{ color: "#250e2c", fontFamily: "'Poppins', sans-serif", fontWeight: 700 }}
-          >
-            Soft Skills
-          </h3>
-          <div className="space-y-4">
-            {softSkills.map((skill) => (
-              <div
-                key={skill}
-                className="flex items-center gap-3 p-3 rounded-lg transition-all hover:shadow-[0_0_15px_rgba(246,165,192,0.2)]"
-                style={{ backgroundColor: "rgba(46, 22, 55, 0.5)" }}
-              >
-                <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: "#f6a5c0" }}></div>
-                <p style={{ color: "#e0c3cc" }}>{skill}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
       {/* Beyond Tech */}
       <div className="mt-16">
         <h3
@@ -127,6 +80,29 @@ export default function Education() {
           ))}
         </div>
       </div>
+
+      <div className="section-title">My skills</div>
+
+      <section className="skills">
+        <div className="skill">
+          <div className="icon">A</div>
+          <h4>App design</h4>
+          <p>Figma, Adobe XD, Photoshop & Illustrator</p>
+        </div>
+
+        <div className="skill">
+          <div className="icon">W</div>
+          <h4>Web design</h4>
+          <p>Figma, Adobe XD, Photoshop & Illustrator</p>
+        </div>
+
+        <div className="skill">
+          <div className="icon">U</div>
+          <h4>UX design</h4>
+          <p>User research, interviews, personas, testing</p>
+        </div>
+      </section>
+      
     </section>
   )
 }
