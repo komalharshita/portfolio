@@ -16,14 +16,14 @@ export default function Hero() {
       {/* Pink Planet Heart */}
       <img
         src="/cute-badges/pink-heart-planet.png"
-        className="hidden sm:block absolute top-20 right-10 w-40 opacity-60 animate-float-slow pointer-events-none"
+        className="hidden sm:block absolute top-20 right-10 w-20 opacity-60 animate-float-slow pointer-events-none"
         alt="Pink Heart Planet"
       />
 
       {/* Sparkle 1 */}
       <img
         src="/cute-badges/purple-sparkles.png"
-        className="hidden sm:block absolute top-10 left-[20%] w-6 opacity-80 animate-twinkle-soft pointer-events-none"
+        className="hidden sm:block absolute top-10 left-[20%] w-8 opacity-80 animate-twinkle-soft pointer-events-none"
         alt="Sparkle"
       />
 
@@ -34,12 +34,6 @@ export default function Hero() {
         alt="Sparkle"
       />
 
-      {/* Butterfly */}
-      <img
-        src="/cute-badges/blue-butterflies.png"
-        className="hidden sm:block absolute top-24 right-[35%] w-20 opacity-55 animate-float-slower pointer-events-none"
-        alt="Butterfly"
-      />
 
       <div className="relative max-w-7xl mx-auto px-6 sm:px-8 py-20 sm:py-7">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
