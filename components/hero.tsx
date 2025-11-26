@@ -15,7 +15,7 @@ export default function Hero() {
       {/* BADGES (absolute decorations) */}
       {/* Pink Planet Heart */}
       <img
-        src="/public/cute-badges/pink-heart-planet.png"
+        src="/cute-badges/pink-heart-planet.png"
         className="hidden sm:block absolute top-20 right-10 w-40 opacity-60 animate-float-slow pointer-events-none"
         alt="Pink Heart Planet"
       />
