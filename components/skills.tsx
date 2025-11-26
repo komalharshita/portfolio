@@ -1,7 +1,80 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
+import {
+  Chart as ChartJS,
+  ArcElement,
+  Tooltip,
+  Legend,
+} from "chart.js";
+import { Doughnut } from "react-chartjs-2";
+
+ChartJS.register(ArcElement, Tooltip, Legend);
 
 const Skills: React.FC = () => {
+  /* =============================
+     SOFTWARE & TOOLS STATE + SORTING
+     ============================= */
+  const [tools, setTools] = useState([
+    { name: "Excel", level: 85 },
+    { name: "Power BI", level: 60 },
+    { name: "GitHub", level: 94 },
+    { name: "Notion", level: 97 },
+    { name: "Google Sheets", level: 65 },
+    { name: "VS Code", level: 95 },
+    { name: "Tableau", level: 45 },
+    { name: "Canva", level: 90 },
+  ]);
+
+  const sortAscending = () => {
+    setTools([...tools].sort((a, b) => a.level - b.level));
+  };
+
+  const sortDescending = () => {
+    setTools([...tools].sort((a, b) => b.level - a.level));
+  };
+
+  /* =============================
+     DONUT CHART DATA (MEDIUM SIZE)
+     ============================= */
+  const donutLabels = [
+    "Python",
+    "SQL",
+    "Viz",
+    "Analytics",
+    "EDA",
+    "Business",
+  ];
+
+  const donutData = {
+    labels: donutLabels,
+    datasets: [
+      {
+        label: "Skill Weight",
+        data: [20, 20, 15, 15, 15, 15],
+        backgroundColor: [
+          "#837ab6", // lavender-blue
+          "#cc8db3", // dusty pink
+          "#f6a5c0", // pastel pink
+          "#9d85b6", // soft lilac
+          "#f7c2ca", // light blush
+          "#d8a6c9", // extra soft pastel
+        ],
+        borderWidth: 1,
+        borderColor: "rgba(255,255,255,0.1)",
+        cutout: "62%", // donut thickness
+      },
+    ],
+  };
+
+  const donutOptions = {
+    plugins: {
+      legend: { display: false },
+      tooltip: { enabled: false },
+    },
+    responsive: true,
+    maintainAspectRatio: false,
+  };
+
   return (
     <section className="max-w-6xl mx-auto px-6 py-20">
       {/* Section Heading */}
@@ -13,7 +86,6 @@ const Skills: React.FC = () => {
       </h2>
 
       {/* 2 Cards + Avatar Grid */}
-      {/* 🔥 ADDED reveal-stagger HERE (only change) */}
       <div className="reveal-stagger grid grid-cols-1 md:grid-cols-[1fr_1fr_auto] gap-10 items-start">
 
         {/* ====================== CARD 1: TECHNICAL SKILLS ====================== */}
@@ -21,7 +93,10 @@ const Skills: React.FC = () => {
           className="p-6 rounded-2xl transition-all duration-300"
           style={{ backgroundColor: "#2e1637" }}
         >
-          <h3 className="reveal text-xl font-bold mb-6" style={{ color: "#f6a5c0" }}>
+          <h3
+            className="reveal text-xl font-bold mb-6"
+            style={{ color: "#f6a5c0" }}
+          >
             Technical Skills
           </h3>
 
@@ -51,29 +126,59 @@ const Skills: React.FC = () => {
               </li>
             ))}
           </ul>
+
+          {/* ⭐ DONUT CHART ADDED HERE ⭐ */}
+          <div className="mt-10 mx-auto w-60 h-60">
+            <Doughnut data={donutData} options={donutOptions} />
+          </div>
         </div>
 
         {/* ====================== CARD 2: SOFTWARE & TOOLS ====================== */}
         <div
-          className="p-6 rounded-2xl transition-all duration-300"
+          className="p-6 rounded-2xl transition-all duration-300 relative"
           style={{ backgroundColor: "#2e1637" }}
         >
-          <h3 className="reveal text-xl font-bold mb-6" style={{ color: "#f6a5c0" }}>
+          {/* Sorting Icon Buttons */}
+          <div className="absolute top-6 right-6 flex gap-3">
+            <button
+              onClick={sortAscending}
+              className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold"
+              style={{
+                background: "rgba(246,165,192,0.2)",
+                color: "#f6a5c0",
+                border: "1px solid rgba(246,165,192,0.4)",
+                boxShadow: "0 0 10px rgba(246,165,192,0.3)",
+              }}
+            >
+              ↑
+            </button>
+            <button
+              onClick={sortDescending}
+              className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold"
+              style={{
+                background: "#f6a5c0",
+                color: "#250e2c",
+                border: "1px solid rgba(246,165,192,0.6)",
+                boxShadow: "0 0 12px rgba(246,165,192,0.4)",
+              }}
+            >
+              ↓
+            </button>
+          </div>
+
+          <h3
+            className="reveal text-xl font-bold mb-6"
+            style={{ color: "#f6a5c0" }}
+          >
             Software & Tools
           </h3>
 
           <div className="space-y-6">
-            {[
-              { name: "Excel", level: 85 },
-              { name: "Power BI", level: 60 },
-              { name: "GitHub", level: 94 },
-              { name: "Notion", level: 97 },
-              { name: "Google Sheets", level: 65 },
-              { name: "VS Code", level: 95 },
-              { name: "Tableau", level: 45 },
-              { name: "Canva", level: 90 },
-            ].map((tool) => (
-              <div key={tool.name}>
+            {tools.map((tool) => (
+              <div
+                key={tool.name}
+                className="transition-all duration-300"
+              >
                 <div
                   className="flex justify-between mb-1 text-sm font-medium"
                   style={{ color: "#e0c3cc" }}
@@ -87,7 +192,7 @@ const Skills: React.FC = () => {
                   style={{ backgroundColor: "rgba(255,255,255,0.1)" }}
                 >
                   <div
-                    className="h-full rounded-full"
+                    className="h-full rounded-full transition-all duration-300"
                     style={{
                       width: `${tool.level}%`,
                       background:
@@ -110,7 +215,6 @@ const Skills: React.FC = () => {
             style={{ borderColor: "rgba(246,165,192,0.5)" }}
           />
         </div>
-
       </div>
     </section>
   );

@@ -135,8 +135,13 @@ export default function Process() {
           </p>
         </div>
 
-        {/* GRID WRAPPER */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 relative">
+        {/* GRID WRAPPER
+            On large screens this creates: 3 equal columns + one fixed 300px CTA column to the right.
+            Tailwind arbitrary value used for custom column layout.
+        */}
+        <div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[repeat(3,1fr)_300px] gap-6 relative items-start"
+        >
           {/* Specialty Cards */}
           {[
             { title: "Data Cleaning & Preparation", icon: "filter" },
@@ -148,7 +153,7 @@ export default function Process() {
           ].map((item, i) => (
             <div
               key={item.title}
-              className="opacity-0 translate-y-6 animate-fade-up p-6 rounded-2xl border"
+              className="opacity-0 translate-y-6 animate-fade-up p-6 rounded-2xl border flex flex-col justify-between min-h-[140px]"
               style={{
                 animationDelay: `${0.1 * i}s`,
                 background: "#2e1637",
@@ -177,16 +182,17 @@ export default function Process() {
             </div>
           ))}
 
-          {/* CTA Box */}
+          {/* CTA Box: force into right column (col 4) and span 2 rows */}
           <a
             href="https://www.linkedin.com/in/komalharshita/"
             target="_blank"
             rel="noopener noreferrer"
-            className="lg:row-span-2 flex flex-col justify-between rounded-2xl p-10 transition-all hover:-translate-y-1"
+            className="lg:col-start-4 lg:row-span-2 flex flex-col justify-between rounded-2xl p-10 transition-all hover:-translate-y-1"
             style={{
               background: "linear-gradient(135deg, #837ab6, #f6a5c0)",
               color: "white",
               boxShadow: "0 0 20px rgba(246,165,192,0.3)",
+              minHeight: "unset",
             }}
           >
             <div className="text-4xl text-right">↗</div>
@@ -205,7 +211,7 @@ export default function Process() {
               </span>
             </div>
           </a>
-        </div>  
+        </div>
       </div>
 
       {/* Fade-up animation */}
