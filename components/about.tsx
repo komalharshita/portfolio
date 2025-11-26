@@ -53,13 +53,6 @@ export default function About() {
               className="hidden lg:block absolute top-[55%] left-[52%] w-9 opacity-70 animate-twinkle-soft pointer-events-none z-20"
             />
 
-            {/* 💗 Faint planet watermark behind (but still visible over avatar) */}
-            <img
-              src="/cute-badges/pink-heart-planet.png"
-              alt="planet"
-              className="hidden lg:block absolute top-6 left-4 w-15 opacity-25 pointer-events-none blur-[1px] z-20"
-            />
-
             {/* Avatar Image — LOWER z-index */}
             <img
               src="/images/p_posing.png"
