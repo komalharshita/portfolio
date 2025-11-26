@@ -48,7 +48,10 @@ export default function Experience() {
   return (
     <section id="experience-achievements" className="py-20 px-4 max-w-6xl mx-auto font-sans">
       <div className="text-center mb-16">
-        <h2 class="section-title" className="font-bold mb-16 text-center text-5xl" style={{ color: "#f6a5c0" }}>
+        <h2
+          className="section-title font-bold mb-16 text-center text-5xl"
+          style={{ color: "#f6a5c0" }}
+        >
           Experience & Achievements
         </h2>
       </div>
@@ -58,20 +61,20 @@ export default function Experience() {
         {projects.map((project) => (
           <div
             key={project.id}
-            className="group relative overflow-hidden rounded-2xl cursor-pointer"
             onMouseEnter={() => setHoveredId(project.id)}
             onMouseLeave={() => setHoveredId(null)}
+            className="group relative overflow-hidden rounded-2xl cursor-pointer"
           >
             {/* Project card */}
             <div
-              className="relative h-80 overflow-hidden rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-lg"
+              className="relative h-80 overflow-hidden rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 group-hover:shadow-xl"
               style={{
                 background: "linear-gradient(to bottom right, rgba(246, 165, 192, 0.3), rgba(157, 133, 182, 0.3))",
               }}
             >
               {/* Magazine-style label */}
               <div
-                className="absolute top-4 right-4 text-white px-4 py-2 rounded-full text-xs font-bold transform rotate-12 group-hover:rotate-0 transition-transform"
+                className="absolute top-4 right-4 text-white px-4 py-2 rounded-full text-xs font-bold transform rotate-12 group-hover:rotate-0 transition-transform duration-300"
                 style={{ backgroundColor: "#f6a5c0" }}
               >
                 {project.category}
@@ -90,22 +93,37 @@ export default function Experience() {
                 >
                   {project.title}
                 </h3>
-                <p className="text-white/80 text-sm leading-relaxed">{project.description}</p>
+
+                <p className="text-white/80 text-sm leading-relaxed">
+                  {project.description}
+                </p>
               </div>
 
-              {/* Overlay on hover */}
+              {/* Hover Overlay */}
               <div
-                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 font-sans"
-                style={{ background: "linear-gradient(to top, rgba(246, 165, 192, 0.9), transparent)" }}
+                className="
+                  absolute inset-0 opacity-0 
+                  group-hover:opacity-100 
+                  transition-opacity duration-300 
+                  flex flex-col justify-end p-6 font-sans
+                  pointer-events-none
+                "
+                style={{
+                  background: "linear-gradient(to top, rgba(246, 165, 192, 0.9), transparent)",
+                }}
               >
-                <p className="text-white font-semibold mb-4">Skills & Focus:</p>
-                <GlassmorphicTooltip content="Key competencies for this role">
-                  <p className="text-white/90 text-sm mb-4">{project.skills}</p>
-                </GlassmorphicTooltip>
+                {/* Wrapper allows tooltip interaction */}
+                <div className="pointer-events-auto">
+                  <p className="text-white font-semibold mb-4">Skills & Focus:</p>
+
+                  <GlassmorphicTooltip content="Key competencies for this role">
+                    <p className="text-white/90 text-sm mb-4">{project.skills}</p>
+                  </GlassmorphicTooltip>
+                </div>
               </div>
 
               {/* Know More button */}
-              <div className="flex justify-end mt-4">
+              <div className="flex justify-end mt-4 pointer-events-auto">
                 <a
                   href={project.link}
                   target="_blank"
@@ -120,17 +138,21 @@ export default function Experience() {
                   Know More →
                 </a>
               </div>
+
             </div>
           </div>
         ))}
       </div>
 
+      {/* Resume button */}
       <div className="text-center mt-16">
         <a
           href="/resume.pdf"
           download
           className="inline-block px-8 py-4 rounded-full font-semibold hover:shadow-lg transition-all text-lg text-white"
-          style={{ background: "linear-gradient(135deg, #837ab6 0%, #cc8db3 50%, #f6a5c0 100%)" }}
+          style={{
+            background: "linear-gradient(135deg, #837ab6 0%, #cc8db3 50%, #f6a5c0 100%)",
+          }}
         >
           View Full Resume
         </a>
