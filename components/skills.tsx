@@ -26,12 +26,12 @@ const Skills: React.FC = () => {
 
           <ul className="space-y-3 text-sm" style={{ color: "#e0c3cc" }}>
             {[
-              { name: "Python", icon: "/icons/python.svg" },
-              { name: "SQL Queries", icon: "/icons/sql.svg" },
-              { name: "Data Visualization", icon: "/icons/dataviz.svg" },
-              { name: "Data Analytics", icon: "/icons/analytics.svg" },
-              { name: "Exploratory Data Analysis (EDA)", icon: "/icons/eda.svg" },
-              { name: "Business Analytics", icon: "/icons/business.svg" },
+              { name: "Python", icon: "https://img.icons8.com/?size=100&id=l75OEUJkPAk4&format=png&color=000000" },
+              { name: "SQL Queries", icon: "https://img.icons8.com/?size=100&id=J6KcaRLsTgpZ&format=png&color=000000" },
+              { name: "Data Visualization", icon: "https://img.icons8.com/?size=100&id=3sGOUDo9nJ4k&format=png&color=000000" },
+              { name: "Data Analytics", icon: "https://img.icons8.com/?size=100&id=undefined&format=png&color=000000" },
+              { name: "Exploratory Data Analysis (EDA)", icon: "https://img.icons8.com/?size=100&id=UT0KFoaguV2Z&format=png&color=000000" },
+              { name: "Business Analytics", icon: "https://img.icons8.com/?size=100&id=6R735OAB4eCV&format=png&color=000000" },
             ].map((skill) => (
               <li
                 key={skill.name}
