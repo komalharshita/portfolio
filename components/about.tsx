@@ -50,7 +50,7 @@ export default function About() {
             <img
               src="/cute-badges/purple-sparkles.png"
               alt="sparkle"
-              className="hidden lg:block absolute top-[55%] left-[52%] w-4 opacity-70 animate-twinkle-soft pointer-events-none z-20"
+              className="hidden lg:block absolute top-[55%] left-[52%] w-9 opacity-70 animate-twinkle-soft pointer-events-none z-20"
             />
 
             {/* 💗 Faint planet watermark behind (but still visible over avatar) */}

@@ -33,7 +33,7 @@ export default function Projects() {
     <section id="projects" className="py-20 px-4 max-w-7xl mx-auto">
       <div className="text-center mb-16">
         <h2 className="font-bold mb-16 text-center text-5xl" style={{ color: "#f6a5c0" }}>
-        My Works
+        ☆  My Works  ☆
         </h2>
       </div>
 

@@ -9,8 +9,7 @@ const Skills: React.FC = () => {
         className="text-4xl font-bold mb-14 text-center"
         style={{ color: "#f6a5c0" }}
       >
-        My Skills
-      </h2>
+        ☆  My Skills  ☆ </h2>
 
       {/* 2 Cards + Avatar Grid */}
       <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr_auto] gap-10 items-start">
