@@ -29,11 +29,11 @@ export default function Contact() {
         <AnimatedDivider />
 
         <div className="text-center mb-16 max-w-3xl mx-auto px-2">
-          <h2 className="section-title font-bold mb-10 text-center text-4xl sm:text-5xl" style={{ color: "#f6a5c0" }}>
+          <h2 className="reveal section-title font-bold mb-10 text-center text-4xl sm:text-5xl" style={{ color: "#f6a5c0" }}>
             Let's Connect!
           </h2>
 
-          <p className="text-lg sm:text-xl" style={{ color: "#b8a0b8" }}>
+          <p className="reveal text-lg sm:text-xl" style={{ color: "#b8a0b8" }}>
             Interested in data, storytelling, or collaboration? I'd love to hear from you.
           </p>
 
@@ -45,7 +45,7 @@ export default function Contact() {
               borderColor: "rgba(211, 195, 227, 0.3)",
             }}
           >
-            <p className="font-semibold mb-3 text-lg" style={{ color: "#f6a5c0" }}>
+            <p className="reveal font-semibold mb-3 text-lg" style={{ color: "#f6a5c0" }}>
               Open to Opportunities
             </p>
             <p style={{ color: "#e0c3cc" }}>
@@ -70,7 +70,7 @@ export default function Contact() {
 
             {/* Social Links */}
             <div className="pt-8 border-t mx-2 sm:mx-0" style={{ borderColor: "rgba(211, 195, 227, 0.3)" }}>
-              <p className="font-semibold mb-4 text-center md:text-left" style={{ color: "#f6a5c0" }}>
+              <p className="reveal font-semibold mb-4 text-center md:text-left" style={{ color: "#f6a5c0" }}>
                 Connect With Me
               </p>
 

@@ -6,20 +6,22 @@ const Skills: React.FC = () => {
     <section className="max-w-6xl mx-auto px-6 py-20">
       {/* Section Heading */}
       <h2
-        className="section-title text-4xl font-bold mb-14 text-center"
+        className="reveal section-title text-4xl font-bold mb-14 text-center"
         style={{ color: "#f6a5c0" }}
       >
-        ☆  My Skills  ☆ </h2>
+        ☆ My Skills ☆
+      </h2>
 
       {/* 2 Cards + Avatar Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr_auto] gap-10 items-start">
+      {/* 🔥 ADDED reveal-stagger HERE (only change) */}
+      <div className="reveal-stagger grid grid-cols-1 md:grid-cols-[1fr_1fr_auto] gap-10 items-start">
 
         {/* ====================== CARD 1: TECHNICAL SKILLS ====================== */}
         <div
           className="p-6 rounded-2xl transition-all duration-300"
           style={{ backgroundColor: "#2e1637" }}
         >
-          <h3 className="text-xl font-bold mb-6" style={{ color: "#f6a5c0" }}>
+          <h3 className="reveal text-xl font-bold mb-6" style={{ color: "#f6a5c0" }}>
             Technical Skills
           </h3>
 
@@ -40,7 +42,6 @@ const Skills: React.FC = () => {
                   border: "1px solid rgba(246,165,192,0.3)",
                 }}
               >
-                {/* Placeholder Icon */}
                 <img
                   src={skill.icon}
                   alt={`${skill.name} icon`}
@@ -57,7 +58,7 @@ const Skills: React.FC = () => {
           className="p-6 rounded-2xl transition-all duration-300"
           style={{ backgroundColor: "#2e1637" }}
         >
-          <h3 className="text-xl font-bold mb-6" style={{ color: "#f6a5c0" }}>
+          <h3 className="reveal text-xl font-bold mb-6" style={{ color: "#f6a5c0" }}>
             Software & Tools
           </h3>
 
@@ -81,7 +82,6 @@ const Skills: React.FC = () => {
                   <span>{tool.level}%</span>
                 </div>
 
-                {/* Progress Bar */}
                 <div
                   className="w-full h-3 rounded-full overflow-hidden"
                   style={{ backgroundColor: "rgba(255,255,255,0.1)" }}

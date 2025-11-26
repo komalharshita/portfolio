@@ -38,7 +38,7 @@ export default function Projects() {
       </div>
 
       {/* Case Studies Grid */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="reveal-stagger grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {caseStudies.map((study) => (
           <div
             key={study.id}
@@ -54,8 +54,8 @@ export default function Projects() {
             >
               {/* Project Info */}
               <div className="mb-8">
-                <h3 className="text-2xl font-bold text-white mb-1">{study.title}</h3>
-                <p className="text-sm font-semibold mb-3" style={{ color: "#f6a5c0" }}>
+                <h3 className="reveal text-2xl font-bold text-white mb-1">{study.title}</h3>
+                <p className="reveal text-sm font-semibold mb-3" style={{ color: "#f6a5c0" }}>
                   {study.subtitle}
                 </p>
                 <p className="text-white/70 text-sm leading-relaxed">{study.description}</p>

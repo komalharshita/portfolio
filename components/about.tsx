@@ -8,7 +8,7 @@ export default function About() {
     >
       {/* Heading with small heart */}
       <h2
-        className="section-title font-bold mb-16 text-center text-5xl flex items-center justify-center gap-3"
+        className="reveal section-title font-bold mb-16 text-center text-5xl flex items-center justify-center gap-3"
         style={{ color: "#f6a5c0" }}
       >
         <img
@@ -120,7 +120,7 @@ export default function About() {
           }}
         >
           <h3
-            className="text-2xl font-bold mb-6"
+            className="reveal text-2xl font-bold mb-6"
             style={{ color: "#f6a5c0" }}
           >
             Education
@@ -129,7 +129,7 @@ export default function About() {
           <div className="space-y-6">
             <div>
               <h4
-                className="font-semibold mb-1"
+                className="reveal font-semibold mb-1"
                 style={{ color: "#f6a5c0" }}
               >
                 Savitribai Phule Pune University
@@ -147,7 +147,7 @@ export default function About() {
 
             <div>
               <h4
-                className="font-semibold mb-1"
+                className="reveal font-semibold mb-1"
                 style={{ color: "#f6a5c0" }}
               >
                 Symbiosis Junior College
@@ -188,7 +188,7 @@ export default function About() {
             {/* Hobbies */}
             <div>
               <h3
-                className="text-2xl font-bold mb-6"
+                className="reveal text-2xl font-bold mb-6"
                 style={{ color: "#f6a5c0" }}
               >
                 Hobbies & Creative Interests
@@ -225,7 +225,7 @@ export default function About() {
 
               {/* Traits */}
               <h4
-                className="text-xl font-semibold mb-3"
+                className="reveal text-xl font-semibold mb-3"
                 style={{ color: "#f6a5c0" }}
               >
                 Personal Traits

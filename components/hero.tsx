@@ -42,13 +42,13 @@ export default function Hero() {
           <div className="space-y-6 lg:space-y-8">
             <div className="space-y-3">
               <h1
-                className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[5.5rem] tracking-wider"
+                className="reveal text-5xl sm:text-6xl lg:text-7xl font-bold leading-[5.5rem] tracking-wider"
                 style={{ color: "#f6a5c0" }}
               >
                 PORTFOLIO
               </h1>
               <h2
-                className="section-title text-2xl sm:text-3xl lg:text-4xl font-semibold"
+                className="reveal section-title text-2xl sm:text-3xl lg:text-4xl font-semibold"
                 style={{ color: "#cc8db3" }}
               >
                 Komal Harshita
@@ -103,7 +103,7 @@ export default function Hero() {
                 }}
               >
                 <p
-                  className="text-xs sm:text-sm font-medium"
+                  className="reveal text-xs sm:text-sm font-medium"
                   style={{ color: "#f6a5c0" }}
                 >
                   📊 Daily Analytics Practice
@@ -118,7 +118,7 @@ export default function Hero() {
                 }}
               >
                 <p
-                  className="text-xs sm:text-sm font-medium"
+                  className="reveal text-xs sm:text-sm font-medium"
                   style={{ color: "#cc8db3" }}
                 >
                   Building Projects & Dashboards 🚀

@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Inter, Poppins } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
+import ScrollReveal from "@/components/ScrollReveal";
 
 const inter = Inter({ subsets: ["latin"] })
 const poppins = Poppins({ weight: ["400", "600", "700"], subsets: ["latin"] })
@@ -26,6 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-deep-purple text-light-blush antialiased`}>
+        <ScrollReveal />
         {children}
         <Analytics />
       </body>

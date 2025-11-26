@@ -49,7 +49,7 @@ export default function Experience() {
     <section id="experience-achievements" className="py-20 px-4 max-w-6xl mx-auto font-sans">
       <div className="text-center mb-16">
         <h2
-          className="section-title font-bold mb-16 text-center text-5xl"
+          className="reveal section-title font-bold mb-16 text-center text-5xl"
           style={{ color: "#f6a5c0" }}
         >
           Experience & Achievements
@@ -83,7 +83,7 @@ export default function Experience() {
               {/* Content */}
               <div>
                 <h3
-                  className="text-2xl font-bold mb-3"
+                  className="reveal text-2xl font-bold mb-3"
                   style={{
                     fontFamily: "'Poppins', sans-serif",
                     color: "#ffffff",
@@ -94,7 +94,7 @@ export default function Experience() {
                   {project.title}
                 </h3>
 
-                <p className="text-white/80 text-sm leading-relaxed">
+                <p className="reveal text-white/80 text-sm leading-relaxed">
                   {project.description}
                 </p>
               </div>
