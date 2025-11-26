@@ -1,7 +1,9 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* Streamlined to only brand colors and core fonts */
+/* --------------------------------------------- */
+/* THEME: Brand Colors & Fonts */
+/* --------------------------------------------- */
 @theme {
   --color-deep-purple: #250e2c;
   --color-lavender-blue: #837ab6;
@@ -10,12 +12,15 @@
   --color-pastel-pink: #f6a5c0;
   --color-light-blush: #f7c2ca;
 
-  /* Added font family variables for Poppins and Inter */
   --font-heading: "Poppins", sans-serif;
   --font-body: "Inter", sans-serif;
 }
 
+/* --------------------------------------------- */
+/* ROOT VARIABLES */
+/* --------------------------------------------- */
 :root {
+  /* Default system tokens */
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -35,22 +40,19 @@
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
+
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
+
   --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
 }
 
+/* --------------------------------------------- */
+/* DARK MODE */
+/* --------------------------------------------- */
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
@@ -58,36 +60,34 @@
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.145 0 0);
   --popover-foreground: oklch(0.985 0 0);
+
   --primary: oklch(0.985 0 0);
   --primary-foreground: oklch(0.205 0 0);
+
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
+
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
+
   --accent: oklch(0.269 0 0);
   --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
+
   --border: oklch(0.269 0 0);
   --input: oklch(0.269 0 0);
   --ring: oklch(0.439 0 0);
+
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.439 0 0);
 }
 
+/* --------------------------------------------- */
+/* INLINE THEME TOKENS (Tailwind) */
+/* --------------------------------------------- */
 @theme inline {
-  /* optional: --font-sans, --font-serif, --font-mono if they are applied in the layout.tsx */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -107,29 +107,55 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
+
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
 }
 
+/* --------------------------------------------- */
+/* BRAND SHADOWS */
+/* --------------------------------------------- */
+:root {
+  --shadow-soft: 0 0 12px rgba(246,165,192,0.25);
+  --shadow-medium: 0 0 20px rgba(204,141,179,0.35);
+  --shadow-strong: 0 0 32px rgba(247,194,202,0.45);
+}
+
+/* --------------------------------------------- */
+/* BRAND RADII */
+/* --------------------------------------------- */
+:root {
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 26px;
+}
+
+/* --------------------------------------------- */
+/* BRAND TYPOGRAPHY SCALE */
+/* --------------------------------------------- */
+:root {
+  --font-display: clamp(2.8rem, 6vw, 4.3rem);
+  --font-title: clamp(2rem, 4vw, 3rem);
+  --font-subtitle: 1.25rem;
+}
+
+/* Apply size */
+h1 { font-size: var(--font-display); }
+h2 { font-size: var(--font-title); }
+h3 { font-size: var(--font-subtitle); }
+
+/* --------------------------------------------- */
+/* BASE STYLES */
+/* --------------------------------------------- */
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     background-color: #250e2c;
     color: #f7c2ca;
@@ -137,28 +163,10 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* Unified heading styles using brand colors */
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h1, h2, h3, h4, h5, h6 {
     font-family: "Poppins", sans-serif;
-    color: #250e2c;
+    color: #f7c2ca;
     font-weight: 700;
-  }
-
-  h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl;
-  }
-
-  h2 {
-    @apply text-3xl md:text-4xl;
-  }
-
-  h3 {
-    @apply text-2xl md:text-3xl;
   }
 
   p {
@@ -166,31 +174,32 @@
     color: #f7c2ca;
     line-height: 1.6;
   }
-
-  /* Removed redundant color and sizing utilities */
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
 }
 
+/* --------------------------------------------- */
+/* GRADIENT UTILITY */
+/* --------------------------------------------- */
+.gradient-brand {
+  background: linear-gradient(
+    135deg,
+    var(--color-lavender-blue),
+    var(--color-dusty-pink),
+    var(--color-pastel-pink)
+  );
+}
+
+/* --------------------------------------------- */
+/* COMPONENTS */
+/* --------------------------------------------- */
 @layer components {
-  /* Simplified button styles using only brand colors */
   .btn-primary {
     @apply px-8 py-3 rounded-lg font-medium text-sm text-white transition-all duration-300;
     background: linear-gradient(135deg, #837ab6 0%, #cc8db3 50%, #f6a5c0 100%);
-    box-shadow: 0 0 20px rgba(246, 165, 192, 0.3);
+    box-shadow: var(--shadow-soft);
   }
 
   .btn-primary:hover {
-    box-shadow: 0 0 30px rgba(246, 165, 192, 0.5);
+    box-shadow: var(--shadow-strong);
     transform: translateY(-2px);
   }
 
@@ -198,51 +207,52 @@
     @apply px-8 py-3 rounded-lg font-medium text-sm transition-all duration-300 border bg-transparent;
     color: #f6a5c0;
     border-color: #f6a5c0;
-    box-shadow: 0 0 10px rgba(246, 165, 192, 0.2);
+    box-shadow: var(--shadow-soft);
   }
 
   .btn-secondary:hover {
-    background-color: rgba(246, 165, 192, 0.1);
-    box-shadow: 0 0 20px rgba(246, 165, 192, 0.4);
+    background-color: rgba(246,165,192,0.12);
+    box-shadow: var(--shadow-medium);
     transform: translateY(-2px);
   }
 
-  /* Card uses glassmorphic effect with brand colors */
+  /* FINAL, CLEAN CARD BLOCK */
   .card {
-    @apply rounded-lg p-6 border transition-all duration-300;
-    background-color: rgba(46, 22, 55, 0.6);
-    border-color: rgba(211, 195, 227, 0.3);
+    @apply p-6 border transition-all duration-300;
+    background-color: rgba(37,14,44,0.45);
+    border: 1px solid rgba(157,133,182,0.35);
+    backdrop-filter: blur(12px);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
   }
 
   .card:hover {
-    background-color: rgba(53, 27, 66, 0.8);
-    border-color: rgba(211, 195, 227, 0.5);
-    box-shadow: 0 0 20px rgba(246, 165, 192, 0.2);
+    background-color: rgba(37,14,44,0.58);
+    border-color: rgba(157,133,182,0.5);
+    box-shadow: var(--shadow-medium);
   }
 
   .input-field {
     @apply w-full px-4 py-3 rounded-lg transition-all duration-300;
     background-color: #1a0820;
-    border: 1px solid rgba(211, 195, 227, 0.3);
+    border: 1px solid rgba(211,195,227,0.3);
     color: #f7c2ca;
   }
 
   .input-field::placeholder {
-    color: #b8a0b8;
+    color: rgba(247,194,202,0.65);
   }
 
   .input-field:focus {
+    border-color: var(--color-dusty-pink);
+    box-shadow: 0 0 15px rgba(204,141,179,0.45);
     outline: none;
-    border-color: #f6a5c0;
-    box-shadow: 0 0 15px rgba(246, 165, 192, 0.3);
-  }
-
-  .glass-effect {
-    background-color: rgba(37, 14, 44, 0.4);
-    backdrop-filter: blur(8px);
   }
 }
 
+/* --------------------------------------------- */
+/* ANIMATIONS */
+/* --------------------------------------------- */
 @keyframes float-slow {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-6px); }
@@ -260,14 +270,6 @@
   50% { opacity: 1; }
 }
 
-.animate-float-slow {
-  animation: float-slow 6s ease-in-out infinite;
-}
-
-.animate-float-slower {
-  animation: float-slower 8s ease-in-out infinite;
-}
-
-.animate-twinkle-soft {
-  animation: twinkle-soft 2s ease-in-out infinite;
-}
+.animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
+.animate-float-slower { animation: float-slower 8s ease-in-out infinite; }
+.animate-twinkle-soft { animation: twinkle-soft 2s ease-in-out infinite; }
