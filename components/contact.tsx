@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import AnimatedDivider from "./animated-divider"
 import GlassmorphicTooltip from "./glassmorphic-tooltip"
@@ -31,7 +30,7 @@ export default function Contact() {
 
         <div className="text-center mb-16 max-w-7xl mx-auto">
           <h2 className="font-bold mb-16 text-center text-5xl" style={{ color: "#f6a5c0" }}>
-        Let's Connect!
+            Let's Connect!
           </h2>
           <p className="text-xl" style={{ color: "#b8a0b8" }}>
             Interested in data, storytelling, or collaboration? I'd love to hear from you.
@@ -54,72 +53,118 @@ export default function Contact() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 max-w-7xl mx-3.5 mr-10">
+          
           {/* Contact info */}
           <div className="space-y-8 mx-10 my-10">
-            <GlassmorphicTooltip content="Send me an email anytime">
-              <div className="flex gap-4 items-start">
-                <div className="text-3xl">📧</div>
-                <div>
-                  <p className="font-semibold" style={{ color: "#f6a5c0" }}>
-                    Email
-                  </p>
-                  <a href="mailto:komal.sony234@gmail.com" className="break-all" style={{ color: "#cc8db3" }}>
-                    komal.sony234@gmail.com
-                  </a>
-                </div>
-              </div>
-            </GlassmorphicTooltip>
 
             {/* Social links */}
             <div className="pt-8 border-t" style={{ borderColor: "rgba(211, 195, 227, 0.3)" }}>
               <p className="font-semibold mb-4" style={{ color: "#f6a5c0" }}>
                 Connect With Me
               </p>
+
               <div className="flex gap-3 flex-wrap">
+
+                {/* LinkedIn */}
                 <a
                   href="https://www.linkedin.com/in/komalharshita/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 rounded-lg font-semibold text-sm transition-all border"
+                  className="px-4 py-2 rounded-lg font-semibold text-sm transition-all border flex items-center gap-2"
                   style={{
                     backgroundColor: "rgba(246, 165, 192, 0.1)",
                     color: "#f6a5c0",
                     borderColor: "rgba(246, 165, 192, 0.3)",
                   }}
                 >
+                  <img src="https://img.icons8.com/?size=100&id=MR3dZdlA53te&format=png&color=000000" className="w-5 h-5" />
                   LinkedIn
                 </a>
+
+                {/* GitHub */}
                 <a
                   href="https://github.com/komalharshita"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 rounded-lg font-semibold text-sm transition-all border"
+                  className="px-4 py-2 rounded-lg font-semibold text-sm transition-all border flex items-center gap-2"
                   style={{
                     backgroundColor: "rgba(246, 165, 192, 0.1)",
                     color: "#f6a5c0",
                     borderColor: "rgba(246, 165, 192, 0.3)",
                   }}
                 >
+                  <img src="https://img.icons8.com/?size=100&id=LoL4bFzqmAa0&format=png&color=000000" className="w-5 h-5" />
                   GitHub
                 </a>
+
+                {/* Facebook */}
                 <a
                   href="https://www.facebook.com/komalxharshitaa/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 rounded-lg font-semibold text-sm transition-all border"
+                  className="px-4 py-2 rounded-lg font-semibold text-sm transition-all border flex items-center gap-2"
                   style={{
                     backgroundColor: "rgba(246, 165, 192, 0.1)",
                     color: "#f6a5c0",
                     borderColor: "rgba(246, 165, 192, 0.3)",
                   }}
                 >
+                  <img src="https://img.icons8.com/?size=100&id=jZ0kw76QEzJU&format=png&color=000000" className="w-5 h-5" />
                   Facebook
                 </a>
+
+                {/* Instagram */}
+                <a
+                  href="https://instagram.com/kokokomali"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded-lg font-semibold text-sm transition-all border flex items-center gap-2"
+                  style={{
+                    backgroundColor: "rgba(246, 165, 192, 0.1)",
+                    color: "#f6a5c0",
+                    borderColor: "rgba(246, 165, 192, 0.3)",
+                  }}
+                >
+                  <img src="https://img.icons8.com/?size=100&id=nj0Uj45LGUYh&format=png&color=000000" className="w-5 h-5" />
+                  Instagram
+                </a>
+
+                {/* Discord */}
+                <a
+                  href="https://discord.com/users/prideandprejudice"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded-lg font-semibold text-sm transition-all border flex items-center gap-2"
+                  style={{
+                    backgroundColor: "rgba(246, 165, 192, 0.1)",
+                    color: "#f6a5c0",
+                    borderColor: "rgba(246, 165, 192, 0.3)",
+                  }}
+                >
+                  <img src="https://img.icons8.com/?size=100&id=D2NqKl85S8Ye&format=png&color=000000" className="w-5 h-5" />
+                  Discord
+                </a>
+
+                {/* Gmail */}
+                <a
+                  href="mailto:komal.sony234@gmail.com"
+                  className="px-4 py-2 rounded-lg font-semibold text-sm transition-all border flex items-center gap-2"
+                  style={{
+                    backgroundColor: "rgba(246, 165, 192, 0.1)",
+                    color: "#f6a5c0",
+                    borderColor: "rgba(246, 165, 192, 0.3)",
+                  }}
+                >
+                  <img src="https://img.icons8.com/?size=100&id=eFPBXQop6V2m&format=png&color=000000" className="w-5 h-5" />
+                  Gmail
+                </a>
+
               </div>
             </div>
           </div>
 
           {/* Contact form */}
+         
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label className="block font-semibold mb-2" style={{ color: "#f6a5c0" }}>
