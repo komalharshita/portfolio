@@ -107,7 +107,7 @@ const Skills: React.FC = () => {
           <img
             src="/images/p_working.png"
             alt="Profile Avatar"
-            className="w-28 h-28 rounded-full object-cover border-2"
+            className="object-cover w-52 h-96 border-0 rounded-4xl"
             style={{ borderColor: "rgba(246,165,192,0.5)" }}
           />
         </div>
