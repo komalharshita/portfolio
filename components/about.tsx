@@ -4,6 +4,11 @@ export default function About() {
   return (
     <div id="about" className="max-w-7xl mx-auto px-6 sm:px-8 py-24">
       <h2 className="font-bold mb-16 text-center text-5xl" style={{ color: "#f6a5c0" }}>
+        <img
+    src="/cute-badges/silver-soft-heart.png"
+    alt="heart"
+    className="w-6 h-6 opacity-85"
+        />
         About Me
       </h2>
 
