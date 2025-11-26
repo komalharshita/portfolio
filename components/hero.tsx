@@ -77,8 +77,8 @@ export default function Hero() {
 
                 {/* Silver soft heart beside button */}
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/purple-sparkles-g6Zql7P8qfm2x4dd3nnPNg7av8K8py.png"
-                  className="absolute -right-6 top-1/2 -translate-y-1/2 opacity-80 transition-all duration-300 hover:brightness-110 size-16 mx-36 my-4"
+                  src="/cute-badges/silver-soft-heart.png"
+                  className="absolute -right-6 top-1/2 -translate-y-1/2 w-7 opacity-80 transition-all duration-300 hover:brightness-110"
                   alt="heart"
                 />
               </button>

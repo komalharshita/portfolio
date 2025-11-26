@@ -26,7 +26,7 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 py-4 flex items-center justify-between">
         <a href="#" className="transition-transform duration-300 hover:scale-110">
-          <img src="/images/kh-favicon.png" alt="KH Logo" className="rounded-full size-12" />
+          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bronze-starburst-KLUxhybjiluGebaha5L7WNLSQnXbcJ.png" alt="KH Logo" className="rounded-full size-12" />
         </a>
 
         <nav className="flex gap-8 text-sm font-medium">
