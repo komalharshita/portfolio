@@ -24,7 +24,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="px-4 py-16">
+    <section id="contact" className="px-4 py-20 max-w-7xl mx-auto">
       <div className="relative z-10">
         <AnimatedDivider />
 
