@@ -11,6 +11,13 @@ const Footer: React.FC = () => {
         borderTop: "1px solid rgba(246,165,192,0.2)",
       }}
     >
+      {/* 🩷 AVATAR ABOVE BRAND */}
+      <img
+        src="/images/footer-avatar.png"
+        alt="Avatar"
+        className="w-14 h-14 rounded-full mx-auto mb-4 shadow-[0_0_12px_rgba(246,165,192,0.45)]"
+      />
+
       {/* BRAND */}
       <div
         className="text-4xl font-extrabold tracking-wider mb-6"
@@ -36,9 +43,7 @@ const Footer: React.FC = () => {
             key={item.name}
             href={item.href}
             className="transition-all"
-            style={{
-              color: "#e0c3cc",
-            }}
+            style={{ color: "#e0c3cc" }}
             onMouseEnter={(e) => (e.currentTarget.style.color = "#f6a5c0")}
             onMouseLeave={(e) => (e.currentTarget.style.color = "#e0c3cc")}
           >
@@ -46,7 +51,6 @@ const Footer: React.FC = () => {
           </a>
         ))}
       </nav>
-
 
       {/* COPYRIGHT */}
       <div
