@@ -59,7 +59,7 @@ export default function Contact() {
               <img
                 src="/images/p_talking.png"
                 alt="Komal Harshita"
-                className="w-32 h-32 rounded-full border shadow-lg mx-auto"
+                className="rounded-full border shadow-lg mx-auto size-6/12"
               />
 
             {/* Social links */}
