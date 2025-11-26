@@ -92,7 +92,7 @@ export default function Process() {
         {/* RIGHT: Avatar */}
         <div className="avatar-box" id="avatarBox">
           <img
-            src="/public/images/p_book.png"
+            src="/images/p_book.png"
             alt="Avatar Placeholder"
           />
         </div>
