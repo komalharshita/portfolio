@@ -11,14 +11,15 @@ export default function Header() {
           <img src="/images/kh-favicon.png" alt="KH Logo" className="rounded-full size-12" />
         </a>
         <nav className="flex gap-8 text-sm font-medium">
-          <a
-            hrerounded-full size-5lassName="transition-colors duration-300"
+            <a
+            className="rounded-full size-5 transition-colors duration-300"
             style={{ color: "#b8a0b8" }}
             onMouseEnter={(e) => (e.currentTarget.style.color = "#f6a5c0")}
             onMouseLeave={(e) => (e.currentTarget.style.color = "#b8a0b8")}
-          >
-            About
-          </a>
+            >
+             About
+            </a>
+
           <a
             href="#projects"
             className="transition-colors duration-300"
