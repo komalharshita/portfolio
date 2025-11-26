@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
     >
       {/* 🩷 AVATAR ABOVE BRAND */}
       <img
-        src="/images/footer-avatar.png"
+        src="/images/p_book.png"
         alt="Avatar"
         className="w-14 h-14 rounded-full mx-auto mb-4 shadow-[0_0_12px_rgba(246,165,192,0.45)]"
       />
