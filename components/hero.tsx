@@ -78,7 +78,7 @@ export default function Hero() {
                 {/* Silver soft heart beside button */}
                 <img
                   src="/cute-badges/silver-soft-heart.png"
-                  className="absolute -right-6 top-1/2 -translate-y-1/2 w-7 opacity-80 transition-all duration-300 hover:brightness-110"
+                  className="absolute -right-6 top-1/2 -translate-y-1/2 opacity-80 transition-all duration-300 hover:brightness-110 size-14 my-0 mx-36 px-0 py-0 pr-0"
                   alt="heart"
                 />
               </button>
