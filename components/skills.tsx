@@ -6,8 +6,7 @@ const Skills: React.FC = () => {
     <section className="max-w-6xl mx-auto px-6 py-20">
       {/* Section Heading */}
       <h2
-        className="text-4xl font-bold mb-14 text-center"
-        class="section-title"
+        className="section-title text-4xl font-bold mb-14 text-center"
         style={{ color: "#f6a5c0" }}
       >
         ☆  My Skills  ☆ </h2>

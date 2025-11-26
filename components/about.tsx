@@ -8,8 +8,7 @@ export default function About() {
     >
       {/* Heading with small heart */}
       <h2
-        class="section-title"
-        className="font-bold mb-16 text-center text-5xl flex items-center justify-center gap-3"
+        className="section-title font-bold mb-16 text-center text-5xl flex items-center justify-center gap-3"
         style={{ color: "#f6a5c0" }}
       >
         <img

@@ -48,8 +48,7 @@ export default function Hero() {
                 PORTFOLIO
               </h1>
               <h2
-                className="text-2xl sm:text-3xl lg:text-4xl font-semibold"
-                class="section-title"
+                className="section-title text-2xl sm:text-3xl lg:text-4xl font-semibold"
                 style={{ color: "#cc8db3" }}
               >
                 Komal Harshita
