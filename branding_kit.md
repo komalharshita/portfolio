@@ -13,7 +13,7 @@
 - **Body Font:** Inter, sans-serif
 
 ## Theme Variables
-```css
+\`\`\`css
 @theme {
   --color-deep-purple: #250e2c;
   --color-lavender-blue: #837ab6;
@@ -25,4 +25,4 @@
   --font-heading: "Poppins", sans-serif;
   --font-body: "Inter", sans-serif;
 }
-```
+\`\`\`

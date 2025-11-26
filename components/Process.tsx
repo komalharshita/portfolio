@@ -140,8 +140,15 @@ export default function Process() {
             Tailwind arbitrary value used for custom column layout.
         */}
         <div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[repeat(3,1fr)_300px] gap-6 relative items-start"
+          className="relative gap-6"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(3, 1fr) 300px",
+            alignItems: "start",
+            gap: "24px",
+          }}
         >
+
           {/* Specialty Cards */}
           {[
             { title: "Data Cleaning & Preparation", icon: "filter" },
@@ -174,7 +181,7 @@ export default function Process() {
               </h3>
 
               <span
-                className="text-xl mt-4 inline-block"
+                className="text-xl mt-4 inline-block mb-0 py-0"
                 style={{ color: "#f6a5c0" }}
               >
                 ↗
@@ -187,14 +194,17 @@ export default function Process() {
             href="https://www.linkedin.com/in/komalharshita/"
             target="_blank"
             rel="noopener noreferrer"
-            className="lg:col-start-4 lg:row-span-2 flex flex-col justify-between rounded-2xl p-10 transition-all hover:-translate-y-1"
+            className="flex flex-col justify-between rounded-2xl p-10 transition-all hover:-translate-y-1 px-10 my-5 py-24"
             style={{
               background: "linear-gradient(135deg, #837ab6, #f6a5c0)",
               color: "white",
               boxShadow: "0 0 20px rgba(246,165,192,0.3)",
-              minHeight: "unset",
+              gridColumn: 4,
+              gridRow: "1 / span 2",
+              height: "100%",
             }}
           >
+
             <div className="text-4xl text-right">↗</div>
 
             <div>
@@ -207,7 +217,7 @@ export default function Process() {
                 className="inline-block mt-6 text-lg font-semibold"
                 style={{ color: "white" }}
               >
-                ↗ Contact Me
+                -&gt; Contact Me
               </span>
             </div>
           </a>

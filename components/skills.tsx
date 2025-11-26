@@ -1,19 +1,18 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Chart as ChartJS,
   ArcElement,
   Tooltip,
-  Legend,
 } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 
-ChartJS.register(ArcElement, Tooltip, Legend);
+ChartJS.register(ArcElement, Tooltip);
 
 const Skills: React.FC = () => {
-  /* =============================
+  /* ==========================================
      SOFTWARE & TOOLS STATE + SORTING
-     ============================= */
+  =========================================== */
   const [tools, setTools] = useState([
     { name: "Excel", level: 85 },
     { name: "Power BI", level: 60 },
@@ -25,52 +24,65 @@ const Skills: React.FC = () => {
     { name: "Canva", level: 90 },
   ]);
 
+  const [animatedLevels, setAnimatedLevels] = useState(
+    tools.map(() => 0)
+  );
+
+  /* Animate numeric counters */
+  useEffect(() => {
+    tools.forEach((tool, index) => {
+      let start = 0;
+      const end = tool.level;
+      const duration = 900;
+      const increment = end / (duration / 16);
+
+      const counter = setInterval(() => {
+        start += increment;
+        if (start >= end) {
+          start = end;
+          clearInterval(counter);
+        }
+        setAnimatedLevels((prev) => {
+          const updated = [...prev];
+          updated[index] = Math.floor(start);
+          return updated;
+        });
+      }, 16);
+    });
+  }, [tools]);
+
   const sortAscending = () => {
     setTools([...tools].sort((a, b) => a.level - b.level));
   };
-
   const sortDescending = () => {
     setTools([...tools].sort((a, b) => b.level - a.level));
   };
 
-  /* =============================
-     DONUT CHART DATA (MEDIUM SIZE)
-     ============================= */
-  const donutLabels = [
-    "Python",
-    "SQL",
-    "Viz",
-    "Analytics",
-    "EDA",
-    "Business",
-  ];
-
+  /* ==========================================
+     DONUT CHART CONFIG
+  =========================================== */
   const donutData = {
-    labels: donutLabels,
+    labels: ["Python", "SQL", "Viz", "Analytics", "EDA", "Business"],
     datasets: [
       {
-        label: "Skill Weight",
         data: [20, 20, 15, 15, 15, 15],
         backgroundColor: [
-          "#837ab6", // lavender-blue
-          "#cc8db3", // dusty pink
-          "#f6a5c0", // pastel pink
-          "#9d85b6", // soft lilac
-          "#f7c2ca", // light blush
-          "#d8a6c9", // extra soft pastel
+          "#837ab6",
+          "#cc8db3",
+          "#f6a5c0",
+          "#9d85b6",
+          "#f7c2ca",
+          "#d8a6c9",
         ],
         borderWidth: 1,
         borderColor: "rgba(255,255,255,0.1)",
-        cutout: "62%", // donut thickness
+        cutout: "62%",
       },
     ],
   };
 
-  const donutOptions = {
-    plugins: {
-      legend: { display: false },
-      tooltip: { enabled: false },
-    },
+  const donutOptions: any = {
+    plugins: { legend: { display: false } },
     responsive: true,
     maintainAspectRatio: false,
   };
@@ -85,18 +97,19 @@ const Skills: React.FC = () => {
         ☆ My Skills ☆
       </h2>
 
-      {/* 2 Cards + Avatar Grid */}
+      {/* Grid Wrapper */}
       <div className="reveal-stagger grid grid-cols-1 md:grid-cols-[1fr_1fr_auto] gap-10 items-start">
 
-        {/* ====================== CARD 1: TECHNICAL SKILLS ====================== */}
+        {/* ====================== TECHNICAL SKILLS CARD ====================== */}
         <div
-          className="p-6 rounded-2xl transition-all duration-300"
-          style={{ backgroundColor: "#2e1637" }}
+          className="p-6 rounded-2xl transition-all duration-300 relative"
+          style={{
+            backgroundColor: "#2e1637",
+            boxShadow: "0 0 22px rgba(246,165,192,0.35)",
+            border: "1px solid rgba(246,165,192,0.25)",
+          }}
         >
-          <h3
-            className="reveal text-xl font-bold mb-6"
-            style={{ color: "#f6a5c0" }}
-          >
+          <h3 className="reveal text-xl font-bold mb-6" style={{ color: "#f6a5c0" }}>
             Technical Skills
           </h3>
 
@@ -117,37 +130,41 @@ const Skills: React.FC = () => {
                   border: "1px solid rgba(246,165,192,0.3)",
                 }}
               >
-                <img
-                  src={skill.icon}
-                  alt={`${skill.name} icon`}
-                  className="w-5 h-5 object-contain"
-                />
+                <img src={skill.icon} className="w-5 h-5 object-contain" />
                 {skill.name}
               </li>
             ))}
           </ul>
 
-          {/* ⭐ DONUT CHART ADDED HERE ⭐ */}
-          <div className="mt-10 mx-auto w-60 h-60">
+          {/* Donut Chart */}
+          <div className="mt-10 mx-auto w-60 h-60 relative group">
+            <div className="absolute inset-0 rounded-full blur-2xl opacity-0 group-hover:opacity-70 transition-all duration-500"
+              style={{ background: "radial-gradient(circle, rgba(246,165,192,0.35), rgba(131,122,182,0.2))" }}
+            ></div>
+
             <Doughnut data={donutData} options={donutOptions} />
           </div>
         </div>
 
-        {/* ====================== CARD 2: SOFTWARE & TOOLS ====================== */}
+        {/* ====================== SOFTWARE & TOOLS CARD ====================== */}
         <div
           className="p-6 rounded-2xl transition-all duration-300 relative"
-          style={{ backgroundColor: "#2e1637" }}
+          style={{
+            backgroundColor: "#2e1637",
+            boxShadow: "0 0 22px rgba(246,165,192,0.35)",
+            border: "1px solid rgba(246,165,192,0.25)",
+          }}
         >
-          {/* Sorting Icon Buttons */}
+          {/* Sorting Buttons */}
           <div className="absolute top-6 right-6 flex gap-3">
             <button
               onClick={sortAscending}
               className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold"
               style={{
-                background: "rgba(246,165,192,0.2)",
+                background: "rgba(246,165,192,0.25)",
                 color: "#f6a5c0",
                 border: "1px solid rgba(246,165,192,0.4)",
-                boxShadow: "0 0 10px rgba(246,165,192,0.3)",
+                boxShadow: "0 0 14px rgba(246,165,192,0.3)",
               }}
             >
               ↑
@@ -159,32 +176,26 @@ const Skills: React.FC = () => {
                 background: "#f6a5c0",
                 color: "#250e2c",
                 border: "1px solid rgba(246,165,192,0.6)",
-                boxShadow: "0 0 12px rgba(246,165,192,0.4)",
+                boxShadow: "0 0 16px rgba(246,165,192,0.4)",
               }}
             >
               ↓
             </button>
           </div>
 
-          <h3
-            className="reveal text-xl font-bold mb-6"
-            style={{ color: "#f6a5c0" }}
-          >
+          <h3 className="reveal text-xl font-bold mb-6" style={{ color: "#f6a5c0" }}>
             Software & Tools
           </h3>
 
           <div className="space-y-6">
-            {tools.map((tool) => (
-              <div
-                key={tool.name}
-                className="transition-all duration-300"
-              >
+            {tools.map((tool, index) => (
+              <div key={tool.name} className="transition-all duration-300">
                 <div
                   className="flex justify-between mb-1 text-sm font-medium"
                   style={{ color: "#e0c3cc" }}
                 >
                   <span>{tool.name}</span>
-                  <span>{tool.level}%</span>
+                  <span>{animatedLevels[index]}%</span>
                 </div>
 
                 <div
@@ -192,7 +203,7 @@ const Skills: React.FC = () => {
                   style={{ backgroundColor: "rgba(255,255,255,0.1)" }}
                 >
                   <div
-                    className="h-full rounded-full transition-all duration-300"
+                    className="h-full rounded-full transition-all duration-500"
                     style={{
                       width: `${tool.level}%`,
                       background:
@@ -206,11 +217,10 @@ const Skills: React.FC = () => {
           </div>
         </div>
 
-        {/* ====================== AVATAR ON RIGHT SIDE ====================== */}
+        {/* ====================== AVATAR ====================== */}
         <div className="flex justify-center md:justify-end">
           <img
             src="/images/p_working.png"
-            alt="Profile Avatar"
             className="object-cover w-52 h-96 border-0 rounded-4xl"
             style={{ borderColor: "rgba(246,165,192,0.5)" }}
           />
