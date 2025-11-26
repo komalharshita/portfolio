@@ -63,7 +63,7 @@ export default function Contact() {
                 Connect With Me
               </p>
 
-              <div className="flex gap-3 flex-wrap">
+              <div className="flex flex-wrap gap-5 pt-6 leading-5 tracking-normal">
 
                 {/* LinkedIn */}
                 <a
