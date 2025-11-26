@@ -29,7 +29,7 @@ export default function Contact() {
         <AnimatedDivider />
 
         <div className="text-center mb-16 max-w-7xl mx-auto">
-          <h2 className="font-bold mb-16 text-center text-5xl" style={{ color: "#f6a5c0" }}>
+          <h2 class="section-title" className="font-bold mb-16 text-center text-5xl" style={{ color: "#f6a5c0" }}>
             Let's Connect!
           </h2>
           <p className="text-xl" style={{ color: "#b8a0b8" }}>

@@ -48,7 +48,7 @@ export default function Experience() {
   return (
     <section id="experience-achievements" className="py-20 px-4 max-w-6xl mx-auto font-sans">
       <div className="text-center mb-16">
-        <h2 className="font-bold mb-16 text-center text-5xl" style={{ color: "#f6a5c0" }}>
+        <h2 class="section-title" className="font-bold mb-16 text-center text-5xl" style={{ color: "#f6a5c0" }}>
           Experience & Achievements
         </h2>
       </div>

@@ -12,6 +12,7 @@ export default function Education() {
           <h3
             className="text-2xl font-bold mb-6"
             style={{ color: "#250e2c", fontFamily: "'Poppins', sans-serif" }}
+            class="section-title"
           >
             Education
           </h3>
@@ -46,6 +47,7 @@ export default function Education() {
         {/* ---------- RIGHT: BEYOND TECH ---------- */}
         <div>
           <h3
+            class="section-title"
             className="text-2xl font-bold mb-8"
             style={{ color: "#250e2c", fontFamily: "'Poppins', sans-serif" }}
           >
