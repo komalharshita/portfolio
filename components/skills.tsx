@@ -29,7 +29,7 @@ const Skills: React.FC = () => {
               { name: "Python", icon: "https://img.icons8.com/?size=100&id=l75OEUJkPAk4&format=png&color=000000" },
               { name: "SQL Queries", icon: "https://img.icons8.com/?size=100&id=J6KcaRLsTgpZ&format=png&color=000000" },
               { name: "Data Visualization", icon: "https://img.icons8.com/?size=100&id=3sGOUDo9nJ4k&format=png&color=000000" },
-              { name: "Data Analytics", icon: "https://img.icons8.com/?size=100&id=undefined&format=png&color=000000" },
+              { name: "Data Analytics", icon: "https://img.icons8.com/?size=100&id=eRN6xwYNB76I&format=png&color=000000" },
               { name: "Exploratory Data Analysis (EDA)", icon: "https://img.icons8.com/?size=100&id=UT0KFoaguV2Z&format=png&color=000000" },
               { name: "Business Analytics", icon: "https://img.icons8.com/?size=100&id=6R735OAB4eCV&format=png&color=000000" },
             ].map((skill) => (

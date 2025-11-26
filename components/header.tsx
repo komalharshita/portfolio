@@ -1,6 +1,24 @@
 "use client";
 
+import { useState, useEffect } from "react";
+
 export default function Header() {
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    const updateScrollProgress = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      const progress = docHeight ? (scrollTop / docHeight) * 100 : 0;
+      setScrollProgress(progress);
+    };
+
+    window.addEventListener("scroll", updateScrollProgress);
+    updateScrollProgress();
+
+    return () => window.removeEventListener("scroll", updateScrollProgress);
+  }, []);
+
   return (
     <header
       className="sticky top-0 z-50 border-b"
@@ -10,15 +28,17 @@ export default function Header() {
         <a href="#" className="transition-transform duration-300 hover:scale-110">
           <img src="/images/kh-favicon.png" alt="KH Logo" className="rounded-full size-12" />
         </a>
+
         <nav className="flex gap-8 text-sm font-medium">
-            <a
+
+          <a
             className="rounded-full size-5 transition-colors duration-300"
             style={{ color: "#b8a0b8" }}
             onMouseEnter={(e) => (e.currentTarget.style.color = "#f6a5c0")}
             onMouseLeave={(e) => (e.currentTarget.style.color = "#b8a0b8")}
-            >
-             About
-            </a>
+          >
+            About
+          </a>
 
           <a
             href="#projects"
@@ -29,6 +49,7 @@ export default function Header() {
           >
             Projects
           </a>
+
           <a
             href="#contact"
             className="transition-colors duration-300"
@@ -40,6 +61,16 @@ export default function Header() {
           </a>
         </nav>
       </div>
+
+      {/* 🔥 Scroll Progress Bar */}
+      <div
+        className="h-1"
+        style={{
+          width: `${scrollProgress}%`,
+          background: "linear-gradient(90deg, #837ab6, #cc8db3, #f6a5c0)",
+          transition: "width 0.2s ease-out",
+        }}
+      ></div>
     </header>
-  )
+  );
 }
