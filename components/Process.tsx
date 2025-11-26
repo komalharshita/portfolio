@@ -176,9 +176,12 @@ export default function Process() {
             </div>
             ))}
 
+            
             {/* ==== CTA BOX (right side tall block) ==== */}
             <a
-            href="https://linkedin/in/komalharshita"
+            href="https://www.linkedin.com/in/komalharshita/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="lg:row-span-2 flex flex-col justify-between rounded-2xl p-10 transition-all hover:-translate-y-1"
             style={{
                 background: "linear-gradient(135deg, #837ab6, #f6a5c0)",
@@ -191,12 +194,21 @@ export default function Process() {
 
             {/* CTA Text */}
             <div>
-                <p className="text-sm opacity-80">Say Hello!</p>
-                <h3 className="text-2xl font-bold mt-2">Add me on Linkedin</h3>
+                <p className="text-sm opacity-80">Open to Opportunities!</p>
+                <h3 className="text-2xl font-bold mt-2">
+                Available for Data Analytics Internships 2026.
+                </h3>
+
+                {/* Arrow link (Option A) */}
+                <span
+                className="inline-block mt-6 text-lg font-semibold"
+                style={{ color: "white" }}
+                >
+                ↗ Contact Me
+                </span>
             </div>
             </a>
-        </div>
-        </div>
+
 
         {/* Fade-up animation */}
         <style jsx>{`
