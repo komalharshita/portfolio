@@ -39,7 +39,11 @@
     "@radix-ui/react-tooltip": "latest",
     "@vercel/analytics": "latest",
     "autoprefixer": "^10.4.20",
+<<<<<<< HEAD
     "chart.js": "^4.5.1",
+=======
+    "chart.js": "latest",
+>>>>>>> a7c626311a31485cdf29596ed5bd5d15481d422e
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "latest",
@@ -50,7 +54,11 @@
     "next": "16.0.3",
     "next-themes": "latest",
     "react": "19.2.0",
+<<<<<<< HEAD
     "react-chartjs-2": "^5.3.1",
+=======
+    "react-chartjs-2": "latest",
+>>>>>>> a7c626311a31485cdf29596ed5bd5d15481d422e
     "react-day-picker": "latest",
     "react-dom": "19.2.0",
     "react-hook-form": "latest",
