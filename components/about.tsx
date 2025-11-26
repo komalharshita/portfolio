@@ -1,20 +1,70 @@
-"use client"
+"use client";
 
 export default function About() {
   return (
-    <div id="about" className="max-w-7xl mx-auto px-6 sm:px-8 py-24">
-      <h2 className="font-bold mb-16 text-center text-5xl" style={{ color: "#f6a5c0" }}>
+    <div
+      id="about"
+      className="relative max-w-7xl mx-auto px-6 sm:px-8 py-24"
+    >
+      {/* Heading with small heart */}
+      <h2
+        className="font-bold mb-16 text-center text-5xl flex items-center justify-center gap-3"
+        style={{ color: "#f6a5c0" }}
+      >
         <img
-    src="/cute-badges/silver-soft-heart.png"
-    alt="heart"
-    className="w-6 h-6 opacity-85"
+          src="/cute-badges/silver-soft-heart.png"
+          alt="heart"
+          className="w-6 h-6 opacity-85"
         />
         About Me
       </h2>
 
       {/* Top Row: Portrait + Bio */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+        {/* Avatar Container */}
         <div className="h-96 rounded-lg flex items-center justify-center overflow-hidden relative">
+
+          {/* 🦋 Butterfly */}
+          {/* Adjust with: top-? left-? */}
+          <img
+            src="/cute-badges/blue-butterflies.png"
+            alt="butterfly"
+            className="hidden sm:block absolute top-4 left-4 w-12 opacity-60 animate-float-slower pointer-events-none"
+          />
+
+          {/* ✨ Sparkle above avatar */}
+          {/* Adjust with: top-? right-? */}
+          <img
+            src="/cute-badges/purple-sparkles.png"
+            alt="sparkle"
+            className="absolute top-0 right-10 w-5 opacity-80 animate-twinkle-soft pointer-events-none"
+          />
+
+          {/* 🌸 Tulip pair */}
+          {/* Adjust with: bottom-? right-? */}
+          <img
+            src="/cute-badges/pink-tulip-pair.png"
+            alt="tulips"
+            className="absolute bottom-0 right-0 w-16 opacity-75 animate-float-slow pointer-events-none"
+          />
+
+          {/* ✦ Sparkle between avatar & text */}
+          {/* Adjust with: left-[%] top-? */}
+          <img
+            src="/cute-badges/purple-sparkles.png"
+            alt="sparkle"
+            className="hidden lg:block absolute top-1/3 left-[55%] w-4 opacity-70 animate-twinkle-soft pointer-events-none"
+          />
+
+          {/* 💗 Optional faint planet */}
+          {/* Adjust with: top-? left-? */}
+          <img
+            src="/cute-badges/pink-heart-planet.png"
+            alt="planet"
+            className="hidden lg:block absolute top-10 left-0 w-28 opacity-20 pointer-events-none blur-[1px]"
+          />
+
+          {/* Avatar Image */}
           <img
             src="/images/p_posing.png"
             alt="Komal Harshita"
@@ -33,45 +83,66 @@ export default function About() {
 
         {/* Bio */}
         <div className="flex flex-col justify-center space-y-4">
-          <p className="leading-relaxed text-lg" style={{ color: "#e0c3cc" }}>
-            Hi, I'm Komal — a Computer Science Engineering sophomore at NMIET, currently exploring Data and Business
-            Analytics. I'm building skills in SQL, Excel, Python (Pandas), and Power BI, and I enjoy identifying
-            patterns in data and solving analytical problems.
+          <p
+            className="leading-relaxed text-lg"
+            style={{ color: "#e0c3cc" }}
+          >
+            Hi, I'm Komal — a Computer Science Engineering sophomore at NMIET,
+            currently exploring Data and Business Analytics. I'm building
+            skills in SQL, Excel, Python (Pandas), and Power BI, and I enjoy
+            identifying patterns in data and solving analytical problems.
           </p>
-          <p className="leading-relaxed text-lg" style={{ color: "#e0c3cc" }}>
-            I learn through consistent daily practice, small exercises, and hands-on exploration. I'm working toward
-            building dashboards, case-based analyses, and beginner-friendly analytical projects that reflect my growth.
+
+          <p
+            className="leading-relaxed text-lg"
+            style={{ color: "#e0c3cc" }}
+          >
+            I learn through consistent daily practice, small exercises, and
+            hands-on exploration. I'm working toward building dashboards,
+            case-based analyses, and beginner-friendly analytical projects
+            that reflect my growth.
           </p>
-          <p className="leading-relaxed text-lg" style={{ color: "#e0c3cc" }}>
-            I'm also open to Summer Internship opportunities where I can apply my skills, work with real datasets, and
-            continue growing as an analyst.
+
+          <p
+            className="leading-relaxed text-lg"
+            style={{ color: "#e0c3cc" }}
+          >
+            I'm also open to Summer Internship opportunities where I can apply
+            my skills, work with real datasets, and continue growing as an
+            analyst.
           </p>
         </div>
       </div>
 
       {/* Bottom Row */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-        
-        {/* Education Block */}
+        {/* Education */}
         <div
           className="rounded-lg p-6 transition-all duration-300 leading-10"
           style={{ backgroundColor: "#2e1637" }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundColor = "#351b42"
-            e.currentTarget.style.boxShadow = "0 0 20px rgba(246,165,192,0.2)"
+            e.currentTarget.style.backgroundColor = "#351b42";
+            e.currentTarget.style.boxShadow =
+              "0 0 20px rgba(246,165,192,0.2)";
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundColor = "#2e1637"
-            e.currentTarget.style.boxShadow = "none"
+            e.currentTarget.style.backgroundColor = "#2e1637";
+            e.currentTarget.style.boxShadow = "none";
           }}
         >
-          <h3 className="text-2xl font-bold mb-6" style={{ color: "#f6a5c0" }}>
+          <h3
+            className="text-2xl font-bold mb-6"
+            style={{ color: "#f6a5c0" }}
+          >
             Education
           </h3>
 
           <div className="space-y-6">
             <div>
-              <h4 className="font-semibold mb-1" style={{ color: "#f6a5c0" }}>
+              <h4
+                className="font-semibold mb-1"
+                style={{ color: "#f6a5c0" }}
+              >
                 Savitribai Phule Pune University
               </h4>
               <p className="text-sm" style={{ color: "#e0c3cc" }}>
@@ -86,7 +157,10 @@ export default function About() {
             </div>
 
             <div>
-              <h4 className="font-semibold mb-1" style={{ color: "#f6a5c0" }}>
+              <h4
+                className="font-semibold mb-1"
+                style={{ color: "#f6a5c0" }}
+              >
                 Symbiosis Junior College
               </h4>
               <p className="text-sm" style={{ color: "#e0c3cc" }}>
@@ -99,40 +173,43 @@ export default function About() {
                 Percentage: 80.67%
               </p>
               <p className="text-sm mt-2" style={{ color: "#b8a0b8" }}>
-                Activities: Creative writing, essay competitions, Student Editor of the Symbi Tribe Magazine
+                Activities: Creative writing, essay competitions, Student
+                Editor of the Symbi Tribe Magazine
               </p>
             </div>
           </div>
         </div>
 
-        {/* Skills Block */}
+        {/* Hobbies & Traits */}
         <div
           className="rounded-lg p-6 transition-all duration-300"
           style={{ backgroundColor: "#2e1637" }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundColor = "#351b42"
-            e.currentTarget.style.boxShadow = "0 0 20px rgba(246,165,192,0.2)"
+            e.currentTarget.style.backgroundColor = "#351b42";
+            e.currentTarget.style.boxShadow =
+              "0 0 20px rgba(246,165,192,0.2)";
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundColor = "#2e1637"
-            e.currentTarget.style.boxShadow = "none"
+            e.currentTarget.style.backgroundColor = "#2e1637";
+            e.currentTarget.style.boxShadow = "none";
           }}
         >
-          
 
           <div className="space-y-6">
-            
-                        {/* Hobbies Block */}
+            {/* Hobbies */}
             <div>
-              <h3 className="text-2xl font-bold mb-6" style={{ color: "#f6a5c0" }}>
+              <h3
+                className="text-2xl font-bold mb-6"
+                style={{ color: "#f6a5c0" }}
+              >
                 Hobbies & Creative Interests
               </h3>
 
               <p className="text-sm mb-4" style={{ color: "#e0c3cc" }}>
-                These hobbies keep me grounded, inspired, and connected to my creative side.
+                These hobbies keep me grounded, inspired, and connected to my
+                creative side.
               </p>
 
-              {/* Hobbies Pills */}
               <div className="flex flex-wrap gap-3 mb-8">
                 {[
                   { label: "Poetry", icon: "✨" },
@@ -147,7 +224,8 @@ export default function About() {
                     key={item.label}
                     className="px-4 py-2 rounded-full text-sm font-medium transition-all shadow-md"
                     style={{
-                      background: "linear-gradient(90deg, #ff99c8, #c774b6, #8b5f9b)",
+                      background:
+                        "linear-gradient(90deg, #ff99c8, #c774b6, #8b5f9b)",
                       color: "white",
                     }}
                   >
@@ -156,8 +234,11 @@ export default function About() {
                 ))}
               </div>
 
-              {/* Personality Traits */}
-              <h4 className="text-xl font-semibold mb-3" style={{ color: "#f6a5c0" }}>
+              {/* Traits */}
+              <h4
+                className="text-xl font-semibold mb-3"
+                style={{ color: "#f6a5c0" }}
+              >
                 Personal Traits
               </h4>
 
@@ -172,7 +253,8 @@ export default function About() {
                     key={trait.label}
                     className="px-4 py-2 rounded-full text-sm font-medium transition-all shadow-md"
                     style={{
-                      background: "linear-gradient(90deg, #c774b6, #9c5fa7, #6d4b8a)",
+                      background:
+                        "linear-gradient(90deg, #c774b6, #9c5fa7, #6d4b8a)",
                       color: "white",
                     }}
                   >
@@ -185,5 +267,5 @@ export default function About() {
         </div>
       </div>
     </div>
-  )
+  );
 }
