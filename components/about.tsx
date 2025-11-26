@@ -21,65 +21,61 @@ export default function About() {
 
       {/* Top Row: Portrait + Bio */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+        
         {/* Avatar Container */}
-        <div className="h-96 rounded-lg flex items-center justify-center overflow-hidden relative">
+          <div className="h-96 rounded-lg flex items-center justify-center overflow-hidden relative">
 
-          {/* 🦋 Butterfly */}
-          {/* Adjust with: top-? left-? */}
-          <img
-            src="/cute-badges/blue-butterflies.png"
-            alt="butterfly"
-            className="hidden sm:block absolute top-4 left-4 w-12 opacity-60 animate-float-slower pointer-events-none"
-          />
+            {/* 🦋 Butterfly - top left */}
+            <img
+              src="/cute-badges/blue-butterflies.png"
+              alt="butterfly"
+              className="hidden sm:block absolute top-0 left-6 w-18 opacity-70 animate-float-slower pointer-events-none z-20"
+            />
 
-          {/* ✨ Sparkle above avatar */}
-          {/* Adjust with: top-? right-? */}
-          <img
-            src="/cute-badges/purple-sparkles.png"
-            alt="sparkle"
-            className="absolute top-0 right-10 w-5 opacity-80 animate-twinkle-soft pointer-events-none"
-          />
+            {/* ✨ Sparkle above avatar */}
+            <img
+              src="/cute-badges/purple-sparkles.png"
+              alt="sparkle"
+              className="absolute top-4 right-6 w-9 opacity-80 animate-twinkle-soft pointer-events-none z-20"
+            />
 
-          {/* 🌸 Tulip pair */}
-          {/* Adjust with: bottom-? right-? */}
-          <img
-            src="/cute-badges/pink-tulip-pair.png"
-            alt="tulips"
-            className="absolute bottom-0 right-0 w-16 opacity-75 animate-float-slow pointer-events-none"
-          />
+            {/* 🌷 Tulips bottom-right */}
+            <img
+              src="/cute-badges/pink-tulip-pair.png"
+              alt="tulips"
+              className="absolute bottom-0 right-0 top-80 w-20 opacity-85 animate-float-slow pointer-events-none z-20"
+            />
 
-          {/* ✦ Sparkle between avatar & text */}
-          {/* Adjust with: left-[%] top-? */}
-          <img
-            src="/cute-badges/purple-sparkles.png"
-            alt="sparkle"
-            className="hidden lg:block absolute top-1/3 left-[55%] w-4 opacity-70 animate-twinkle-soft pointer-events-none"
-          />
+            {/* ✦ Sparkle near text side */}
+            <img
+              src="/cute-badges/purple-sparkles.png"
+              alt="sparkle"
+              className="hidden lg:block absolute top-[55%] left-[52%] w-4 opacity-70 animate-twinkle-soft pointer-events-none z-20"
+            />
 
-          {/* 💗 Optional faint planet */}
-          {/* Adjust with: top-? left-? */}
-          <img
-            src="/cute-badges/pink-heart-planet.png"
-            alt="planet"
-            className="hidden lg:block absolute top-10 left-0 w-28 opacity-20 pointer-events-none blur-[1px]"
-          />
+            {/* 💗 Faint planet watermark behind (but still visible over avatar) */}
+            <img
+              src="/cute-badges/pink-heart-planet.png"
+              alt="planet"
+              className="hidden lg:block absolute top-6 left-4 w-15 opacity-25 pointer-events-none blur-[1px] z-20"
+            />
 
-          {/* Avatar Image */}
-          <img
-            src="/images/p_posing.png"
-            alt="Komal Harshita"
-            className="h-full w-full object-cover"
-          />
+            {/* Avatar Image — LOWER z-index */}
+            <img
+              src="/images/p_posing.png"
+              alt="Komal Harshita"
+              className="h-full w-full object-cover z-10"  //<-- BADGES WILL BE ABOVE THIS
+            />
 
-          {/* McKinsey Badge */}
-          <div
-            className="absolute top-6 left-6 glass-effect px-6 py-3 rounded-lg shadow-lg transform -rotate-6 border border-white/30 pl-6"
-            style={{ backgroundColor: "rgba(156, 82, 120, 0.7)" }}
-          >
-            <p className="font-bold text-sm text-white">McKinsey</p>
-            <p className="text-xs text-white">Forward Learner</p>
+            {/* McKinsey Badge — keep on top */}
+            <div
+              className="absolute top-6 left-6 glass-effect px-6 py-3 rounded-lg shadow-lg transform -rotate-6 border border-white/30 pl-6 z-30"
+              style={{ backgroundColor: "rgba(156, 82, 120, 0.7)" }}
+            >
+              <p className="font-bold text-sm text-white">McKinsey</p>
+              <p className="text-xs text-white">Forward Learner</p>
+            </div>
           </div>
-        </div>
 
         {/* Bio */}
         <div className="flex flex-col justify-center space-y-4">
