@@ -29,7 +29,7 @@ export default function About() {
             <img
               src="/cute-badges/blue-butterflies.png"
               alt="butterfly"
-              className="hidden sm:block absolute top-0 left-6 w-18 opacity-70 animate-float-slower pointer-events-none z-20"
+              className="hidden sm:block absolute top-0 left-6 w-18 opacity-80 animate-float-slower pointer-events-none z-20"
             />
 
             {/* ✨ Sparkle above avatar */}
@@ -43,7 +43,7 @@ export default function About() {
             <img
               src="/cute-badges/pink-tulip-pair.png"
               alt="tulips"
-              className="absolute bottom-0 right-0 top-80 w-20 opacity-85 animate-float-slow pointer-events-none z-20"
+              className="absolute bottom-0 right-0 top-80 w-18 opacity-85 animate-float-slow pointer-events-none z-20"
             />
 
             {/* ✦ Sparkle near text side */}
