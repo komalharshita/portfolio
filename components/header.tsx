@@ -32,7 +32,8 @@ export default function Header() {
         <nav className="flex gap-8 text-sm font-medium">
 
           <a
-            className="rounded-full size-5 transition-colors duration-300"
+            href = "#about"
+            className="transition-colors duration-300"
             style={{ color: "#b8a0b8" }}
             onMouseEnter={(e) => (e.currentTarget.style.color = "#f6a5c0")}
             onMouseLeave={(e) => (e.currentTarget.style.color = "#b8a0b8")}

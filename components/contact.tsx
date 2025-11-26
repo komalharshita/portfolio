@@ -56,6 +56,11 @@ export default function Contact() {
           
           {/* Contact info */}
           <div className="space-y-8 mx-10 my-10">
+              <img
+                src="/images/p_talking.png"
+                alt="Komal Harshita"
+                className="w-32 h-32 rounded-full border shadow-lg mx-auto"
+              />
 
             {/* Social links */}
             <div className="pt-8 border-t" style={{ borderColor: "rgba(211, 195, 227, 0.3)" }}>
