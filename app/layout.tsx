@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { Inter, Poppins } from "next/font/google"
-import ScrollProgressBar from "@/components/scroll-progress-bar"
+import ScrollProgressBar from "@/components/ScrollReveal"
 import "./globals.css"
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 const poppins = Poppins({
