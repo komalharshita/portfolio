@@ -243,7 +243,7 @@ const Skills: React.FC = () => {
         <div className="flex justify-center md:justify-end">
           <img
             src="/images/p_working.png"
-            className="object-cover w-52 h-96 border-0 rounded-4xl"
+            className="object-cover w-52 h-96 border-0 rounded-3xl"
             style={{ borderColor: "rgba(246,165,192,0.5)" }}
           />
         </div>
