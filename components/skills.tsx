@@ -51,12 +51,19 @@ const Skills: React.FC = () => {
     });
   }, [tools]);
 
+  
   const sortAscending = () => {
-    setTools([...tools].sort((a, b) => a.level - b.level));
+  const sorted = [...tools].sort((a, b) => a.level - b.level);
+  setTools(sorted);
+  setAnimatedLevels(sorted.map(() => 0)); // reset animation indexes
   };
+
   const sortDescending = () => {
-    setTools([...tools].sort((a, b) => b.level - a.level));
+  const sorted = [...tools].sort((a, b) => b.level - a.level);
+  setTools(sorted);
+  setAnimatedLevels(sorted.map(() => 0)); // reset animation indexes
   };
+
 
   /* ==========================================
      DONUT CHART CONFIG
@@ -81,11 +88,26 @@ const Skills: React.FC = () => {
     ],
   };
 
+  
   const donutOptions: any = {
-    plugins: { legend: { display: false } },
-    responsive: true,
-    maintainAspectRatio: false,
-  };
+  plugins: {
+    legend: {
+      display: true,
+      position: "bottom",
+      labels: {
+        color: "#f7c2ca",
+        padding: 20,
+        font: {
+          size: 12,
+          family: "Poppins",
+        },
+      },
+    },
+  },
+  responsive: true,
+  maintainAspectRatio: false,
+};
+
 
   return (
     <section className="max-w-6xl mx-auto px-6 py-20">

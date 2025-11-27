@@ -164,10 +164,19 @@ h3 { font-size: var(--font-subtitle); }
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: "Poppins", sans-serif;
-    color: #f7c2ca;
-    font-weight: 700;
-  }
+  font-family: "Poppins", sans-serif;
+  color: #f7c2ca;
+  font-weight: 700;
+  text-align: center; /* added */
+  width: 100%;        /* added */
+}
+
+/* Also fix section-title alignment */
+.section-title {
+  text-align: center;
+  width: 100%;
+}
+
 
   p {
     @apply text-base md:text-lg;
@@ -286,7 +295,7 @@ h3 { font-size: var(--font-subtitle); }
 
 /* 2) Reveal (fade + slide up) for whole header */
 .section-title {
-  display: inline-block;
+  display: block;
   position: relative;
   color: var(--color-light-blush); /* #f7c2ca */
   font-family: var(--font-heading);
@@ -294,7 +303,8 @@ h3 { font-size: var(--font-subtitle); }
   will-change: transform, opacity;
   transform-origin: left center;
   animation: reveal-up 650ms cubic-bezier(.2,.9,.2,1) both;
-  /* subtle glow consistent with brand */
+  text-align: center;
+  width: 100%;
   text-shadow: 0 6px 18px rgba(247,194,202,0.12);
 }
 
