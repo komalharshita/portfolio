@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
       </div>
 
       {/* NAVIGATION */}
-      <nav className="hidden flex flex-wrap justify-center gap-6 mb-8 text-sm font-medium">
+      <nav className="flex flex-wrap justify-center gap-6 mb-8 text-sm font-medium">
         {[
           { name: "About", href: "#about" },
           { name: "Skills", href: "#skills" },
@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
           <a
             key={item.name}
             href={item.href}
-            className="transition-all duration-300"
+            className="transition-all"
             style={{ color: "#e0c3cc" }}
             onMouseEnter={(e) => (e.currentTarget.style.color = "#f6a5c0")}
             onMouseLeave={(e) => (e.currentTarget.style.color = "#e0c3cc")}

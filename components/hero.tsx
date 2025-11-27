@@ -39,16 +39,16 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
           {/* LEFT CONTENT */}
-          <div className="space-y-6 lg:space-y-8">
+          <div className="space-y-6 lg:space-y-8 text-left">
             <div className="space-y-3">
               <h1
-                className="reveal text-5xl sm:text-6xl lg:text-7xl font-bold leading-[5.5rem] tracking-wider"
+                className="reveal text-5xl sm:text-6xl lg:text-7xl font-bold leading-[5.5rem] tracking-wider text-left"
                 style={{ color: "#f6a5c0" }}
               >
                 PORTFOLIO
               </h1>
               <h2
-                className="reveal section-title text-2xl sm:text-3xl lg:text-4xl font-semibold"
+                className="reveal text-2xl sm:text-3xl lg:text-4xl font-semibold text-left"
                 style={{ color: "#cc8db3" }}
               >
                 Komal Harshita
@@ -135,7 +135,7 @@ export default function Hero() {
         >
           <div className="text-center lg:text-left">
             <p
-              className="text-xl sm:text-2xl font-bold"
+              className="reveal text-xl sm:text-2xl font-bold"
               style={{ color: "#f6a5c0" }}
             >
               50+
@@ -149,7 +149,7 @@ export default function Hero() {
           </div>
           <div className="text-center lg:text-left">
             <p
-              className="text-xl sm:text-2xl font-bold"
+              className="reveal text-xl sm:text-2xl font-bold"
               style={{ color: "#cc8db3" }}
             >
               Skilled
@@ -163,7 +163,7 @@ export default function Hero() {
           </div>
           <div className="text-center lg:text-left">
             <p
-              className="text-xl sm:text-2xl font-bold"
+              className="reveal text-xl sm:text-2xl font-bold"
               style={{ color: "#837ab6" }}
             >
               2026

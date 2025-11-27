@@ -105,13 +105,13 @@ export default function Process() {
             </p>
 
             <h2
-              className="text-4xl sm:text-5xl font-extrabold mt-2 relative"
+              className="reveal text-4xl sm:text-5xl font-extrabold mt-2 relative"
               style={{ color: "#f6a5c0" }}
             >
               My{" "}
               <span className="relative inline-block">
                 <span
-                  className="absolute rounded-full -left-2 -top-3"
+                  className="reveal absolute rounded-full -left-2 -top-3"
                   style={{
                     width: "55px",
                     height: "55px",
@@ -126,7 +126,7 @@ export default function Process() {
           </div>
 
           <p
-            className="max-w-md text-sm leading-relaxed"
+            className="reveal max-w-md text-sm leading-relaxed"
             style={{ color: "#e0c3cc" }}
           >
             I help turn raw data into clear insights through structured
@@ -174,7 +174,7 @@ export default function Process() {
               ></i>
 
               <h3
-                className="text-lg font-semibold"
+                className="reveal text-lg font-semibold"
                 style={{ color: "#f7c2ca" }}
               >
                 {item.title}
@@ -208,8 +208,8 @@ export default function Process() {
             <div className="text-4xl text-right">↗</div>
 
             <div>
-              <p className="text-sm opacity-80">Open to Opportunities!</p>
-              <h3 className="text-2xl font-bold mt-2 text-left">
+              <p className="reveal text-sm opacity-80">Open to Opportunities!</p>
+              <h3 className="reveal text-2xl font-bold mt-2 text-left">
                 Available for Data Analytics Internships 2026.
               </h3>
 

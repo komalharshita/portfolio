@@ -1,18 +1,46 @@
 "use client";
-import React, { useState, useEffect } from "react";
+
+import React, { useState, useEffect, useRef } from "react";
+import { Doughnut } from "react-chartjs-2";
 import {
   Chart as ChartJS,
   ArcElement,
   Tooltip,
+  Legend as ChartLegend,
 } from "chart.js";
-import { Doughnut } from "react-chartjs-2";
 
-ChartJS.register(ArcElement, Tooltip);
+ChartJS.register(ArcElement, Tooltip, ChartLegend);
 
 const Skills: React.FC = () => {
-  /* ==========================================
-     SOFTWARE & TOOLS STATE + SORTING
-  =========================================== */
+  /* --------------------------- TECHNICAL SKILLS --------------------------- */
+  const technicalSkills = [
+    {
+      name: "Python",
+      icon: "https://img.icons8.com/?size=100&id=l75OEUJkPAk4&format=png&color=000000",
+    },
+    {
+      name: "SQL Queries",
+      icon: "https://img.icons8.com/?size=100&id=J6KcaRLsTgpZ&format=png&color=000000",
+    },
+    {
+      name: "Data Visualization",
+      icon: "https://img.icons8.com/?size=100&id=3sGOUDo9nJ4k&format=png&color=000000",
+    },
+    {
+      name: "Data Analytics",
+      icon: "https://img.icons8.com/?size=100&id=eRN6xwYNB76I&format=png&color=000000",
+    },
+    {
+      name: "Exploratory Data Analysis (EDA)",
+      icon: "https://img.icons8.com/?size=100&id=UT0KFoaguV2Z&format=png&color=000000",
+    },
+    {
+      name: "Business Analytics",
+      icon: "https://img.icons8.com/?size=100&id=6R735OAB4eCV&format=png&color=000000",
+    },
+  ];
+
+  /* ----------------------------- TOOL SKILLS ------------------------------ */
   const [tools, setTools] = useState([
     { name: "Excel", level: 85 },
     { name: "Power BI", level: 60 },
@@ -24,50 +52,64 @@ const Skills: React.FC = () => {
     { name: "Canva", level: 90 },
   ]);
 
-  const [animatedLevels, setAnimatedLevels] = useState(
+  /* --------------------------- ANIMATED LEVELS ---------------------------- */
+  const [animatedLevels, setAnimatedLevels] = useState<number[]>(
     tools.map(() => 0)
   );
+  const timers = useRef<number[]>([]);
 
-  /* Animate numeric counters */
+  /* --------------------------- ANIMATE NUMBERS ---------------------------- */
   useEffect(() => {
-    tools.forEach((tool, index) => {
-      let start = 0;
-      const end = tool.level;
-      const duration = 900;
-      const increment = end / (duration / 16);
+    timers.current.forEach((id) => clearInterval(id));
+    timers.current = [];
 
-      const counter = setInterval(() => {
-        start += increment;
-        if (start >= end) {
-          start = end;
-          clearInterval(counter);
+    setAnimatedLevels(tools.map(() => 0));
+
+    tools.forEach((tool, index) => {
+      let current = 0;
+      const end = tool.level;
+      const duration = 700;
+      const stepTime = 16;
+      const steps = Math.floor(duration / stepTime);
+      const increment = end / steps;
+
+      const id = window.setInterval(() => {
+        current += increment;
+        if (current >= end) {
+          current = end;
+          clearInterval(id);
         }
+
         setAnimatedLevels((prev) => {
           const updated = [...prev];
-          updated[index] = Math.floor(start);
+          updated[index] = Math.floor(current);
           return updated;
         });
-      }, 16);
+      }, stepTime);
+
+      timers.current.push(id);
     });
+
+    return () => {
+      timers.current.forEach((id) => clearInterval(id));
+      timers.current = [];
+    };
   }, [tools]);
 
-  
+  /* --------------------------- SORT FUNCTIONS ----------------------------- */
   const sortAscending = () => {
-  const sorted = [...tools].sort((a, b) => a.level - b.level);
-  setTools(sorted);
-  setAnimatedLevels(sorted.map(() => 0)); // reset animation indexes
+    const sorted = [...tools].sort((a, b) => a.level - b.level);
+    setTools(sorted);
+    setAnimatedLevels(sorted.map(() => 0));
   };
 
   const sortDescending = () => {
-  const sorted = [...tools].sort((a, b) => b.level - a.level);
-  setTools(sorted);
-  setAnimatedLevels(sorted.map(() => 0)); // reset animation indexes
+    const sorted = [...tools].sort((a, b) => b.level - a.level);
+    setTools(sorted);
+    setAnimatedLevels(sorted.map(() => 0));
   };
 
-
-  /* ==========================================
-     DONUT CHART CONFIG
-  =========================================== */
+  /* -------------------------- TECHNICAL PIE CHART ------------------------- */
   const donutData = {
     labels: ["Python", "SQL", "Viz", "Analytics", "EDA", "Business"],
     datasets: [
@@ -81,139 +123,99 @@ const Skills: React.FC = () => {
           "#f7c2ca",
           "#d8a6c9",
         ],
-        borderWidth: 1,
-        borderColor: "rgba(255,255,255,0.1)",
-        cutout: "62%",
+        borderWidth: 0,
       },
     ],
   };
 
-  
   const donutOptions: any = {
-  plugins: {
-    legend: {
-      display: true,
-      position: "bottom",
-      labels: {
-        color: "#f7c2ca",
-        padding: 20,
-        font: {
-          size: 12,
-          family: "Poppins",
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        position: "bottom",
+        labels: {
+          color: "#f7c2ca",
+          padding: 10,
         },
       },
     },
-  },
-  responsive: true,
-  maintainAspectRatio: false,
-};
+  };
 
+  /* ------------------------------------------------------------------------ */
 
   return (
     <section className="max-w-6xl mx-auto px-6 py-20">
       {/* Section Heading */}
-      <h2
-        className="reveal section-title text-4xl font-bold mb-14 text-center"
-        style={{ color: "#f6a5c0" }}
-      >
-        ☆ My Skills ☆
-      </h2>
+      <h2 className="section-title text-4xl font-bold mb-14">My Skills</h2>
 
-      {/* Grid Wrapper */}
-      <div className="reveal-stagger grid grid-cols-1 md:grid-cols-[1fr_1fr_auto] gap-10 items-start">
-
-        {/* ====================== TECHNICAL SKILLS CARD ====================== */}
+      {/* Main Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
+        
+        {/* ---------------------- TECHNICAL SKILLS ---------------------- */}
         <div
-          className="p-6 rounded-2xl transition-all duration-300 relative"
-          style={{
-            backgroundColor: "#2e1637",
-            boxShadow: "0 0 22px rgba(246,165,192,0.35)",
-            border: "1px solid rgba(246,165,192,0.25)",
-          }}
+          className="p-6 rounded-2xl"
+          style={{ backgroundColor: "#2e1637" }}
         >
-          <h3 className="reveal text-xl font-bold mb-6" style={{ color: "#f6a5c0" }}>
+          <h3 className="text-xl font-bold mb-4" style={{ color: "#f6a5c0" }}>
             Technical Skills
           </h3>
 
-          <ul className="space-y-3 text-sm" style={{ color: "#e0c3cc" }}>
-            {[
-              { name: "Python", icon: "https://img.icons8.com/?size=100&id=l75OEUJkPAk4&format=png&color=000000" },
-              { name: "SQL Queries", icon: "https://img.icons8.com/?size=100&id=J6KcaRLsTgpZ&format=png&color=000000" },
-              { name: "Data Visualization", icon: "https://img.icons8.com/?size=100&id=3sGOUDo9nJ4k&format=png&color=000000" },
-              { name: "Data Analytics", icon: "https://img.icons8.com/?size=100&id=eRN6xwYNB76I&format=png&color=000000" },
-              { name: "Exploratory Data Analysis (EDA)", icon: "https://img.icons8.com/?size=100&id=UT0KFoaguV2Z&format=png&color=000000" },
-              { name: "Business Analytics", icon: "https://img.icons8.com/?size=100&id=6R735OAB4eCV&format=png&color=000000" },
-            ].map((skill) => (
+          <ul className="space-y-3 text-sm mb-8">
+            {technicalSkills.map((skill) => (
               <li
                 key={skill.name}
-                className="flex items-center gap-3 px-4 py-2 w-fit rounded-full text-sm font-medium shadow-sm"
+                className="flex items-center gap-3 px-3 py-2 w-fit rounded-full"
                 style={{
                   background: "rgba(246, 165, 192, 0.15)",
                   border: "1px solid rgba(246,165,192,0.3)",
                 }}
               >
-                <img src={skill.icon} className="w-5 h-5 object-contain" />
-                {skill.name}
+                <img
+                  src={skill.icon}
+                  className="w-5 h-5 object-contain"
+                  alt={skill.name}
+                />
+                <span style={{ color: "#e0c3cc" }}>{skill.name}</span>
               </li>
             ))}
           </ul>
 
-          {/* Donut Chart */}
-          <div className="mt-10 mx-auto w-60 h-60 relative group">
-            <div className="absolute inset-0 rounded-full blur-2xl opacity-0 group-hover:opacity-70 transition-all duration-500"
-              style={{ background: "radial-gradient(circle, rgba(246,165,192,0.35), rgba(131,122,182,0.2))" }}
-            ></div>
-
+          {/* PIE CHART */}
+          <div className="mx-auto w-full max-w-xs h-48 md:h-56 relative">
             <Doughnut data={donutData} options={donutOptions} />
           </div>
         </div>
 
-        {/* ====================== SOFTWARE & TOOLS CARD ====================== */}
+        {/* ---------------------- SOFTWARE & TOOLS ---------------------- */}
         <div
-          className="p-6 rounded-2xl transition-all duration-300 relative"
-          style={{
-            backgroundColor: "#2e1637",
-            boxShadow: "0 0 22px rgba(246,165,192,0.35)",
-            border: "1px solid rgba(246,165,192,0.25)",
-          }}
+          className="p-6 rounded-2xl"
+          style={{ backgroundColor: "#2e1637" }}
         >
-          {/* Sorting Buttons */}
-          <div className="absolute top-6 right-6 flex gap-3">
-            <button
-              onClick={sortAscending}
-              className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold"
-              style={{
-                background: "rgba(246,165,192,0.25)",
-                color: "#f6a5c0",
-                border: "1px solid rgba(246,165,192,0.4)",
-                boxShadow: "0 0 14px rgba(246,165,192,0.3)",
-              }}
-            >
-              ↑
-            </button>
-            <button
-              onClick={sortDescending}
-              className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold"
-              style={{
-                background: "#f6a5c0",
-                color: "#250e2c",
-                border: "1px solid rgba(246,165,192,0.6)",
-                boxShadow: "0 0 16px rgba(246,165,192,0.4)",
-              }}
-            >
-              ↓
-            </button>
-          </div>
-
-          <h3 className="reveal text-xl font-bold mb-6" style={{ color: "#f6a5c0" }}>
+          <h3 className="text-xl font-bold mb-4" style={{ color: "#f6a5c0" }}>
             Software & Tools
           </h3>
 
-          <div className="space-y-6">
+          <div className="flex gap-3 mb-5">
+            <button
+              onClick={sortAscending}
+              className="px-3 py-1 text-xs rounded bg-purple-900/40 text-pink-200 border border-pink-300/30"
+            >
+              Sort ↑
+            </button>
+            <button
+              onClick={sortDescending}
+              className="px-3 py-1 text-xs rounded bg-purple-900/40 text-pink-200 border border-pink-300/30"
+            >
+              Sort ↓
+            </button>
+          </div>
+
+          <div className="space-y-5">
             {tools.map((tool, index) => (
-              <div key={tool.name} className="transition-all duration-300">
+              <div key={tool.name}>
                 <div
-                  className="flex justify-between mb-1 text-sm font-medium"
+                  className="flex justify-between text-sm font-medium"
                   style={{ color: "#e0c3cc" }}
                 >
                   <span>{tool.name}</span>
@@ -221,30 +223,33 @@ const Skills: React.FC = () => {
                 </div>
 
                 <div
-                  className="w-full h-3 rounded-full overflow-hidden"
+                  className="w-full h-3 rounded-full overflow-hidden mt-1"
                   style={{ backgroundColor: "rgba(255,255,255,0.1)" }}
                 >
                   <div
                     className="h-full rounded-full transition-all duration-500"
                     style={{
-                      width: `${tool.level}%`,
+                      width: `${animatedLevels[index]}%`,
                       background:
                         "linear-gradient(90deg, #ff99c8, #c774b6, #8b5f9b)",
                       boxShadow: "0 0 8px rgba(246,165,192,0.5)",
                     }}
-                  ></div>
+                  />
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* ====================== AVATAR ====================== */}
+        {/* ---------------------- AVATAR ---------------------- */}
         <div className="flex justify-center md:justify-end">
           <img
             src="/images/p_working.png"
-            className="object-cover w-52 h-96 border-0 rounded-3xl"
-            style={{ borderColor: "rgba(246,165,192,0.5)" }}
+            alt="Avatar"
+            className="object-cover w-56 h-72 md:w-64 md:h-80 rounded-3xl shadow-lg"
+            style={{
+              boxShadow: "0 0 30px rgba(246,165,192,0.3)",
+            }}
           />
         </div>
       </div>
