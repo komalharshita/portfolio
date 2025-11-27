@@ -14,7 +14,7 @@ export default function About() {
         <img
           src="/cute-badges/silver-soft-heart.png"
           alt="heart"
-          className="w-6 h-6 opacity-85"
+          className="w-6 h-6 opacity-85 px-0 mx-[600px]"
         />
         About Me
       </h2>
@@ -107,7 +107,7 @@ export default function About() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Education */}
         <div
-          className="rounded-lg p-6 transition-all duration-300 leading-10"
+          className="rounded-lg p-6 transition-all duration-300 leading-10 text-left"
           style={{ backgroundColor: "#2e1637" }}
           onMouseEnter={(e) => {
             e.currentTarget.style.backgroundColor = "#351b42";
@@ -120,7 +120,7 @@ export default function About() {
           }}
         >
           <h3
-            className="reveal text-2xl font-bold mb-6"
+            className="reveal text-2xl font-bold mb-6 text-left"
             style={{ color: "#f6a5c0" }}
           >
             Education
@@ -129,7 +129,7 @@ export default function About() {
           <div className="space-y-6">
             <div>
               <h4
-                className="reveal font-semibold mb-1"
+                className="reveal font-semibold mb-1 text-left"
                 style={{ color: "#f6a5c0" }}
               >
                 Savitribai Phule Pune University
@@ -147,7 +147,7 @@ export default function About() {
 
             <div>
               <h4
-                className="reveal font-semibold mb-1"
+                className="reveal font-semibold mb-1 text-left"
                 style={{ color: "#f6a5c0" }}
               >
                 Symbiosis Junior College
@@ -171,7 +171,7 @@ export default function About() {
 
         {/* Hobbies & Traits */}
         <div
-          className="rounded-lg p-6 transition-all duration-300"
+          className="rounded-lg p-6 transition-all duration-300 text-left"
           style={{ backgroundColor: "#2e1637" }}
           onMouseEnter={(e) => {
             e.currentTarget.style.backgroundColor = "#351b42";
@@ -188,7 +188,7 @@ export default function About() {
             {/* Hobbies */}
             <div>
               <h3
-                className="reveal text-2xl font-bold mb-6"
+                className="reveal text-2xl font-bold mb-6 text-left"
                 style={{ color: "#f6a5c0" }}
               >
                 Hobbies & Creative Interests
@@ -225,7 +225,7 @@ export default function About() {
 
               {/* Traits */}
               <h4
-                className="reveal text-xl font-semibold mb-3"
+                className="reveal text-xl font-semibold mb-3 text-left"
                 style={{ color: "#f6a5c0" }}
               >
                 Personal Traits

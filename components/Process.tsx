@@ -96,7 +96,7 @@ export default function Process() {
       </div>
 
       {/* === SPECIALTIES SECTION === */}
-      <div className="max-w-6xl mx-auto mt-32 px-4">
+      <div className="max-w-6xl mx-auto px-4 mt-4 mb-4 text-left">
         {/* Header */}
         <div className="flex flex-wrap justify-between gap-6 mb-12">
           <div>
@@ -140,7 +140,7 @@ export default function Process() {
             Tailwind arbitrary value used for custom column layout.
         */}
         <div
-          className="relative gap-6"
+          className="relative text-justify gap-5 mx-1.5 my-1.5 px-7 border-0"
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr) 300px",
@@ -209,7 +209,7 @@ export default function Process() {
 
             <div>
               <p className="text-sm opacity-80">Open to Opportunities!</p>
-              <h3 className="text-2xl font-bold mt-2">
+              <h3 className="text-2xl font-bold mt-2 text-left">
                 Available for Data Analytics Internships 2026.
               </h3>
 
