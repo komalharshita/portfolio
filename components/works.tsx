@@ -18,21 +18,21 @@ const projects: ProjectType[] = [
     tagline:
       "Autonomous data workflow agent built using Python, LangGraph and automation pipelines to streamline analytics tasks with clarity and speed.",
     repo: "prodigyflow",
-    thumb: "https://via.placeholder.com/600x350?text=ProdigyFlow+Screenshot",
+    thumb: "/public/projects/prodigy_tb.png",
     tools: ["Python", "LangGraph", "OpenAI API", "MCP", "Agents", "Workflow Automation"],
-    gallery: ["https://via.placeholder.com/600x350?text=ProdigyFlow+1"],
+    gallery: [""],
   },
   {
     title: "Urban Sustainability Analysis",
     tagline:
       "Explores sustainability indicators across global cities using structured EDA, data cleaning workflows, pattern exploration and visual analytics.",
     repo: "CitiesOfTomorrow_EDA",
-    thumb: "https://via.placeholder.com/600x350?text=Urban+Sustainability",
+    thumb: "/public/projects/urban_tb.png",
     tools: ["Python", "Pandas", "Seaborn", "Matplotlib", "EDA", "Data Cleaning"],
     gallery: [
-      "https://via.placeholder.com/600x350?text=Urban+1",
-      "https://via.placeholder.com/600x350?text=Urban+2",
-      "https://via.placeholder.com/600x350?text=Urban+3",
+      "/public/projects/1.png",
+      "/public/projects/2.png",
+      "/public/projects/4.png",
     ],
   },
   {
@@ -40,11 +40,11 @@ const projects: ProjectType[] = [
     tagline:
       "Interactive analytics resume designed in Power BI with storytelling layouts, dynamic visual elements and user-centered dashboard design.",
     repo: "yourdatastory-powerbi-resume",
-    thumb: "https://via.placeholder.com/600x350?text=Power+BI+Resume",
+    thumb: "/public/projects/resume_tb.png",
     tools: ["Power BI", "DAX", "Data Modeling", "UX Design", "Dashboards"],
     gallery: [
-      "https://via.placeholder.com/600x350?text=Resume+1",
-      "https://via.placeholder.com/600x350?text=Resume+2",
+      "/public/projects/resume_gallery.png",
+      "/public/projects/resume_galleryy.png",
     ],
   },
 ];
