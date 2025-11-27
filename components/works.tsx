@@ -15,17 +15,17 @@ interface ProjectType {
 const projects: ProjectType[] = [
   {
     title: "ProdigyFlow",
-    tagline: "Autonomous data workflow agent built using Python and LangGraph.",
+    tagline:
+      "Autonomous data workflow agent built using Python, LangGraph and automation pipelines to streamline analytics tasks with clarity and speed.",
     repo: "prodigyflow",
     thumb: "https://via.placeholder.com/600x350?text=ProdigyFlow+Screenshot",
     tools: ["Python", "LangGraph", "OpenAI API", "MCP", "Agents", "Workflow Automation"],
-    gallery: [
-      "https://via.placeholder.com/600x350?text=ProdigyFlow+1",
-    ],
+    gallery: ["https://via.placeholder.com/600x350?text=ProdigyFlow+1"],
   },
   {
     title: "Urban Sustainability Analysis",
-    tagline: "Exploring sustainable city patterns using EDA.",
+    tagline:
+      "Explores sustainability indicators across global cities using structured EDA, data cleaning workflows, pattern exploration and visual analytics.",
     repo: "CitiesOfTomorrow_EDA",
     thumb: "https://via.placeholder.com/600x350?text=Urban+Sustainability",
     tools: ["Python", "Pandas", "Seaborn", "Matplotlib", "EDA", "Data Cleaning"],
@@ -37,7 +37,8 @@ const projects: ProjectType[] = [
   },
   {
     title: "Interactive Power BI Resume",
-    tagline: "An interactive analytics resume built using Power BI.",
+    tagline:
+      "Interactive analytics resume designed in Power BI with storytelling layouts, dynamic visual elements and user-centered dashboard design.",
     repo: "yourdatastory-powerbi-resume",
     thumb: "https://via.placeholder.com/600x350?text=Power+BI+Resume",
     tools: ["Power BI", "DAX", "Data Modeling", "UX Design", "Dashboards"],
@@ -56,10 +57,10 @@ cleaning, exploration, visualization, and storytelling using modern analytics to
 
 const sharedTakeaways = [
   "Built a clean end-to-end workflow from raw data to insights",
-  "Strengthened exploratory analysis & visualization skills",
-  "Improved ability to structure insights for decision-making",
-  "Demonstrated practical tool proficiency",
-  "Enhanced storytelling through dashboards and reports",
+  "Improved exploratory analysis & visualization skills",
+  "Strengthened ability to structure insights for decision-making",
+  "Demonstrated tool proficiency and practical problem-solving",
+  "Enhanced storytelling through dashboards and visual reports",
 ];
 
 export default function Projects() {
@@ -71,60 +72,68 @@ export default function Projects() {
     setModalOpen(true);
   };
 
-  const closeModal = () => {
-    setModalOpen(false);
-  };
+  const closeModal = () => setModalOpen(false);
 
   return (
     <section className="max-w-7xl mx-auto px-6 py-20">
-      <h2 className="reveal text-center text-4xl font-bold mb-12" style={{ color: "#f6a5c0" }}>
-        ☆ Featured Projects ☆
+
+      {/* Title */}
+      <h2
+        className="reveal section-title text-4xl font-bold mb-12"
+        style={{ color: "#f6a5c0", textAlign: "center" }}
+      >
+        My Works
       </h2>
 
       {/* GRID */}
-      <div className="reveal-stagger grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="reveal-stagger grid grid-cols-1 md:grid-cols-3 gap-10">
+
         {projects.map((p, i) => (
           <div
             key={i}
-            className="card-custom p-4 rounded-2xl border border-pink-200/30 shadow-lg transition-all duration-500 cursor-pointer"
+            className="card-custom p-5 rounded-3xl border border-pink-200/30 shadow-lg 
+                       transition-all duration-500 text-left"
           >
-            {/* Thumbnail */}
-            <div className="overflow-hidden rounded-xl">
+            {/* THUMBNAIL */}
+            <div className="overflow-hidden rounded-2xl mb-4">
               <Image
                 src={p.thumb}
-                width={600}
-                height={350}
+                width={500}
+                height={300}
                 alt={p.title}
-                className="rounded-xl transition-transform duration-500 hover:scale-105"
+                className="w-full h-48 object-cover rounded-2xl transition-transform duration-500 hover:scale-105"
               />
             </div>
 
-            <h3 className="text-2xl font-semibold mt-4 mb-1" style={{ color: "#f6a5c0" }}>
+            {/* TITLE */}
+            <h3 className="text-xl font-semibold mb-1 text-justify" style={{ color: "#f6a5c0" }}>
               {p.title}
             </h3>
 
-            <p className="text-sm mb-3" style={{ color: "#eac7d6" }}>
+            {/* TAGLINE */}
+            <p className="text-sm mb-4" style={{ color: "#eac7d6" }}>
               {p.tagline}
             </p>
 
-            {/* Tools (first three) */}
-            <div className="flex flex-wrap gap-2 mb-4">
+            {/* TOOLS */}
+            <div className="flex flex-wrap gap-2 mb-5">
               {p.tools.slice(0, 3).map((t) => (
                 <span
                   key={t}
                   className="px-3 py-1 rounded-md text-xs border border-pink-200/30"
-                  style={{ background: "rgba(246,165,192,0.15)", color: "#f7c2ca" }}
+                  style={{ background: "rgba(246,165,192,0.18)", color: "#f7c2ca" }}
                 >
                   {t}
                 </span>
               ))}
             </div>
 
-            {/* Buttons */}
+            {/* BUTTONS */}
             <div className="flex gap-3">
               <button
                 onClick={() => openModal(p)}
-                className="flex-1 py-2 rounded-lg font-semibold text-sm shadow-md transition-all"
+                className="flex-1 py-2 rounded-lg font-semibold text-sm shadow-md
+                           transition-all"
                 style={{
                   background:
                     "linear-gradient(135deg, #837ab6, #cc8db3, #f6a5c0)",
@@ -137,7 +146,7 @@ export default function Projects() {
               <a
                 href={`https://github.com/komalharshita/${p.repo}`}
                 target="_blank"
-                className="flex-1 py-2 rounded-lg font-semibold text-sm border border-pink-200/40"
+                className="flex-1 py-2 rounded-lg font-semibold text-sm border border-pink-200/40 text-center"
                 style={{
                   background: "rgba(246,165,192,0.12)",
                   color: "#f6a5c0",
@@ -148,6 +157,22 @@ export default function Projects() {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* VIEW MORE BUTTON — NOW VISIBLE */}
+      <div className="mt-16 text-center">
+        <a
+          href="https://github.com/komalharshita"
+          target="_blank"
+          className="px-8 py-3 rounded-xl font-semibold text-lg"
+          style={{
+            background:
+              "linear-gradient(135deg, #837ab6, #cc8db3, #f6a5c0)",
+            color: "#250e2c",
+          }}
+        >
+          View More Projects →
+        </a>
       </div>
 
       {/* ===================== MODAL ===================== */}
@@ -162,7 +187,7 @@ export default function Projects() {
             style={{ background: "#2e1637" }}
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Close button */}
+            {/* Close */}
             <button
               onClick={closeModal}
               className="absolute top-4 right-4 text-2xl font-bold"
@@ -171,6 +196,7 @@ export default function Projects() {
               ×
             </button>
 
+            {/* Title */}
             <h2 className="text-3xl font-bold mb-4" style={{ color: "#f6a5c0" }}>
               {modalProject.title}
             </h2>
@@ -190,14 +216,14 @@ export default function Projects() {
                 <span
                   key={t}
                   className="px-3 py-1 rounded-md text-xs border border-pink-200/30"
-                  style={{ background: "rgba(246,165,192,0.14)", color: "#f7c2ca" }}
+                  style={{ background: "rgba(246,165,192,0.16)", color: "#f7c2ca" }}
                 >
                   {t}
                 </span>
               ))}
             </div>
 
-            {/* Key Takeaways */}
+            {/* Takeaways */}
             <h3 className="text-lg font-semibold mb-2" style={{ color: "#f6a5c0" }}>
               Key Takeaways
             </h3>
@@ -220,8 +246,8 @@ export default function Projects() {
                 <Image
                   key={i}
                   src={img}
-                  width={600}
-                  height={350}
+                  width={700}
+                  height={400}
                   alt="project screenshot"
                   className="rounded-xl shadow-md hover:scale-[1.03] transition-transform"
                 />
