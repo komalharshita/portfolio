@@ -18,33 +18,29 @@ const projects: ProjectType[] = [
     tagline:
       "Autonomous data workflow agent built using Python, LangGraph and automation pipelines to streamline analytics tasks with clarity and speed.",
     repo: "prodigyflow",
-    thumb: "/public/projects/prodigy_tb.png",
-    tools: ["Python", "LangGraph", "OpenAI API", "MCP", "Agents", "Workflow Automation"],
-    gallery: [""],
+    thumb: "/projects/prodigy_tb.png",
+    tools: ["Python", "NumPy", "Gen AI", "Pandas", "Maptpotlib", "Seaborn"],
+    gallery: ["/projects/prodigy_1.png"],
   },
   {
     title: "Urban Sustainability Analysis",
     tagline:
       "Explores sustainability indicators across global cities using structured EDA, data cleaning workflows, pattern exploration and visual analytics.",
     repo: "CitiesOfTomorrow_EDA",
-    thumb: "/public/projects/urban_tb.png",
+    thumb: "/projects/urban_tb.png",
     tools: ["Python", "Pandas", "Seaborn", "Matplotlib", "EDA", "Data Cleaning"],
-    gallery: [
-      "/public/projects/1.png",
-      "/public/projects/2.png",
-      "/public/projects/4.png",
-    ],
+    gallery: ["/projects/1.png", "/projects/2.png", "/projects/4.png"],
   },
   {
     title: "Interactive Power BI Resume",
     tagline:
       "Interactive analytics resume designed in Power BI with storytelling layouts, dynamic visual elements and user-centered dashboard design.",
     repo: "yourdatastory-powerbi-resume",
-    thumb: "/public/projects/resume_tb.png",
+    thumb: "/projects/resume_tb.png",
     tools: ["Power BI", "DAX", "Data Modeling", "UX Design", "Dashboards"],
     gallery: [
-      "/public/projects/resume_gallery.png",
-      "/public/projects/resume_galleryy.png",
+      "/projects/resume_gallery.png",
+      "/projects/resume_galleryy.png",
     ],
   },
 ];
@@ -66,13 +62,29 @@ const sharedTakeaways = [
 export default function Projects() {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalProject, setModalProject] = useState<ProjectType | null>(null);
+  const [slide, setSlide] = useState(0);
 
+  // Open modal + reset carousel slide
   const openModal = (p: ProjectType) => {
     setModalProject(p);
+    setSlide(0);
     setModalOpen(true);
   };
 
   const closeModal = () => setModalOpen(false);
+
+  // Carousel controls
+  const nextSlide = () => {
+    if (!modalProject) return;
+    setSlide((prev) => (prev + 1) % modalProject.gallery.length);
+  };
+
+  const prevSlide = () => {
+    if (!modalProject) return;
+    setSlide((prev) =>
+      prev === 0 ? modalProject.gallery.length - 1 : prev - 1
+    );
+  };
 
   return (
     <section className="max-w-7xl mx-auto px-6 py-20">
@@ -91,8 +103,9 @@ export default function Projects() {
         {projects.map((p, i) => (
           <div
             key={i}
+            onClick={() => openModal(p)}
             className="card-custom p-5 rounded-3xl border border-pink-200/30 shadow-lg 
-                       transition-all duration-500 text-left"
+                       transition-all duration-500 text-left cursor-pointer"
           >
             {/* THUMBNAIL */}
             <div className="overflow-hidden rounded-2xl mb-4">
@@ -106,7 +119,7 @@ export default function Projects() {
             </div>
 
             {/* TITLE */}
-            <h3 className="text-xl font-semibold mb-1 text-justify" style={{ color: "#f6a5c0" }}>
+            <h3 className="text-xl font-semibold mb-1" style={{ color: "#f6a5c0" }}>
               {p.title}
             </h3>
 
@@ -131,7 +144,10 @@ export default function Projects() {
             {/* BUTTONS */}
             <div className="flex gap-3">
               <button
-                onClick={() => openModal(p)}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  openModal(p);
+                }}
                 className="flex-1 py-2 rounded-lg font-semibold text-sm shadow-md
                            transition-all"
                 style={{
@@ -146,6 +162,7 @@ export default function Projects() {
               <a
                 href={`https://github.com/komalharshita/${p.repo}`}
                 target="_blank"
+                onClick={(e) => e.stopPropagation()}
                 className="flex-1 py-2 rounded-lg font-semibold text-sm border border-pink-200/40 text-center"
                 style={{
                   background: "rgba(246,165,192,0.12)",
@@ -159,7 +176,7 @@ export default function Projects() {
         ))}
       </div>
 
-      {/* VIEW MORE BUTTON — NOW VISIBLE */}
+      {/* VIEW MORE BUTTON */}
       <div className="mt-16 text-center">
         <a
           href="https://github.com/komalharshita"
@@ -183,7 +200,7 @@ export default function Projects() {
           onClick={closeModal}
         >
           <div
-            className="modal-box w-[90%] max-w-2xl p-8 rounded-2xl border border-pink-200/30 shadow-2xl relative"
+            className="w-[95%] max-w-4xl max-h-[85vh] overflow-y-auto pr-3 p-8 rounded-2xl border border-pink-200/30 shadow-xl relative"
             style={{ background: "#2e1637" }}
             onClick={(e) => e.stopPropagation()}
           >
@@ -236,23 +253,56 @@ export default function Projects() {
               ))}
             </ul>
 
-            {/* Gallery */}
+            {/* ================= CAROUSEL ================= */}
             <h3 className="text-lg font-semibold mb-3" style={{ color: "#f6a5c0" }}>
               Project Gallery
             </h3>
 
-            <div className="grid gap-4 mb-8">
-              {modalProject.gallery.map((img, i) => (
+            {modalProject.gallery.length > 0 ? (
+              <div className="relative w-full mb-10">
+                {/* IMAGE */}
                 <Image
-                  key={i}
-                  src={img}
-                  width={700}
-                  height={400}
+                  src={modalProject.gallery[slide]}
+                  width={900}
+                  height={500}
                   alt="project screenshot"
-                  className="rounded-xl shadow-md hover:scale-[1.03] transition-transform"
+                  className="rounded-xl shadow-lg mx-auto transition-all duration-500"
                 />
-              ))}
-            </div>
+
+                {/* LEFT ARROW */}
+                <button
+                  onClick={prevSlide}
+                  className="absolute top-1/2 left-2 -translate-y-1/2 p-3 rounded-full backdrop-blur-md"
+                  style={{ background: "rgba(246,165,192,0.2)" }}
+                >
+                  ‹
+                </button>
+
+                {/* RIGHT ARROW */}
+                <button
+                  onClick={nextSlide}
+                  className="absolute top-1/2 right-2 -translate-y-1/2 p-3 rounded-full backdrop-blur-md"
+                  style={{ background: "rgba(246,165,192,0.2)" }}
+                >
+                  ›
+                </button>
+
+                {/* INDICATORS */}
+                <div className="flex justify-center gap-2 mt-3">
+                  {modalProject.gallery.map((_, i) => (
+                    <div
+                      key={i}
+                      onClick={() => setSlide(i)}
+                      className={`h-3 w-3 rounded-full cursor-pointer ${
+                        i === slide ? "bg-pink-300" : "bg-pink-900/40"
+                      }`}
+                    ></div>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <p className="text-sm text-pink-200/70">No gallery available.</p>
+            )}
 
             {/* Buttons */}
             <div className="flex justify-between gap-4">
