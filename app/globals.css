@@ -621,13 +621,13 @@ body, button, a, input, textarea {
 
 .cursor-trail {
   position: fixed;
-  width: 10px;
+  width: 20px;
   height: 10px;
   pointer-events: none;
-  border-radius: 50%;
+  border-radius: 80%;
   background: #f6a5c0;
-  opacity: 0.85;
-  filter: blur(3px);
+  opacity: 1;
+  filter: blur(8px);
   z-index: 9999;
   transform: translate(-50%, -50%);
   animation: cursorFade 0.6s ease-out forwards;
