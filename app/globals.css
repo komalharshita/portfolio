@@ -1,10 +1,11 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* --------------------------------------------- */
-/* THEME: Brand Colors & Fonts */
-/* --------------------------------------------- */
-@theme {
+/* -------------------------------------------------------- */
+/*  BRAND THEME SYSTEM — COLORS, TYPOGRAPHY, RADII, SHADOWS  */
+/* -------------------------------------------------------- */
+:root {
+  /* Brand Colors */
   --color-deep-purple: #250e2c;
   --color-lavender-blue: #837ab6;
   --color-soft-lilac: #9d85b6;
@@ -12,101 +13,63 @@
   --color-pastel-pink: #f6a5c0;
   --color-light-blush: #f7c2ca;
 
+  /* Layout Colors (Tailwind-compatible tokens) */
+  --background: #250e2c;
+  --foreground: #f7c2ca;
+  --card: #2e1637;
+  --card-foreground: #f7c2ca;
+
+  /* Shadows */
+  --shadow-soft: 0 0 12px rgba(246,165,192,0.25);
+  --shadow-medium: 0 0 20px rgba(204,141,179,0.35);
+  --shadow-strong: 0 0 32px rgba(247,194,202,0.45);
+
+  /* Radii */
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 26px;
+
+  /* Typography */
   --font-heading: "Poppins", sans-serif;
   --font-body: "Inter", sans-serif;
+  --font-display: clamp(2.8rem, 6vw, 4.3rem);
+  --font-title: clamp(2rem, 4vw, 3rem);
+  --font-subtitle: 1.25rem;
+
+  /* Chart Colors (if using Chart.js) */
+  --chart-1: #c774b6;
+  --chart-2: #8b5f9b;
+  --chart-3: #cc8db3;
+  --chart-4: #f6a5c0;
+  --chart-5: #e0b6d3;
 }
 
-/* --------------------------------------------- */
-/* ROOT VARIABLES */
-/* --------------------------------------------- */
-:root {
-  /* Default system tokens */
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-
-  --radius: 0.625rem;
-}
-
-/* --------------------------------------------- */
 /* DARK MODE */
-/* --------------------------------------------- */
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
+  --background: #1c0f22;
+  --foreground: #f7c2ca;
+  --card: #2e1637;
+  --card-foreground: #f7c2ca;
 
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-  --ring: oklch(0.439 0 0);
-
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
+  --border: rgba(247,194,202,0.18);
 }
 
-/* --------------------------------------------- */
-/* INLINE THEME TOKENS (Tailwind) */
-/* --------------------------------------------- */
+/* -------------------------------------------------------- */
+/*  TAILWIND-THEME INLINE TOKENS                           */
+/* -------------------------------------------------------- */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
+
+  --color-primary: var(--color-pastel-pink);
+  --color-secondary: var(--color-dusty-pink);
+
+  --color-border: rgba(247,194,202,0.2);
+  --color-input: rgba(247,194,202,0.25);
+  --color-ring: var(--color-pastel-pink);
 
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
@@ -115,116 +78,49 @@
   --color-chart-5: var(--chart-5);
 }
 
-/* --------------------------------------------- */
-/* BRAND SHADOWS */
-/* --------------------------------------------- */
-:root {
-  --shadow-soft: 0 0 12px rgba(246,165,192,0.25);
-  --shadow-medium: 0 0 20px rgba(204,141,179,0.35);
-  --shadow-strong: 0 0 32px rgba(247,194,202,0.45);
-}
-
-/* --------------------------------------------- */
-/* BRAND RADII */
-/* --------------------------------------------- */
-:root {
-  --radius-sm: 10px;
-  --radius-md: 14px;
-  --radius-lg: 20px;
-  --radius-xl: 26px;
-}
-
-/* --------------------------------------------- */
-/* BRAND TYPOGRAPHY SCALE */
-/* --------------------------------------------- */
-:root {
-  --font-display: clamp(2.8rem, 6vw, 4.3rem);
-  --font-title: clamp(2rem, 4vw, 3rem);
-  --font-subtitle: 1.25rem;
-}
-
-/* Apply size */
-h1 { font-size: var(--font-display); }
-h2 { font-size: var(--font-title); }
-h3 { font-size: var(--font-subtitle); }
-
-/* --------------------------------------------- */
-/* BASE STYLES */
-/* --------------------------------------------- */
+/* -------------------------------------------------------- */
+/*  BASE STYLES                                             */
+/* -------------------------------------------------------- */
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
 
   body {
-    background-color: #250e2c;
-    color: #f7c2ca;
-    font-family: "Inter", sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
-  font-family: "Poppins", sans-serif;
-  color: #f7c2ca;
-  font-weight: 700;
-  text-align: center; /* added */
-  width: 100%;        /* added */
-}
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--color-light-blush);
+    text-align: center;
+    width: 100%;
+  }
 
-/* Also fix section-title alignment */
-.section-title {
-  text-align: center;
-  width: 100%;
-}
-
+  h1 { font-size: var(--font-display); }
+  h2 { font-size: var(--font-title); }
+  h3 { font-size: var(--font-subtitle); }
 
   p {
     @apply text-base md:text-lg;
     color: #f7c2ca;
     line-height: 1.6;
   }
-
-  /* Custom styles for the landing page */
-.text-balance {
-  text-wrap: balance;
 }
 
-.text-pretty {
-  text-wrap: pretty;
-}
-
-.font-inter {
-  font-family: var(--font-inter), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
-.font-instrument-serif {
-  font-family: var(--font-instrument-serif);
-  font-display: swap;
-}
-}
-
-/* --------------------------------------------- */
-/* GRADIENT UTILITY */
-/* --------------------------------------------- */
-.gradient-brand {
-  background: linear-gradient(
-    135deg,
-    var(--color-lavender-blue),
-    var(--color-dusty-pink),
-    var(--color-pastel-pink)
-  );
-}
-
-/* --------------------------------------------- */
-/* COMPONENTS */
-/* --------------------------------------------- */
+/* -------------------------------------------------------- */
+/*  COMPONENTS — BUTTONS, CARDS, INPUTS                     */
+/* -------------------------------------------------------- */
 @layer components {
   .btn-primary {
     @apply px-8 py-3 rounded-lg font-medium text-sm text-white transition-all duration-300;
-    background: linear-gradient(135deg, #837ab6 0%, #cc8db3 50%, #f6a5c0 100%);
+    background: linear-gradient(135deg, #837ab6, #cc8db3, #f6a5c0);
     box-shadow: var(--shadow-soft);
   }
-
   .btn-primary:hover {
     box-shadow: var(--shadow-strong);
     transform: translateY(-2px);
@@ -232,44 +128,39 @@ h3 { font-size: var(--font-subtitle); }
 
   .btn-secondary {
     @apply px-8 py-3 rounded-lg font-medium text-sm transition-all duration-300 border bg-transparent;
-    color: #f6a5c0;
-    border-color: #f6a5c0;
+    color: var(--color-pastel-pink);
+    border-color: var(--color-pastel-pink);
     box-shadow: var(--shadow-soft);
   }
-
   .btn-secondary:hover {
-    background-color: rgba(246,165,192,0.12);
+    background: rgba(246,165,192,0.12);
     box-shadow: var(--shadow-medium);
     transform: translateY(-2px);
   }
 
-  /* FINAL, CLEAN CARD BLOCK */
   .card {
     @apply p-6 border transition-all duration-300;
-    background-color: rgba(37,14,44,0.45);
+    background: rgba(37,14,44,0.45);
     border: 1px solid rgba(157,133,182,0.35);
     backdrop-filter: blur(12px);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-soft);
   }
-
   .card:hover {
-    background-color: rgba(37,14,44,0.58);
+    background: rgba(37,14,44,0.58);
     border-color: rgba(157,133,182,0.5);
     box-shadow: var(--shadow-medium);
   }
 
   .input-field {
     @apply w-full px-4 py-3 rounded-lg transition-all duration-300;
-    background-color: #1a0820;
+    background: #1a0820;
     border: 1px solid rgba(211,195,227,0.3);
     color: #f7c2ca;
   }
-
   .input-field::placeholder {
     color: rgba(247,194,202,0.65);
   }
-
   .input-field:focus {
     border-color: var(--color-dusty-pink);
     box-shadow: 0 0 15px rgba(204,141,179,0.45);
@@ -277,135 +168,96 @@ h3 { font-size: var(--font-subtitle); }
   }
 }
 
-/* --------------------------------------------- */
-/* ANIMATIONS */
-/* --------------------------------------------- */
-
-
-/* 1) Respect reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .section-title,
-  .section-title .char {
-    animation-duration: 0.001ms !important;
-    transition: none !important;
-    opacity: 1 !important;
-    transform: none !important;
-  }
-}
-
-/* 2) Reveal (fade + slide up) for whole header */
+/* -------------------------------------------------------- */
+/*  SECTION TITLES                                          */
+/* -------------------------------------------------------- */
 .section-title {
   display: block;
   position: relative;
-  color: var(--color-light-blush); /* #f7c2ca */
   font-family: var(--font-heading);
   font-weight: 700;
-  will-change: transform, opacity;
-  transform-origin: left center;
-  animation: reveal-up 650ms cubic-bezier(.2,.9,.2,1) both;
+  color: var(--color-light-blush);
   text-align: center;
   width: 100%;
   text-shadow: 0 6px 18px rgba(247,194,202,0.12);
+  will-change: transform, opacity;
+  transform-origin: center;
+  animation: reveal-up 650ms cubic-bezier(.2,.9,.2,1) both;
 }
 
-@keyframes reveal-up {
-  0%   { opacity: 0; transform: translateY(14px) scale(.995); }
-  60%  { opacity: .9; transform: translateY(-6px) scale(1.01); }
-  100% { opacity: 1; transform: translateY(0) scale(1); }
-}
-
-/* 3) Per-letter stagger animation (fancier) */
-/* Use when you split header text into spans with class="char" */
-.section-title .char {
-  display: inline-block;
-  opacity: 0;
-  transform: translateY(10px);
-  animation: letter-fade 520ms cubic-bezier(.2,.9,.2,1) forwards;
-  animation-delay: calc(var(--i) * 40ms); /* --i set per char in JS */
-}
-
-@keyframes letter-fade {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* 4) Optional subtle gradient underline that follows brand gradient */
-.section-title:after {
+/* Pink gradient underline */
+.section-title::after {
   content: "";
   display: block;
   width: 40px;
   height: 4px;
-  margin-top: 10px;
+  margin: 10px auto 0;
   border-radius: 999px;
   background: linear-gradient(90deg, var(--color-lavender-blue), var(--color-dusty-pink));
   opacity: 0;
   transform: scaleX(0.9);
-  transition: opacity 320ms ease, transform 320ms ease;
+  transition: opacity .32s ease, transform .32s ease;
 }
-
-.section-title.animated:after {
+.section-title.animated::after {
   opacity: 1;
   transform: scaleX(1);
 }
 
-@keyframes float-slow {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-6px); }
-  100% { transform: translateY(0px); }
+/* -------------------------------------------------------- */
+/*  ANIMATIONS — SLIDE UP, LETTER FADE, FLOATING ELEMENTS    */
+/* -------------------------------------------------------- */
+@keyframes reveal-up {
+  0%   { opacity: 0; transform: translateY(14px) scale(.99); }
+  60%  { opacity: .9; transform: translateY(-4px) scale(1.01); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-@keyframes float-slower {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
+/* Per-letter stagger */
+.section-title .char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: letter-fade .52s cubic-bezier(.2,.9,.2,1) forwards;
+  animation-delay: calc(var(--i) * 40ms);
+}
+@keyframes letter-fade {
+  to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes twinkle-soft {
-  0%, 100% { opacity: 0.85; }
-  50% { opacity: 1; }
-}
+/* Floating sparkles / images */
+@keyframes float-slow   { 0%,100% {transform:translateY(0);} 50% {transform:translateY(-6px);}  }
+@keyframes float-slower { 0%,100% {transform:translateY(0);} 50% {transform:translateY(-10px);} }
+@keyframes twinkle-soft { 0%,100% {opacity:.85;} 50% {opacity:1;} }
 
 .animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
 .animate-float-slower { animation: float-slower 8s ease-in-out infinite; }
 .animate-twinkle-soft { animation: twinkle-soft 2s ease-in-out infinite; }
 
-/* =======================
-   GLOBAL SCROLL REVEAL ANIMATIONS
-   ======================= */
-
+/* -------------------------------------------------------- */
+/*  SCROLL REVEAL                                            */
+/* -------------------------------------------------------- */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
-  transition:
-    opacity 0.7s ease-out,
-    transform 0.7s ease-out;
+  transition: opacity .7s ease-out, transform .7s ease-out;
 }
-
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Stagger children for cards */
 .reveal-stagger > * {
   opacity: 0;
   transform: translateY(20px);
-  transition:
-    opacity 0.6s ease-out,
-    transform 0.6s ease-out;
+  transition: opacity .6s ease-out, transform .6s ease-out;
 }
-
 .reveal-stagger.visible > * {
   opacity: 1;
   transform: translateY(0);
 }
-
-/* Delay each card */
-.reveal-stagger > *:nth-child(1) { transition-delay: 0.1s; }
-.reveal-stagger > *:nth-child(2) { transition-delay: 0.2s; }
-.reveal-stagger > *:nth-child(3) { transition-delay: 0.3s; }
-.reveal-stagger > *:nth-child(4) { transition-delay: 0.4s; }
-.reveal-stagger > *:nth-child(5) { transition-delay: 0.5s; }
-.reveal-stagger > *:nth-child(6) { transition-delay: 0.6s; }
+.reveal-stagger > *:nth-child(1) { transition-delay: .1s; }
+.reveal-stagger > *:nth-child(2) { transition-delay: .2s; }
+.reveal-stagger > *:nth-child(3) { transition-delay: .3s; }
+.reveal-stagger > *:nth-child(4) { transition-delay: .4s; }
+.reveal-stagger > *:nth-child(5) { transition-delay: .5s; }
+.reveal-stagger > *:nth-child(6) { transition-delay: .6s; }

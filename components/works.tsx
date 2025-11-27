@@ -47,7 +47,7 @@ export default function Projects() {
             onMouseLeave={() => setExpandedId(null)}
           >
             <div
-              className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 h-full flex flex-col justify-between transition-all duration-300 hover:border-pink-soft/50 hover:shadow-[0_0_40px_rgba(246,165,192,0.3)]"
+              className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 h-full flex flex-col justify-between transition-all duration-300 hover:border-pink-soft/50 hover:shadow-[0_0_40px_rgba(246,165,192,0.3)] leading-9 gap-8 px-8 pr-4 pl-4 text-center tracking-normal"
               style={{
                 background: "linear-gradient(135deg, rgba(246, 165, 192, 0.08) 0%, rgba(157, 133, 182, 0.05) 100%)",
               }}
