@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
-        <meta name="eo6fz4sclkhp" content="gv-qahruv2dckdete.dv.googlehosted.com" />
+        <meta name="google-site-verification" content="FpebaqQQXqlFniIPT3fiZQYAfiH63UoqX3SNO_o5PKg" />
       </head>
       <body
         className={`
