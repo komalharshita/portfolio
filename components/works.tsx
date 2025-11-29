@@ -20,7 +20,7 @@ const projects: ProjectType[] = [
     repo: "prodigyflow",
     thumb: "/projects/prodigy_tb.png",
     tools: ["Python", "NumPy", "Gen AI", "Pandas", "Maptpotlib", "Seaborn"],
-    gallery: ["/projects/prodigy_1.png"],
+    gallery: ["/projects/PRODIGYFLOW ARCH.png"],
   },
   {
     title: "Urban Sustainability Analysis",

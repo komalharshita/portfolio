@@ -65,7 +65,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 pt-4 items-center sm:items-start">
               <button
                 className="btn-primary relative"
-                onClick={() => window.open("path-to-cv", "_blank")}
+                onClick={() => window.open("/MY RESUME.pdf", "_blank")}
               >
                 Download CV
 

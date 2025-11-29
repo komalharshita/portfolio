@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
         {[
           { name: "About", href: "#about" },
           { name: "Skills", href: "#skills" },
-          { name: "Resume", href: "#resume" },
+          { name: "Resume", href: "/MY RESUME.pdf" },
           { name: "Projects", href: "#projects" },
           { name: "Contact", href: "#contact" },
         ].map((item) => (

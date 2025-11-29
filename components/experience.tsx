@@ -147,7 +147,7 @@ export default function Experience() {
       {/* Resume button */}
       <div className="text-center mt-16">
         <a
-          href="/resume.pdf"
+          href="/MY RESUME.pdf.pdf"
           download
           className="inline-block px-8 py-4 rounded-full font-semibold hover:shadow-lg transition-all text-lg text-white"
           style={{
