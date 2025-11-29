@@ -29,10 +29,10 @@ export default function LoadingScreen() {
 
   return (
     <div
-      className="
+      className={`
         fixed inset-0 z-[9999] flex flex-col items-center justify-center
         animate-fadeIn backdrop-blur-2xl
-      "
+      `}
       style={{
         background:
           "linear-gradient(145deg, #1a0820 0%, #250e2c 40%, #2e1637 100%)",
@@ -40,10 +40,7 @@ export default function LoadingScreen() {
     >
       {/* Center Block */}
       <div className="text-center animate-pulseSlow">
-        <h1
-          className="text-5xl font-bold"
-          style={{ color: "#f7c2ca" }}
-        >
+        <h1 className="text-5xl font-bold" style={{ color: "#f7c2ca" }}>
           Welcome to my Portfolio!
         </h1>
 
@@ -64,21 +61,34 @@ export default function LoadingScreen() {
           background: "rgba(247,194,202,0.35)",
           animation: "pulseGlow 4s infinite ease-in-out",
         }}
-      ></div>
+      />
 
       {/* GLOBAL STYLES */}
       <style jsx global>{`
         /* Glow animation */
         @keyframes pulseGlow {
-          0% { transform: scale(0.9); opacity: 0.3; }
-          50% { transform: scale(1.1); opacity: 0.5; }
-          100% { transform: scale(0.9); opacity: 0.3; }
+          0% {
+            transform: scale(0.9);
+            opacity: 0.3;
+          }
+          50% {
+            transform: scale(1.1);
+            opacity: 0.5;
+          }
+          100% {
+            transform: scale(0.9);
+            opacity: 0.3;
+          }
         }
 
         /* Fade-in wrapper */
         @keyframes fadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
         }
 
         /* Slow pulsing */
@@ -92,12 +102,17 @@ export default function LoadingScreen() {
           margin-left: 3px;
           width: 6px;
           animation: blink 0.7s infinite;
-          color: rgba(247,194,202,0.85);
+          color: rgba(247, 194, 202, 0.85);
         }
 
         @keyframes blink {
-          0%, 100% { opacity: 1; }
-          50% { opacity: 0; }
+          0%,
+          100% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0;
+          }
         }
       `}</style>
     </div>
