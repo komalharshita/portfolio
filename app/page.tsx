@@ -1,17 +1,18 @@
-import Header from "@/components/header"
-import Hero from "@/components/hero"
-import About from "@/components/about"
-import Skills from "@/components/skills"
-import Works from "@/components/works"
+import { Suspense } from "react";
+import Header from "@/components/header";
+import Hero from "@/components/hero";
+import About from "@/components/about";
+import Skills from "@/components/skills";
+import Works from "@/components/works";
 import Process from "@/components/Process";
-import Experience from "@/components/experience"
-import Contact from "@/components/contact"
-import BackToTop from "@/components/back-to-top"
-import Footer from "@/components/Footer"  
+import Experience from "@/components/experience";
+import Contact from "@/components/contact";
+import BackToTop from "@/components/back-to-top";
+import Footer from "@/components/Footer";
 
-export default function Home() {
+function PageContent() {
   return (
-    <div className="min-h-screen bg-[#250e2c]">
+    <>
       <Header />
       <Hero />
       <About />
@@ -20,8 +21,18 @@ export default function Home() {
       <Process />
       <Experience />
       <Contact />
-      <Footer />      
+      <Footer />
       <BackToTop />
+    </>
+  );
+}
+
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-[#250e2c]">
+      <Suspense fallback={<div className="text-center text-pink-200 py-20">Loading…</div>}>
+        <PageContent />
+      </Suspense>
     </div>
-  )
+  );
 }

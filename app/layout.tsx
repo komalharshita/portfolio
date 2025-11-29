@@ -16,14 +16,17 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Komal Harshita - Portfolio",
-  description: "Data Analyst Portfolio",
-  generator: "v0.app",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    userScalable: false,
-  },
-}
+  description:
+    "Data Analyst Portfolio",
+    generator: 'v0.app'
+};
+
+// ✅ FIX: Move viewport OUT of metadata
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 
 export default function RootLayout({
   children,
@@ -46,7 +49,6 @@ export default function RootLayout({
         <HireMePop />
 
         {/* Google Analytics Loader */}
-        {/* Google Analytics Loader */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
           strategy="afterInteractive"
@@ -66,7 +68,6 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* Scroll Progress Bar */}
         <ScrollProgressBar />
 
         <GoogleAnalytics />
@@ -74,9 +75,6 @@ export default function RootLayout({
         {/* Page Content */}
         {children}
 
-        {/* --------------------------------------------- */}
-        {/* ✨ Cursor Trail Script */}
-        {/* --------------------------------------------- */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -94,10 +92,6 @@ export default function RootLayout({
             `,
           }}
         />
-
-        {/* --------------------------------------------- */}
-        {/* 💖 Heart Cursor on Link Hover */}
-        {/* --------------------------------------------- */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -114,8 +108,7 @@ export default function RootLayout({
               });
             `,
           }}
-        />
-
+         />
       </body>
     </html>
   )
