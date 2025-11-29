@@ -14,19 +14,18 @@ export default function HireMePop() {
 
   return (
     <div
-      className="
+      className={`
         fixed bottom-6 right-6 z-[9998]
         p-5 rounded-2xl shadow-xl
         flex items-start gap-4
         animate-slideUp
         backdrop-blur-xl
-      "
+      `}
       style={{
         background:
           "linear-gradient(135deg, rgba(131,122,182,0.85), rgba(246,165,192,0.85))",
       }}
     >
-
       {/* INFO */}
       <div className="text-white">
         <p className="font-semibold text-sm opacity-90 text-card-foreground">
@@ -39,10 +38,7 @@ export default function HireMePop() {
         <a
           href="https://www.linkedin.com/in/komalharshita/"
           target="_blank"
-          className="
-            inline-block mt-3 text-sm font-semibold
-            underline underline-offset-4
-          "
+          className="inline-block mt-3 text-sm font-semibold underline underline-offset-4"
         >
           → Contact Me
         </a>
@@ -58,8 +54,14 @@ export default function HireMePop() {
 
       <style jsx global>{`
         @keyframes slideUp {
-          0% { opacity: 0; transform: translateY(20px); }
-          100% { opacity: 1; transform: translateY(0); }
+          0% {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
 
         .animate-slideUp {
