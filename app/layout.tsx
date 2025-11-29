@@ -4,6 +4,7 @@ import { Inter, Poppins } from "next/font/google"
 import ScrollProgressBar from "@/components/ScrollReveal"
 import LoadingScreen from "@/components/LoadingScreen"
 import HireMePop from "@/components/HireMePop"
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 import "./globals.css"
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
@@ -31,6 +32,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <meta name="eo6fz4sclkhp" content="gv-qahruv2dckdete.dv.googlehosted.com" />
+      </head>
       <body
         className={`
           ${inter.variable}
@@ -64,6 +68,8 @@ export default function RootLayout({
 
         {/* Scroll Progress Bar */}
         <ScrollProgressBar />
+
+        <GoogleAnalytics />
 
         {/* Page Content */}
         {children}
