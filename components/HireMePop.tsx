@@ -29,7 +29,7 @@ export default function HireMePop() {
 
       {/* INFO */}
       <div className="text-white">
-        <p className="font-semibold text-sm opacity-90">
+        <p className="font-semibold text-sm opacity-90 text-card-foreground">
           Open to Opportunities!
         </p>
         <h4 className="text-lg font-bold leading-tight mt-1">
