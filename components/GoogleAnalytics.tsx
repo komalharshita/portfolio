@@ -2,17 +2,21 @@
 
 import { useEffect } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
-import * as gtag from "@/lib/gtag";
 
 export default function GoogleAnalytics() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
+  // Track page views on route change
   useEffect(() => {
-    if (!pathname) return;
+    if (!window.gtag) return;
+
     const url = pathname + (searchParams?.toString() ? `?${searchParams}` : "");
-    gtag.pageview(url);
+
+    window.gtag("config", process.env.NEXT_PUBLIC_GA_ID as string, {
+      page_path: url,
+    });
   }, [pathname, searchParams]);
 
-  return null;
+  return null; // no UI, just tracking
 }

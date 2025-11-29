@@ -1,12 +1,7 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { Suspense } from "react";
-import Script from "next/script";
-
-import LoadingScreen from "@/components/LoadingScreen";
-import HireMePop from "@/components/HireMePop";
-import ScrollProgressBar from "@/components/ScrollReveal";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 import Header from "@/components/header";
 import Hero from "@/components/hero";
@@ -19,9 +14,16 @@ import Contact from "@/components/contact";
 import BackToTop from "@/components/back-to-top";
 import Footer from "@/components/Footer";
 
-// -------------------------------
-// PAGE CONTENT (your sections)
-// -------------------------------
+// ⭐ Load GoogleAnalytics only on the client (NO SSR)
+const GoogleAnalytics = dynamic(() => import("@/components/GoogleAnalytics"), {
+  ssr: false,
+});
+
+// ⭐ Load ScrollReveal only on the client as well (optional safety)
+const ScrollReveal = dynamic(() => import("@/components/ScrollReveal"), {
+  ssr: false,
+});
+
 function PageContent() {
   return (
     <>
@@ -39,88 +41,22 @@ function PageContent() {
   );
 }
 
-// -------------------------------
-// MAIN PAGE COMPONENT
-// -------------------------------
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#250e2c]">
-
-      {/* 💜 Loading Screen */}
-      <LoadingScreen />
-
-      {/* 💖 Hire Me Popup */}
-      <HireMePop />
-
-      {/* 📊 Scroll Progress Bar */}
-      <ScrollProgressBar />
-
-      {/* 📈 Google Analytics Loader */}
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
-        strategy="afterInteractive"
-      />
-
-      {/* 📈 Google Analytics Init */}
-      <Script id="gtag-init" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          window.gtag = gtag;
-          gtag('js', new Date());
-          gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
-            page_path: window.location.pathname,
-            anonymize_ip: true
-          });
-        `}
-      </Script>
-
-      {/* Custom GA Component (optional second handler) */}
-      <GoogleAnalytics />
-
-      {/* ------------------------------ */}
-      {/*  PAGE RENDER WITH SUSPENSE     */}
-      {/* ------------------------------ */}
-      <Suspense fallback={<div className="text-center py-20 text-pink-200">Loading…</div>}>
-        <PageContent />
+      {/* Wrap client-only components in Suspense */}
+      <Suspense fallback={null}>
+        <GoogleAnalytics />
       </Suspense>
 
-      {/* --------------------------------------------- */}
-      {/* ✨ Cursor Trail Script */}
-      {/* --------------------------------------------- */}
-      <Script id="cursor-trail" strategy="afterInteractive">
-        {`
-          document.addEventListener("mousemove", function(e) {
-            const dot = document.createElement("div");
-            dot.className = "cursor-trail";
-            dot.style.left = e.clientX + "px";
-            dot.style.top = e.clientY + "px";
-            document.body.appendChild(dot);
+      <Suspense fallback={null}>
+        <ScrollReveal />
+      </Suspense>
 
-            setTimeout(() => dot.remove(), 600);
-          });
-        `}
-      </Script>
-
-      {/* --------------------------------------------- */}
-      {/* 💖 Heart Cursor on Link Hover */}
-      {/* --------------------------------------------- */}
-      <Script id="heart-hover" strategy="afterInteractive">
-        {`
-          const links = document.querySelectorAll("a");
-
-          links.forEach(link => {
-            link.addEventListener("mouseenter", () => {
-              document.body.classList.add("cursor-heart");
-            });
-
-            link.addEventListener("mouseleave", () => {
-              document.body.classList.remove("cursor-heart");
-            });
-          });
-        `}
-      </Script>
-
+      {/* Main Page Content */}
+      <Suspense fallback={<div className="text-center text-pink-200 py-20">Loading…</div>}>
+        <PageContent />
+      </Suspense>
     </div>
   );
 }
