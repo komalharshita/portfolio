@@ -34,6 +34,10 @@ export default function RootLayout({
           font-sans antialiased
         `}
       >
+        <LoadingScreen />
+        <HireMePop />
+
+
         {/* Scroll Progress Bar */}
         <ScrollProgressBar />
 
