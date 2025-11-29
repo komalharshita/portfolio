@@ -1,3 +1,4 @@
+import Script from "next/script";
 import type { Metadata } from "next"
 import { Inter, Poppins } from "next/font/google"
 import ScrollProgressBar from "@/components/ScrollReveal"
@@ -40,6 +41,26 @@ export default function RootLayout({
         <LoadingScreen />
         <HireMePop />
 
+        {/* Google Analytics Loader */}
+        {/* Google Analytics Loader */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+          strategy="afterInteractive"
+        />
+
+        {/* Google Analytics Init */}
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
+              page_path: window.location.pathname,
+              anonymize_ip: true
+            });
+          `}
+        </Script>
 
         {/* Scroll Progress Bar */}
         <ScrollProgressBar />
