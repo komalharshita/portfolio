@@ -1,48 +1,57 @@
-# Creative Portfolio — Komal Harshita
+# ✨ Data Analyst Portfolio — Komal Harshita
 
-A small, static Next.js portfolio site with playful "Barbiecore Y2K" visuals, glassmorphic UI elements, and animated backgrounds. Built with Next.js, Tailwind CSS and lightweight client components.
+A modern, aesthetic, and fully responsive personal portfolio website designed to showcase my journey as a **Data Analyst**, **CSE Sophomore**, and **creative technical learner**.  
+Built with **Next.js**, **Tailwind CSS**, and lightweight animation-rich client components, the site reflects my branding style — **deep purple, soft lilac gradients, dusty pink accents**, glassmorphic UI, and playful Y2K-inspired visual elements.
 
-Badges
-- ![status](https://img.shields.io/badge/status-active-brightgreen) (placeholder)
-- ![next](https://img.shields.io/badge/framework-Next.js-black)
-- ![license](https://img.shields.io/badge/license-MIT-lightgrey) (add LICENSE file to enable)
+---
 
-What this project does
-- Presents a personal portfolio site for Komal Harshita with sections for hero, about, projects and contact.
-- Uses modular React components (client components) for animated visuals and UI patterns (glassmorphic tooltips, holographic text, animated dividers, floating shapes, gradient mesh background).
-- Exports a static site (see [next.config.mjs](next.config.mjs)) suitable for static hosting.
+## 🏷️ Badges
 
-Why this project is useful
-- Ready-made, aesthetic portfolio template with accessible components and animations.
-- Small, component-focused codebase that’s easy to adapt for other creators or developers.
-- Demonstrates using Tailwind + PostCSS + Next.js with client-side micro-interactions.
+![status](https://img.shields.io/badge/status-active-brightgreen)  
+![next](https://img.shields.io/badge/framework-Next.js-black)  
+![license](https://img.shields.io/badge/license-MIT-lightgrey) 
 
-Quick links (open these files)
-- App entry: [app/page.tsx](app/page.tsx) — composes the page using components.
-- Root layout: [app/layout.tsx](app/layout.tsx) — fonts, metadata and global CSS import.
-- Global styles: [app/globals.css](app/globals.css) and [styles/globals.css](styles/globals.css).
-- Next config: [next.config.mjs](next.config.mjs)
-- PostCSS: [postcss.config.mjs](postcss.config.mjs)
-- Components:
-  - [`Hero`](components/hero.tsx)
-  - [`About`](components/about.tsx)
-  - [`Projects`](components/projects.tsx)
-  - [`Contact`](components/contact.tsx)
-  - [`Navigation`](components/navigation.tsx)
-  - [`GradientMeshBackground`](components/gradient-mesh-background.tsx)
-  - [`FloatingShapes`](components/floating-shapes.tsx)
-  - [`GlassmorphicTooltip`](components/glassmorphic-tooltip.tsx)
-  - [`HolographicText`](components/holographic-text.tsx)
-  - [`AnimatedDivider`](components/animated-divider.tsx)
-  - [`ThemeProvider`](components/theme-provider.tsx)
-- Utility: [`cn`](lib/utils.ts)
+---
 
-Quick start
+## Quick Links (Important Files)
 
-Development (pnpm recommended)
-\`\`\`bash
+### **App Structure**
+- `app/page.tsx` — main page composition  
+- `app/layout.tsx` — metadata, fonts, and global setup  
+- `app/globals.css` — Tailwind setup, brand theme, animations  
+- `next.config.mjs` — Next.js configuration  
+- `postcss.config.mjs` — PostCSS configuration  
+
+### **Core Components**
+- `components/header.tsx`  
+- `components/hero.tsx`  
+- `components/about.tsx`  
+- `components/skills.tsx`  
+- `components/works.tsx`  
+- `components/experience.tsx`  
+- `components/contact.tsx`  
+- `components/Footer.tsx`  
+- `components/back-to-top.tsx`
+
+### **UI / Visual Components**
+- `components/glassmorphic-tooltip.tsx`  
+- `components/holographic-text.tsx`  
+- `components/animated-divider.tsx`  
+- `components/section-divider.tsx`  
+- `components/theme-provider.tsx`
+
+### **Utility**
+- `lib/utils.ts`
+
+---
+
+## 🚀 Quick Start
+
+Use **pnpm** (recommended):
+
+```bash
 # Install dependencies
 pnpm install
 
-# Run dev server (Next.js)
+# Run development server
 pnpm dev
