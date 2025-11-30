@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://komal-harshita.vercel.app/sitemap.xml
