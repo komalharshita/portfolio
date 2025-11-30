@@ -18,8 +18,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Komal Harshita - Portfolio",
-  description: "Data Analyst Portfolio",
+  title: "Komal Harshita | Data Analyst Portfolio",
+  description: "Portfolio of Komal Harshita — CSE Sophomore & Data Analyst skilled in Python, SQL, Excel, Power BI, and Business Analytics projects",
     generator: 'v0.app'
 };
 
