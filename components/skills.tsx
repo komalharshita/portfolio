@@ -147,7 +147,7 @@ const Skills: React.FC = () => {
   return (
     <section className="max-w-6xl mx-auto px-6 py-20">
       {/* Section Heading */}
-      <h2 className="reveal section-title text-4xl font-bold mb-14">My Skills</h2>
+      <h2 className="section-title text-4xl font-bold mb-14">My Skills</h2>
 
       {/* Main Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
@@ -157,7 +157,7 @@ const Skills: React.FC = () => {
           className="p-6 rounded-2xl"
           style={{ backgroundColor: "#2e1637" }}
         >
-          <h3 className="reveal text-xl font-bold mb-4" style={{ color: "#f6a5c0" }}>
+          <h3 className="text-xl font-bold mb-4" style={{ color: "#f6a5c0" }}>
             Technical Skills
           </h3>
 
@@ -192,7 +192,7 @@ const Skills: React.FC = () => {
           className="p-6 rounded-2xl"
           style={{ backgroundColor: "#2e1637" }}
         >
-          <h3 className="reveal text-xl font-bold mb-4" style={{ color: "#f6a5c0" }}>
+          <h3 className="text-xl font-bold mb-4" style={{ color: "#f6a5c0" }}>
             Software & Tools
           </h3>
 

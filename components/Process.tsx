@@ -100,7 +100,7 @@ export default function Process() {
         {/* Header */}
         <div className="flex flex-wrap justify-between gap-6 mb-12">
           <div>
-            <p className="reveal text-sm font-semibold" style={{ color: "#cc8db3" }}>
+            <p className="text-sm font-semibold" style={{ color: "#cc8db3" }}>
               Services
             </p>
 

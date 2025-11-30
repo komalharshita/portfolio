@@ -293,7 +293,7 @@ h3 { font-size: var(--font-subtitle); }
   /* SAFE FIX */
   transform-origin: center;
 
-  animation: reveal-up 950ms cubic-bezier(.2,.9,.2,1) both;
+  animation: reveal-up 650ms cubic-bezier(.2,.9,.2,1) both;
   text-align: center;
   width: 100%;
   text-shadow: 0 6px 18px rgba(247,194,202,0.12);
@@ -366,7 +366,7 @@ h3 { font-size: var(--font-subtitle); }
   transform: translateY(30px);
   transition:
     opacity 0.7s ease-out,
-    transform 0.9s ease-out;
+    transform 0.7s ease-out;
 }
 
 .reveal.visible {
