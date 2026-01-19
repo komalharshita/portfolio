@@ -8,6 +8,7 @@ import Hero from "@/components/hero";
 import About from "@/components/about";
 import Skills from "@/components/skills";
 import Works from "@/components/works";
+import VisualizationsGallery from "@/components/VisualizationsGallery";
 import Process from "@/components/Process";
 import Experience from "@/components/experience";
 import Contact from "@/components/contact";
@@ -32,6 +33,7 @@ function PageContent() {
       <About />
       <Skills />
       <Works />
+      <VisualizationsGallery />
       <Process />
       <Experience />
       <Contact />
