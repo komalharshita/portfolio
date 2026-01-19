@@ -78,7 +78,7 @@ export default function Hero() {
               </button>
 
               <button
-                className="btn-secondary"
+                className="btn-secondary mx-3"
                 onClick={() => window.open("https://linkedin.com", "_blank")}
               >
                 Connect on LinkedIn

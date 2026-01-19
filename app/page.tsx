@@ -29,15 +29,33 @@ function PageContent() {
   return (
     <>
       <Header />
-      <Hero />
-      <About />
-      <Skills />
-      <Works />
-      <VisualizationsGallery />
-      <Process />
-      <Experience />
-      <Contact />
-      <Footer />
+      <div id="hero" className="section-animate">
+        <Hero />
+      </div>
+      <div id="about" className="section-animate">
+        <About />
+      </div>
+      <div id="skills" className="section-animate">
+        <Skills />
+      </div>
+      <div id="projects" className="section-animate">
+        <Works />
+      </div>
+      <div id="visualizations" className="section-animate">
+        <VisualizationsGallery />
+      </div>
+      <div id="process" className="section-animate">
+        <Process />
+      </div>
+      <div id="experience" className="section-animate">
+        <Experience />
+      </div>
+      <div id="contact" className="section-animate">
+        <Contact />
+      </div>
+      <div id="footer" className="section-animate-fade">
+        <Footer />
+      </div>
       <BackToTop />
     </>
   );

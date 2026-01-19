@@ -70,7 +70,7 @@ export default function VisualizationsGallery() {
       <div className="max-w-7xl mx-auto">
         {/* Section title */}
         <div className="text-center mb-12 sm:mb-16">
-          <h2 className="reveal text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4">
+          <h2 className="reveal text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-[rgba(232,151,177,1)]">
             Visualizations Gallery
           </h2>
           <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-transparent via-[#ff4da6] to-transparent mx-auto" />

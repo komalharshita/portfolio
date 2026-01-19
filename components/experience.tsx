@@ -27,15 +27,33 @@ export default function Experience() {
     },
     {
       id: 3,
-      title: "Google Student Ambassador",
-      category: "Volunteering",
+      title: "Infosys Springboard Pragati – Cohort 7",
+      category: "Internship / Learning Program",
       description:
-        "Helping students discover how Google Gemini AI can enhance their studies and creativity through campus events and activities.",
-      skills: "AI Education, Community Building",
-      link: "https://www.google.com/",
+        "Selected participant of Infosys Springboard Pragati (Cohort 7), focused on industry-ready digital and professional skills.",
+      skills: "Digital Skills, Professional Development",
+      link: "https://www.infosys.com/",
     },
     {
       id: 4,
+      title: "5-Day AI Agents Intensive Course with Google",
+      category: "Skill Development",
+      description:
+        "Intensive course on building AI agents using cutting-edge technologies. Mastered advanced prompt-based workflows and AI orchestration.",
+      skills: "Google Gemini, AI Agents, Prompt-based workflows",
+      link: "https://www.kaggle.com/",
+    },
+    {
+      id: 5,
+      title: "Startup School: Prompt to Prototype",
+      category: "Professional Development",
+      description:
+        "Google for Startups program focused on rapid prototyping from prompts to production-ready applications.",
+      skills: "Prompt Engineering, Rapid Prototyping, AI Product Thinking",
+      link: "https://www.google.com/startups/",
+    },
+    {
+      id: 6,
       title: "Advanced PowerPoint Certification",
       category: "Skill Development",
       description:
@@ -83,7 +101,7 @@ export default function Experience() {
               {/* Content */}
               <div>
                 <h3
-                  className="reveal text-2xl font-bold mb-3"
+                  className="reveal text-2xl font-bold mb-3 py-1.5"
                   style={{
                     fontFamily: "'Poppins', sans-serif",
                     color: "#ffffff",
@@ -94,7 +112,7 @@ export default function Experience() {
                   {project.title}
                 </h3>
 
-                <p className="reveal text-white/80 text-sm leading-relaxed">
+                <p className="reveal text-white/80 text-sm leading-relaxed py-2">
                   {project.description}
                 </p>
               </div>
@@ -113,11 +131,11 @@ export default function Experience() {
                 }}
               >
                 {/* Wrapper allows tooltip interaction */}
-                <div className="pointer-events-auto">
-                  <p className="text-white font-semibold mb-4">Skills & Focus:</p>
+                <div className="pointer-events-auto pt-12 pb-6">
+                  <p className="text-white font-semibold mb-3 px-2.5 py-7">Skills & Focus:</p>
 
                   <GlassmorphicTooltip content="Key competencies for this role">
-                    <p className="text-white/90 text-sm mb-4">{project.skills}</p>
+                    <p className="text-white/90 text-sm">{project.skills}</p>
                   </GlassmorphicTooltip>
                 </div>
               </div>
