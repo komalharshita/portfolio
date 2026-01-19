@@ -24,16 +24,16 @@ export default function Header() {
       className="sticky top-0 z-50 border-b"
       style={{ backgroundColor: "#250e2c", borderColor: "rgba(211,195,227,0.2)" }}
     >
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 py-4 flex items-center justify-between">
-        <a href="#" className="transition-transform duration-300 hover:scale-110">
-          <img src="/images/kh-favicon.png" alt="KH Logo" className="rounded-full size-12" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+        <a href="#" className="transition-transform duration-300 hover:scale-110 flex-shrink-0">
+          <img src="/images/kh-favicon.png" alt="KH Logo" className="rounded-full size-10 sm:size-12" />
         </a>
 
-        <nav className="flex gap-8 text-sm font-medium">
+        <nav className="flex gap-4 sm:gap-6 lg:gap-8 text-xs sm:text-sm font-medium">
 
           <a
-            href = "#about"
-            className="transition-colors duration-300"
+            href="#about"
+            className="transition-colors duration-300 whitespace-nowrap"
             style={{ color: "#b8a0b8" }}
             onMouseEnter={(e) => (e.currentTarget.style.color = "#f6a5c0")}
             onMouseLeave={(e) => (e.currentTarget.style.color = "#b8a0b8")}
@@ -43,7 +43,7 @@ export default function Header() {
 
           <a
             href="#projects"
-            className="transition-colors duration-300"
+            className="transition-colors duration-300 whitespace-nowrap"
             style={{ color: "#b8a0b8" }}
             onMouseEnter={(e) => (e.currentTarget.style.color = "#f6a5c0")}
             onMouseLeave={(e) => (e.currentTarget.style.color = "#b8a0b8")}
@@ -53,7 +53,7 @@ export default function Header() {
 
           <a
             href="#contact"
-            className="transition-colors duration-300"
+            className="transition-colors duration-300 whitespace-nowrap"
             style={{ color: "#b8a0b8" }}
             onMouseEnter={(e) => (e.currentTarget.style.color = "#f6a5c0")}
             onMouseLeave={(e) => (e.currentTarget.style.color = "#b8a0b8")}

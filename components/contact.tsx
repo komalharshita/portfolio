@@ -24,31 +24,31 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="px-4 py-20 max-w-7xl mx-auto">
+    <section id="contact" className="px-4 sm:px-6 lg:px-8 py-16 sm:py-20 max-w-7xl mx-auto">
       <div className="relative z-10">
         <AnimatedDivider />
 
-        <div className="text-center mb-16 max-w-3xl mx-auto px-2">
-          <h2 className="reveal section-title font-bold mb-10 text-center text-4xl sm:text-5xl" style={{ color: "#f6a5c0" }}>
+        <div className="text-center mb-12 sm:mb-16 max-w-3xl mx-auto">
+          <h2 className="reveal section-title font-bold mb-8 sm:mb-10 text-center text-3xl sm:text-4xl lg:text-5xl" style={{ color: "#f6a5c0" }}>
             Let's Connect!
           </h2>
 
-          <p className="reveal text-lg sm:text-xl" style={{ color: "#b8a0b8" }}>
+          <p className="reveal text-sm sm:text-base lg:text-lg px-2" style={{ color: "#b8a0b8" }}>
             Interested in data, storytelling, or collaboration? I'd love to hear from you.
           </p>
 
           {/* Responsive Card */}
           <div
-            className="mt-8 p-6 sm:p-8 rounded-2xl border mx-auto"
+            className="mt-6 sm:mt-8 p-4 sm:p-6 lg:p-8 rounded-2xl border mx-auto"
             style={{
               backgroundColor: "rgba(46, 22, 55, 0.6)",
               borderColor: "rgba(211, 195, 227, 0.3)",
             }}
           >
-            <p className="reveal font-semibold mb-3 text-lg" style={{ color: "#f6a5c0" }}>
+            <p className="reveal font-semibold mb-2 sm:mb-3 text-base sm:text-lg" style={{ color: "#f6a5c0" }}>
               Open to Opportunities
             </p>
-            <p style={{ color: "#e0c3cc" }}>
+            <p className="text-xs sm:text-sm lg:text-base" style={{ color: "#e0c3cc" }}>
               Currently seeking internships in Data Analytics and Business Intelligence. Also open to creative
               collaborations and writing projects!
             </p>
@@ -56,16 +56,16 @@ export default function Contact() {
         </div>
 
         {/* RESPONSIVE GRID */}
-        <div className="grid md:grid-cols-2 gap-12 max-w-7xl mx-auto px-2 md:px-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 max-w-7xl mx-auto">
 
           {/* ========== LEFT SIDE: CONTACT INFO ========== */}
-          <div className="space-y-8 mx-auto md:mx-0">
+          <div className="space-y-6 sm:space-y-8 mx-auto md:mx-0 w-full">
 
             {/* Responsive Avatar */}
             <img
               src="/images/p_talking.png"
               alt="Komal Harshita"
-              className="rounded-full border shadow-lg mx-auto w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-72 object-cover"
+              className="rounded-full border shadow-lg mx-auto w-36 h-36 sm:w-48 sm:h-48 md:w-64 md:h-64 object-cover"
             />
 
             {/* Social Links */}

@@ -4,26 +4,26 @@ export default function About() {
   return (
     <div
       id="about"
-      className="relative max-w-7xl mx-auto px-6 sm:px-8 py-24"
+      className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24"
     >
       {/* Heading with small heart */}
       <h2
-        className="reveal section-title font-bold mb-16 text-center text-5xl flex items-center justify-center gap-3"
+        className="section-title reveal font-bold mb-12 sm:mb-16 text-center text-4xl sm:text-5xl flex items-center justify-center gap-3 flex-wrap"
         style={{ color: "#f6a5c0" }}
       >
         <img
           src="/cute-badges/silver-soft-heart.png"
           alt="heart"
-          className="w-6 h-6 opacity-85 px-0 mx-[600px]"
+          className="w-5 sm:w-6 h-5 sm:h-6 opacity-85"
         />
         About Me
       </h2>
 
       {/* Top Row: Portrait + Bio */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 mb-12 sm:mb-16">
         
         {/* Avatar Container */}
-          <div className="h-96 rounded-lg flex items-center justify-center overflow-hidden relative">
+          <div className="h-72 sm:h-80 md:h-96 rounded-lg flex items-center justify-center overflow-hidden relative">
 
             {/* 🦋 Butterfly - top left */}
             <img

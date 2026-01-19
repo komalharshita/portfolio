@@ -35,26 +35,26 @@ export default function Hero() {
       />
 
 
-      <div className="relative max-w-7xl mx-auto px-6 sm:px-8 py-20 sm:py-7">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           
           {/* LEFT CONTENT */}
-          <div className="space-y-6 lg:space-y-8 text-left">
+          <div className="space-y-6 lg:space-y-8 text-left order-2 lg:order-1">
             <div className="space-y-3">
               <h1
-                className="reveal text-5xl sm:text-6xl lg:text-7xl font-bold leading-[5.5rem] tracking-wider text-left"
+                className="reveal text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight sm:leading-snug lg:leading-[5.5rem] tracking-wider text-left"
                 style={{ color: "#f6a5c0" }}
               >
                 PORTFOLIO
               </h1>
               <h2
-                className="reveal text-2xl sm:text-3xl lg:text-4xl font-semibold text-left"
+                className="reveal text-xl sm:text-2xl lg:text-4xl font-semibold text-left"
                 style={{ color: "#cc8db3" }}
               >
                 Komal Harshita
               </h2>
               <p
-                className="text-sm sm:text-base pt-2"
+                className="text-xs sm:text-sm lg:text-base pt-2"
                 style={{ color: "#b8a0b8" }}
               >
                 A CSE Sophomore @ NMIET Pune
@@ -62,9 +62,9 @@ export default function Hero() {
             </div>
 
             {/* BUTTONS */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 items-center sm:items-start">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 items-stretch sm:items-start w-full sm:w-auto">
               <button
-                className="btn-primary relative"
+                className="btn-primary relative px-6 sm:px-8 py-2 sm:py-3 text-xs sm:text-sm whitespace-nowrap"
                 onClick={() => window.open("/MY RESUME.pdf", "_blank")}
               >
                 Download CV
@@ -72,7 +72,7 @@ export default function Hero() {
                 {/* Silver soft heart beside button */}
                 <img
                   src="/cute-badges/silver-soft-heart.png"
-                  className="absolute -right-6 top-1/2 -translate-y-1/2 opacity-80 transition-all duration-300 hover:brightness-110 size-14 my-0 mx-36 px-0 py-0 pr-0"
+                  className="absolute -right-3 sm:-right-6 top-1/2 -translate-y-1/2 opacity-80 transition-all duration-300 hover:brightness-110 size-10 sm:size-14 my-0 hidden sm:block"
                   alt="heart"
                 />
               </button>

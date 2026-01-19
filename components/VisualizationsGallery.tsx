@@ -14,10 +14,10 @@ interface Visualization {
 const visualizations: Visualization[] = [
   {
     id: 1,
-    title: "IMDB Movies Dashboard",
+    title: "Exploratory Data Analysis",
     image:
       "/dashboard  (1).png",
-    alt: "IMDB Movies Dashboard Dark UI Themed",
+    alt: "Exploratory Data Analysis Dashboard",
   },
   {
     id: 2,
@@ -28,17 +28,17 @@ const visualizations: Visualization[] = [
   },
   {
     id: 3,
-    title: "Sales Analytics Dashboard",
+    title: "IMDB Movies Dashboard",
     image:
       "/dashboard  (3).png",
-    alt: "Sales Analytics Dashboard",
+    alt: "IMDB Movies Dashboard",
   },
   {
     id: 4,
-    title: "Exploratory Data Analysis",
+    title: "Sales Analytics Dashboard",
     image:
       "/dashboard  (5).png",
-    alt: "Exploratory Data Analysis Dashboard",
+    alt: "Sales Analytics Dashboard",
   },
 ];
 
@@ -57,7 +57,7 @@ export default function VisualizationsGallery() {
   }, [selectedImage]);
 
   return (
-    <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+    <section className="relative py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
       {/* Background gradient */}
       <div
         className="absolute inset-0 -z-10"
@@ -69,15 +69,15 @@ export default function VisualizationsGallery() {
 
       <div className="max-w-7xl mx-auto">
         {/* Section title */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="reveal text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4">
             Visualizations Gallery
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-transparent via-[#ff4da6] to-transparent mx-auto" />
+          <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-transparent via-[#ff4da6] to-transparent mx-auto" />
         </div>
 
         {/* Gallery container - horizontal scroll */}
-        <div className="w-full overflow-x-auto pb-4 scroll-smooth" style={{ scrollBehavior: "smooth", WebkitOverflowScrolling: "touch" }}>
+        <div className="w-full overflow-x-auto pb-3 sm:pb-4 scroll-smooth" style={{ scrollBehavior: "smooth", WebkitOverflowScrolling: "touch" }}>
           <style>{`
             .gallery-scroll::-webkit-scrollbar {
               height: 6px;
@@ -94,18 +94,19 @@ export default function VisualizationsGallery() {
             }
           `}</style>
 
-          <div className="gallery-scroll flex gap-6 px-4 pb-2 min-w-min">
+          <div className="gallery-scroll flex gap-4 sm:gap-6 px-2 sm:px-4 pb-2 min-w-min">
             {visualizations.map((viz) => (
               <div
                 key={viz.id}
                 className="flex-shrink-0 group cursor-pointer"
                 style={{
-                  width: "clamp(280px, calc((100vw - 48px - 24px) / 3.5), 380px)",
+                  width: "clamp(240px, calc((100vw - 32px - 16px) / 1.3), 380px)",
+                  minWidth: "240px",
                 }}
                 onClick={() => setSelectedImage(viz)}
               >
                 {/* Card */}
-                <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-[#2a1a3d] to-[#1a0f25] border border-[#ff4da6]/20 group-hover:border-[#ff4da6]/50 transition-all duration-300 h-72 sm:h-96 shadow-lg group-hover:shadow-xl group-hover:shadow-[#ff4da6]/10">
+                <div className="relative overflow-hidden rounded-lg sm:rounded-xl bg-gradient-to-br from-[#2a1a3d] to-[#1a0f25] border border-[#ff4da6]/20 group-hover:border-[#ff4da6]/50 transition-all duration-300 h-56 sm:h-72 md:h-96 shadow-lg group-hover:shadow-xl group-hover:shadow-[#ff4da6]/10">
                   {/* Image */}
                   <Image
                     src={viz.image || "/placeholder.svg"}
@@ -125,7 +126,7 @@ export default function VisualizationsGallery() {
                 </div>
 
                 {/* Title */}
-                <p className="text-white text-sm font-medium mt-3 px-1 text-center">
+                <p className="text-white text-xs sm:text-sm font-medium mt-2 sm:mt-3 px-1 text-center break-words line-clamp-2">
                   {viz.title}
                 </p>
               </div>
@@ -137,20 +138,20 @@ export default function VisualizationsGallery() {
       {/* Modal/Lightbox */}
       {selectedImage && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4 animate-in fade-in duration-200"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-3 sm:p-4 animate-in fade-in duration-200 overflow-y-auto"
           onClick={() => setSelectedImage(null)}
         >
           <div
-            className="relative w-full max-w-5xl max-h-[90vh] bg-black rounded-xl overflow-hidden shadow-2xl"
+            className="relative w-full max-w-5xl max-h-[95vh] sm:max-h-[90vh] bg-black rounded-lg sm:rounded-xl overflow-hidden shadow-2xl my-auto"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close button */}
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-4 right-4 z-10 bg-[#ff4da6] hover:bg-[#ff4da6]/80 rounded-full p-2 transition-colors duration-200 shadow-lg"
+              className="absolute top-2 sm:top-4 right-2 sm:right-4 z-10 bg-[#ff4da6] hover:bg-[#ff4da6]/80 rounded-full p-1.5 sm:p-2 transition-colors duration-200 shadow-lg"
               aria-label="Close modal"
             >
-              <X size={24} className="text-white" strokeWidth={2.5} />
+              <X size={20} className="text-white sm:w-6 sm:h-6" strokeWidth={2.5} />
             </button>
 
             {/* Modal content */}
@@ -160,14 +161,14 @@ export default function VisualizationsGallery() {
                 alt={selectedImage.alt}
                 width={1400}
                 height={900}
-                className="w-full h-auto max-h-[calc(90vh-60px)] object-contain"
-                sizes="100vw"
+                className="w-full h-auto max-h-[calc(95vh-80px)] sm:max-h-[calc(90vh-80px)] object-contain"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 95vw"
                 priority
               />
 
               {/* Title in modal */}
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/80 to-transparent p-6">
-                <p className="text-white text-lg font-semibold">
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/80 to-transparent p-3 sm:p-4 md:p-6">
+                <p className="text-white text-sm sm:text-base md:text-lg font-semibold break-words">
                   {selectedImage.title}
                 </p>
               </div>
