@@ -83,7 +83,7 @@ export default function About() {
           </p>
 
           <p
-            className="leading-relaxed text-lg"
+            className="scroll-fade-up-delay-2 leading-relaxed text-lg"
             style={{ color: "#e0c3cc" }}
           >
             I learn through consistent daily practice, small exercises, and
@@ -93,7 +93,7 @@ export default function About() {
           </p>
 
           <p
-            className="leading-relaxed text-lg"
+            className="scroll-fade-up-delay-3 leading-relaxed text-lg"
             style={{ color: "#e0c3cc" }}
           >
             I'm also open to Summer Internship opportunities where I can apply
