@@ -4,7 +4,7 @@ export default function AnimatedDivider() {
       <div
         className="absolute inset-0"
         style={{
-          background: "linear-gradient(to right, transparent, #ff4da6, transparent)",
+          background: "linear-gradient(to right, transparent, #f6a5c0, transparent)",
           animation: "shimmer 3s infinite",
         }}
       />

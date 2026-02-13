@@ -214,7 +214,7 @@ export default function About() {
                     className="px-4 py-2 rounded-full text-sm font-medium transition-all shadow-md"
                     style={{
                       background:
-                        "linear-gradient(90deg, #ff99c8, #c774b6, #8b5f9b)",
+                        "linear-gradient(135deg, #837ab6 0%, #cc8db3 50%, #f6a5c0 100%)",
                       color: "white",
                     }}
                   >
@@ -243,7 +243,7 @@ export default function About() {
                     className="px-4 py-2 rounded-full text-sm font-medium transition-all shadow-md"
                     style={{
                       background:
-                        "linear-gradient(90deg, #c774b6, #9c5fa7, #6d4b8a)",
+                        "linear-gradient(135deg, #837ab6 0%, #cc8db3 50%, #f6a5c0 100%)",
                       color: "white",
                     }}
                   >

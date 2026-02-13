@@ -231,7 +231,7 @@ const Skills: React.FC = () => {
                     style={{
                       width: `${animatedLevels[index]}%`,
                       background:
-                        "linear-gradient(90deg, #ff99c8, #c774b6, #8b5f9b)",
+                        "linear-gradient(135deg, #837ab6 0%, #cc8db3 50%, #f6a5c0 100%)",
                       boxShadow: "0 0 8px rgba(246,165,192,0.5)",
                     }}
                   />
