@@ -52,11 +52,11 @@ Your portfolio has been systematically enhanced with comprehensive responsive de
 ## Global CSS Enhancements
 
 ### Responsive Typography Scale
-```css
+\`\`\`css
 --font-display: clamp(2rem, 5vw, 4.3rem);
 --font-title: clamp(1.5rem, 3.5vw, 3rem);
 --font-subtitle: clamp(1rem, 2vw, 1.25rem);
-```
+\`\`\`
 **Result:** Text automatically scales between min and max sizes based on viewport
 
 ### Button Responsiveness

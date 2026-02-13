@@ -91,20 +91,20 @@ export default function Projects() {
 
       {/* Title */}
       <h2
-        className="reveal section-title text-4xl font-bold mb-12"
+        className="reveal-left section-title text-4xl font-bold mb-12"
         style={{ color: "#f6a5c0", textAlign: "center" }}
       >
         My Works
       </h2>
 
       {/* GRID */}
-      <div className="reveal-stagger grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
 
         {projects.map((p, i) => (
           <div
             key={i}
             onClick={() => openModal(p)}
-            className="card-custom p-5 rounded-3xl border border-pink-200/30 shadow-lg 
+            className="scroll-fade-up stagger-item card-custom p-5 rounded-3xl border border-pink-200/30 shadow-lg 
                        transition-all duration-500 text-left cursor-pointer"
           >
             {/* THUMBNAIL */}

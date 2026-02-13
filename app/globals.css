@@ -831,6 +831,135 @@ body {
 }
 
 /* --------------------------------------------- */
+/* TEXT & HEADING ANIMATIONS */
+/* --------------------------------------------- */
+
+/* Heading reveal with word-by-word effect */
+@keyframes revealHeading {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scaleY(0.9);
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+/* Subtle text shimmer effect */
+@keyframes textShimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* Micro-pulse for text elements */
+@keyframes microPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+/* Subtle bounce for body text */
+@keyframes subtleBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+/* Line draw effect for underlines */
+@keyframes lineDrawFromLeft {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Fade in with slight scale */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Stagger child animation */
+@keyframes staggerIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll triggered - slide in from left */
+@keyframes scrollSlideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Scroll triggered - slide in from right */
+@keyframes scrollSlideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Scroll triggered - fade up */
+@keyframes scrollFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Text color shift animation */
+@keyframes textColorShift {
+  0%, 100% {
+    color: #f6a5c0;
+  }
+  50% {
+    color: #cc8db3;
+  }
+}
+
+/* --------------------------------------------- */
 /* RESPONSIVE UTILITIES */
 /* --------------------------------------------- */
 
@@ -939,6 +1068,226 @@ body {
 
   .stagger-child:nth-child(5) {
     animation-delay: 0.5s;
+  }
+
+  /* --------------------------------------------- */
+  /* TEXT ANIMATION UTILITIES */
+  /* --------------------------------------------- */
+
+  /* Heading animations that trigger after load screen */
+  .heading-reveal {
+    animation: revealHeading 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    opacity: 0;
+  }
+
+  .heading-reveal-delayed {
+    animation: revealHeading 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    opacity: 0;
+    animation-delay: 0.2s;
+  }
+
+  .heading-reveal-delayed-lg {
+    animation: revealHeading 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    opacity: 0;
+    animation-delay: 0.4s;
+  }
+
+  /* Paragraph text animation */
+  .text-reveal {
+    animation: fadeInScale 0.7s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.3s;
+  }
+
+  .text-reveal-delayed {
+    animation: fadeInScale 0.7s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.5s;
+  }
+
+  /* Micro-animations for smaller text */
+  .text-micro-pulse {
+    animation: microPulse 3s ease-in-out infinite;
+  }
+
+  .text-subtle-bounce {
+    animation: subtleBounce 2s ease-in-out infinite;
+  }
+
+  /* Text shimmer effect */
+  .text-shimmer {
+    background: linear-gradient(90deg, #f6a5c0 0%, #cc8db3 50%, #f6a5c0 100%);
+    background-size: 1000px 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textShimmer 3s infinite;
+  }
+
+  /* Text color pulsing */
+  .text-color-pulse {
+    animation: textColorShift 2s ease-in-out infinite;
+  }
+
+  /* --------------------------------------------- */
+  /* SCROLL-TRIGGERED ANIMATIONS */
+  /* --------------------------------------------- */
+
+  /* Content slides in from left on scroll */
+  .scroll-slide-left {
+    animation: scrollSlideInLeft 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    opacity: 0;
+  }
+
+  .scroll-slide-left-delay {
+    animation: scrollSlideInLeft 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    opacity: 0;
+    animation-delay: 0.15s;
+  }
+
+  /* Content slides in from right on scroll */
+  .scroll-slide-right {
+    animation: scrollSlideInRight 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    opacity: 0;
+  }
+
+  .scroll-slide-right-delay {
+    animation: scrollSlideInRight 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    opacity: 0;
+    animation-delay: 0.15s;
+  }
+
+  /* Content fades up on scroll */
+  .scroll-fade-up {
+    animation: scrollFadeUp 0.9s ease-out forwards;
+    opacity: 0;
+  }
+
+  .scroll-fade-up-delay {
+    animation: scrollFadeUp 0.9s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.15s;
+  }
+
+  .scroll-fade-up-delay-2 {
+    animation: scrollFadeUp 0.9s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.3s;
+  }
+
+  .scroll-fade-up-delay-3 {
+    animation: scrollFadeUp 0.9s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.45s;
+  }
+
+  /* Stagger animation for list items */
+  .stagger-item {
+    animation: staggerIn 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  .stagger-item:nth-child(1) {
+    animation-delay: 0.05s;
+  }
+
+  .stagger-item:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+
+  .stagger-item:nth-child(3) {
+    animation-delay: 0.15s;
+  }
+
+  .stagger-item:nth-child(4) {
+    animation-delay: 0.2s;
+  }
+
+  .stagger-item:nth-child(5) {
+    animation-delay: 0.25s;
+  }
+
+  .stagger-item:nth-child(6) {
+    animation-delay: 0.3s;
+  }
+
+  .stagger-item:nth-child(7) {
+    animation-delay: 0.35s;
+  }
+
+  .stagger-item:nth-child(8) {
+    animation-delay: 0.4s;
+  }
+
+  /* --------------------------------------------- */
+  /* SCROLL REVEAL WITH INTERSECTION OBSERVER */
+  /* --------------------------------------------- */
+
+  /* Base reveal states */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s cubic-bezier(0.34, 1.56, 0.64, 1),
+      transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .reveal-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .reveal-right {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .reveal-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* Stagger reveal for grouped elements */
+  .reveal-stagger {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .reveal-stagger.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-stagger:nth-child(2).visible {
+    transition-delay: 0.1s;
+  }
+
+  .reveal-stagger:nth-child(3).visible {
+    transition-delay: 0.2s;
+  }
+
+  .reveal-stagger:nth-child(4).visible {
+    transition-delay: 0.3s;
+  }
+
+  .reveal-stagger:nth-child(5).visible {
+    transition-delay: 0.4s;
+  }
+
+  .reveal-stagger:nth-child(6).visible {
+    transition-delay: 0.5s;
   }
 
   /* Hero section animations */

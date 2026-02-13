@@ -42,19 +42,19 @@ export default function Hero() {
           <div className="space-y-6 lg:space-y-8 text-left order-2 lg:order-1">
             <div className="space-y-3">
               <h1
-                className="reveal text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight sm:leading-snug lg:leading-[5.5rem] tracking-wider text-left"
+                className="heading-reveal text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight sm:leading-snug lg:leading-[5.5rem] tracking-wider text-left"
                 style={{ color: "#f6a5c0" }}
               >
                 PORTFOLIO
               </h1>
               <h2
-                className="reveal text-xl sm:text-2xl lg:text-4xl font-semibold text-left"
+                className="heading-reveal-delayed text-xl sm:text-2xl lg:text-4xl font-semibold text-left"
                 style={{ color: "#cc8db3" }}
               >
                 Komal Harshita
               </h2>
               <p
-                className="text-xs sm:text-sm lg:text-base pt-2"
+                className="text-reveal text-xs sm:text-sm lg:text-base pt-2"
                 style={{ color: "#b8a0b8" }}
               >
                 A CSE Sophomore @ NMIET Pune
@@ -133,43 +133,43 @@ export default function Hero() {
           className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mt-16 sm:mt-20 pt-12 sm:pt-16 border-t"
           style={{ borderColor: "rgba(211, 195, 227, 0.3)" }}
         >
-          <div className="text-center lg:text-left">
+          <div className="stagger-item text-center lg:text-left">
             <p
-              className="reveal text-xl sm:text-2xl font-bold"
+              className="text-xl sm:text-2xl font-bold"
               style={{ color: "#f6a5c0" }}
             >
               50+
             </p>
             <p
-              className="text-xs sm:text-sm mt-2"
+              className="text-xs sm:text-sm mt-2 text-micro-pulse"
               style={{ color: "#b8a0b8" }}
             >
               Practice Exercises
             </p>
           </div>
-          <div className="text-center lg:text-left">
+          <div className="stagger-item text-center lg:text-left">
             <p
-              className="reveal text-xl sm:text-2xl font-bold"
+              className="text-xl sm:text-2xl font-bold"
               style={{ color: "#cc8db3" }}
             >
               Skilled
             </p>
             <p
-              className="text-xs sm:text-sm mt-2"
+              className="text-xs sm:text-sm mt-2 text-micro-pulse"
               style={{ color: "#b8a0b8" }}
             >
               SQL, Python & BI Tools
             </p>
           </div>
-          <div className="text-center lg:text-left">
+          <div className="stagger-item text-center lg:text-left">
             <p
-              className="reveal text-xl sm:text-2xl font-bold"
+              className="text-xl sm:text-2xl font-bold"
               style={{ color: "#837ab6" }}
             >
               2026
             </p>
             <p
-              className="text-xs sm:text-sm mt-2"
+              className="text-xs sm:text-sm mt-2 text-micro-pulse"
               style={{ color: "#b8a0b8" }}
             >
               Open to Summer Internships

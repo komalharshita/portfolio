@@ -147,14 +147,14 @@ const Skills: React.FC = () => {
   return (
     <section className="max-w-6xl mx-auto px-6 py-20">
       {/* Section Heading */}
-      <h2 className="section-title text-4xl font-bold mb-14">My Skills</h2>
+      <h2 className="section-title reveal-left text-4xl font-bold mb-14">My Skills</h2>
 
       {/* Main Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
         
         {/* ---------------------- TECHNICAL SKILLS ---------------------- */}
         <div
-          className="p-6 rounded-2xl"
+          className="scroll-fade-up p-6 rounded-2xl"
           style={{ backgroundColor: "#2e1637" }}
         >
           <h3 className="text-xl font-bold mb-4" style={{ color: "#f6a5c0" }}>
@@ -162,10 +162,10 @@ const Skills: React.FC = () => {
           </h3>
 
           <ul className="space-y-3 text-sm mb-8">
-            {technicalSkills.map((skill) => (
+            {technicalSkills.map((skill, index) => (
               <li
                 key={skill.name}
-                className="flex items-center gap-3 px-3 py-2 w-fit rounded-full"
+                className="stagger-item flex items-center gap-3 px-3 py-2 w-fit rounded-full"
                 style={{
                   background: "rgba(246, 165, 192, 0.15)",
                   border: "1px solid rgba(246,165,192,0.3)",
@@ -189,7 +189,7 @@ const Skills: React.FC = () => {
 
         {/* ---------------------- SOFTWARE & TOOLS ---------------------- */}
         <div
-          className="p-6 rounded-2xl"
+          className="scroll-fade-up scroll-fade-up-delay p-6 rounded-2xl"
           style={{ backgroundColor: "#2e1637" }}
         >
           <h3 className="text-xl font-bold mb-4" style={{ color: "#f6a5c0" }}>
