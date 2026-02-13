@@ -29,6 +29,7 @@ function PageContent() {
   return (
     <>
       <Header />
+      <div className="pt-16 sm:pt-20">
       <div id="hero" className="section-animate">
         <Hero />
       </div>
@@ -57,6 +58,7 @@ function PageContent() {
         <Footer />
       </div>
       <BackToTop />
+      </div>
     </>
   );
 }
