@@ -70,10 +70,10 @@ export default function VisualizationsGallery() {
       <div className="max-w-7xl mx-auto">
         {/* Section title */}
         <div className="text-center mb-12 sm:mb-16">
-          <h2 className="reveal text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-[rgba(232,151,177,1)]">
+          <h2 className="reveal text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4" style={{ color: "#f6a5c0" }}>
             Visualizations Gallery
           </h2>
-          <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-transparent via-[#ff4da6] to-transparent mx-auto" />
+          <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-transparent via-[#f6a5c0] to-transparent mx-auto" />
         </div>
 
         {/* Gallery container - horizontal scroll */}
@@ -86,11 +86,11 @@ export default function VisualizationsGallery() {
               background: transparent;
             }
             .gallery-scroll::-webkit-scrollbar-thumb {
-              background: rgba(255, 77, 166, 0.3);
+              background: rgba(246, 165, 192, 0.3);
               border-radius: 3px;
             }
             .gallery-scroll::-webkit-scrollbar-thumb:hover {
-              background: rgba(255, 77, 166, 0.5);
+              background: rgba(246, 165, 192, 0.5);
             }
           `}</style>
 
@@ -106,7 +106,7 @@ export default function VisualizationsGallery() {
                 onClick={() => setSelectedImage(viz)}
               >
                 {/* Card */}
-                <div className="relative overflow-hidden rounded-lg sm:rounded-xl bg-gradient-to-br from-[#2a1a3d] to-[#1a0f25] border border-[#ff4da6]/20 group-hover:border-[#ff4da6]/50 transition-all duration-300 h-56 sm:h-72 md:h-96 shadow-lg group-hover:shadow-xl group-hover:shadow-[#ff4da6]/10">
+                <div className="relative overflow-hidden rounded-lg sm:rounded-xl bg-gradient-to-br from-[#2a1a3d] to-[#1a0f25] border border-[#f6a5c0]/20 group-hover:border-[#f6a5c0]/50 transition-all duration-300 h-56 sm:h-72 md:h-96 shadow-lg group-hover:shadow-xl group-hover:shadow-[#f6a5c0]/10">
                   {/* Image */}
                   <Image
                     src={viz.image || "/placeholder.svg"}
@@ -119,7 +119,7 @@ export default function VisualizationsGallery() {
 
                   {/* Overlay on hover */}
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <div className="bg-[#ff4da6] rounded-full p-4 transform scale-0 group-hover:scale-100 transition-transform duration-300 shadow-lg">
+                    <div className="bg-[#f6a5c0] rounded-full p-4 transform scale-0 group-hover:scale-100 transition-transform duration-300 shadow-lg">
                       <ZoomIn size={28} className="text-white" strokeWidth={2.5} />
                     </div>
                   </div>
@@ -148,7 +148,7 @@ export default function VisualizationsGallery() {
             {/* Close button */}
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-2 sm:top-4 right-2 sm:right-4 z-10 bg-[#ff4da6] hover:bg-[#ff4da6]/80 rounded-full p-1.5 sm:p-2 transition-colors duration-200 shadow-lg"
+              className="absolute top-2 sm:top-4 right-2 sm:right-4 z-10 bg-[#f6a5c0] hover:bg-[#f6a5c0]/80 rounded-full p-1.5 sm:p-2 transition-colors duration-200 shadow-lg"
               aria-label="Close modal"
             >
               <X size={20} className="text-white sm:w-6 sm:h-6" strokeWidth={2.5} />
