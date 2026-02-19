@@ -976,13 +976,25 @@ body {
   }
 }
 
-/* Pulsing glow effect */
+/* Pulsing glow effect - optimized for performance */
 @keyframes pulsingGlow {
   0%, 100% {
     opacity: 0.08;
   }
   50% {
     opacity: 0.15;
+  }
+}
+
+/* Base fade in up animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
