@@ -71,9 +71,9 @@ export default function About() {
           </div>
 
         {/* Bio */}
-        <div className="scroll-slide-right flex flex-col justify-center space-y-4 text-white">
+        <div className="scroll-slide-right flex flex-col justify-center space-y-4">
           <p
-            className="scroll-fade-up-delay leading-relaxed text-lg text-foreground"
+            className="scroll-fade-up-delay leading-relaxed text-lg"
             style={{ color: "#e0c3cc" }}
           >
             Hi, I'm Komal — a Computer Science Engineering sophomore at NMIET,
@@ -83,7 +83,7 @@ export default function About() {
           </p>
 
           <p
-            className="scroll-fade-up-delay-2 leading-relaxed text-lg text-foreground"
+            className="leading-relaxed text-lg"
             style={{ color: "#e0c3cc" }}
           >
             I learn through consistent daily practice, small exercises, and
@@ -93,7 +93,7 @@ export default function About() {
           </p>
 
           <p
-            className="scroll-fade-up-delay-3 leading-relaxed text-lg"
+            className="leading-relaxed text-lg"
             style={{ color: "#e0c3cc" }}
           >
             I'm also open to Summer Internship opportunities where I can apply

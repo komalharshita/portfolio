@@ -67,7 +67,7 @@ export default function Experience() {
     <section id="experience-achievements" className="py-20 px-4 max-w-6xl mx-auto font-sans">
       <div className="text-center mb-16">
         <h2
-          className="reveal-left section-title font-bold mb-16 text-center text-5xl"
+          className="reveal section-title font-bold mb-16 text-center text-5xl"
           style={{ color: "#f6a5c0" }}
         >
           Experience & Achievements
@@ -76,9 +76,8 @@ export default function Experience() {
 
       {/* Magazine-style grid */}
       <div className="grid md:grid-cols-2 gap-8">
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <div
-            className="scroll-fade-up stagger-item"
             key={project.id}
             onMouseEnter={() => setHoveredId(project.id)}
             onMouseLeave={() => setHoveredId(null)}
