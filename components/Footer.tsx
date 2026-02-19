@@ -5,12 +5,14 @@ import React from "react";
 const Footer: React.FC = () => {
   return (
     <footer
-      className="w-full mt-20 py-10 px-6 text-center"
+      className="bg-pattern-overlay relative w-full mt-20 py-10 px-6 text-center"
       style={{
         background: "linear-gradient(180deg, #2e1637 0%, #250e2c 100%)",
         borderTop: "1px solid rgba(246,165,192,0.2)",
       }}
     >
+      {/* FOOTER SUBTLE PATTERN */}
+      <div className="bg-footer-pattern absolute inset-0 pointer-events-none" />
       {/* 🩷 AVATAR ABOVE BRAND */}
       <img
         src="/images/p_book.png"

@@ -87,7 +87,9 @@ export default function Projects() {
   };
 
   return (
-    <section className="max-w-7xl mx-auto px-6 py-20">
+    <section className="bg-pattern-overlay relative max-w-7xl mx-auto px-6 py-20">
+      {/* WORKS GRID PATTERN */}
+      <div className="bg-works-pattern absolute -inset-4 pointer-events-none" />
 
       {/* Title */}
       <h2

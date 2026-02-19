@@ -64,7 +64,10 @@ export default function Experience() {
   ]
 
   return (
-    <section id="experience-achievements" className="py-20 px-4 max-w-6xl mx-auto font-sans">
+    <section id="experience-achievements" className="bg-pattern-overlay relative py-20 px-4 max-w-6xl mx-auto font-sans">
+      {/* EXPERIENCE TIMELINE PATTERN */}
+      <div className="bg-experience-pattern absolute inset-0 pointer-events-none" />
+      
       <div className="text-center mb-16">
         <h2
           className="reveal section-title font-bold mb-16 text-center text-5xl"

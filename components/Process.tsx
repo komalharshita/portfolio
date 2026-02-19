@@ -23,7 +23,10 @@ export default function Process() {
   }, []);
 
   return (
-    <section className="mt-24 mb-24">
+    <section className="bg-pattern-overlay relative mt-24 mb-24">
+      {/* PROCESS TIMELINE PATTERN */}
+      <div className="bg-process-pattern absolute inset-0 pointer-events-none" />
+      
       <div className="wrapper">
         <h2>My Process, Step-by-Step</h2>
 

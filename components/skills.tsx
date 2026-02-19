@@ -145,7 +145,10 @@ const Skills: React.FC = () => {
   /* ------------------------------------------------------------------------ */
 
   return (
-    <section className="max-w-6xl mx-auto px-6 py-20">
+    <section className="bg-pattern-overlay relative max-w-6xl mx-auto px-6 py-20">
+      {/* SKILLS FLOWING PATTERN */}
+      <div className="bg-skills-pattern absolute -inset-4 pointer-events-none" />
+      
       {/* Section Heading */}
       <h2 className="section-title reveal-left text-4xl font-bold mb-14">My Skills</h2>
 

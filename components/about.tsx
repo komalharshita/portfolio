@@ -4,8 +4,10 @@ export default function About() {
   return (
     <div
       id="about"
-      className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24"
+      className="bg-pattern-overlay relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24"
     >
+      {/* ABOUT PULSING PATTERN */}
+      <div className="bg-about-pattern absolute -inset-4 pointer-events-none" />
       {/* Heading with small heart */}
       <h2
         className="section-title reveal-left font-bold mb-12 sm:mb-16 text-center text-4xl sm:text-5xl flex items-center justify-center gap-3 flex-wrap"
