@@ -8,7 +8,7 @@ export default function About() {
     >
       {/* Heading with small heart */}
       <h2
-        className="section-title reveal font-bold mb-12 sm:mb-16 text-center text-4xl sm:text-5xl flex items-center justify-center gap-3 flex-wrap"
+        className="section-title reveal-left font-bold mb-12 sm:mb-16 text-center text-4xl sm:text-5xl flex items-center justify-center gap-3 flex-wrap"
         style={{ color: "#f6a5c0" }}
       >
         <img
@@ -23,7 +23,7 @@ export default function About() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 mb-12 sm:mb-16">
         
         {/* Avatar Container */}
-          <div className="h-72 sm:h-80 md:h-96 rounded-lg flex items-center justify-center overflow-hidden relative">
+          <div className="scroll-slide-left h-72 sm:h-80 md:h-96 rounded-lg flex items-center justify-center overflow-hidden relative">
 
             {/* 🦋 Butterfly - top left */}
             <img
@@ -71,9 +71,9 @@ export default function About() {
           </div>
 
         {/* Bio */}
-        <div className="flex flex-col justify-center space-y-4">
+        <div className="scroll-slide-right flex flex-col justify-center leading-8 space-y-3.5">
           <p
-            className="leading-relaxed text-lg"
+            className="scroll-fade-up-delay leading-relaxed text-lg"
             style={{ color: "#e0c3cc" }}
           >
             Hi, I'm Komal — a Computer Science Engineering sophomore at NMIET,
