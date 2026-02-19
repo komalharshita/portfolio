@@ -71,7 +71,7 @@ export default function About() {
           </div>
 
         {/* Bio */}
-        <div className="scroll-slide-right flex flex-col justify-center space-y-4 leading-8">
+        <div className="scroll-slide-right flex flex-col justify-center leading-8 space-y-3.5">
           <p
             className="scroll-fade-up-delay leading-relaxed text-lg"
             style={{ color: "#e0c3cc" }}
