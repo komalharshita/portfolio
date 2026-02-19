@@ -7,10 +7,10 @@ export default function About() {
       className="bg-pattern-overlay relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24"
     >
       {/* ABOUT PULSING PATTERN */}
-      <div className="bg-about-pattern absolute -inset-4 pointer-events-none" />
+      <div className="bg-about-pattern absolute inset-0 pointer-events-none" />
       {/* Heading with small heart */}
       <h2
-        className="section-title reveal-left font-bold mb-12 sm:mb-16 text-center text-4xl sm:text-5xl flex items-center justify-center gap-3 flex-wrap"
+        className="relative z-10 section-title reveal-left font-bold mb-12 sm:mb-16 text-center text-4xl sm:text-5xl flex items-center justify-center gap-3 flex-wrap"
         style={{ color: "#f6a5c0" }}
       >
         <img
@@ -22,10 +22,10 @@ export default function About() {
       </h2>
 
       {/* Top Row: Portrait + Bio */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 mb-12 sm:mb-16">
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 mb-12 sm:mb-16">
         
         {/* Avatar Container */}
-          <div className="scroll-slide-left h-72 sm:h-80 md:h-96 rounded-lg flex items-center justify-center overflow-hidden relative">
+          <div className="scroll-slide-left relative z-10 h-72 sm:h-80 md:h-96 rounded-lg flex items-center justify-center overflow-hidden">
 
             {/* 🦋 Butterfly - top left */}
             <img
@@ -73,7 +73,7 @@ export default function About() {
           </div>
 
         {/* Bio */}
-        <div className="scroll-slide-right flex flex-col justify-center leading-8 space-y-3.5">
+        <div className="scroll-slide-right relative z-10 flex flex-col justify-center leading-8 space-y-3.5">
           <p
             className="scroll-fade-up-delay leading-relaxed text-lg"
             style={{ color: "#e0c3cc" }}
@@ -106,7 +106,7 @@ export default function About() {
       </div>
 
       {/* Bottom Row */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Education */}
         <div
           className="rounded-lg p-6 transition-all duration-300 leading-10 text-left"

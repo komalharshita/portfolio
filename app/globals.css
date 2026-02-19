@@ -1453,8 +1453,8 @@ body {
   .bg-hero-pattern {
     position: relative;
     background: 
-      radial-gradient(circle at 20% 50%, rgba(246, 165, 192, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 80%, rgba(131, 122, 182, 0.1) 0%, transparent 50%);
+      radial-gradient(circle at 20% 50%, rgba(246, 165, 192, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(131, 122, 182, 0.15) 0%, transparent 50%);
     background-size: 40% 40%;
     animation: flowingWave 8s ease-in-out infinite;
   }
@@ -1467,8 +1467,8 @@ body {
     right: 0;
     bottom: 0;
     background-image: 
-      radial-gradient(circle, rgba(204, 141, 179, 0.08) 1px, transparent 1px),
-      radial-gradient(circle, rgba(246, 165, 192, 0.08) 1px, transparent 1px);
+      radial-gradient(circle, rgba(204, 141, 179, 0.12) 1px, transparent 1px),
+      radial-gradient(circle, rgba(246, 165, 192, 0.12) 1px, transparent 1px);
     background-size: 60px 60px, 100px 100px;
     background-position: 0 0, 30px 30px;
     animation: flowingWave 12s linear infinite;
@@ -1479,8 +1479,8 @@ body {
   .bg-about-pattern {
     position: relative;
     background: 
-      radial-gradient(circle at 30% 30%, rgba(131, 122, 182, 0.12) 0%, transparent 40%),
-      radial-gradient(circle at 70% 70%, rgba(204, 141, 179, 0.12) 0%, transparent 40%);
+      radial-gradient(circle at 30% 30%, rgba(131, 122, 182, 0.18) 0%, transparent 40%),
+      radial-gradient(circle at 70% 70%, rgba(204, 141, 179, 0.18) 0%, transparent 40%);
     background-size: 50% 50%;
     animation: pulsingGlow 6s ease-in-out infinite;
   }
@@ -1493,10 +1493,10 @@ body {
     right: 0;
     bottom: 0;
     background-image: 
-      linear-gradient(45deg, rgba(246, 165, 192, 0.05) 25%, transparent 25%),
-      linear-gradient(-45deg, rgba(246, 165, 192, 0.05) 25%, transparent 25%),
-      linear-gradient(45deg, transparent 75%, rgba(246, 165, 192, 0.05) 75%),
-      linear-gradient(-45deg, transparent 75%, rgba(246, 165, 192, 0.05) 75%);
+      linear-gradient(45deg, rgba(246, 165, 192, 0.08) 25%, transparent 25%),
+      linear-gradient(-45deg, rgba(246, 165, 192, 0.08) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, rgba(246, 165, 192, 0.08) 75%),
+      linear-gradient(-45deg, transparent 75%, rgba(246, 165, 192, 0.08) 75%);
     background-size: 40px 40px;
     background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
     pointer-events: none;
@@ -1508,15 +1508,15 @@ body {
     background:
       repeating-linear-gradient(
         90deg,
-        rgba(246, 165, 192, 0.08),
-        rgba(246, 165, 192, 0.08) 2px,
+        rgba(246, 165, 192, 0.14),
+        rgba(246, 165, 192, 0.14) 2px,
         transparent 2px,
         transparent 40px
       ),
       repeating-linear-gradient(
         90deg,
-        rgba(131, 122, 182, 0.06),
-        rgba(131, 122, 182, 0.06) 2px,
+        rgba(131, 122, 182, 0.11),
+        rgba(131, 122, 182, 0.11) 2px,
         transparent 2px,
         transparent 80px
       );
@@ -1529,8 +1529,8 @@ body {
   .bg-works-pattern {
     position: relative;
     background-image:
-      linear-gradient(rgba(246, 165, 192, 0.1) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(246, 165, 192, 0.1) 1px, transparent 1px);
+      linear-gradient(rgba(246, 165, 192, 0.15) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(246, 165, 192, 0.15) 1px, transparent 1px);
     background-size: 50px 50px;
     background-position: 0 0;
   }
@@ -1543,8 +1543,8 @@ body {
     right: 0;
     bottom: 0;
     background-image:
-      radial-gradient(circle, rgba(204, 141, 179, 0.15) 3px, transparent 3px),
-      radial-gradient(circle, rgba(131, 122, 182, 0.12) 2px, transparent 2px);
+      radial-gradient(circle, rgba(204, 141, 179, 0.20) 3px, transparent 3px),
+      radial-gradient(circle, rgba(131, 122, 182, 0.16) 2px, transparent 2px);
     background-size: 100px 100px, 150px 150px;
     background-position: 0 0, 30px 30px;
     animation: pulsingGlow 5s ease-in-out infinite;
@@ -1557,15 +1557,15 @@ body {
     background:
       repeating-linear-gradient(
         90deg,
-        rgba(246, 165, 192, 0.12),
-        rgba(246, 165, 192, 0.12) 3px,
+        rgba(246, 165, 192, 0.18),
+        rgba(246, 165, 192, 0.18) 3px,
         transparent 3px,
         transparent 20px
       ),
       repeating-linear-gradient(
         180deg,
-        rgba(204, 141, 179, 0.08),
-        rgba(204, 141, 179, 0.08) 2px,
+        rgba(204, 141, 179, 0.14),
+        rgba(204, 141, 179, 0.14) 2px,
         transparent 2px,
         transparent 30px
       );
@@ -1578,11 +1578,11 @@ body {
   .bg-process-pattern {
     position: relative;
     background:
-      linear-gradient(180deg, rgba(246, 165, 192, 0.1) 1px, transparent 1px),
+      linear-gradient(180deg, rgba(246, 165, 192, 0.16) 1px, transparent 1px),
       repeating-linear-gradient(
         180deg,
-        rgba(131, 122, 182, 0.08) 0,
-        rgba(131, 122, 182, 0.08) 1px,
+        rgba(131, 122, 182, 0.14) 0,
+        rgba(131, 122, 182, 0.14) 1px,
         transparent 1px,
         transparent 60px
       );
@@ -1602,10 +1602,10 @@ body {
     background:
       repeating-linear-gradient(
         180deg,
-        rgba(246, 165, 192, 0.2),
-        rgba(246, 165, 192, 0.2) 20px,
-        rgba(246, 165, 192, 0.08) 20px,
-        rgba(246, 165, 192, 0.08) 60px
+        rgba(246, 165, 192, 0.25),
+        rgba(246, 165, 192, 0.25) 20px,
+        rgba(246, 165, 192, 0.12) 20px,
+        rgba(246, 165, 192, 0.12) 60px
       );
     animation: verticalFlow 6s linear infinite;
     pointer-events: none;
@@ -1619,13 +1619,13 @@ body {
         90deg,
         transparent,
         transparent 20px,
-        rgba(246, 165, 192, 0.08) 20px,
-        rgba(246, 165, 192, 0.08) 22px
+        rgba(246, 165, 192, 0.14) 20px,
+        rgba(246, 165, 192, 0.14) 22px
       ),
       linear-gradient(
         180deg,
-        rgba(131, 122, 182, 0.05),
-        rgba(204, 141, 179, 0.05)
+        rgba(131, 122, 182, 0.12),
+        rgba(204, 141, 179, 0.12)
       );
     background-size: 100% 100%, 100% 100%;
   }
@@ -1638,8 +1638,8 @@ body {
     right: 0;
     bottom: 0;
     background-image:
-      radial-gradient(circle, rgba(246, 165, 192, 0.15) 4px, transparent 4px),
-      radial-gradient(circle, rgba(204, 141, 179, 0.1) 2px, transparent 2px);
+      radial-gradient(circle, rgba(246, 165, 192, 0.20) 4px, transparent 4px),
+      radial-gradient(circle, rgba(204, 141, 179, 0.16) 2px, transparent 2px);
     background-size: 150px 150px, 100px 100px;
     background-position: 0 0, 50px 50px;
     animation: pulsingGlow 5.5s ease-in-out infinite;
@@ -1650,8 +1650,8 @@ body {
   .bg-contact-pattern {
     position: relative;
     background-image:
-      radial-gradient(circle, rgba(246, 165, 192, 0.1) 1px, transparent 1px),
-      radial-gradient(circle, rgba(131, 122, 182, 0.08) 1px, transparent 1px);
+      radial-gradient(circle, rgba(246, 165, 192, 0.16) 1px, transparent 1px),
+      radial-gradient(circle, rgba(131, 122, 182, 0.14) 1px, transparent 1px);
     background-size: 80px 80px, 120px 120px;
     background-position: 0 0, 40px 40px;
     animation: pulsingGlow 7s ease-in-out infinite;
@@ -1665,10 +1665,10 @@ body {
     right: 0;
     bottom: 0;
     background-image:
-      linear-gradient(135deg, rgba(246, 165, 192, 0.05) 25%, transparent 25%),
-      linear-gradient(225deg, rgba(246, 165, 192, 0.05) 25%, transparent 25%),
-      linear-gradient(45deg, rgba(246, 165, 192, 0.05) 25%, transparent 25%),
-      linear-gradient(315deg, rgba(246, 165, 192, 0.05) 25%, transparent 25%);
+      linear-gradient(135deg, rgba(246, 165, 192, 0.10) 25%, transparent 25%),
+      linear-gradient(225deg, rgba(246, 165, 192, 0.10) 25%, transparent 25%),
+      linear-gradient(45deg, rgba(246, 165, 192, 0.10) 25%, transparent 25%),
+      linear-gradient(315deg, rgba(246, 165, 192, 0.10) 25%, transparent 25%);
     background-size: 60px 60px;
     background-position: 0 0;
     pointer-events: none;
@@ -1680,15 +1680,15 @@ body {
     background:
       repeating-linear-gradient(
         90deg,
-        rgba(246, 165, 192, 0.06),
-        rgba(246, 165, 192, 0.06) 1px,
+        rgba(246, 165, 192, 0.10),
+        rgba(246, 165, 192, 0.10) 1px,
         transparent 1px,
         transparent 30px
       ),
       repeating-linear-gradient(
         0deg,
-        rgba(204, 141, 179, 0.04),
-        rgba(204, 141, 179, 0.04) 1px,
+        rgba(204, 141, 179, 0.08),
+        rgba(204, 141, 179, 0.08) 1px,
         transparent 1px,
         transparent 30px
       );
@@ -1703,8 +1703,8 @@ body {
     right: 0;
     bottom: 0;
     background:
-      radial-gradient(circle at 20% 50%, rgba(131, 122, 182, 0.08) 0%, transparent 50%),
-      radial-gradient(circle at 80% 80%, rgba(246, 165, 192, 0.08) 0%, transparent 50%);
+      radial-gradient(circle at 20% 50%, rgba(131, 122, 182, 0.14) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(246, 165, 192, 0.14) 0%, transparent 50%);
     background-size: 40% 40%;
     animation: pulsingGlow 8s ease-in-out infinite;
     pointer-events: none;
@@ -1720,50 +1720,50 @@ body {
     position: relative;
     z-index: 1;
   }
+
 }
 
-  /* Hero section animations */
-  #hero {
-    animation: fadeInUp 1s ease-out forwards;
-  }
+/* Hero section animations */
+#hero {
+  animation: fadeInUp 1s ease-out forwards;
+}
 
-  /* About section animations */
-  #about {
-    animation: fadeInUp 0.8s ease-out forwards;
-  }
+/* About section animations */
+#about {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
 
-  /* Skills section animations */
-  #skills {
-    animation: fadeInUp 0.8s ease-out forwards;
-  }
+/* Skills section animations */
+#skills {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
 
-  /* Works/Projects section animations */
-  #projects {
-    animation: fadeInUp 0.8s ease-out forwards;
-  }
+/* Works/Projects section animations */
+#projects {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
 
-  /* Visualizations section animations */
-  #visualizations {
-    animation: fadeInUp 0.8s ease-out forwards;
-  }
+/* Visualizations section animations */
+#visualizations {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
 
-  /* Process section animations */
-  #process {
-    animation: fadeInUp 0.8s ease-out forwards;
-  }
+/* Process section animations */
+#process {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
 
-  /* Experience section animations */
-  #experience {
-    animation: fadeInUp 0.8s ease-out forwards;
-  }
+/* Experience section animations */
+#experience {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
 
-  /* Contact section animations */
-  #contact {
-    animation: fadeInUp 0.8s ease-out forwards;
-  }
+/* Contact section animations */
+#contact {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
 
-  /* Footer animations */
-  #footer {
-    animation: fadeIn 0.6s ease-out forwards;
-  }
+/* Footer animations */
+#footer {
+  animation: fadeIn 0.6s ease-out forwards;
 }
