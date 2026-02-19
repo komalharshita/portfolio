@@ -114,7 +114,7 @@ These activate via Intersection Observer when elements enter the viewport (15% t
 ## Implementation Examples
 
 ### Hero Section
-```jsx
+\`\`\`jsx
 <h1 className="heading-reveal">PORTFOLIO</h1>
 <h2 className="heading-reveal-delayed">Komal Harshita</h2>
 <p className="text-reveal">A CSE Sophomore @ NMIET Pune</p>
@@ -123,20 +123,20 @@ These activate via Intersection Observer when elements enter the viewport (15% t
 <div className="stagger-item">50+</div>
 <div className="stagger-item">Skilled</div>
 <div className="stagger-item">2026</div>
-```
+\`\`\`
 
 ### About Section
-```jsx
+\`\`\`jsx
 <div className="scroll-slide-left">
   <img src="profile.png" />
 </div>
 <div className="scroll-slide-right">
   <p className="scroll-fade-up-delay">Bio content</p>
 </div>
-```
+\`\`\`
 
 ### Skills Section
-```jsx
+\`\`\`jsx
 <div className="scroll-fade-up">
   <h3>Technical Skills</h3>
   <ul>
@@ -147,7 +147,7 @@ These activate via Intersection Observer when elements enter the viewport (15% t
     ))}
   </ul>
 </div>
-```
+\`\`\`
 
 ---
 
@@ -155,7 +155,7 @@ These activate via Intersection Observer when elements enter the viewport (15% t
 
 The `ScrollReveal.tsx` component handles all scroll-triggered animations:
 
-```javascript
+\`\`\`javascript
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -166,7 +166,7 @@ const observer = new IntersectionObserver((entries) => {
   threshold: 0.15,
   rootMargin: "0px 0px -50px 0px"
 });
-```
+\`\`\`
 
 **Key Settings:**
 - **Threshold: 0.15** - Trigger when 15% of element is visible
@@ -208,19 +208,19 @@ const observer = new IntersectionObserver((entries) => {
 
 ### Modify Animation Speed
 Edit in `/app/globals.css`:
-```css
+\`\`\`css
 @keyframes revealHeading {
   /* Change 0.8s to 0.6s for faster, 1.2s for slower */
   animation: 0.8s cubic-bezier(...);
 }
-```
+\`\`\`
 
 ### Adjust Stagger Delays
-```css
+\`\`\`css
 .stagger-item:nth-child(2) {
   animation-delay: 0.2s; /* Change from 0.1s */
 }
-```
+\`\`\`
 
 ### Add New Scroll Sections
 1. Add class to section element: `<div className="scroll-fade-up">`
@@ -228,10 +228,10 @@ Edit in `/app/globals.css`:
 3. Animation activates automatically on scroll
 
 ### Change Timing Function
-```css
+\`\`\`css
 animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
 /* Options: ease-out, ease-in, ease-in-out, or custom cubic-bezier */
-```
+\`\`\`
 
 ---
 

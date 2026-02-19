@@ -960,6 +960,86 @@ body {
 }
 
 /* --------------------------------------------- */
+/* BACKGROUND PATTERN ANIMATIONS */
+/* --------------------------------------------- */
+
+/* Flowing wave/data stream animation */
+@keyframes flowingWave {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Pulsing glow effect - optimized for performance */
+@keyframes pulsingGlow {
+  0%, 100% {
+    opacity: 0.08;
+  }
+  50% {
+    opacity: 0.15;
+  }
+}
+
+/* Base fade in up animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Floating node animation */
+@keyframes floatingNodes {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Horizontal flowing lines */
+@keyframes horizontalFlow {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* Vertical flowing lines (for process section) */
+@keyframes verticalFlow {
+  0% {
+    background-position: 0 -1000px;
+  }
+  100% {
+    background-position: 0 1000px;
+  }
+}
+
+/* Subtle rotation for grid patterns */
+@keyframes subtleRotate {
+  0%, 100% {
+    transform: rotate(0deg);
+    opacity: 0.12;
+  }
+  50% {
+    opacity: 0.18;
+  }
+}
+
+/* --------------------------------------------- */
 /* RESPONSIVE UTILITIES */
 /* --------------------------------------------- */
 
@@ -1377,48 +1457,325 @@ body {
     transition-delay: 0.5s;
   }
 
-  /* Hero section animations */
-  #hero {
-    animation: fadeInUp 1s ease-out forwards;
+  /* --------------------------------------------- */
+  /* BACKGROUND PATTERN STYLES */
+  /* --------------------------------------------- */
+
+  /* HERO SECTION - Data flowing particles */
+  .bg-hero-pattern {
+    position: relative;
+    background: 
+      radial-gradient(circle at 20% 50%, rgba(246, 165, 192, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(131, 122, 182, 0.15) 0%, transparent 50%);
+    background-size: 40% 40%;
+    animation: flowingWave 8s ease-in-out infinite;
   }
 
-  /* About section animations */
-  #about {
-    animation: fadeInUp 0.8s ease-out forwards;
+  .bg-hero-pattern::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      radial-gradient(circle, rgba(204, 141, 179, 0.12) 1px, transparent 1px),
+      radial-gradient(circle, rgba(246, 165, 192, 0.12) 1px, transparent 1px);
+    background-size: 60px 60px, 100px 100px;
+    background-position: 0 0, 30px 30px;
+    animation: flowingWave 12s linear infinite;
+    pointer-events: none;
   }
 
-  /* Skills section animations */
-  #skills {
-    animation: fadeInUp 0.8s ease-out forwards;
+  /* ABOUT SECTION - Pulsing connection nodes */
+  .bg-about-pattern {
+    position: relative;
+    background: 
+      radial-gradient(circle at 30% 30%, rgba(131, 122, 182, 0.18) 0%, transparent 40%),
+      radial-gradient(circle at 70% 70%, rgba(204, 141, 179, 0.18) 0%, transparent 40%);
+    background-size: 50% 50%;
+    animation: pulsingGlow 6s ease-in-out infinite;
   }
 
-  /* Works/Projects section animations */
-  #projects {
-    animation: fadeInUp 0.8s ease-out forwards;
+  .bg-about-pattern::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      linear-gradient(45deg, rgba(246, 165, 192, 0.08) 25%, transparent 25%),
+      linear-gradient(-45deg, rgba(246, 165, 192, 0.08) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, rgba(246, 165, 192, 0.08) 75%),
+      linear-gradient(-45deg, transparent 75%, rgba(246, 165, 192, 0.08) 75%);
+    background-size: 40px 40px;
+    background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+    pointer-events: none;
   }
 
-  /* Visualizations section animations */
-  #visualizations {
-    animation: fadeInUp 0.8s ease-out forwards;
+  /* SKILLS SECTION - Horizontal flowing skill waves */
+  .bg-skills-pattern {
+    position: relative;
+    background:
+      repeating-linear-gradient(
+        90deg,
+        rgba(246, 165, 192, 0.14),
+        rgba(246, 165, 192, 0.14) 2px,
+        transparent 2px,
+        transparent 40px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        rgba(131, 122, 182, 0.11),
+        rgba(131, 122, 182, 0.11) 2px,
+        transparent 2px,
+        transparent 80px
+      );
+    background-size: 100% 100%, 100% 100%;
+    background-position: 0 0, 0 40px;
+    animation: horizontalFlow 10s linear infinite;
   }
 
-  /* Process section animations */
-  #process {
-    animation: fadeInUp 0.8s ease-out forwards;
+  /* PROJECTS/WORKS SECTION - Grid with pulsing nodes */
+  .bg-works-pattern {
+    position: relative;
+    background-image:
+      linear-gradient(rgba(246, 165, 192, 0.15) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(246, 165, 192, 0.15) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: 0 0;
   }
 
-  /* Experience section animations */
-  #experience {
-    animation: fadeInUp 0.8s ease-out forwards;
+  .bg-works-pattern::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+      radial-gradient(circle, rgba(204, 141, 179, 0.20) 3px, transparent 3px),
+      radial-gradient(circle, rgba(131, 122, 182, 0.16) 2px, transparent 2px);
+    background-size: 100px 100px, 150px 150px;
+    background-position: 0 0, 30px 30px;
+    animation: pulsingGlow 5s ease-in-out infinite;
+    pointer-events: none;
   }
 
-  /* Contact section animations */
-  #contact {
-    animation: fadeInUp 0.8s ease-out forwards;
+  /* VISUALIZATIONS SECTION - Chart-like bars animation */
+  .bg-visualizations-pattern {
+    position: relative;
+    background:
+      repeating-linear-gradient(
+        90deg,
+        rgba(246, 165, 192, 0.18),
+        rgba(246, 165, 192, 0.18) 3px,
+        transparent 3px,
+        transparent 20px
+      ),
+      repeating-linear-gradient(
+        180deg,
+        rgba(204, 141, 179, 0.14),
+        rgba(204, 141, 179, 0.14) 2px,
+        transparent 2px,
+        transparent 30px
+      );
+    background-size: 100% 100%, 100% 100%;
+    background-position: 0 0, 0 0;
+    animation: pulsingGlow 4s ease-in-out infinite;
   }
 
-  /* Footer animations */
-  #footer {
-    animation: fadeIn 0.6s ease-out forwards;
+  /* PROCESS SECTION - Vertical timeline flow */
+  .bg-process-pattern {
+    position: relative;
+    background:
+      linear-gradient(180deg, rgba(246, 165, 192, 0.16) 1px, transparent 1px),
+      repeating-linear-gradient(
+        180deg,
+        rgba(131, 122, 182, 0.14) 0,
+        rgba(131, 122, 182, 0.14) 1px,
+        transparent 1px,
+        transparent 60px
+      );
+    background-size: 100% 40px, 100% 60px;
+    background-position: 0 0, 0 0;
+    animation: verticalFlow 8s linear infinite;
   }
+
+  .bg-process-pattern::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background:
+      repeating-linear-gradient(
+        180deg,
+        rgba(246, 165, 192, 0.25),
+        rgba(246, 165, 192, 0.25) 20px,
+        rgba(246, 165, 192, 0.12) 20px,
+        rgba(246, 165, 192, 0.12) 60px
+      );
+    animation: verticalFlow 6s linear infinite;
+    pointer-events: none;
+  }
+
+  /* EXPERIENCE SECTION - Timeline with milestone markers */
+  .bg-experience-pattern {
+    position: relative;
+    background:
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 20px,
+        rgba(246, 165, 192, 0.14) 20px,
+        rgba(246, 165, 192, 0.14) 22px
+      ),
+      linear-gradient(
+        180deg,
+        rgba(131, 122, 182, 0.12),
+        rgba(204, 141, 179, 0.12)
+      );
+    background-size: 100% 100%, 100% 100%;
+  }
+
+  .bg-experience-pattern::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+      radial-gradient(circle, rgba(246, 165, 192, 0.20) 4px, transparent 4px),
+      radial-gradient(circle, rgba(204, 141, 179, 0.16) 2px, transparent 2px);
+    background-size: 150px 150px, 100px 100px;
+    background-position: 0 0, 50px 50px;
+    animation: pulsingGlow 5.5s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  /* CONTACT SECTION - Network connection pattern */
+  .bg-contact-pattern {
+    position: relative;
+    background-image:
+      radial-gradient(circle, rgba(246, 165, 192, 0.16) 1px, transparent 1px),
+      radial-gradient(circle, rgba(131, 122, 182, 0.14) 1px, transparent 1px);
+    background-size: 80px 80px, 120px 120px;
+    background-position: 0 0, 40px 40px;
+    animation: pulsingGlow 7s ease-in-out infinite;
+  }
+
+  .bg-contact-pattern::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+      linear-gradient(135deg, rgba(246, 165, 192, 0.10) 25%, transparent 25%),
+      linear-gradient(225deg, rgba(246, 165, 192, 0.10) 25%, transparent 25%),
+      linear-gradient(45deg, rgba(246, 165, 192, 0.10) 25%, transparent 25%),
+      linear-gradient(315deg, rgba(246, 165, 192, 0.10) 25%, transparent 25%);
+    background-size: 60px 60px;
+    background-position: 0 0;
+    pointer-events: none;
+  }
+
+  /* FOOTER SECTION - Subtle fade pattern */
+  .bg-footer-pattern {
+    position: relative;
+    background:
+      repeating-linear-gradient(
+        90deg,
+        rgba(246, 165, 192, 0.10),
+        rgba(246, 165, 192, 0.10) 1px,
+        transparent 1px,
+        transparent 30px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        rgba(204, 141, 179, 0.08),
+        rgba(204, 141, 179, 0.08) 1px,
+        transparent 1px,
+        transparent 30px
+      );
+    background-size: 100% 100%, 100% 100%;
+  }
+
+  .bg-footer-pattern::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      radial-gradient(circle at 20% 50%, rgba(131, 122, 182, 0.14) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(246, 165, 192, 0.14) 0%, transparent 50%);
+    background-size: 40% 40%;
+    animation: pulsingGlow 8s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  /* Ensure patterns don't interfere with content */
+  .bg-pattern-overlay {
+    position: relative;
+    z-index: 0;
+  }
+
+  .bg-pattern-overlay > * {
+    position: relative;
+    z-index: 1;
+  }
+
+}
+
+/* Hero section animations */
+#hero {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* About section animations */
+#about {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Skills section animations */
+#skills {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Works/Projects section animations */
+#projects {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Visualizations section animations */
+#visualizations {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Process section animations */
+#process {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Experience section animations */
+#experience {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Contact section animations */
+#contact {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Footer animations */
+#footer {
+  animation: fadeIn 0.6s ease-out forwards;
 }

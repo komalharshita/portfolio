@@ -12,6 +12,9 @@ export default function Hero() {
         }}
       />
 
+      {/* HERO DATA PATTERN */}
+      <div className="bg-hero-pattern absolute inset-0 pointer-events-none" />
+
       {/* BADGES (absolute decorations) */}
       {/* Pink Planet Heart */}
       <img

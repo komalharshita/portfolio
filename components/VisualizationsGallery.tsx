@@ -67,6 +67,9 @@ export default function VisualizationsGallery() {
         }}
       />
 
+      {/* VISUALIZATIONS CHART PATTERN */}
+      <div className="bg-visualizations-pattern absolute inset-0 -z-10 pointer-events-none" />
+
       <div className="max-w-7xl mx-auto">
         {/* Section title */}
         <div className="text-center mb-12 sm:mb-16">
