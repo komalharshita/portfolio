@@ -111,94 +111,94 @@ This comprehensive refactor provides everything needed to deploy a **production-
 ## 🎨 Section-by-Section Reference
 
 ### Hero Section
-```
+\`\`\`
 Animation: Flowing data particles with dot grid
 Duration: 8-12 seconds
 Opacity: 0.12-0.15
 Pattern: Radial gradients + flowing dots
 Cycle: Wave flowing left ↔ right
 Status: ✅ Production Ready
-```
+\`\`\`
 
 ### About Section
-```
+\`\`\`
 Animation: Pulsing connection nodes with cross-hatch
 Duration: 6 seconds
 Opacity: 0.08-0.18
 Pattern: Radial nodes + diagonal stripes
 Cycle: Breathing pulse effect
 Status: ✅ Production Ready
-```
+\`\`\`
 
 ### Skills Section
-```
+\`\`\`
 Animation: Horizontal flowing wave lines
 Duration: 10 seconds
 Opacity: 0.11-0.14
 Pattern: Staggered horizontal lines
 Cycle: Lines streaming left → right
 Status: ✅ Production Ready
-```
+\`\`\`
 
 ### Works Section
-```
+\`\`\`
 Animation: Grid with pulsing connection nodes
 Duration: 5 seconds
 Opacity: 0.15-0.20
 Pattern: Grid + radial nodes
 Cycle: Fast pulse at intersections
 Status: ✅ Production Ready
-```
+\`\`\`
 
 ### Visualizations Section
-```
+\`\`\`
 Animation: Chart-style bars with stripes
 Duration: 4 seconds
 Opacity: 0.14-0.18
 Pattern: Vertical bars + horizontal stripes
 Cycle: Fast pulse (bar chart rhythm)
 Status: ✅ Production Ready
-```
+\`\`\`
 
 ### Process Section
-```
+\`\`\`
 Animation: Vertical timeline with flowing center line
 Duration: 6-8 seconds
 Opacity: 0.12-0.25
 Pattern: Vertical dots + center line
 Cycle: Line flowing top → bottom
 Status: ✅ Production Ready
-```
+\`\`\`
 
 ### Experience Section
-```
+\`\`\`
 Animation: Timeline with milestone markers
 Duration: 5.5 seconds
 Opacity: 0.12-0.20
 Pattern: Vertical dashes + milestone nodes
 Cycle: Pulsing at milestones
 Status: ✅ Production Ready
-```
+\`\`\`
 
 ### Contact Section
-```
+\`\`\`
 Animation: Network connection pattern
 Duration: 7 seconds
 Opacity: 0.10-0.16
 Pattern: Diamond grid + connection nodes
 Cycle: Pulsing network effect
 Status: ✅ Production Ready
-```
+\`\`\`
 
 ### Footer Section
-```
+\`\`\`
 Animation: Subtle fade with radial pulses
 Duration: 8 seconds
 Opacity: 0.08-0.14
 Pattern: Fine grid + radial gradients
 Cycle: Gentle breathing effect
 Status: ✅ Production Ready
-```
+\`\`\`
 
 ---
 
@@ -229,16 +229,16 @@ Status: ✅ Production Ready
 ## 🚀 Deployment Steps
 
 ### Step 1: Backup (30 seconds)
-```bash
+\`\`\`bash
 cp /app/globals.css /app/globals.css.backup
 cp /components/ScrollReveal.tsx /components/ScrollReveal.tsx.backup
-```
+\`\`\`
 
 ### Step 2: Deploy Refactored Files (1 minute)
-```bash
+\`\`\`bash
 cp /app/globals-refactored.css /app/globals.css
 cp /components/ScrollReveal-refactored.tsx /components/ScrollReveal.tsx
-```
+\`\`\`
 
 ### Step 3: Verify Components (2 minutes)
 Check each section component has:
@@ -247,18 +247,18 @@ Check each section component has:
 - Content with `relative z-10`
 
 ### Step 4: Test Locally (1 minute)
-```bash
+\`\`\`bash
 npm run dev
 # Check http://localhost:3000
 # Test mobile, tablet, desktop views
-```
+\`\`\`
 
 ### Step 5: Deploy to Production
-```bash
+\`\`\`bash
 git add .
 git commit -m "refactor: production-ready animations and backgrounds"
 git push
-```
+\`\`\`
 
 ---
 
@@ -317,31 +317,31 @@ git push
 
 ### Adjust Animation Speed
 In `/app/globals.css`, find animation and change duration:
-```css
+\`\`\`css
 /* Hero: Change from 8s to your preferred duration */
 animation: flowingWave 6s ease-in-out infinite;
-```
+\`\`\`
 
 ### Adjust Pattern Opacity
 Find the `.bg-[section]-pattern` class:
-```css
+\`\`\`css
 /* Increase opacity for more visibility */
 rgba(246, 165, 192, 0.15) /* Change 0.15 to higher value */
-```
+\`\`\`
 
 ### Adjust Colors
 Use the brand color variables defined in `:root`:
-```css
+\`\`\`css
 --color-pastel-pink: #f6a5c0;
 --color-dusty-pink: #cc8db3;
 --color-lavender-blue: #837ab6;
-```
+\`\`\`
 
 ---
 
 ## 📊 File Structure
 
-```
+\`\`\`
 Project Root/
 ├── /app/
 │   ├── globals.css (Replace with globals-refactored.css)
@@ -363,7 +363,7 @@ Project Root/
 ├── IMPLEMENTATION_REFACTOR_GUIDE.md (Detailed guide)
 ├── REFACTOR_SUMMARY.md (Overview)
 └── COMPLETE_REFACTOR_DELIVERABLES.md (This file)
-```
+\`\`\`
 
 ---
 

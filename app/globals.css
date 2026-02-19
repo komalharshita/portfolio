@@ -1463,12 +1463,17 @@ body {
 
   /* HERO SECTION - Data flowing particles */
   .bg-hero-pattern {
-    position: relative;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     background: 
       radial-gradient(circle at 20% 50%, rgba(246, 165, 192, 0.15) 0%, transparent 50%),
       radial-gradient(circle at 80% 80%, rgba(131, 122, 182, 0.15) 0%, transparent 50%);
     background-size: 40% 40%;
     animation: flowingWave 8s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 1;
   }
 
   .bg-hero-pattern::before {
@@ -1489,12 +1494,17 @@ body {
 
   /* ABOUT SECTION - Pulsing connection nodes */
   .bg-about-pattern {
-    position: relative;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     background: 
       radial-gradient(circle at 30% 30%, rgba(131, 122, 182, 0.18) 0%, transparent 40%),
       radial-gradient(circle at 70% 70%, rgba(204, 141, 179, 0.18) 0%, transparent 40%);
     background-size: 50% 50%;
     animation: pulsingGlow 6s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 1;
   }
 
   .bg-about-pattern::before {
@@ -1516,7 +1526,10 @@ body {
 
   /* SKILLS SECTION - Horizontal flowing skill waves */
   .bg-skills-pattern {
-    position: relative;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     background:
       repeating-linear-gradient(
         90deg,
@@ -1535,16 +1548,23 @@ body {
     background-size: 100% 100%, 100% 100%;
     background-position: 0 0, 0 40px;
     animation: horizontalFlow 10s linear infinite;
+    pointer-events: none;
+    z-index: 1;
   }
 
   /* PROJECTS/WORKS SECTION - Grid with pulsing nodes */
   .bg-works-pattern {
-    position: relative;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     background-image:
       linear-gradient(rgba(246, 165, 192, 0.15) 1px, transparent 1px),
       linear-gradient(90deg, rgba(246, 165, 192, 0.15) 1px, transparent 1px);
     background-size: 50px 50px;
     background-position: 0 0;
+    pointer-events: none;
+    z-index: 1;
   }
 
   .bg-works-pattern::before {
@@ -1565,7 +1585,10 @@ body {
 
   /* VISUALIZATIONS SECTION - Chart-like bars animation */
   .bg-visualizations-pattern {
-    position: relative;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     background:
       repeating-linear-gradient(
         90deg,
@@ -1584,11 +1607,16 @@ body {
     background-size: 100% 100%, 100% 100%;
     background-position: 0 0, 0 0;
     animation: pulsingGlow 4s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 1;
   }
 
   /* PROCESS SECTION - Vertical timeline flow */
   .bg-process-pattern {
-    position: relative;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     background:
       linear-gradient(180deg, rgba(246, 165, 192, 0.16) 1px, transparent 1px),
       repeating-linear-gradient(
@@ -1601,6 +1629,8 @@ body {
     background-size: 100% 40px, 100% 60px;
     background-position: 0 0, 0 0;
     animation: verticalFlow 8s linear infinite;
+    pointer-events: none;
+    z-index: 1;
   }
 
   .bg-process-pattern::before {
@@ -1625,7 +1655,10 @@ body {
 
   /* EXPERIENCE SECTION - Timeline with milestone markers */
   .bg-experience-pattern {
-    position: relative;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     background:
       repeating-linear-gradient(
         90deg,
@@ -1640,6 +1673,8 @@ body {
         rgba(204, 141, 179, 0.12)
       );
     background-size: 100% 100%, 100% 100%;
+    pointer-events: none;
+    z-index: 1;
   }
 
   .bg-experience-pattern::before {
@@ -1660,13 +1695,18 @@ body {
 
   /* CONTACT SECTION - Network connection pattern */
   .bg-contact-pattern {
-    position: relative;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     background-image:
       radial-gradient(circle, rgba(246, 165, 192, 0.16) 1px, transparent 1px),
       radial-gradient(circle, rgba(131, 122, 182, 0.14) 1px, transparent 1px);
     background-size: 80px 80px, 120px 120px;
     background-position: 0 0, 40px 40px;
     animation: pulsingGlow 7s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 1;
   }
 
   .bg-contact-pattern::before {
@@ -1688,7 +1728,10 @@ body {
 
   /* FOOTER SECTION - Subtle fade pattern */
   .bg-footer-pattern {
-    position: relative;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     background:
       repeating-linear-gradient(
         90deg,
@@ -1705,6 +1748,8 @@ body {
         transparent 30px
       );
     background-size: 100% 100%, 100% 100%;
+    pointer-events: none;
+    z-index: 1;
   }
 
   .bg-footer-pattern::before {

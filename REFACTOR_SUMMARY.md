@@ -106,7 +106,7 @@ Your portfolio website has been comprehensively refactored to eliminate all erro
 ## Technical Improvements
 
 ### Animation System
-```
+\`\`\`
 Before:
 - Inconsistent animation triggers
 - Mixed animation methods (keyframes + transitions)
@@ -117,10 +117,10 @@ After:
 - GPU-accelerated transforms and opacity
 - Will-change optimization
 - Consistent timing and easing
-```
+\`\`\`
 
 ### CSS Organization
-```
+\`\`\`
 Before:
 - ~1700 lines, difficult to navigate
 - Media queries improperly nesting animations
@@ -131,10 +131,10 @@ After:
 - Clear separation: keyframes → utilities → patterns → responsive
 - Explicit z-index management
 - Easy to modify and maintain
-```
+\`\`\`
 
 ### Component Optimization
-```
+\`\`\`
 Before:
 - ScrollReveal with redundant selectors
 - No error handling
@@ -145,7 +145,7 @@ After:
 - Error handling for empty selections
 - Proper useEffect cleanup
 - TypeScript typed
-```
+\`\`\`
 
 ---
 

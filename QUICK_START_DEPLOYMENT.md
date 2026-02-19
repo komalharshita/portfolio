@@ -3,65 +3,65 @@
 ## 🚀 5-Minute Setup
 
 ### Step 1: Backup Current Files (30 seconds)
-```bash
+\`\`\`bash
 # Backup current files
 cp /app/globals.css /app/globals.css.backup
 cp /components/ScrollReveal.tsx /components/ScrollReveal.tsx.backup
-```
+\`\`\`
 
 ### Step 2: Deploy Refactored Files (1 minute)
-```bash
+\`\`\`bash
 # Replace with refactored versions
 cp /app/globals-refactored.css /app/globals.css
 cp /components/ScrollReveal-refactored.tsx /components/ScrollReveal.tsx
-```
+\`\`\`
 
 ### Step 3: Verify Components (2 minutes)
 Check these files have the correct background pattern classes:
 
 **About Section** (`/components/about.tsx`):
-```tsx
+\`\`\`tsx
 <div id="about" className="bg-pattern-overlay relative...">
   <div className="bg-about-pattern absolute inset-0 pointer-events-none" />
   {/* Rest of content with relative z-10 */}
 </div>
-```
+\`\`\`
 
 **Skills Section** (`/components/skills.tsx`):
-```tsx
+\`\`\`tsx
 <section className="bg-pattern-overlay relative...">
   <div className="bg-skills-pattern absolute -inset-4 pointer-events-none" />
   {/* Rest of content */}
 </section>
-```
+\`\`\`
 
 **Works Section** (`/components/works.tsx`):
-```tsx
+\`\`\`tsx
 <section className="bg-pattern-overlay relative...">
   <div className="bg-works-pattern absolute -inset-4 pointer-events-none" />
   {/* Rest of content */}
 </section>
-```
+\`\`\`
 
 **Do this for all other sections**: Process, Experience, Contact, Footer
 
 ### Step 4: Test Locally (1 minute)
-```bash
+\`\`\`bash
 # Start dev server
 npm run dev
 
 # Visit http://localhost:3000
 # Verify animations on all sections
 # Test on mobile view (DevTools)
-```
+\`\`\`
 
 ### Step 5: Deploy (1 minute)
-```bash
+\`\`\`bash
 # Push to Vercel or your hosting
 git add .
 git commit -m "refactor: optimize animations and background patterns"
 git push
-```
+\`\`\`
 
 ---
 
@@ -139,68 +139,68 @@ After deployment, verify these work:
 ## 📱 Responsive Testing
 
 ### Mobile (320px - 640px)
-```
+\`\`\`
 ✓ Animations reduced (lighter on mobile CPU)
 ✓ All backgrounds visible
 ✓ Text readable on all sections
 ✓ Smooth touch interactions
-```
+\`\`\`
 
 ### Tablet (641px - 1024px)
-```
+\`\`\`
 ✓ Full animation effects
 ✓ Proper scaling of patterns
 ✓ All sections responsive
 ✓ Smooth transitions
-```
+\`\`\`
 
 ### Desktop (1025px+)
-```
+\`\`\`
 ✓ Full effect showcase
 ✓ All animations visible
 ✓ High performance (60fps)
 ✓ Professional appearance
-```
+\`\`\`
 
 ---
 
 ## 🔧 Troubleshooting
 
 ### Problem: "Animations not showing"
-```
+\`\`\`
 Solution:
 1. Hard refresh browser (Cmd+Shift+R on Mac, Ctrl+Shift+R on Windows)
 2. Check CSS file loaded in DevTools (Network tab)
 3. Inspect elements to see classes applied
 4. Check console for JavaScript errors
-```
+\`\`\`
 
 ### Problem: "Text hard to read"
-```
+\`\`\`
 Solution:
 1. Verify background has opacity < 0.25
 2. Check content has z-index: 1 or higher
 3. Ensure background pattern has pointer-events-none
 4. Verify text color has sufficient contrast
-```
+\`\`\`
 
 ### Problem: "Animations stuttering on mobile"
-```
+\`\`\`
 Solution:
 1. Check device CPU not already maxed
 2. Reduce number of simultaneous animations
 3. Test on actual device (not emulation)
 4. Consider reducing animation complexity on mobile
-```
+\`\`\`
 
 ### Problem: "Scroll animations not triggering"
-```
+\`\`\`
 Solution:
 1. Verify ScrollReveal component loaded
 2. Check elements have animation classes
 3. Inspect IntersectionObserver in console
 4. Verify threshold settings appropriate
-```
+\`\`\`
 
 ---
 
@@ -262,7 +262,7 @@ Your deployment is successful when:
 
 If something goes wrong:
 
-```bash
+\`\`\`bash
 # Restore backup files
 cp /app/globals.css.backup /app/globals.css
 cp /components/ScrollReveal.tsx.backup /components/ScrollReveal.tsx
@@ -271,7 +271,7 @@ cp /components/ScrollReveal.tsx.backup /components/ScrollReveal.tsx
 git add .
 git commit -m "rollback: restore previous animation configuration"
 git push
-```
+\`\`\`
 
 ---
 

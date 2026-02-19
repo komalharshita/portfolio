@@ -117,10 +117,10 @@ This guide documents the comprehensive refactor of your portfolio website to eli
 ## Performance Optimizations
 
 ### Hardware Acceleration
-```css
+\`\`\`css
 will-change: transform;
 /* Applied to all animated background patterns */
-```
+\`\`\`
 
 ### Animation Performance
 - Uses `transform` and `opacity` for GPU acceleration
@@ -128,32 +128,32 @@ will-change: transform;
 - Intersection Observer for efficient scroll-triggered animations
 
 ### Accessibility
-```css
+\`\`\`css
 @media (prefers-reduced-motion: reduce) {
   * animation-duration: 0.01ms !important;
   * transition-duration: 0.01ms !important;
 }
-```
+\`\`\`
 
 ## Implementation Steps
 
 ### Step 1: Replace CSS File
-```bash
+\`\`\`bash
 # Backup current CSS
 mv /app/globals.css /app/globals-backup.css
 
 # Use refactored CSS
 cp /app/globals-refactored.css /app/globals.css
-```
+\`\`\`
 
 ### Step 2: Replace ScrollReveal Component
-```bash
+\`\`\`bash
 # Backup current component
 mv /components/ScrollReveal.tsx /components/ScrollReveal-backup.tsx
 
 # Use refactored component
 cp /components/ScrollReveal-refactored.tsx /components/ScrollReveal.tsx
-```
+\`\`\`
 
 ### Step 3: Verify All Sections Have Proper Classes
 - Check each section component has `bg-pattern-overlay` class
