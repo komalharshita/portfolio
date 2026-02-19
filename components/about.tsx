@@ -75,7 +75,7 @@ export default function About() {
         {/* Bio */}
         <div className="scroll-slide-right relative z-10 flex flex-col justify-center leading-8 space-y-3.5">
           <p
-            className="scroll-fade-up-delay leading-relaxed text-lg"
+            className="leading-relaxed text-lg"
             style={{ color: "#e0c3cc" }}
           >
             Hi, I'm Komal — a Computer Science Engineering sophomore at NMIET,

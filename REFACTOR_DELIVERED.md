@@ -36,7 +36,7 @@ Plus this file and a completion summary file.
 
 ## ⚡ Deploy in 5 Minutes
 
-```bash
+\`\`\`bash
 # 1. Backup (30 sec)
 cp /app/globals.css /app/globals.css.backup
 cp /components/ScrollReveal.tsx /components/ScrollReveal.tsx.backup
@@ -50,7 +50,7 @@ npm run dev
 
 # 4. Push (1 min)
 git add . && git commit -m "refactor: production-ready animations" && git push
-```
+\`\`\`
 
 ✅ Done in 5 minutes!
 
@@ -209,14 +209,14 @@ After deployment, verify:
 
 ## 📊 File Summary
 
-```
+\`\`\`
 Total Files:        10
 Core Files:         2 (ready to deploy)
 Documentation:      8 (comprehensive guides)
 Total Lines:        3,500+ lines
 Total Words:        100,000+ words
 Deployment Time:    5 minutes
-```
+\`\`\`
 
 ---
 
@@ -301,11 +301,11 @@ Expected metrics:
 ## 🚀 Deploy Now!
 
 **Quick command:**
-```bash
+\`\`\`bash
 cp /app/globals-refactored.css /app/globals.css && \
 cp /components/ScrollReveal-refactored.tsx /components/ScrollReveal.tsx && \
 npm run dev
-```
+\`\`\`
 
 Then:
 1. Test locally

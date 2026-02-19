@@ -215,7 +215,7 @@
 
 ## 🗂️ FILE STRUCTURE
 
-```
+\`\`\`
 Project Root/
 │
 ├── Core Deployment Files:
@@ -235,7 +235,7 @@ Project Root/
 └── Backup (Optional):
     ├── /app/globals.css.backup
     └── /components/ScrollReveal.tsx.backup
-```
+\`\`\`
 
 ---
 
@@ -291,14 +291,14 @@ Project Root/
 
 ## 📊 FILE STATISTICS
 
-```
+\`\`\`
 Total Files Provided:     9
 Core Files (Deploy):      2
 Documentation:            7
 Total Lines:              ~3,500+ lines
 Total Words:              ~100,000+ words
 Total Read Time:          2-60 minutes (depending on depth)
-```
+\`\`\`
 
 ---
 
@@ -347,7 +347,7 @@ Every document includes:
 
 ## 🎓 Documentation Hierarchy
 
-```
+\`\`\`
 START
   ↓
 00_START_HERE.md (Quick orientation)
@@ -362,7 +362,7 @@ Choose Path:
   └→ ANIMATION_REFERENCE_VISUAL.md (Visual guide)
   ↓
 DEPLOY
-```
+\`\`\`
 
 ---
 

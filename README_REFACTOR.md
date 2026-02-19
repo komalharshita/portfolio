@@ -76,32 +76,32 @@ Your portfolio website has been completely refactored into a **production-ready,
 ## 🚀 Get Started in 5 Minutes
 
 ### 1️⃣ Read Overview (1 min)
-```
+\`\`\`
 Read the sections below titled "What Was Fixed" and "Animation Details"
-```
+\`\`\`
 
 ### 2️⃣ Deploy Files (1 min)
-```bash
+\`\`\`bash
 cp /app/globals-refactored.css /app/globals.css
 cp /components/ScrollReveal-refactored.tsx /components/ScrollReveal.tsx
-```
+\`\`\`
 
 ### 3️⃣ Verify Components (1 min)
 Ensure all sections have background pattern classes (see "Key Changes" below)
 
 ### 4️⃣ Test Locally (1 min)
-```bash
+\`\`\`bash
 npm run dev
 # Visit http://localhost:3000
 # Check animations on all sections
-```
+\`\`\`
 
 ### 5️⃣ Deploy (1 min)
-```bash
+\`\`\`bash
 git add .
 git commit -m "refactor: production-ready animations"
 git push
-```
+\`\`\`
 
 ✅ **You're done!**
 
@@ -122,7 +122,7 @@ git push
 
 ### Performance Improvements
 
-```
+\`\`\`
 Before → After
 ─────────────────────────────────────────
 FPS:          30-45 fps → 60 fps
@@ -130,7 +130,7 @@ CSS Size:     ~1800 lines → 990 lines
 Scroll:       Janky → Smooth
 GPU Accel:    Partial → Full
 Memory:       High → Low
-```
+\`\`\`
 
 ---
 
@@ -139,107 +139,107 @@ Memory:       High → Low
 ### 9 Section Background Patterns
 
 #### 1. **Hero** - Data Flowing Particles
-```
+\`\`\`
 Animation: Radial gradients flowing left ↔ right
 Duration: 8-12 seconds
 Opacity: 0.12-0.15
 Effect: Smooth data stream impression
-```
+\`\`\`
 
 #### 2. **About** - Pulsing Connections
-```
+\`\`\`
 Animation: Breathing pulse + diagonal stripes
 Duration: 6 seconds
 Opacity: 0.08-0.18
 Effect: Connection nodes network
-```
+\`\`\`
 
 #### 3. **Skills** - Flowing Waves
-```
+\`\`\`
 Animation: Horizontal lines streaming
 Duration: 10 seconds
 Opacity: 0.11-0.14
 Effect: Skill progression waves
-```
+\`\`\`
 
 #### 4. **Works** - Grid Network
-```
+\`\`\`
 Animation: Grid + pulsing nodes
 Duration: 5 seconds
 Opacity: 0.15-0.20
 Effect: Project ecosystem
-```
+\`\`\`
 
 #### 5. **Visualizations** - Chart Bars
-```
+\`\`\`
 Animation: Vertical bars + stripes
 Duration: 4 seconds
 Opacity: 0.14-0.18
 Effect: Chart rhythm
-```
+\`\`\`
 
 #### 6. **Process** - Timeline Flow
-```
+\`\`\`
 Animation: Vertical line flowing down
 Duration: 6-8 seconds
 Opacity: 0.12-0.25
 Effect: Process progression
-```
+\`\`\`
 
 #### 7. **Experience** - Milestones
-```
+\`\`\`
 Animation: Timeline with markers
 Duration: 5.5 seconds
 Opacity: 0.12-0.20
 Effect: Career journey
-```
+\`\`\`
 
 #### 8. **Contact** - Network Pattern
-```
+\`\`\`
 Animation: Diamond network pulsing
 Duration: 7 seconds
 Opacity: 0.10-0.16
 Effect: Connection nodes
-```
+\`\`\`
 
 #### 9. **Footer** - Subtle Glow
-```
+\`\`\`
 Animation: Fine grid + radial pulse
 Duration: 8 seconds
 Opacity: 0.08-0.14
 Effect: Gentle breathing
-```
+\`\`\`
 
 ---
 
 ## 🔑 Key Changes by Component
 
 ### About Section
-```tsx
+\`\`\`tsx
 // Added background pattern
 <div id="about" className="bg-pattern-overlay relative...">
   <div className="bg-about-pattern absolute inset-0 pointer-events-none" />
   {/* Content needs relative z-10 */}
 </div>
-```
+\`\`\`
 
 ### Skills Section
-```tsx
+\`\`\`tsx
 // Added background pattern
 <section className="bg-pattern-overlay relative...">
   <div className="bg-skills-pattern absolute inset-0 pointer-events-none" />
   {/* Rest of content */}
 </section>
-```
+\`\`\`
 
 ### Works Section
-```tsx
+\`\`\`tsx
 // Added background pattern
 <section className="bg-pattern-overlay relative...">
   <div className="bg-works-pattern absolute inset-0 pointer-events-none" />
   {/* Rest of content */}
 </section>
-```
+\`\`\`
 
 ### All Other Sections
 Same pattern: `bg-pattern-overlay` wrapper + background div + content with `z-10`
@@ -335,7 +335,7 @@ See `QUICK_START_DEPLOYMENT.md` for detailed troubleshooting.
 
 ## 📚 Documentation Map
 
-```
+\`\`\`
 README_REFACTOR.md (You are here)
 ├── Start here: Get oriented
 │
@@ -350,7 +350,7 @@ README_REFACTOR.md (You are here)
 │
 └─→ COMPLETE_REFACTOR_DELIVERABLES.md
     └─ Master reference document
-```
+\`\`\`
 
 ---
 
@@ -376,21 +376,21 @@ Your deployment is successful when:
 - **Complete**: Study `COMPLETE_REFACTOR_DELIVERABLES.md` (20 min)
 
 ### Step 2: Deploy
-```bash
+\`\`\`bash
 cp /app/globals-refactored.css /app/globals.css
 cp /components/ScrollReveal-refactored.tsx /components/ScrollReveal.tsx
 npm run dev
-```
+\`\`\`
 
 ### Step 3: Verify
 Check verification checklist above
 
 ### Step 4: Push
-```bash
+\`\`\`bash
 git add .
 git commit -m "refactor: production-ready animations"
 git push
-```
+\`\`\`
 
 ---
 

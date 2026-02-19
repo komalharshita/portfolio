@@ -26,30 +26,30 @@ Your portfolio website has been **completely refactored into a production-ready*
 ## ⚡ Deploy in 5 Minutes
 
 ### 1. Backup Current Files (30 sec)
-```bash
+\`\`\`bash
 cp /app/globals.css /app/globals.css.backup
 cp /components/ScrollReveal.tsx /components/ScrollReveal.tsx.backup
-```
+\`\`\`
 
 ### 2. Deploy New Files (1 min)
-```bash
+\`\`\`bash
 cp /app/globals-refactored.css /app/globals.css
 cp /components/ScrollReveal-refactored.tsx /components/ScrollReveal.tsx
-```
+\`\`\`
 
 ### 3. Test Locally (2 min)
-```bash
+\`\`\`bash
 npm run dev
 # Visit http://localhost:3000
 # Check all animations are smooth (60fps)
-```
+\`\`\`
 
 ### 4. Push to Production (1 min)
-```bash
+\`\`\`bash
 git add .
 git commit -m "refactor: production-ready animations"
 git push
-```
+\`\`\`
 
 ✅ **Done!**
 
@@ -96,7 +96,7 @@ git push
 
 ## 🎨 9 Beautiful Sections (All Animated)
 
-```
+\`\`\`
 1. Hero             ← Flowing data particles
 2. About            ← Pulsing connections
 3. Skills           ← Horizontal waves
@@ -106,7 +106,7 @@ git push
 7. Experience       ← Milestone markers
 8. Contact          ← Network pattern
 9. Footer           ← Subtle glow
-```
+\`\`\`
 
 All animations:
 - ✅ Smooth (60fps)
@@ -118,7 +118,7 @@ All animations:
 
 ## 📊 Performance Improvements
 
-```
+\`\`\`
 Metric              Before → After       Improvement
 ────────────────────────────────────────────────────
 Animation FPS       30-45 → 60 fps      +33% smoother
@@ -126,7 +126,7 @@ CSS File Size       1800 → 990 lines    -45% smaller
 Scroll Performance  Janky → Smooth      100% better
 GPU Acceleration    Partial → Full      Complete
 Memory Usage        High → Low          Better GC
-```
+\`\`\`
 
 ---
 
@@ -151,7 +151,7 @@ Quick checklist to verify everything works:
 
 ## 🎓 Documentation Map
 
-```
+\`\`\`
 Quick Deploy
     ↓
 QUICK_START_DEPLOYMENT.md
@@ -160,7 +160,7 @@ Everything working?
     ├─ YES → You're done! 🎉
     └─ NO → Check IMPLEMENTATION_REFACTOR_GUIDE.md
             or QUICK_START_DEPLOYMENT.md troubleshooting
-```
+\`\`\`
 
 **Full references available:**
 - `README_REFACTOR.md` — Main overview
@@ -202,26 +202,26 @@ Everything working?
 ## 🚀 Ready to Deploy?
 
 ### Quick Deploy (Recommended)
-```bash
+\`\`\`bash
 # Follow the 5-minute steps above
 # Then verify using the checklist
 # ✅ Done in 5 minutes!
-```
+\`\`\`
 
 ### Want More Details?
-```
+\`\`\`
 1. Read: QUICK_START_DEPLOYMENT.md (5 min)
 2. Read: IMPLEMENTATION_REFACTOR_GUIDE.md (15 min)
 3. Deploy with confidence
-```
+\`\`\`
 
 ### Need Help?
-```
+\`\`\`
 Troubleshooting: QUICK_START_DEPLOYMENT.md (last section)
 Technical Q&A: IMPLEMENTATION_REFACTOR_GUIDE.md
 Deep Dive: COMPLETE_REFACTOR_DELIVERABLES.md
 Visual Guide: ANIMATION_REFERENCE_VISUAL.md
-```
+\`\`\`
 
 ---
 
