@@ -9,7 +9,7 @@ Your portfolio website has been **fully refactored** into a single, consolidated
 ## Current Architecture
 
 ### File Structure
-```
+\`\`\`
 /app
   ├── globals.css         ✅ SINGLE SOURCE OF TRUTH (1827 lines)
   ├── layout.tsx         ✅ Imports globals.css once
@@ -22,7 +22,7 @@ Your portfolio website has been **fully refactored** into a single, consolidated
 /public                  ✅ Assets only
 /styles                  ❌ REMOVED (was redundant)
 /app/globals-refactored.css  ❌ REMOVED (consolidated into globals.css)
-```
+\`\`\`
 
 ---
 
@@ -91,7 +91,7 @@ Your portfolio website has been **fully refactored** into a single, consolidated
 | **Footer** | `.bg-footer-pattern` | Subtle glow | 8s | 8-14% | ✅ |
 
 ### CSS Pattern Structure
-```css
+\`\`\`css
 .bg-*-pattern {
   position: absolute;        /* Positioned absolutely */
   inset: 0;                 /* Covers entire container */
@@ -104,7 +104,7 @@ Your portfolio website has been **fully refactored** into a single, consolidated
   pointer-events: none;     /* Allows interaction with content */
   z-index: 1;              /* Below content (z-index 10) */
 }
-```
+\`\`\`
 
 ---
 
@@ -113,7 +113,7 @@ Your portfolio website has been **fully refactored** into a single, consolidated
 ### About Section - First Paragraph
 **Issue:** Text was barely visible (#e0c3cc on dark background)
 **Fix Applied:**
-```tsx
+\`\`\`tsx
 // Before
 <p style={{ color: "#e0c3cc" }}>Text...</p>
 
@@ -121,7 +121,7 @@ Your portfolio website has been **fully refactored** into a single, consolidated
 <p className="relative z-10 font-medium" style={{ color: "#f0d4dd" }}>
   Text...
 </p>
-```
+\`\`\`
 
 **Result:** ✅ Clearly visible and readable
 
@@ -131,7 +131,7 @@ Your portfolio website has been **fully refactored** into a single, consolidated
 
 ### Using Background Patterns in Components
 
-```tsx
+\`\`\`tsx
 // In component JSX:
 <section className="relative">
   {/* Background pattern layer */}
@@ -143,11 +143,11 @@ Your portfolio website has been **fully refactored** into a single, consolidated
     <p>Content appears above the animated background</p>
   </div>
 </section>
-```
+\`\`\`
 
 ### Animation Classes
 
-```tsx
+\`\`\`tsx
 // Scroll-triggered animations
 <div className="scroll-fade-up">
   {/* Fades up when scrolled into view */}
@@ -164,7 +164,7 @@ Your portfolio website has been **fully refactored** into a single, consolidated
   <li className="reveal-stagger">Item 2</li>
   <li className="reveal-stagger">Item 3</li>
 </ul>
-```
+\`\`\`
 
 ---
 
@@ -203,14 +203,14 @@ Your portfolio website has been **fully refactored** into a single, consolidated
 ## Color Palette (From Theme)
 
 ### Brand Colors
-```css
+\`\`\`css
 --color-deep-purple: #250e2c          /* Dark backgrounds */
 --color-lavender-blue: #837ab6        /* Accents */
 --color-soft-lilac: #9d85b6           /* Light accents */
 --color-dusty-pink: #cc8db3           /* Secondary brand */
 --color-pastel-pink: #f6a5c0          /* Primary brand */
 --color-light-blush: #f7c2ca          /* Text/highlights */
-```
+\`\`\`
 
 All colors are used consistently throughout the CSS file.
 
@@ -218,13 +218,13 @@ All colors are used consistently throughout the CSS file.
 
 ## Z-Index Hierarchy
 
-```
+\`\`\`
 9999  - Cursor trail particles
 1     - Background pattern layers
 10    - Content over patterns (form elements, text)
 0     - Default/standard content
 -1    - Hidden elements
-```
+\`\`\`
 
 This ensures proper layering without conflicts.
 
@@ -233,7 +233,7 @@ This ensures proper layering without conflicts.
 ## Adding New Styles: Best Practices
 
 ### Rule 1: Edit `/app/globals.css` ONLY
-```css
+\`\`\`css
 /* ❌ DO NOT: Create new CSS files */
 /* ❌ DO NOT: Import CSS in components */
 
@@ -244,10 +244,10 @@ This ensures proper layering without conflicts.
     background: linear-gradient(135deg, #837ab6, #f6a5c0);
   }
 }
-```
+\`\`\`
 
 ### Rule 2: Follow Naming Conventions
-```css
+\`\`\`css
 /* Section-specific pattern */
 .bg-[section]-pattern { ... }
 
@@ -256,10 +256,10 @@ This ensures proper layering without conflicts.
 
 /* Component utility */
 .[component-name] { ... }
-```
+\`\`\`
 
 ### Rule 3: Use Proper Structure
-```css
+\`\`\`css
 /* Group related styles */
 @layer utilities {
   /* Related styles grouped together */
@@ -267,16 +267,16 @@ This ensures proper layering without conflicts.
 
 /* Add comments for clarity */
 /* ===== SECTION NAME ===== */
-```
+\`\`\`
 
 ### Rule 4: Maintain Responsiveness
-```css
+\`\`\`css
 @layer utilities {
   .new-utility {
     @apply text-sm md:text-base lg:text-lg;
   }
 }
-```
+\`\`\`
 
 ---
 
@@ -362,7 +362,7 @@ Your website is production-ready:
 5. Visual bugs fixed
 
 ### Deployment Steps
-```bash
+\`\`\`bash
 # 1. Verify changes locally
 npm run dev
 
@@ -378,7 +378,7 @@ npm run dev
 # 4. Deploy to production
 # - Push to Vercel/deployment platform
 # - Monitor for any issues
-```
+\`\`\`
 
 ---
 

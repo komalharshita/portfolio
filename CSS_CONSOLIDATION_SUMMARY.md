@@ -24,7 +24,7 @@ This document confirms the complete consolidation of all CSS files into a single
 
 ## 2. CSS Organization in `/app/globals.css`
 
-```
+\`\`\`
 Section 1: Framework Imports (Lines 1-4)
   @import "tailwindcss"
   @import "tw-animate-css"
@@ -54,7 +54,7 @@ Section 7: Responsive Utilities (Lines 1047+)
   - Scroll animations (scroll-slide-left, scroll-fade-up)
   - Reveal patterns (reveal, reveal-left, reveal-stagger)
   - Background pattern classes (bg-hero-pattern through bg-footer-pattern)
-```
+\`\`\`
 
 ---
 
@@ -79,7 +79,7 @@ All 9 sections have animated background patterns properly defined:
 ### Key Implementation Details
 
 **CSS Properties for Each Pattern:**
-```css
+\`\`\`css
 .bg-*-pattern {
   position: absolute;        /* Required for positioning */
   inset: 0;                 /* Cover entire container */
@@ -90,7 +90,7 @@ All 9 sections have animated background patterns properly defined:
   pointer-events: none;     /* Don't block interactions */
   z-index: 1;              /* Proper layering */
 }
-```
+\`\`\`
 
 **Result:** All background patterns are now visible with smooth animations and proper z-index layering.
 
@@ -104,13 +104,13 @@ All 9 sections have animated background patterns properly defined:
 ✅ Pattern classes: Applied directly in JSX via className prop
 
 ### Example Component Usage
-```tsx
+\`\`\`tsx
 // In component JSX:
 <div className="bg-hero-pattern absolute inset-0 pointer-events-none" />
 <section className="relative z-10">
   {/* Content properly layered above background */}
 </section>
-```
+\`\`\`
 
 ---
 
@@ -162,12 +162,12 @@ All 9 sections have animated background patterns properly defined:
 ## 8. Visual Hierarchy & Z-Index Management
 
 ### Layering Structure
-```
+\`\`\`
 Z-Index 9999: Cursor trails
 Z-Index 1: Background patterns
 Z-Index 10: Content overlaid on patterns
 Default (0): Standard content
-```
+\`\`\`
 
 **Result:** Proper layering prevents patterns from obscuring content
 

@@ -2,7 +2,7 @@
 
 ## Single CSS File Structure
 
-```
+\`\`\`
 📁 Project Root
 │
 ├── 📄 /app/globals.css ⭐ (1827 lines - ALL STYLES HERE)
@@ -19,7 +19,7 @@
 │
 └── 📁 /components (NO CSS FILES)
     └── All files use only Tailwind + global CSS classes
-```
+\`\`\`
 
 ---
 
@@ -42,7 +42,7 @@
 ## How to Use Background Patterns
 
 ### In Your Component
-```tsx
+\`\`\`tsx
 <section className="relative">
   {/* Add this line */}
   <div className="bg-hero-pattern absolute inset-0 pointer-events-none" />
@@ -52,25 +52,25 @@
     <h1>Your Title</h1>
   </div>
 </section>
-```
+\`\`\`
 
 ---
 
 ## Color Palette
 
-```
+\`\`\`
 🟣 Deep Purple    #250e2c    (Dark backgrounds)
 🟣 Lavender Blue  #837ab6    (Accents)
 🌺 Dusty Pink     #cc8db3    (Secondary)
 💖 Pastel Pink    #f6a5c0    (Primary brand)
 🤍 Light Blush    #f7c2ca    (Text/highlights)
-```
+\`\`\`
 
 ---
 
 ## Key CSS Variables
 
-```css
+\`\`\`css
 /* Theme */
 --color-deep-purple: #250e2c
 --color-pastel-pink: #f6a5c0
@@ -83,7 +83,7 @@
 /* Typography */
 --font-heading: "Poppins", sans-serif
 --font-body: "Inter", sans-serif
-```
+\`\`\`
 
 ---
 
@@ -111,30 +111,30 @@
 
 ## Z-Index Guide
 
-```
+\`\`\`
 9999  Cursor trails (always on top)
 1     Background patterns
 10    Content (above patterns)
 0     Normal content
 -1    Hidden elements
-```
+\`\`\`
 
 ---
 
 ## Adding New Styles
 
 ### ✅ DO THIS
-```css
+\`\`\`css
 /* Edit /app/globals.css */
 @layer components {
   .my-button {
     @apply px-4 py-2 rounded-lg;
   }
 }
-```
+\`\`\`
 
 ### ❌ DON'T DO THIS
-```tsx
+\`\`\`tsx
 // ❌ Don't import CSS in components
 import "./styles.css"
 
@@ -143,7 +143,7 @@ import "./styles.css"
 
 // ❌ Don't use style imports
 import styles from "./Component.css"
-```
+\`\`\`
 
 ---
 
@@ -174,20 +174,20 @@ import styles from "./Component.css"
 
 **If text is hard to see:**
 
-```tsx
+\`\`\`tsx
 <p 
   className="relative z-10 font-medium"
   style={{ color: "#f0d4dd" }}  // Lighter pink
 >
   Your text here
 </p>
-```
+\`\`\`
 
 ---
 
 ## Animation Speeds Reference
 
-```css
+\`\`\`css
 /* Keyframe animations (pattern backgrounds) */
 4s    - Visualizations chart bars
 5s    - Works/Projects pulsing
@@ -197,13 +197,13 @@ import styles from "./Component.css"
 8s    - Hero flowing wave, Footer glow
 10s   - Skills horizontal flow
 12s   - Hero particle grid
-```
+\`\`\`
 
 ---
 
 ## Common Tailwind + Global CSS Combo
 
-```tsx
+\`\`\`tsx
 // Pattern + content layer
 <section className="relative py-20">
   <div className="bg-hero-pattern absolute inset-0" />
@@ -217,7 +217,7 @@ import styles from "./Component.css"
     </p>
   </div>
 </section>
-```
+\`\`\`
 
 ---
 
@@ -241,12 +241,12 @@ import styles from "./Component.css"
 
 ## File Location Reference
 
-```
+\`\`\`
 ALL CSS EDITING → /app/globals.css
 CSS IMPORT → /app/layout.tsx (line 11)
 COMPONENTS → /components/*.tsx (use className only)
 NO CSS FILES → /styles/, /components/styles/
-```
+\`\`\`
 
 ---
 
