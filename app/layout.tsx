@@ -1,26 +1,19 @@
-import { Suspense } from "react";
-import Script from "next/script";
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
-
-import ScrollProgressBar from "@/components/ScrollReveal";
-import LoadingScreen from "@/components/LoadingScreen";
-import HireMePop from "@/components/HireMePop";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const poppins = Poppins({
-  weight: ["400", "600", "700"],
+  weight: ["400", "500", "600", "700", "800"],
   subsets: ["latin"],
   variable: "--font-poppins",
 });
 
 export const metadata: Metadata = {
   title: "Komal Harshita | Data Analyst Portfolio",
-  description: "Portfolio of Komal Harshita — CSE Sophomore & Data Analyst skilled in Python, SQL, Excel, Power BI, and Business Analytics projects",
-    generator: 'v0.app'
+  description: "Excel-themed portfolio of Komal Harshita — CSE Student & ESG Analyst Intern skilled in Data Analytics, SQL, Python, Power BI, and Business Intelligence.",
+  generator: "v0.app",
 };
 
 export const viewport = {
@@ -42,55 +35,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           ${inter.variable}
           ${poppins.variable}
           font-sans antialiased
+          h-screen overflow-hidden
         `}
       >
-        {/* --- Client components that may use next/navigation must be rendered inside Suspense --- */}
-        <Suspense fallback={null}>
-          <LoadingScreen />
-        </Suspense>
-
-        <Suspense fallback={null}>
-          <HireMePop />
-        </Suspense>
-
-        {/* Google Analytics uses usePathname/useSearchParams (client hooks). Wrap it too. */}
-        <Suspense fallback={null}>
-          <GoogleAnalytics />
-        </Suspense>
-
-        {/* Scroll progress (client) */}
-        <Suspense fallback={null}>
-          <ScrollProgressBar />
-        </Suspense>
-
-        {/* Page Content */}
         {children}
-
-        {/* cursor script — server-side script injection is okay, but prefer <Script> where possible */}
-        <Script id="cursor-trail" dangerouslySetInnerHTML={{
-          __html: `
-            document.addEventListener("mousemove", function(e) {
-              const dot = document.createElement("div");
-              dot.className = "cursor-trail";
-              dot.style.left = e.clientX + "px";
-              dot.style.top = e.clientY + "px";
-              document.body.appendChild(dot);
-              setTimeout(() => dot.remove(), 600);
-            });
-          `,
-        }} />
-
-        <Script id="link-hover-heart" dangerouslySetInnerHTML={{
-          __html: `
-            document.addEventListener('DOMContentLoaded', function() {
-              const links = Array.from(document.querySelectorAll("a"));
-              links.forEach(link => {
-                link.addEventListener("mouseenter", () => document.body.classList.add("cursor-heart"));
-                link.addEventListener("mouseleave", () => document.body.classList.remove("cursor-heart"));
-              });
-            });
-          `,
-        }} />
       </body>
     </html>
   );

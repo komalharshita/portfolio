@@ -74,7 +74,7 @@
 /* ========================================== */
 
 * {
-  @apply border-border;
+  border-color: hsl(var(--border));
 }
 
 html {
@@ -120,48 +120,69 @@ h6 { @apply text-base md:text-lg; }
 @layer components {
   /* Excel-themed cell styles */
   .excel-cell {
-    @apply border border-grid-line px-4 py-3 transition-colors;
-    @apply hover:bg-secondary/60 cursor-cell;
+    @apply px-4 py-3 transition-colors cursor-cell;
+    border: 1px solid hsl(var(--grid-line));
+  }
+
+  .excel-cell:hover {
+    @apply bg-secondary/60;
   }
 
   .excel-cell-header {
-    @apply bg-secondary/80 uppercase tracking-wider font-semibold text-xs text-secondary-foreground;
+    @apply uppercase tracking-wider font-semibold text-xs;
+    background-color: hsl(var(--secondary) / 0.8);
+    color: hsl(var(--secondary-foreground));
   }
 
   .excel-cell-active {
-    @apply ring-2 ring-primary/40 bg-primary/5;
+    @apply bg-primary/5;
+    ring: 2px hsl(var(--primary) / 0.4);
   }
 
   /* Sheet tab styles */
   .sheet-tab {
-    @apply px-4 py-2 border-t-2 border-t-transparent transition-all cursor-pointer;
-    @apply hover:bg-card/50 hover:border-t-primary/30;
+    @apply px-4 py-2 border-t-2 transition-all cursor-pointer;
+    border-top-color: transparent;
+  }
+
+  .sheet-tab:hover {
+    @apply bg-card/50;
+    border-top-color: hsl(var(--primary) / 0.3);
   }
 
   .sheet-tab-active {
-    @apply bg-card border-t-primary text-primary;
+    @apply text-primary;
+    background-color: hsl(var(--card));
+    border-top-color: hsl(var(--primary));
   }
 
   /* Stat card - glassmorphism */
   .stat-card {
-    @apply rounded-xl border border-border/50 bg-card/90 p-6 backdrop-blur-md;
-    @apply shadow-soft transition-all duration-300;
-    @apply hover:shadow-glow hover:-translate-y-1;
+    @apply rounded-xl p-6 backdrop-blur-md transition-all duration-300;
+    background-color: hsl(var(--card) / 0.9);
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+
+  .stat-card:hover {
+    @apply shadow-glow -translate-y-1;
   }
 
   /* Glass card - more transparent */
   .glass-card {
-    @apply rounded-xl border border-border/50 backdrop-blur-16;
-    @apply bg-gradient-to-br from-primary/5 to-accent/5;
+    @apply rounded-xl backdrop-blur-xl outline-ring/50;
+    border: 1px solid hsl(var(--border) / 0.5);
+    background: linear-gradient(135deg, hsl(var(--primary) / 0.05), hsl(var(--accent) / 0.05));
   }
 
   /* Progress bar with gradient */
   .progress-bar {
-    @apply h-2 rounded-full bg-secondary/20 overflow-hidden;
+    @apply h-2 rounded-full overflow-hidden;
+    background-color: hsl(var(--secondary) / 0.2);
   }
 
   .progress-bar-fill {
-    @apply h-full bg-gradient-accent transition-all duration-700;
+    @apply h-full transition-all duration-700;
+    background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--accent)));
   }
 }
 
