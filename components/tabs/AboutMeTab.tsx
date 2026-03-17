@@ -36,7 +36,7 @@ export default function AboutMeTab() {
           </div>
 
           <h1 className="text-2xl font-bold mb-2">Komal Harshita</h1>
-          <p className="text-primary mb-4">ESG Analyst Intern · Data Analytics & Business Intelligence</p>
+          <p className="mb-4" style={{ color: `hsl(var(--primary))` }}>ESG Analyst Intern · Data Analytics & Business Intelligence</p>
 
           <div className="flex gap-2 flex-wrap justify-center mb-4">
             {['McKinsey Forward Learner', 'Infosys Springboard', 'ESG Analyst @ Excelerate'].map((tag) => (
@@ -113,12 +113,12 @@ export default function AboutMeTab() {
           {education.map((edu, i) => (
             <div key={i} className="pb-4 border-b last:border-b-0 last:pb-0"
               style={{ borderColor: `hsl(var(--border))` }}>
-              <h4 className="font-semibold text-primary">{edu.institution}</h4>
+              <h4 className="font-semibold" style={{ color: `hsl(var(--primary))` }}>{edu.institution}</h4>
               <p className="text-sm">{edu.degree}</p>
-              <p className="text-xs text-muted-foreground">{edu.year}</p>
+              <p className="text-xs" style={{ color: `hsl(var(--muted-foreground))` }}>{edu.year}</p>
               <ul className="text-xs mt-2 space-y-1">
                 {edu.achievements.map((a) => (
-                  <li key={a} className="text-muted-foreground">• {a}</li>
+                  <li key={a} style={{ color: `hsl(var(--muted-foreground))` }}>• {a}</li>
                 ))}
               </ul>
             </div>

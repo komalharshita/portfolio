@@ -63,7 +63,7 @@ export default function AchievementsTab() {
           { label: 'Communities Contributed', value: '5' },
         ].map((metric) => (
           <div key={metric.label} className="stat-card text-center">
-            <p className="text-xs text-muted-foreground mb-1">{metric.label}</p>
+            <p className="text-xs mb-1" style={{ color: `hsl(var(--muted-foreground))` }}>{metric.label}</p>
             <p className="text-3xl font-bold" style={{ color: `hsl(var(--primary))` }}>
               {metric.value}
             </p>
@@ -96,7 +96,7 @@ export default function AchievementsTab() {
                     )}
                     {cert.name}
                   </h4>
-                  <p className="text-sm text-muted-foreground">{cert.platform}</p>
+                  <p className="text-sm" style={{ color: `hsl(var(--muted-foreground))` }}>{cert.platform}</p>
                 </div>
                 <span className="text-xs px-2 py-1 rounded-full"
                   style={{

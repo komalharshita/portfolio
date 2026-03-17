@@ -41,7 +41,7 @@ function SkillBar({ skill }: { skill: Skill }) {
     <div className="mb-4">
       <div className="flex justify-between items-center mb-2">
         <span className="text-sm font-medium">{skill.name}</span>
-        <span className="text-xs text-muted-foreground">{displayLevel}%</span>
+        <span className="text-xs" style={{ color: `hsl(var(--muted-foreground))` }}>{displayLevel}%</span>
       </div>
       <div className="progress-bar">
         <div
@@ -83,7 +83,7 @@ export default function MySkillsTab() {
                   style={{ width: `${tool.level}%` }}
                 />
               </div>
-              <p className="text-xs text-muted-foreground mt-1">{tool.level}%</p>
+              <p className="text-xs mt-1" style={{ color: `hsl(var(--muted-foreground))` }}>{tool.level}%</p>
             </div>
           ))}
         </div>

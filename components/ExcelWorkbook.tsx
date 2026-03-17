@@ -96,7 +96,7 @@ export default function ExcelWorkbook() {
           backgroundColor: `hsl(var(--secondary) / 0.2)`,
           borderColor: `hsl(var(--border))` 
         }}>
-        <span className="text-muted-foreground">fx</span>
+        <span style={{ color: `hsl(var(--muted-foreground))` }}>fx</span>
         <input
           type="text"
           placeholder="Active: About Me"
@@ -136,7 +136,7 @@ export default function ExcelWorkbook() {
           borderColor: `hsl(var(--border))` 
         }}>
         {Array.from({ length: 20 }).map((_, i) => (
-          <div key={i} className="h-6 flex items-center justify-center text-xs text-muted-foreground border-b"
+          <div key={i} className="h-6 flex items-center justify-center text-xs border-b" style={{ color: `hsl(var(--muted-foreground))` }}
             style={{ borderColor: `hsl(var(--border))` }}>
             {i + 1}
           </div>

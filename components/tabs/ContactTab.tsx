@@ -142,7 +142,7 @@ export default function ContactTab() {
                   <Icon className="w-6 h-6" style={{ color: `hsl(var(--primary))` }} />
                   <div>
                     <p className="text-sm font-medium">{social.platform}</p>
-                    <p className="text-xs text-muted-foreground">{social.value}</p>
+                    <p className="text-xs" style={{ color: `hsl(var(--muted-foreground))` }}>{social.value}</p>
                   </div>
                 </div>
               </a>

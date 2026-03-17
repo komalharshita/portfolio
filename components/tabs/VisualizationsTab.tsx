@@ -33,7 +33,7 @@ export default function VisualizationsTab() {
               <div className="text-center">
                 <BarChart3 className="w-8 h-8 mx-auto mb-2" style={{ color: `hsl(var(--primary))` }} />
                 <h4 className="font-semibold text-sm">{dashboard.title}</h4>
-                <p className="text-xs text-muted-foreground">{dashboard.category}</p>
+                <p className="text-xs" style={{ color: `hsl(var(--muted-foreground))` }}>{dashboard.category}</p>
               </div>
             </div>
           ))}

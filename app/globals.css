@@ -215,15 +215,15 @@ h6 { @apply text-base md:text-lg; }
 @layer utilities {
   /* Gradient utilities */
   .gradient-hero {
-    @apply bg-gradient-to-br from-lavender/10 via-dusty-pink/8 to-transparent;
+    background: linear-gradient(135deg, hsl(var(--lavender) / 0.1) 0%, hsl(var(--dusty-pink) / 0.08) 50%, transparent 100%);
   }
 
   .gradient-accent {
-    @apply bg-gradient-to-r from-primary to-accent;
+    background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--accent)));
   }
 
   .gradient-subtle {
-    @apply bg-gradient-to-br from-primary/8 to-accent/6;
+    background: linear-gradient(135deg, hsl(var(--primary) / 0.08), hsl(var(--accent) / 0.06));
   }
 
   /* Shadow utilities */

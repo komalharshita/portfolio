@@ -76,7 +76,7 @@ export default function ProjectsTab() {
               <div className="flex justify-between items-start">
                 <div className="flex-1">
                   <h4 className="font-semibold">{project.name}</h4>
-                  <p className="text-sm text-muted-foreground">{project.tool}</p>
+                  <p className="text-sm" style={{ color: `hsl(var(--muted-foreground))` }}>{project.tool}</p>
                 </div>
                 <a
                   href={`https://${project.github}`}
