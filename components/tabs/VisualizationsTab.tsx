@@ -28,7 +28,8 @@ export default function VisualizationsTab() {
         <div className="grid md:grid-cols-2 gap-4">
           {DASHBOARDS.map((dashboard) => (
             <div key={dashboard.title}
-              className="stat-card aspect-video bg-secondary/20 flex items-center justify-center cursor-pointer hover:scale-105 transition-transform">
+              className="stat-card aspect-video flex items-center justify-center cursor-pointer hover:scale-105 transition-transform"
+              style={{ backgroundColor: `hsl(var(--secondary) / 0.2)` }}>
               <div className="text-center">
                 <BarChart3 className="w-8 h-8 mx-auto mb-2" style={{ color: `hsl(var(--primary))` }} />
                 <h4 className="font-semibold text-sm">{dashboard.title}</h4>

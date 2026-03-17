@@ -66,8 +66,10 @@ export default function ProjectsTab() {
         <div className="space-y-3">
           {PROJECTS.map((project) => (
             <div key={project.name}
-              className="border rounded-lg p-4 cursor-pointer transition-all hover:bg-secondary/20"
+              className="border rounded-lg p-4 cursor-pointer transition-all"
               style={{ borderColor: `hsl(var(--border))` }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = `hsl(var(--secondary) / 0.2)`}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
               onClick={() =>
                 setExpandedProject(expandedProject === project.name ? null : project.name)
               }>
@@ -81,7 +83,10 @@ export default function ProjectsTab() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={(e) => e.stopPropagation()}
-                  className="p-1 hover:bg-primary/10 rounded"
+                  className="p-1 rounded"
+                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = `hsl(var(--primary) / 0.1)`}
+                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+                  style={{ cursor: 'pointer' }}
                 >
                   <ExternalLink className="w-4 h-4" style={{ color: `hsl(var(--primary))` }} />
                 </a>

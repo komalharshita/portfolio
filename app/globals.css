@@ -146,7 +146,7 @@ h6 { @apply text-base md:text-lg; }
   }
 
   .excel-cell:hover {
-    @apply bg-secondary/60;
+    background-color: hsl(var(--secondary) / 0.6);
   }
 
   .excel-cell-header {
@@ -156,8 +156,8 @@ h6 { @apply text-base md:text-lg; }
   }
 
   .excel-cell-active {
-    @apply bg-primary/5;
-    ring: 2px hsl(var(--primary) / 0.4);
+    background-color: hsl(var(--primary) / 0.05);
+    box-shadow: 0 0 0 2px hsl(var(--primary) / 0.4);
   }
 
   /* Sheet tab styles */
@@ -167,7 +167,7 @@ h6 { @apply text-base md:text-lg; }
   }
 
   .sheet-tab:hover {
-    @apply bg-card/50;
+    background-color: hsl(var(--card) / 0.5);
     border-top-color: hsl(var(--primary) / 0.3);
   }
 
@@ -185,7 +185,8 @@ h6 { @apply text-base md:text-lg; }
   }
 
   .stat-card:hover {
-    @apply shadow-glow -translate-y-1;
+    box-shadow: 0 8px 30px -6px hsl(var(--primary) / 0.2);
+    transform: translateY(-4px);
   }
 
   /* Glass card - more transparent */

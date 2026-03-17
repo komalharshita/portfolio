@@ -70,14 +70,20 @@ export default function ExcelWorkbook() {
         <div className="flex items-center gap-2">
           <button
             onClick={toggleTheme}
-            className="p-1 hover:bg-secondary/50 rounded transition-colors"
+            className="p-1 rounded transition-colors"
+            style={{ cursor: 'pointer' }}
+            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = `hsl(var(--secondary) / 0.5)`}
+            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
             aria-label="Toggle theme"
           >
             {isDark ? <Sun size={18} /> : <Moon size={18} />}
           </button>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-1 hover:bg-secondary/50 rounded"
+            className="md:hidden p-1 rounded"
+            style={{ cursor: 'pointer' }}
+            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = `hsl(var(--secondary) / 0.5)`}
+            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
           >
             {mobileMenuOpen ? <X size={18} /> : <Menu size={18} />}
           </button>
@@ -85,8 +91,11 @@ export default function ExcelWorkbook() {
       </div>
 
       {/* FORMULA BAR */}
-      <div className="h-8 bg-secondary/20 border-b flex items-center px-4 sticky top-11 z-30 text-xs"
-        style={{ borderColor: `hsl(var(--border))` }}>
+      <div className="h-8 border-b flex items-center px-4 sticky top-11 z-30 text-xs"
+        style={{ 
+          backgroundColor: `hsl(var(--secondary) / 0.2)`,
+          borderColor: `hsl(var(--border))` 
+        }}>
         <span className="text-muted-foreground">fx</span>
         <input
           type="text"
@@ -97,12 +106,15 @@ export default function ExcelWorkbook() {
       </div>
 
       {/* COLUMN HEADERS */}
-      <div className="h-6 bg-secondary/10 flex-shrink-0"></div>
+      <div className="h-6 flex-shrink-0" style={{ backgroundColor: `hsl(var(--secondary) / 0.1)` }}></div>
 
       {/* MAIN CONTENT AREA */}
       <div className="flex-1 overflow-auto">
-        <div className="hidden sm:grid grid-cols-7 sticky top-0 z-20 bg-secondary/20"
-          style={{ borderColor: `hsl(var(--border))` }}>
+        <div className="hidden sm:grid grid-cols-7 sticky top-0 z-20"
+          style={{ 
+            backgroundColor: `hsl(var(--secondary) / 0.2)`,
+            borderColor: `hsl(var(--border))` 
+          }}>
           {['A', 'B', 'C', 'D', 'E', 'F', 'G'].map((col) => (
             <div key={col} className="border-r p-2 text-xs font-semibold text-center"
               style={{ borderColor: `hsl(var(--border))` }}>
@@ -118,8 +130,11 @@ export default function ExcelWorkbook() {
       </div>
 
       {/* ROW NUMBERS (LEFT SIDEBAR) */}
-      <div className="hidden sm:flex flex-col bg-secondary/10 border-r w-8 sticky left-0 z-10"
-        style={{ borderColor: `hsl(var(--border))` }}>
+      <div className="hidden sm:flex flex-col border-r w-8 sticky left-0 z-10"
+        style={{ 
+          backgroundColor: `hsl(var(--secondary) / 0.1)`,
+          borderColor: `hsl(var(--border))` 
+        }}>
         {Array.from({ length: 20 }).map((_, i) => (
           <div key={i} className="h-6 flex items-center justify-center text-xs text-muted-foreground border-b"
             style={{ borderColor: `hsl(var(--border))` }}>
@@ -129,8 +144,11 @@ export default function ExcelWorkbook() {
       </div>
 
       {/* SHEET TABS (sticky bottom) */}
-      <div className="h-10 bg-secondary/10 border-t flex items-end overflow-x-auto gap-1 px-2 sticky bottom-0"
-        style={{ borderColor: `hsl(var(--border))` }}>
+      <div className="h-10 border-t flex items-end overflow-x-auto gap-1 px-2 sticky bottom-0"
+        style={{ 
+          backgroundColor: `hsl(var(--secondary) / 0.1)`,
+          borderColor: `hsl(var(--border))` 
+        }}>
         {TABS.map((tab) => (
           <button
             key={tab.id}
@@ -156,11 +174,17 @@ export default function ExcelWorkbook() {
           borderColor: `hsl(var(--border))`,
         }}>
           <div className="flex flex-col p-2 gap-1 text-sm min-w-[150px]">
-            <button className="px-3 py-2 hover:bg-secondary/50 rounded text-left">File</button>
-            <button className="px-3 py-2 hover:bg-secondary/50 rounded text-left">Home</button>
-            <button className="px-3 py-2 hover:bg-secondary/50 rounded text-left">Insert</button>
-            <button className="px-3 py-2 hover:bg-secondary/50 rounded text-left">Data</button>
-            <button className="px-3 py-2 hover:bg-secondary/50 rounded text-left">View</button>
+            {['File', 'Home', 'Insert', 'Data', 'View'].map((item) => (
+              <button 
+                key={item}
+                className="px-3 py-2 rounded text-left transition-colors"
+                style={{ cursor: 'pointer' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = `hsl(var(--secondary) / 0.5)`}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+              >
+                {item}
+              </button>
+            ))}
           </div>
         </div>
       )}

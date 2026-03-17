@@ -25,9 +25,12 @@ export default function AboutMeTab() {
       <div className="stat-card">
         <div className="flex flex-col items-center text-center mb-6">
           <div
-            className="w-28 h-28 rounded-full ring-4 mb-4 cursor-pointer transition-transform hover:scale-105 bg-secondary/20 flex items-center justify-center"
+            className="w-28 h-28 rounded-full ring-4 mb-4 cursor-pointer transition-transform hover:scale-105 flex items-center justify-center"
             onClick={() => setShowHobbies(!showHobbies)}
-            style={{ ringColor: `hsl(var(--primary) / 0.2)` }}
+            style={{ 
+              backgroundColor: `hsl(var(--secondary) / 0.2)`,
+              ringColor: `hsl(var(--primary) / 0.2)` 
+            }}
           >
             <div className="text-4xl">👩‍💼</div>
           </div>
@@ -57,7 +60,7 @@ export default function AboutMeTab() {
         </div>
 
         {/* BIO */}
-        <div className="space-y-3 text-sm text-foreground/80">
+        <div className="space-y-3 text-sm" style={{ color: `hsl(var(--foreground) / 0.8)` }}>
           <p>
             Hi, I'm Komal — a Computer Science Engineering student at NMIET, currently exploring Data and Business Analytics.
             I'm passionate about turning raw data into actionable insights that drive real-world impact.
