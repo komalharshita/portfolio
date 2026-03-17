@@ -52,10 +52,15 @@ export default function ExcelWorkbook() {
   };
 
   return (
-    <div className="h-screen flex flex-col bg-background text-foreground">
+    <div className="h-screen flex flex-col" style={{
+      backgroundColor: `hsl(var(--background))`,
+      color: `hsl(var(--foreground))`,
+    }}>
       {/* TITLE BAR */}
-      <div className="h-11 bg-card/80 backdrop-blur-md border-b flex items-center justify-between px-4 sticky top-0 z-40"
-        style={{ borderColor: `hsl(var(--border))` }}>
+      <div className="h-11 backdrop-blur-md border-b flex items-center justify-between px-4 sticky top-0 z-40" style={{
+        backgroundColor: `hsl(var(--card) / 0.8)`,
+        borderColor: `hsl(var(--border))`,
+      }}>
         <div className="flex items-center gap-2 flex-1">
           <BarChart3 className="w-5 h-5" style={{ color: `hsl(var(--primary))` }} />
           <span className="font-semibold text-sm">KomalHarshita_Portfolio.xlsx</span>
@@ -166,8 +171,10 @@ export default function ExcelWorkbook() {
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-11 right-0 bg-card border-l border-b rounded-bl"
-          style={{ borderColor: `hsl(var(--border))` }}>
+        <div className="md:hidden absolute top-11 right-0 rounded-bl" style={{
+          backgroundColor: `hsl(var(--card))`,
+          borderColor: `hsl(var(--border))`,
+        }} className="border-l border-b">
           <div className="flex flex-col p-2 gap-1 text-sm">
             <button className="px-3 py-2 hover:bg-secondary/50 rounded text-left">File</button>
             <button className="px-3 py-2 hover:bg-secondary/50 rounded text-left">Home</button>
