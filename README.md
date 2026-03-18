@@ -1,73 +1,64 @@
-# Welcome to your Lovable project
+# Komal Harshita — Portfolio
 
-## Project info
+A data analyst portfolio built with an Excel workbook aesthetic. Features an interactive SQL playground, GitHub analytics, skill charts, project showcase, and certifications — all in a spreadsheet-themed UI.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Tech stack
 
-## How can I edit this code?
+- **React 18** + **TypeScript**
+- **Vite** — build tool & dev server
+- **Tailwind CSS** + **shadcn/ui** — styling & component library
+- **Framer Motion** — animations
+- **Recharts** — data visualizations
+- **sql.js** — in-browser SQLite playground
+- **React Router** — routing
+- **Vitest** — unit testing
 
-There are several ways of editing your application.
+## Getting started
 
-**Use Lovable**
+\`\`\`bash
+# Install dependencies
+npm install
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server (http://localhost:8080)
 npm run dev
-```
 
-**Edit a file directly in GitHub**
+# Build for production
+npm run build
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+# Preview production build
+npm run preview
+\`\`\`
 
-**Use GitHub Codespaces**
+## Running tests
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+\`\`\`bash
+npm test
+\`\`\`
 
-## What technologies are used for this project?
+## Deployment
 
-This project is built with:
+This project is configured for **Vercel**. Push to your connected repository and Vercel will automatically run \`npm run build\` and deploy the \`dist/\` output.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Build command: \`npm run build\`
+Output directory: \`dist\`
+Install command: \`npm install\`
 
-## How can I deploy this project?
+## Project structure
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+\`\`\`
+src/
+├── assets/          # Images
+├── components/
+│   ├── tabs/        # Tab panel content (About, Skills, Projects, etc.)
+│   ├── ui/          # shadcn/ui primitives
+│   └── *.tsx        # Shared components
+├── hooks/           # Custom React hooks
+├── lib/             # Utilities (cn helper)
+├── test/            # Vitest setup & example tests
+├── App.tsx          # Root component & router
+├── main.tsx         # Entry point
+└── index.css        # Global styles & Tailwind layers
+public/
+├── robots.txt
+└── sql-wasm.wasm    # WebAssembly binary for sql.js
+\`\`\`
