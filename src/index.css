@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 280 50% 11%;
+    --foreground: 270 20% 90%;
+
+    --card: 280 45% 15%;
+    --card-foreground: 270 20% 90%;
+
+    --popover: 280 45% 15%;
+    --popover-foreground: 270 20% 90%;
+
+    --primary: 270 60% 65%;
+    --primary-foreground: 280 50% 8%;
+
+    --secondary: 280 30% 20%;
+    --secondary-foreground: 270 20% 85%;
+
+    --muted: 280 20% 18%;
+    --muted-foreground: 270 15% 60%;
+
+    --accent: 330 50% 72%;
+    --accent-foreground: 330 60% 92%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 280 30% 22%;
+    --input: 280 30% 22%;
+    --ring: 270 60% 65%;
+
+    --radius: 0.625rem;
+
+    --lavender: 270 40% 70%;
+    --dusty-pink: 340 40% 68%;
+    --pastel-pink: 330 50% 75%;
+    --deep-purple: 280 50% 11%;
+    --grid-line: 270 30% 20%;
+
+    --grid-bg-line: 270 40% 55%;
+
+    --sidebar-background: 280 40% 13%;
+    --sidebar-foreground: 270 20% 80%;
+    --sidebar-primary: 270 60% 65%;
+    --sidebar-primary-foreground: 280 50% 8%;
+    --sidebar-accent: 280 30% 20%;
+    --sidebar-accent-foreground: 270 20% 85%;
+    --sidebar-border: 280 30% 22%;
+    --sidebar-ring: 270 60% 65%;
+  }
+
+  .light {
+    --background: 0 0% 97%;
+    --foreground: 240 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 15%;
+
+    --primary: 270 55% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 270 15% 92%;
+    --secondary-foreground: 270 20% 30%;
+
+    --muted: 270 10% 94%;
+    --muted-foreground: 270 10% 45%;
+
+    --accent: 330 45% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 270 15% 88%;
+    --input: 270 15% 88%;
+    --ring: 270 55% 55%;
+
+    --lavender: 270 35% 60%;
+    --dusty-pink: 340 35% 58%;
+    --pastel-pink: 330 40% 65%;
+    --deep-purple: 270 20% 95%;
+    --grid-line: 270 15% 85%;
+
+    --grid-bg-line: 270 20% 70%;
+
+    --sidebar-background: 270 10% 96%;
+    --sidebar-foreground: 270 15% 35%;
+    --sidebar-primary: 270 55% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 270 15% 90%;
+    --sidebar-accent-foreground: 270 20% 30%;
+    --sidebar-border: 270 15% 88%;
+    --sidebar-ring: 270 55% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply text-foreground font-body antialiased;
+    scroll-behavior: smooth;
+    background-color: hsl(var(--background));
+    background-image:
+      linear-gradient(hsl(var(--grid-bg-line) / 0.07) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--grid-bg-line) / 0.07) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  @media (max-width: 640px) {
+    body {
+      background-size: 28px 28px;
+    }
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .excel-cell {
+    @apply border border-grid-line px-4 py-3 transition-all duration-200;
+  }
+  .excel-cell:hover {
+    @apply bg-secondary/60;
+  }
+  .excel-cell-header {
+    @apply bg-secondary/80 font-heading font-semibold text-sm uppercase tracking-wider text-muted-foreground;
+  }
+  .excel-cell-active {
+    @apply ring-2 ring-primary/40 bg-primary/5;
+  }
+  .sheet-tab {
+    @apply px-4 py-2 text-sm font-medium border-t-2 border-transparent transition-all duration-200 cursor-pointer hover:bg-secondary/60 hover:border-t-primary/40;
+  }
+  .sheet-tab-active {
+    @apply bg-card border-t-primary text-primary font-semibold;
+  }
+  .sparkle {
+    @apply absolute rounded-full opacity-60 pointer-events-none;
+  }
+  .stat-card {
+    @apply rounded-xl border border-border bg-card/90 p-6 shadow-soft transition-all duration-300 hover:shadow-glow hover:-translate-y-1;
+    backdrop-filter: blur(8px);
+  }
+  .glass-card {
+    @apply rounded-xl border border-border/50 p-6 shadow-soft transition-all duration-300 hover:shadow-glow hover:-translate-y-1;
+    background: linear-gradient(135deg, hsl(var(--card) / 0.7), hsl(var(--card) / 0.5));
+    backdrop-filter: blur(16px);
+  }
+}
+
+@layer utilities {
+  .gradient-hero {
+    background: linear-gradient(135deg, hsl(var(--lavender) / 0.1), hsl(var(--pastel-pink) / 0.08), transparent);
+  }
+  .gradient-accent {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+  }
+  .gradient-subtle {
+    background: linear-gradient(135deg, hsl(var(--primary) / 0.08), hsl(var(--accent) / 0.06));
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.6; }
+  50% { transform: translateY(-20px) rotate(180deg); opacity: 0.3; }
+}

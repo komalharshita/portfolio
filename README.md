@@ -1,48 +1,73 @@
-# Creative Portfolio — Komal Harshita
+# Welcome to your Lovable project
 
-A small, static Next.js portfolio site with playful "Barbiecore Y2K" visuals, glassmorphic UI elements, and animated backgrounds. Built with Next.js, Tailwind CSS and lightweight client components.
+## Project info
 
-Badges
-- ![status](https://img.shields.io/badge/status-active-brightgreen) (placeholder)
-- ![next](https://img.shields.io/badge/framework-Next.js-black)
-- ![license](https://img.shields.io/badge/license-MIT-lightgrey) (add LICENSE file to enable)
+**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
 
-What this project does
-- Presents a personal portfolio site for Komal Harshita with sections for hero, about, projects and contact.
-- Uses modular React components (client components) for animated visuals and UI patterns (glassmorphic tooltips, holographic text, animated dividers, floating shapes, gradient mesh background).
-- Exports a static site (see [next.config.mjs](next.config.mjs)) suitable for static hosting.
+## How can I edit this code?
 
-Why this project is useful
-- Ready-made, aesthetic portfolio template with accessible components and animations.
-- Small, component-focused codebase that’s easy to adapt for other creators or developers.
-- Demonstrates using Tailwind + PostCSS + Next.js with client-side micro-interactions.
+There are several ways of editing your application.
 
-Quick links (open these files)
-- App entry: [app/page.tsx](app/page.tsx) — composes the page using components.
-- Root layout: [app/layout.tsx](app/layout.tsx) — fonts, metadata and global CSS import.
-- Global styles: [app/globals.css](app/globals.css) and [styles/globals.css](styles/globals.css).
-- Next config: [next.config.mjs](next.config.mjs)
-- PostCSS: [postcss.config.mjs](postcss.config.mjs)
-- Components:
-  - [`Hero`](components/hero.tsx)
-  - [`About`](components/about.tsx)
-  - [`Projects`](components/projects.tsx)
-  - [`Contact`](components/contact.tsx)
-  - [`Navigation`](components/navigation.tsx)
-  - [`GradientMeshBackground`](components/gradient-mesh-background.tsx)
-  - [`FloatingShapes`](components/floating-shapes.tsx)
-  - [`GlassmorphicTooltip`](components/glassmorphic-tooltip.tsx)
-  - [`HolographicText`](components/holographic-text.tsx)
-  - [`AnimatedDivider`](components/animated-divider.tsx)
-  - [`ThemeProvider`](components/theme-provider.tsx)
-- Utility: [`cn`](lib/utils.ts)
+**Use Lovable**
 
-Quick start
+Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
 
-Development (pnpm recommended)
-\`\`\`bash
-# Install dependencies
-pnpm install
+Changes made via Lovable will be committed automatically to this repo.
 
-# Run dev server (Next.js)
-pnpm dev
+**Use your preferred IDE**
+
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+
+The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+
+Follow these steps:
+
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
+
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
+
+# Step 3: Install the necessary dependencies.
+npm i
+
+# Step 4: Start the development server with auto-reloading and an instant preview.
+npm run dev
+```
+
+**Edit a file directly in GitHub**
+
+- Navigate to the desired file(s).
+- Click the "Edit" button (pencil icon) at the top right of the file view.
+- Make your changes and commit the changes.
+
+**Use GitHub Codespaces**
+
+- Navigate to the main page of your repository.
+- Click on the "Code" button (green button) near the top right.
+- Select the "Codespaces" tab.
+- Click on "New codespace" to launch a new Codespace environment.
+- Edit files directly within the Codespace and commit and push your changes once you're done.
+
+## What technologies are used for this project?
+
+This project is built with:
+
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
+
+## How can I deploy this project?
+
+Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+
+## Can I connect a custom domain to my Lovable project?
+
+Yes, you can!
+
+To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+
+Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
