@@ -213,6 +213,73 @@ h6 { @apply text-base md:text-lg; }
 /* ========================================== */
 
 @layer utilities {
+  /* Text color utilities */
+  .text-primary { color: hsl(var(--primary)); }
+  .text-primary-foreground { color: hsl(var(--primary-foreground)); }
+  .text-secondary { color: hsl(var(--secondary)); }
+  .text-secondary-foreground { color: hsl(var(--secondary-foreground)); }
+  .text-muted { color: hsl(var(--muted)); }
+  .text-muted-foreground { color: hsl(var(--muted-foreground)); }
+  .text-accent { color: hsl(var(--accent)); }
+  .text-accent-foreground { color: hsl(var(--accent-foreground)); }
+  .text-background { color: hsl(var(--background)); }
+  .text-foreground { color: hsl(var(--foreground)); }
+  .text-card { color: hsl(var(--card)); }
+  .text-card-foreground { color: hsl(var(--card-foreground)); }
+  .text-destructive { color: hsl(var(--destructive)); }
+  .text-border { color: hsl(var(--border)); }
+  .text-input { color: hsl(var(--input)); }
+
+  /* Background color utilities */
+  .bg-primary { background-color: hsl(var(--primary)); }
+  .bg-primary-foreground { background-color: hsl(var(--primary-foreground)); }
+  .bg-secondary { background-color: hsl(var(--secondary)); }
+  .bg-secondary-foreground { background-color: hsl(var(--secondary-foreground)); }
+  .bg-muted { background-color: hsl(var(--muted)); }
+  .bg-muted-foreground { background-color: hsl(var(--muted-foreground)); }
+  .bg-accent { background-color: hsl(var(--accent)); }
+  .bg-accent-foreground { background-color: hsl(var(--accent-foreground)); }
+  .bg-background { background-color: hsl(var(--background)); }
+  .bg-foreground { background-color: hsl(var(--foreground)); }
+  .bg-card { background-color: hsl(var(--card)); }
+  .bg-card-foreground { background-color: hsl(var(--card-foreground)); }
+  .bg-destructive { background-color: hsl(var(--destructive)); }
+  .bg-border { background-color: hsl(var(--border)); }
+  .bg-input { background-color: hsl(var(--input)); }
+
+  /* Border color utilities */
+  .border-primary { border-color: hsl(var(--primary)); }
+  .border-primary-foreground { border-color: hsl(var(--primary-foreground)); }
+  .border-secondary { border-color: hsl(var(--secondary)); }
+  .border-secondary-foreground { border-color: hsl(var(--secondary-foreground)); }
+  .border-muted { border-color: hsl(var(--muted)); }
+  .border-muted-foreground { border-color: hsl(var(--muted-foreground)); }
+  .border-accent { border-color: hsl(var(--accent)); }
+  .border-accent-foreground { border-color: hsl(var(--accent-foreground)); }
+  .border-background { border-color: hsl(var(--background)); }
+  .border-foreground { border-color: hsl(var(--foreground)); }
+  .border-card { border-color: hsl(var(--card)); }
+  .border-card-foreground { border-color: hsl(var(--card-foreground)); }
+  .border-destructive { border-color: hsl(var(--destructive)); }
+  .border-border { border-color: hsl(var(--border)); }
+  .border-input { border-color: hsl(var(--input)); }
+
+  /* Opacity variants for colors */
+  .bg-secondary\/5 { background-color: hsl(var(--secondary) / 0.05); }
+  .bg-secondary\/10 { background-color: hsl(var(--secondary) / 0.1); }
+  .bg-secondary\/20 { background-color: hsl(var(--secondary) / 0.2); }
+  .bg-secondary\/50 { background-color: hsl(var(--secondary) / 0.5); }
+  .bg-secondary\/60 { background-color: hsl(var(--secondary) / 0.6); }
+  .bg-secondary\/80 { background-color: hsl(var(--secondary) / 0.8); }
+  
+  .bg-card\/50 { background-color: hsl(var(--card) / 0.5); }
+  .bg-card\/90 { background-color: hsl(var(--card) / 0.9); }
+  
+  .bg-primary\/5 { background-color: hsl(var(--primary) / 0.05); }
+  .bg-primary\/10 { background-color: hsl(var(--primary) / 0.1); }
+  
+  .text-foreground\/80 { color: hsl(var(--foreground) / 0.8); }
+
   /* Gradient utilities */
   .gradient-hero {
     background: linear-gradient(135deg, hsl(var(--lavender) / 0.1) 0%, hsl(var(--dusty-pink) / 0.08) 50%, transparent 100%);
@@ -233,11 +300,6 @@ h6 { @apply text-base md:text-lg; }
 
   .shadow-glow {
     box-shadow: 0 8px 30px -6px hsl(var(--primary) / 0.2);
-  }
-
-  /* Text utilities */
-  .text-muted {
-    @apply text-muted-foreground;
   }
 
   /* Flex center */
