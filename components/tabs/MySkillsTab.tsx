@@ -1,89 +1,62 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-
-interface Skill {
-  name: string;
-  level: number;
-}
-
-const SKILLS: Skill[] = [
-  { name: 'Python', level: 70 },
-  { name: 'SQL', level: 80 },
-  { name: 'Data Visualization', level: 75 },
-  { name: 'Data Analytics', level: 72 },
-  { name: 'EDA', level: 68 },
-  { name: 'Business Analytics', level: 55 },
-];
-
-const TOOLS = [
-  { name: 'Excel', level: 85 },
-  { name: 'Power BI', level: 60 },
-  { name: 'GitHub', level: 94 },
-  { name: 'Notion', level: 97 },
-  { name: 'Google Sheets', level: 65 },
-  { name: 'VS Code', level: 95 },
-  { name: 'Tableau', level: 45 },
-  { name: 'Canva', level: 90 },
-];
-
-function SkillBar({ skill }: { skill: Skill }) {
-  const [displayLevel, setDisplayLevel] = useState(0);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setDisplayLevel(skill.level);
-    }, 100);
-    return () => clearTimeout(timer);
-  }, [skill.level]);
-
-  return (
-    <div className="mb-4">
-      <div className="flex justify-between items-center mb-2">
-        <span className="text-sm font-medium">{skill.name}</span>
-        <span className="text-xs" style={{ color: `hsl(var(--muted-foreground))` }}>{displayLevel}%</span>
-      </div>
-      <div className="progress-bar">
-        <div
-          className="progress-bar-fill"
-          style={{ width: `${displayLevel}%` }}
-        />
-      </div>
-    </div>
-  );
-}
-
 export default function MySkillsTab() {
+  const skills = [
+    { name: 'SQL', level: 90 },
+    { name: 'Python', level: 85 },
+    { name: 'Excel', level: 95 },
+    { name: 'Power BI', level: 85 },
+    { name: 'Data Analysis', level: 88 },
+    { name: 'Business Analytics', level: 82 },
+  ];
+
+  const tools = [
+    { name: 'Tableau', category: 'Visualization' },
+    { name: 'Looker', category: 'BI' },
+    { name: 'Google Sheets', category: 'Data' },
+    { name: 'Jupyter', category: 'Python' },
+    { name: 'Git', category: 'Version Control' },
+    { name: 'Pandas', category: 'Python' },
+  ];
+
   return (
-    <div className="max-w-5xl space-y-8">
-      {/* SKILL CHART */}
+    <div className="space-y-6">
       <div className="stat-card">
-        <h3 className="font-semibold mb-6">Technical Skills</h3>
-        <div className="grid md:grid-cols-2 gap-8">
-          {SKILLS.map((skill) => (
-            <SkillBar key={skill.name} skill={skill} />
+        <h3 className="font-semibold mb-6 text-lg" style={{ color: 'hsl(var(--primary))' }}>Core Technical Skills</h3>
+        <div className="space-y-4">
+          {skills.map((skill) => (
+            <div key={skill.name}>
+              <div className="flex justify-between mb-2">
+                <span className="font-semibold text-sm">{skill.name}</span>
+                <span className="text-xs" style={{ color: 'hsl(var(--muted-foreground))' }}>{skill.level}%</span>
+              </div>
+              <div className="progress-bar">
+                <div className="progress-bar-fill" style={{ width: `${skill.level}%` }} />
+              </div>
+            </div>
           ))}
         </div>
       </div>
 
-      {/* TOOLS DASHBOARD */}
       <div className="stat-card">
-        <h3 className="font-semibold mb-6">Tools & Technologies</h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {TOOLS.map((tool) => (
-            <div key={tool.name} className="p-4 rounded-lg transition-all hover:scale-105 hover:-translate-y-1"
-              style={{
-                backgroundColor: `hsl(var(--secondary) / 0.5)`,
-                cursor: 'pointer',
-              }}>
-              <h4 className="font-semibold text-sm mb-2">{tool.name}</h4>
-              <div className="progress-bar">
-                <div
-                  className="progress-bar-fill"
-                  style={{ width: `${tool.level}%` }}
-                />
-              </div>
-              <p className="text-xs mt-1" style={{ color: `hsl(var(--muted-foreground))` }}>{tool.level}%</p>
+        <h3 className="font-semibold mb-6 text-lg" style={{ color: 'hsl(var(--primary))' }}>Tools & Technologies</h3>
+        <div className="grid md:grid-cols-2 gap-4">
+          {tools.map((tool) => (
+            <div key={tool.name} className="glass-card p-4">
+              <h4 className="font-semibold mb-1">{tool.name}</h4>
+              <p className="text-xs" style={{ color: 'hsl(var(--muted-foreground))' }}>{tool.category}</p>
+              <p className="text-xs mt-1" style={{ color: 'hsl(var(--accent))' }}>Proficient</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="stat-card">
+        <h3 className="font-semibold mb-4" style={{ color: 'hsl(var(--primary))' }}>Soft Skills</h3>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+          {['Problem Solving', 'Communication', 'Leadership', 'Creativity', 'Team Work', 'Adaptability'].map((skill) => (
+            <div key={skill} className="rounded px-3 py-2 text-sm text-center" style={{ backgroundColor: 'hsl(var(--secondary) / 0.2)' }}>
+              {skill}
             </div>
           ))}
         </div>
