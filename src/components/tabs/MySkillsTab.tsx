@@ -1,7 +1,6 @@
 import SkillChart from "@/components/SkillChart";
 import ToolsDashboard from "@/components/ToolCard";
 import GitHubAnalytics from "@/components/GitHubAnalytics";
-import SkillRadar from "@/components/SkillRadar";
 import ToolsPieChart from "@/components/ToolsPieChart";
 
 const MySkillsTab = () => (
@@ -10,10 +9,7 @@ const MySkillsTab = () => (
       <SkillChart />
       <ToolsDashboard />
     </div>
-    <div className="grid gap-6 lg:grid-cols-2">
-      <SkillRadar />
-      <ToolsPieChart />
-    </div>
+    <ToolsPieChart />
     <GitHubAnalytics />
   </div>
 );

@@ -76,9 +76,9 @@ const AboutMeTab = () => {
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15 }}
-              className="text-lg md:text-xl font-medium text-primary mb-4"
+              className="text-lg md:text-xl font-medium text-primary mb-2"
             >
-              Data Analytics & Business Intelligence Enthusiast
+              Aspiring Data Analyst | Data-Driven Problem Solver
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 8 }}
@@ -86,7 +86,7 @@ const AboutMeTab = () => {
               transition={{ delay: 0.2 }}
               className="text-sm md:text-base text-muted-foreground leading-relaxed mb-6 max-w-xl"
             >
-              CSE Sophomore at NMIET, passionate about transforming data into actionable insights. Skilled in SQL, Excel, Python (Pandas), and Power BI. I believe in learning through consistent practice and hands-on exploration.
+              Computer Science Engineering student specializing in data analysis, risk assessment, and transforming complex data into actionable insights.
             </motion.p>
 
             {/* CTA Buttons */}

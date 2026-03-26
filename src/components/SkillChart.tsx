@@ -58,37 +58,6 @@ const SkillChart = () => {
             </div>
           </div>
         ))}
-    </div>
-
-      {/* Radar bubbles */}
-      <div className="mt-8">
-        <h4 className="text-xs font-heading font-semibold text-muted-foreground uppercase tracking-wider mb-4">
-          Skill Radar
-        </h4>
-        <div className="flex flex-wrap gap-2 justify-center">
-          {skills.map((s) => {
-            const size = 40 + (s.level / 100) * 60;
-            return (
-              <motion.div
-                key={s.name}
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ delay: 0.4 + Math.random() * 0.3 }}
-                className="rounded-full flex items-center justify-center text-center cursor-default hover:ring-2 hover:ring-primary/40 transition-all shadow-lg hover:shadow-xl"
-                style={{
-                  width: size,
-                  height: size,
-                  background: s.gradient,
-                  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)",
-                }}
-                title={`${s.name}: ${s.level}%`}
-              >
-                <span className="text-[9px] font-heading font-semibold text-white leading-tight px-1">
-                  {s.name.split(" ")[0]}
-                </span>
-              </motion.div>
-            );
-          })}
         </div>
       </div>
     </div>
