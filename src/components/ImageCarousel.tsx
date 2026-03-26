@@ -91,16 +91,16 @@ const ImageCarousel = ({ images, autoSlideInterval = 4000 }: ImageCarouselProps)
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full max-w-3xl mx-auto">
       {/* Main Carousel Container */}
       <div
-        className="relative w-full bg-secondary/30 rounded-2xl overflow-hidden"
+        className="relative w-full bg-secondary/30 rounded-xl overflow-hidden"
         onMouseDown={handleDragStart}
         onMouseUp={handleDragEnd}
         onMouseLeave={() => isDragging && setIsDragging(false)}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
-        style={{ aspectRatio: "16/9", userSelect: "none" }}
+        style={{ aspectRatio: "16/9", userSelect: "none", maxHeight: "400px" }}
       >
         <AnimatePresence initial={false} custom={direction}>
           <motion.div
@@ -167,7 +167,7 @@ const ImageCarousel = ({ images, autoSlideInterval = 4000 }: ImageCarouselProps)
       </div>
 
       {/* Thumbnail Strip */}
-      <div className="mt-4 flex gap-3 overflow-x-auto pb-2">
+      <div className="mt-3 flex gap-2 overflow-x-auto pb-1 justify-center">
         {images.map((image, index) => (
           <button
             key={index}
@@ -176,10 +176,10 @@ const ImageCarousel = ({ images, autoSlideInterval = 4000 }: ImageCarouselProps)
               setCurrentIndex(index);
               startAutoSlide();
             }}
-            className={`relative rounded-lg overflow-hidden transition-all flex-shrink-0 ${
+            className={`relative rounded-md overflow-hidden transition-all flex-shrink-0 ${
               index === currentIndex
-                ? "ring-2 ring-primary w-24 h-16"
-                : "w-20 h-14 opacity-60 hover:opacity-100"
+                ? "ring-2 ring-primary w-16 h-12"
+                : "w-14 h-10 opacity-50 hover:opacity-75"
             }`}
           >
             <img
@@ -193,7 +193,7 @@ const ImageCarousel = ({ images, autoSlideInterval = 4000 }: ImageCarouselProps)
       </div>
 
       {/* Slide Counter */}
-      <div className="mt-3 text-center text-sm text-muted-foreground">
+      <div className="mt-2 text-center text-xs text-muted-foreground">
         {currentIndex + 1} / {images.length}
       </div>
     </div>

@@ -5,11 +5,18 @@ import {
   LineChart, Line, PieChart, Pie, Cell, ScatterChart, Scatter,
 } from "recharts";
 
-const purple = "hsl(270, 60%, 65%)";
-const pink = "hsl(330, 50%, 72%)";
-const lavender = "hsl(270, 40%, 75%)";
-const dustyPink = "hsl(340, 40%, 72%)";
-const colors = [purple, pink, lavender, dustyPink, "hsl(270,30%,60%)"];
+// Sophisticated color palette with gradients
+const colors = ["#4F46E5", "#06B6D4", "#8B5CF6", "#EC4899", "#F59E0B", "#10B981", "#6366F1", "#F97316"];
+const gradients = [
+  { start: "#4F46E5", end: "#6366F1" },    // Indigo
+  { start: "#06B6D4", end: "#0891B2" },    // Cyan
+  { start: "#8B5CF6", end: "#A78BFA" },    // Violet
+  { start: "#EC4899", end: "#F472B6" },    // Pink
+  { start: "#F59E0B", end: "#FBBF24" },    // Amber
+  { start: "#10B981", end: "#34D399" },    // Emerald
+  { start: "#6366F1", end: "#818CF8" },    // Indigo-light
+  { start: "#F97316", end: "#FB923C" },    // Orange
+];
 const axisColor = "hsl(270,15%,50%)";
 const gridColor = "hsl(280,20%,25%)";
 
@@ -80,7 +87,12 @@ const tooltipStyle = {
     background: "hsl(280, 45%, 15%)",
     border: "1px solid hsl(280, 30%, 25%)",
     borderRadius: 8,
-    fontSize: 12,
+    fontSize: 11,
+    color: "hsl(270, 20%, 85%)",
+    padding: "6px 8px",
+  },
+  labelStyle: {
+    fontSize: 10,
     color: "hsl(270, 20%, 85%)",
   },
 };
@@ -91,13 +103,21 @@ const VisualizationGrid = () => (
       <ChartCard title="Projects by Technology" description="Distribution of projects across tech stacks.">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={projectsByTech}>
-            <CartesianGrid strokeDasharray="3 3" stroke={gridColor} />
-            <XAxis dataKey="name" tick={{ fontSize: 11, fill: axisColor }} stroke={axisColor} />
-            <YAxis tick={{ fontSize: 11, fill: axisColor }} stroke={axisColor} />
+            <defs>
+              {gradients.map((grad, i) => (
+                <linearGradient key={`grad-${i}`} id={`barGrad-${i}`} x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor={grad.start} stopOpacity={0.9} />
+                  <stop offset="100%" stopColor={grad.end} stopOpacity={0.6} />
+                </linearGradient>
+              ))}
+            </defs>
+            <CartesianGrid strokeDasharray="3 3" stroke={gridColor} opacity={0.3} />
+            <XAxis dataKey="name" tick={{ fontSize: 10, fill: axisColor }} stroke={axisColor} />
+            <YAxis tick={{ fontSize: 10, fill: axisColor }} stroke={axisColor} />
             <Tooltip {...tooltipStyle} />
-            <Bar dataKey="count" radius={[4, 4, 0, 0]} animationDuration={1200}>
+            <Bar dataKey="count" radius={[6, 6, 0, 0]} animationDuration={1200}>
               {projectsByTech.map((_, i) => (
-                <Cell key={i} fill={colors[i % colors.length]} />
+                <Cell key={i} fill={`url(#barGrad-${i % gradients.length})`} />
               ))}
             </Bar>
           </BarChart>
@@ -107,6 +127,14 @@ const VisualizationGrid = () => (
       <ChartCard title="Tool Usage Distribution" description="Share of tools used across all projects.">
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
+            <defs>
+              {gradients.map((grad, i) => (
+                <linearGradient key={`pieGrad-${i}`} id={`pieGrad-${i}`} x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor={grad.start} stopOpacity={0.85} />
+                  <stop offset="100%" stopColor={grad.end} stopOpacity={0.65} />
+                </linearGradient>
+              ))}
+            </defs>
             <Pie
               data={toolUsage}
               cx="50%"
@@ -115,12 +143,12 @@ const VisualizationGrid = () => (
               outerRadius={75}
               dataKey="value"
               animationDuration={1200}
-              label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+              label={({ percent }) => `${(percent * 100).toFixed(0)}%`}
               labelLine={false}
-              fontSize={10}
+              fontSize={8}
             >
               {toolUsage.map((_, i) => (
-                <Cell key={i} fill={colors[i % colors.length]} />
+                <Cell key={i} fill={`url(#pieGrad-${i % gradients.length})`} />
               ))}
             </Pie>
             <Tooltip {...tooltipStyle} />
@@ -133,16 +161,23 @@ const VisualizationGrid = () => (
       <ChartCard title="Skill Growth Over Time" description="Proficiency increase throughout the year.">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={skillGrowth}>
-            <CartesianGrid strokeDasharray="3 3" stroke={gridColor} />
-            <XAxis dataKey="month" tick={{ fontSize: 11, fill: axisColor }} stroke={axisColor} />
-            <YAxis tick={{ fontSize: 11, fill: axisColor }} stroke={axisColor} />
+            <defs>
+              <linearGradient id="lineGrad-growth" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#8B5CF6" stopOpacity={0.9} />
+                <stop offset="100%" stopColor="#A78BFA" stopOpacity={0.6} />
+              </linearGradient>
+            </defs>
+            <CartesianGrid strokeDasharray="3 3" stroke={gridColor} opacity={0.3} />
+            <XAxis dataKey="month" tick={{ fontSize: 10, fill: axisColor }} stroke={axisColor} />
+            <YAxis tick={{ fontSize: 10, fill: axisColor }} stroke={axisColor} />
             <Tooltip {...tooltipStyle} />
             <Line
               type="monotone"
               dataKey="skill"
-              stroke={purple}
+              stroke="url(#lineGrad-growth)"
               strokeWidth={2.5}
-              dot={{ fill: purple, r: 4 }}
+              dot={{ fill: "#8B5CF6", r: 4 }}
+              activeDot={{ r: 6 }}
               animationDuration={1500}
             />
           </LineChart>
@@ -152,11 +187,17 @@ const VisualizationGrid = () => (
       <ChartCard title="Data Quality Findings" description="Common EDA issues across datasets.">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={edaBar} layout="vertical">
-            <CartesianGrid strokeDasharray="3 3" stroke={gridColor} />
-            <XAxis type="number" tick={{ fontSize: 11, fill: axisColor }} stroke={axisColor} />
-            <YAxis dataKey="cat" type="category" tick={{ fontSize: 11, fill: axisColor }} stroke={axisColor} width={70} />
+            <defs>
+              <linearGradient id="horizGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stopColor="#EC4899" stopOpacity={0.9} />
+                <stop offset="100%" stopColor="#F472B6" stopOpacity={0.6} />
+              </linearGradient>
+            </defs>
+            <CartesianGrid strokeDasharray="3 3" stroke={gridColor} opacity={0.3} />
+            <XAxis type="number" tick={{ fontSize: 10, fill: axisColor }} stroke={axisColor} />
+            <YAxis dataKey="cat" type="category" tick={{ fontSize: 10, fill: axisColor }} stroke={axisColor} width={65} />
             <Tooltip {...tooltipStyle} />
-            <Bar dataKey="count" radius={[0, 4, 4, 0]} fill={pink} animationDuration={1200} />
+            <Bar dataKey="count" radius={[0, 6, 6, 0]} fill="url(#horizGrad)" animationDuration={1200} />
           </BarChart>
         </ResponsiveContainer>
       </ChartCard>
@@ -166,16 +207,23 @@ const VisualizationGrid = () => (
       <ChartCard title="Practice Activity Trend" description="Weekly exercise completion over 8 weeks.">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={practiceActivity}>
-            <CartesianGrid strokeDasharray="3 3" stroke={gridColor} />
-            <XAxis dataKey="week" tick={{ fontSize: 11, fill: axisColor }} stroke={axisColor} />
-            <YAxis tick={{ fontSize: 11, fill: axisColor }} stroke={axisColor} />
+            <defs>
+              <linearGradient id="lineGrad-practice" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#F59E0B" stopOpacity={0.9} />
+                <stop offset="100%" stopColor="#FBBF24" stopOpacity={0.6} />
+              </linearGradient>
+            </defs>
+            <CartesianGrid strokeDasharray="3 3" stroke={gridColor} opacity={0.3} />
+            <XAxis dataKey="week" tick={{ fontSize: 10, fill: axisColor }} stroke={axisColor} />
+            <YAxis tick={{ fontSize: 10, fill: axisColor }} stroke={axisColor} />
             <Tooltip {...tooltipStyle} />
             <Line
               type="monotone"
               dataKey="exercises"
-              stroke={pink}
+              stroke="url(#lineGrad-practice)"
               strokeWidth={2.5}
-              dot={{ fill: pink, r: 4 }}
+              dot={{ fill: "#F59E0B", r: 4 }}
+              activeDot={{ r: 6 }}
               animationDuration={1500}
             />
           </LineChart>
@@ -185,11 +233,17 @@ const VisualizationGrid = () => (
       <ChartCard title="Skill vs. Project Complexity" description="Scatter showing skill level vs. project difficulty.">
         <ResponsiveContainer width="100%" height="100%">
           <ScatterChart>
-            <CartesianGrid strokeDasharray="3 3" stroke={gridColor} />
-            <XAxis dataKey="x" name="Complexity" tick={{ fontSize: 11, fill: axisColor }} stroke={axisColor} />
-            <YAxis dataKey="y" name="Skill" tick={{ fontSize: 11, fill: axisColor }} stroke={axisColor} />
+            <defs>
+              <linearGradient id="scatterGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#10B981" stopOpacity={0.8} />
+                <stop offset="100%" stopColor="#34D399" stopOpacity={0.6} />
+              </linearGradient>
+            </defs>
+            <CartesianGrid strokeDasharray="3 3" stroke={gridColor} opacity={0.3} />
+            <XAxis dataKey="x" name="Complexity" tick={{ fontSize: 10, fill: axisColor }} stroke={axisColor} />
+            <YAxis dataKey="y" name="Skill" tick={{ fontSize: 10, fill: axisColor }} stroke={axisColor} />
             <Tooltip {...tooltipStyle} />
-            <Scatter data={scatterData} fill={purple} animationDuration={1200} />
+            <Scatter data={scatterData} fill="#10B981" animationDuration={1200} />
           </ScatterChart>
         </ResponsiveContainer>
       </ChartCard>

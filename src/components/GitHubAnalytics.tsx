@@ -58,7 +58,10 @@ const GitHubAnalytics = () => {
   // Commit count from push events
   const totalCommits = events
     .filter((e) => e.type === "PushEvent")
-    .reduce((sum, e) => sum + ((e.payload?.commits as unknown[])?.length || 0), 0);
+    .reduce((sum, e) => {
+      const commitCount = Array.isArray(e.payload?.commits) ? e.payload.commits.length : 0;
+      return sum + commitCount;
+    }, 0);
 
   // Contribution timeline (group events by date, last 30 days)
   const dateMap: Record<string, number> = {};
