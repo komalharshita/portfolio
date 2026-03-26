@@ -150,38 +150,77 @@ const GitHubAnalytics = () => {
       {/* Charts */}
       <div className="grid gap-6 lg:grid-cols-2">
         {/* Languages bar chart */}
-        <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} className="stat-card">
-          <h4 className="font-heading text-sm font-semibold text-foreground mb-4">Most Used Languages</h4>
-          {langData.length > 0 ? (
-            <ResponsiveContainer width="100%" height={220}>
-              <BarChart data={langData} margin={{ top: 0, right: 0, bottom: 0, left: -20 }}>
-                <XAxis dataKey="name" tick={{ fill: "hsl(270 15% 60%)", fontSize: 11 }} axisLine={false} tickLine={false} />
-                <YAxis tick={{ fill: "hsl(270 15% 60%)", fontSize: 11 }} axisLine={false} tickLine={false} />
-                <Tooltip {...tooltipStyle} />
-                <Bar dataKey="count" fill="hsl(270 60% 65%)" radius={[4, 4, 0, 0]} />
-              </BarChart>
-            </ResponsiveContainer>
-          ) : (
-            <p className="text-sm text-muted-foreground">No language data available.</p>
-          )}
+        <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} className="stat-card relative overflow-hidden">
+          <div className="absolute inset-0 opacity-20 pointer-events-none">
+            <div 
+              className="absolute inset-0" 
+              style={{
+                background: "radial-gradient(circle at 50% 20%, rgba(139, 92, 246, 0.2), transparent 70%)"
+              }}
+            />
+          </div>
+          <div className="relative z-10">
+            <h4 className="font-heading text-sm font-semibold text-foreground mb-4">Most Used Languages</h4>
+            {langData.length > 0 ? (
+              <ResponsiveContainer width="100%" height={220}>
+                <BarChart data={langData} margin={{ top: 0, right: 0, bottom: 0, left: -20 }}>
+                  <defs>
+                    <linearGradient id="barGradient" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stopColor="#8B5CF6" stopOpacity={0.9} />
+                      <stop offset="100%" stopColor="#6366F1" stopOpacity={0.6} />
+                    </linearGradient>
+                  </defs>
+                  <XAxis dataKey="name" tick={{ fill: "hsl(270 15% 60%)", fontSize: 11 }} axisLine={false} tickLine={false} />
+                  <YAxis tick={{ fill: "hsl(270 15% 60%)", fontSize: 11 }} axisLine={false} tickLine={false} />
+                  <Tooltip {...tooltipStyle} />
+                  <Bar dataKey="count" fill="url(#barGradient)" radius={[6, 6, 0, 0]} />
+                </BarChart>
+              </ResponsiveContainer>
+            ) : (
+              <p className="text-sm text-muted-foreground">No language data available.</p>
+            )}
+          </div>
         </motion.div>
 
         {/* Contributions line chart */}
-        <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} className="stat-card">
-          <h4 className="font-heading text-sm font-semibold text-foreground mb-4">Recent Contributions</h4>
-          {contribData.length > 0 ? (
-            <ResponsiveContainer width="100%" height={220}>
-              <LineChart data={contribData} margin={{ top: 0, right: 0, bottom: 0, left: -20 }}>
-                <CartesianGrid stroke="hsl(270 30% 20%)" strokeDasharray="3 3" />
-                <XAxis dataKey="date" tick={{ fill: "hsl(270 15% 60%)", fontSize: 11 }} axisLine={false} tickLine={false} />
-                <YAxis tick={{ fill: "hsl(270 15% 60%)", fontSize: 11 }} axisLine={false} tickLine={false} />
-                <Tooltip {...tooltipStyle} />
-                <Line type="monotone" dataKey="count" stroke="hsl(330 50% 72%)" strokeWidth={2} dot={{ fill: "hsl(330 50% 72%)", r: 3 }} />
-              </LineChart>
-            </ResponsiveContainer>
-          ) : (
-            <p className="text-sm text-muted-foreground">No recent contribution data.</p>
-          )}
+        <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} className="stat-card relative overflow-hidden">
+          <div className="absolute inset-0 opacity-20 pointer-events-none">
+            <div 
+              className="absolute inset-0" 
+              style={{
+                background: "radial-gradient(circle at 50% 20%, rgba(236, 72, 153, 0.2), transparent 70%)"
+              }}
+            />
+          </div>
+          <div className="relative z-10">
+            <h4 className="font-heading text-sm font-semibold text-foreground mb-4">Recent Contributions</h4>
+            {contribData.length > 0 ? (
+              <ResponsiveContainer width="100%" height={220}>
+                <LineChart data={contribData} margin={{ top: 0, right: 0, bottom: 0, left: -20 }}>
+                  <defs>
+                    <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stopColor="#EC4899" stopOpacity={0.8} />
+                      <stop offset="100%" stopColor="#F472B6" stopOpacity={0.6} />
+                    </linearGradient>
+                  </defs>
+                  <CartesianGrid stroke="hsl(270 30% 20%)" strokeDasharray="3 3" opacity={0.3} />
+                  <XAxis dataKey="date" tick={{ fill: "hsl(270 15% 60%)", fontSize: 11 }} axisLine={false} tickLine={false} />
+                  <YAxis tick={{ fill: "hsl(270 15% 60%)", fontSize: 11 }} axisLine={false} tickLine={false} />
+                  <Tooltip {...tooltipStyle} />
+                  <Line 
+                    type="monotone" 
+                    dataKey="count" 
+                    stroke="url(#lineGradient)" 
+                    strokeWidth={2.5} 
+                    dot={{ fill: "#EC4899", r: 4 }}
+                    activeDot={{ r: 6 }}
+                  />
+                </LineChart>
+              </ResponsiveContainer>
+            ) : (
+              <p className="text-sm text-muted-foreground">No recent contribution data.</p>
+            )}
+          </div>
         </motion.div>
       </div>
 
