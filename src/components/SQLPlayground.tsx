@@ -318,6 +318,7 @@ const SQLPlayground = () => {
                     <table className="w-full text-sm font-mono">
                       <thead>
                         <tr>
+                          <th className="excel-cell excel-cell-header text-center font-heading w-12 shrink-0">#</th>
                           {result.columns.map((c) => (
                             <th key={c} className="excel-cell excel-cell-header text-left font-heading">{c}</th>
                           ))}
@@ -329,9 +330,10 @@ const SQLPlayground = () => {
                             key={i}
                             initial={{ opacity: 0, x: -8 }}
                             animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: i * 0.03 }}
+                            transition={{ delay: Math.min(i * 0.02, 0.3) }}
                             className={`${i % 2 === 0 ? "bg-card" : "bg-secondary/20"} hover:bg-primary/5 transition-colors`}
                           >
+                            <td className="excel-cell border-t-0 text-muted-foreground text-center text-xs w-12 shrink-0">{i + 1}</td>
                             {row.map((cell, j) => (
                               <td key={j} className="excel-cell border-t-0 text-muted-foreground">{cell}</td>
                             ))}
