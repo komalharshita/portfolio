@@ -1,9 +1,9 @@
-import ProjectsTable from "@/components/ProjectsTable";
+import ProjectsCards from "@/components/ProjectsCards";
 import SQLPlayground from "@/components/SQLPlayground";
 
 const ProjectsTab = () => (
-  <div className="max-w-5xl">
-    <ProjectsTable />
+  <div className="space-y-12 max-w-5xl">
+    <ProjectsCards />
     <SQLPlayground />
   </div>
 );
