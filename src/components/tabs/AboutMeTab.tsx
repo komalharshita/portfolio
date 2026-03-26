@@ -26,7 +26,7 @@ const AboutMeTab = () => {
 
   const handleResumeDownload = () => {
     const link = document.createElement("a");
-    link.href = "/MY RESUME.pdf";
+    link.href = "/Komal Harshita_Resume.pdf";
     link.download = "Komal_Harshita_Resume.pdf";
     document.body.appendChild(link);
     link.click();
