@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, BarChart3 } from "lucide-react";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -21,7 +21,7 @@ const tabs = [
 type TabId = (typeof tabs)[number]["id"];
 
 const colHeaders = ["A", "B", "C", "D", "E", "F", "G"];
-const rowCount = 20;
+const rowCount = 100;
 
 const tabContent: Record<TabId, React.ReactNode> = {
   about: <AboutMeTab />,
@@ -35,6 +35,14 @@ const tabContent: Record<TabId, React.ReactNode> = {
 const ExcelWorkbook = () => {
   const [activeTab, setActiveTab] = useState<TabId>("about");
   const [mobileMenu, setMobileMenu] = useState(false);
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  // Auto-scroll to top when tab changes
+  useEffect(() => {
+    if (contentRef.current) {
+      contentRef.current.scrollTop = 0;
+    }
+  }, [activeTab]);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -137,7 +145,7 @@ const ExcelWorkbook = () => {
           </div>
 
           {/* Tab content */}
-          <div className="flex-1 min-w-0">
+          <div className="flex-1 min-w-0 overflow-y-auto" ref={contentRef}>
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeTab}

@@ -61,7 +61,6 @@ const SkillChart = () => {
         </div>
       </div>
     </div>
-  </div>
   );
 };
 
