@@ -20,9 +20,9 @@ const ContactTab = () => {
   return (
     <div className="max-w-2xl space-y-6">
       <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="stat-card bg-gradient-to-r from-primary/5 to-accent/5">
-        <h3 className="font-heading font-semibold text-foreground mb-1">Open to Opportunities</h3>
+        <h3 className="font-heading font-semibold text-foreground mb-1">Let&apos;s Connect</h3>
         <p className="text-sm text-muted-foreground leading-relaxed">
-          Currently working as an ESG Analyst Intern at Excelerate. Open to roles in Data Analytics, Business Intelligence, and ESG analysis. Also open to creative collaborations and writing projects!
+          I&apos;m open to conversations about Data Analytics, Business Intelligence, and creative collaborations. Feel free to reach out via email, LinkedIn, or any of the social links below!
         </p>
         <p className="text-xs text-muted-foreground mt-1">500+ connections · 2,800+ followers on LinkedIn</p>
       </motion.div>

@@ -168,6 +168,12 @@
   .gradient-subtle {
     background: linear-gradient(135deg, hsl(var(--primary) / 0.08), hsl(var(--accent) / 0.06));
   }
+  .sr-only {
+    @apply absolute w-1 h-1 p-0 -m-1 overflow-hidden clip-hidden border-0 whitespace-nowrap;
+  }
+  .not-sr-only {
+    @apply static w-auto h-auto p-0 m-0 overflow-visible;
+  }
 }
 
 @keyframes float {

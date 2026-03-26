@@ -113,14 +113,7 @@ const certifications: Certification[] = [
     description: "Selected participant focused on industry-ready digital and professional skills.",
     skills: "Digital Skills, Professional Development",
   },
-  {
-    name: "ESG Analyst Internship",
-    platform: "Excelerate",
-    status: "Completed",
-    year: "2025",
-    description: "ESG Analyst Intern role focused on environmental, social, and governance data analysis, sustainability reporting, and ESG metrics evaluation.",
-    skills: "ESG Analysis, Sustainability Reporting, Data Analytics",
-  },
+
   {
     name: "Power BI Data Analyst",
     platform: "Microsoft",

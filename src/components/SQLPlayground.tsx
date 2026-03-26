@@ -9,7 +9,7 @@ CREATE TABLE komal (
 );
 INSERT INTO komal VALUES (
   'Komal Harshita',
-  'ESG Analyst Intern · Data Analytics & Business Intelligence',
+  'Data Analytics & Business Intelligence Enthusiast',
   'NMIET Pune',
   9.05,
   'Data Analytics, Business Intelligence'

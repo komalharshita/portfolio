@@ -36,7 +36,6 @@ const milestones: Milestone[] = [
   {
     year: "2025",
     items: [
-      "ESG Analyst Intern at Excelerate",
       "Completed McKinsey Forward Program",
       "Completed Deloitte Data Analytics Job Simulation",
       "Selected for Infosys Springboard Pragati – Cohort 7",
