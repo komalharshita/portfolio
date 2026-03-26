@@ -56,36 +56,6 @@ const projectsData: Project[] = [
     keyInsight: "Visual resumes get 40% more recruiter engagement compared to traditional PDF formats.",
     github: "https://github.com/komalharshita/yourdatastory-powerbi-resume",
   },
-  {
-    id: "eda-dashboard",
-    name: "Exploratory Data Analysis Dashboard",
-    description: "EDA visual insights and data quality analysis",
-    longDescription: "Dashboard showcasing exploratory data analysis techniques with visual breakdowns of key metrics and data quality indicators.",
-    category: "Data Analytics",
-    techStack: ["Excel", "Charts", "Pivot Tables"],
-    keyInsight: "Identified 12% data quality issues across datasets that impacted downstream reporting accuracy.",
-    github: "https://github.com/komalharshita",
-  },
-  {
-    id: "sales-profit",
-    name: "Sales & Profit Dashboard",
-    description: "Sales trends and profit analysis across dimensions",
-    longDescription: "Interactive Excel dashboard analyzing sales and profit trends across multiple dimensions with slicers and conditional formatting.",
-    category: "BI",
-    techStack: ["Excel", "Dashboard Design"],
-    keyInsight: "Q4 holiday season drives 35% of annual profit, with electronics leading margin growth.",
-    github: "https://github.com/komalharshita",
-  },
-  {
-    id: "imdb-movies",
-    name: "IMDB Movies Dashboard",
-    description: "Movie industry analytics and revenue insights",
-    longDescription: "Visual analytics dashboard exploring IMDB movie data including ratings, genres, revenue trends, and production insights.",
-    category: "Data Analytics",
-    techStack: ["Excel", "Data Visualization"],
-    keyInsight: "Action and adventure genres generate 2.5x more revenue than drama despite lower average ratings.",
-    github: "https://github.com/komalharshita",
-  },
 ];
 
 const categories = ["All", ...Array.from(new Set(projectsData.map((p) => p.category)))];
