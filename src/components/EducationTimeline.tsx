@@ -8,7 +8,7 @@ interface EducationEntry {
   duration: string;
   startDate: string;
   endDate: string;
-  achievement?: string;
+  achievement?: string[];
   highlights?: string[];
   icon: React.ReactNode;
   order: number;
@@ -22,20 +22,20 @@ const educationData: EducationEntry[] = [
     duration: "Apr 2013 – Jul 2022",
     startDate: "2013",
     endDate: "2022",
-    achievement: "Class 10th Board School Topper",
+    achievement: ["Class 10th Board School Topper", "English Marathon State level Merit holder"],
     highlights: ["Poetry Writing", "Speech & Elocution Competitions"],
     icon: <BookMarked className="h-5 w-5" />,
     order: 1,
   },
   {
     id: "symbiosis",
-    institution: "Symbiosis College of Arts & Commerce",
+    institution: "Symbiosis Junior College",
     degree: "Higher Secondary – Science · 80.67%",
     duration: "Sep 2022 – Jun 2024",
     startDate: "2022",
     endDate: "2024",
     achievement: undefined,
-    highlights: ["Student Editor, Symbi Tribe Magazine"],
+    highlights: ["Student Editor for Symbi Tribe Magazine"],
     icon: <Users className="h-5 w-5" />,
     order: 2,
   },
@@ -47,7 +47,7 @@ const educationData: EducationEntry[] = [
     startDate: "2026",
     endDate: "2026",
     achievement: undefined,
-    highlights: [],
+    highlights: ["Active member of a global cohort of emerging leaders; participated in peer discussions, cross-cultural learning sessions, and collaborative leadership activities."],
     icon: <Zap className="h-5 w-5" />,
     order: 3,
   },

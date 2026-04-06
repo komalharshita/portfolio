@@ -100,7 +100,7 @@ const ImageCarousel = ({ images, autoSlideInterval = 4000 }: ImageCarouselProps)
         onMouseLeave={() => isDragging && setIsDragging(false)}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
-        style={{ aspectRatio: "16/9", userSelect: "none", maxHeight: "400px" }}
+        style={{ aspectRatio: "16/9", userSelect: "none", maxHeight: "500px" }}
       >
         <AnimatePresence initial={false} custom={direction}>
           <motion.div
@@ -155,11 +155,10 @@ const ImageCarousel = ({ images, autoSlideInterval = 4000 }: ImageCarouselProps)
                 setCurrentIndex(index);
                 startAutoSlide();
               }}
-              className={`h-2 rounded-full transition-all ${
-                index === currentIndex
+              className={`h-2 rounded-full transition-all ${index === currentIndex
                   ? "w-8 bg-white"
                   : "w-2 bg-white/50 hover:bg-white/75"
-              }`}
+                }`}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
@@ -176,11 +175,10 @@ const ImageCarousel = ({ images, autoSlideInterval = 4000 }: ImageCarouselProps)
               setCurrentIndex(index);
               startAutoSlide();
             }}
-            className={`relative rounded-md overflow-hidden transition-all flex-shrink-0 ${
-              index === currentIndex
+            className={`relative rounded-md overflow-hidden transition-all flex-shrink-0 ${index === currentIndex
                 ? "ring-2 ring-primary w-16 h-12"
                 : "w-14 h-10 opacity-50 hover:opacity-75"
-            }`}
+              }`}
           >
             <img
               src={image.src}

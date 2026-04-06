@@ -21,7 +21,7 @@ const tabs = [
 type TabId = (typeof tabs)[number]["id"];
 
 const colHeaders = ["A", "B", "C", "D", "E", "F", "G"];
-const rowCount = 100;
+const rowCount = 45;
 
 const tabContent: Record<TabId, React.ReactNode> = {
   about: <AboutMeTab />,
@@ -98,9 +98,8 @@ const ExcelWorkbook = () => {
               <button
                 key={t.id}
                 onClick={() => { setActiveTab(t.id); setMobileMenu(false); }}
-                className={`block w-full text-left px-3 py-2 text-sm rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-primary/60 ${
-                  activeTab === t.id ? "bg-primary/10 text-primary font-medium" : "text-muted-foreground hover:bg-secondary/40"
-                }`}
+                className={`block w-full text-left px-3 py-2 text-sm rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-primary/60 ${activeTab === t.id ? "bg-primary/10 text-primary font-medium" : "text-muted-foreground hover:bg-secondary/40"
+                  }`}
                 role="menuitem"
                 aria-current={activeTab === t.id ? "page" : undefined}
               >
@@ -172,11 +171,10 @@ const ExcelWorkbook = () => {
             <button
               key={t.id}
               onClick={() => setActiveTab(t.id)}
-              className={`px-4 py-2.5 text-xs font-heading font-medium whitespace-nowrap border-r border-border transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/60 focus:ring-offset-y-[-2px] ${
-                activeTab === t.id
+              className={`px-4 py-2.5 text-xs font-heading font-medium whitespace-nowrap border-r border-border transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/60 focus:ring-offset-y-[-2px] ${activeTab === t.id
                   ? "bg-card text-primary border-t-2 border-t-primary -mt-[2px]"
                   : "text-muted-foreground hover:bg-secondary/40 hover:text-foreground border-t-2 border-t-transparent"
-              }`}
+                }`}
               role="tab"
               aria-selected={activeTab === t.id}
               aria-label={t.label}
