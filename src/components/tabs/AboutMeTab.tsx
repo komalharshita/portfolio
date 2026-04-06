@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Music, PenLine, Scissors, BookOpen, Code, Download, GraduationCap, Sparkles, NotebookPen, Heart, MessageCircle, Target, Linkedin } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.png";
+import EducationTimeline from "@/components/EducationTimeline";
 
 const hobbies = [
   { icon: <Sparkles className="h-3.5 w-3.5 text-primary" />, label: "Poetry" },
@@ -182,44 +183,18 @@ const AboutMeTab = () => {
         )}
       </AnimatePresence>
 
-      {/* Education */}
+      {/* Education Timeline */}
       <motion.div
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.35 }}
-        className="stat-card"
+        className="space-y-6"
       >
-        <div className="flex items-center gap-2 mb-6">
+        <div className="flex items-center gap-2">
           <GraduationCap className="h-5 w-5 text-primary" aria-hidden="true" />
-          <h2 className="font-heading font-semibold text-foreground text-lg">Education</h2>
+          <h2 className="font-heading font-semibold text-foreground text-lg">Educational Journey</h2>
         </div>
-        <div className="space-y-6">
-          <article className="pb-4 border-b border-border/50 last:border-b-0 last:pb-0">
-            <h3 className="font-heading font-semibold text-sm text-foreground">Savitribai Phule Pune University (NMIET)</h3>
-            <p className="text-xs text-muted-foreground font-medium mt-1">Bachelor of Engineering — Computer Science</p>
-            <p className="text-xs text-muted-foreground">Sep 2024 – Jun 2028</p>
-            <p className="text-xs text-muted-foreground font-semibold text-primary mt-2">First Year CGPA: 9.05</p>
-            <p className="text-xs text-muted-foreground/70 mt-1">Women Techmakers Member · McKinsey Forward Graduate</p>
-          </article>
-          <article className="pb-4 border-b border-border/50 last:border-b-0 last:pb-0">
-            <h3 className="font-heading font-semibold text-sm text-foreground">Aspire Institute</h3>
-            <p className="text-xs text-muted-foreground font-medium mt-1">Aspire Leaders Program — Cohort 1</p>
-            <p className="text-xs text-muted-foreground">Feb 2026 – Apr 2026</p>
-          </article>
-          <article className="pb-4 border-b border-border/50 last:border-b-0 last:pb-0">
-            <h3 className="font-heading font-semibold text-sm text-foreground">Symbiosis College of Arts &amp; Commerce</h3>
-            <p className="text-xs text-muted-foreground font-medium mt-1">Higher Secondary – Science · 80.67%</p>
-            <p className="text-xs text-muted-foreground">Sep 2022 – Jun 2024</p>
-            <p className="text-xs text-muted-foreground/70 mt-1">Student Editor, Symbi Tribe Magazine</p>
-          </article>
-          <article className="pb-4 border-b border-border/50 last:border-b-0 last:pb-0">
-            <h3 className="font-heading font-semibold text-sm text-foreground">Bharati Vidyapeeth</h3>
-            <p className="text-xs text-muted-foreground font-medium mt-1">Secondary School · 92.2%</p>
-            <p className="text-xs text-muted-foreground">Apr 2013 – Jul 2022</p>
-            <p className="text-xs text-muted-foreground font-semibold text-primary mt-2">Class 10th Board School Topper</p>
-            <p className="text-xs text-muted-foreground/70 mt-1">Poetry Writing, Speech &amp; Elocution Competitions</p>
-          </article>
-        </div>
+        <EducationTimeline />
       </motion.div>
     </div>
   );
