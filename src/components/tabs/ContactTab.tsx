@@ -47,9 +47,9 @@ const ContactTab = () => {
         <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="stat-card bg-gradient-to-r from-primary/5 to-accent/5">
           <h3 className="font-heading font-semibold text-foreground mb-1">Let&apos;s Connect</h3>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            I&apos;m open to conversations about Data Analytics, Business Intelligence, and creative collaborations. Feel free to reach out!
+            I&apos;m open to conversations about Data Analytics, Business Intelligence, Internships, Collaborations, Open Source
           </p>
-          <p className="text-xs text-muted-foreground mt-1">500+ connections · 2,800+ followers on LinkedIn</p>
+          <p className="text-xs text-muted-foreground mt-1">3000+ followers on LinkedIn</p>
         </motion.div>
 
         {/* Contact form */}

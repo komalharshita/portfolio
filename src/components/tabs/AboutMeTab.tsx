@@ -128,13 +128,13 @@ const AboutMeTab = () => {
         className="flex flex-wrap gap-2 justify-center md:justify-start"
       >
         <span className="text-xs px-3 py-1.5 rounded-full bg-primary/10 text-primary font-heading font-medium border border-primary/20">
-          McKinsey Forward Learner
+          SQL
         </span>
         <span className="text-xs px-3 py-1.5 rounded-full bg-primary/10 text-primary font-heading font-medium border border-primary/20">
-          Infosys Springboard Pragati
+          Python & EDA
         </span>
         <span className="text-xs px-3 py-1.5 rounded-full bg-primary/10 text-primary font-heading font-medium border border-primary/20">
-          Data Enthusiast
+          POWER BI
         </span>
       </motion.div>
 
