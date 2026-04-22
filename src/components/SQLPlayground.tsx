@@ -119,9 +119,9 @@ const SQLPlayground = () => {
       try {
         const SQL = await initSqlJs({
           locateFile: (file: string) => {
-            // Handle WASM file location with fallback strategies
+            // Use jsdelivr CDN for reliable WASM delivery
             if (file.endsWith('.wasm')) {
-              return `https://sql.js.org/dist/${file}`;
+              return `https://cdn.jsdelivr.net/npm/sql.js@1.10.3/dist/${file}`;
             }
             return file;
           },
@@ -132,9 +132,10 @@ const SQLPlayground = () => {
         setLoading(false);
         setError("");
       } catch (err: any) {
-        console.error("[v0] SQL.js initialization failed:", err);
-        setError(`Database initialization failed: ${err?.message || 'Unknown error'}. Please refresh the page.`);
-        setLoading(false);
+        console.error("[v0] SQL.js initialization error:", err?.message || err);
+        setError("Database initialization failed. Attempting retry...");
+        // Retry initialization after delay
+        setTimeout(init, 2000);
       }
     };
     init();
@@ -142,14 +143,14 @@ const SQLPlayground = () => {
       try {
         dbRef.current?.close();
       } catch (e) {
-        console.error("[v0] Error closing database:", e);
+        // Cleanup error - non-critical
       }
     };
   }, []);
 
   const runQuery = useCallback(() => {
     if (!dbRef.current) {
-      setError("Database not initialized. Please refresh the page.");
+      setError("Database not initialized. Please wait for the database to load or refresh the page.");
       return;
     }
     setRunning(true);
