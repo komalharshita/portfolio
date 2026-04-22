@@ -16,6 +16,7 @@ interface Project {
 }
 
 const projectsData: Project[] = [
+  // Featured Projects
   {
     id: "pocket-pilot",
     name: "PocketPilot AI",
@@ -56,10 +57,84 @@ const projectsData: Project[] = [
     keyInsight: "Visual resumes get 40% more recruiter engagement compared to traditional PDF formats.",
     github: "https://github.com/komalharshita/yourdatastory-powerbi-resume",
   },
+  // Data Analysis & EDA Projects
+  {
+    id: "black-friday-sales",
+    name: "Black Friday Sales Data Analysis",
+    description: "Comprehensive analysis of Black Friday shopping patterns and sales trends",
+    longDescription: "In-depth exploratory data analysis of Black Friday sales data, identifying customer purchasing patterns, product preferences, and revenue drivers through statistical analysis and data visualization.",
+    category: "Data Analytics",
+    techStack: ["Python", "Pandas", "Matplotlib", "Seaborn", "Statistical Analysis"],
+    keyInsight: "Identified peak shopping hours and product categories driving 70% of total revenue.",
+    github: "https://github.com/komalharshita/Black-Friday-Sales-Data-Analysis",
+  },
+  {
+    id: "sugarcane-eda",
+    name: "Sugarcane Production EDA",
+    description: "Exploratory analysis of sugarcane crop production and yield factors",
+    longDescription: "Detailed exploratory data analysis examining sugarcane production metrics, seasonal variations, environmental factors, and yield optimization patterns using structured analytical workflows.",
+    category: "Data Analytics",
+    techStack: ["Python", "Pandas", "NumPy", "Matplotlib", "EDA"],
+    keyInsight: "Rainfall and temperature patterns account for 65% of yield variance across regions.",
+    github: "https://github.com/komalharshita/EDA-Sugarcane-Project",
+  },
+  {
+    id: "heart-disease-eda",
+    name: "Heart Disease EDA",
+    description: "Medical data analysis identifying cardiovascular disease risk factors",
+    longDescription: "Comprehensive exploratory analysis of heart disease datasets, examining correlations between clinical measurements, lifestyle factors, and disease presence using advanced statistical methods.",
+    category: "Data Analytics",
+    techStack: ["Python", "Pandas", "Scikit-learn", "Seaborn", "Statistical Analysis"],
+    keyInsight: "Chest pain type and ST depression are the strongest predictors of heart disease.",
+    github: "https://github.com/komalharshita/Heart-Disease-EDA",
+  },
+  {
+    id: "iris-flower-classification",
+    name: "Iris Flower Classification",
+    description: "Machine learning classification of iris flower species",
+    longDescription: "Machine learning project implementing multiple classification algorithms to identify iris flower species based on sepal and petal measurements, with model evaluation and comparison.",
+    category: "Python",
+    techStack: ["Python", "Scikit-learn", "Machine Learning", "Data Visualization"],
+    keyInsight: "Random Forest classifier achieved 97% accuracy in species classification.",
+    github: "https://github.com/komalharshita/iris-flower-classification",
+  },
+  // Data Visualization & Learning Projects
+  {
+    id: "30-days-data-viz",
+    name: "30 Days of Data Visualization",
+    description: "Structured learning journey in data visualization with Python",
+    longDescription: "A comprehensive 30-day hands-on learning program mastering data visualization techniques using Python, Seaborn, and Matplotlib with guided notebooks, EDA workflows, and interview-focused analytical thinking.",
+    category: "Data Analytics",
+    techStack: ["Python", "Seaborn", "Matplotlib", "Data Visualization"],
+    keyInsight: "Completed 30 structured visualization projects covering basic to advanced techniques.",
+    github: "https://github.com/komalharshita/30-Days-of-Data-Visualization",
+  },
+  {
+    id: "90-days-challenge",
+    name: "90 Days Data Analytics Challenge",
+    description: "Comprehensive 90-day journey into data analytics practice",
+    longDescription: "Documentation of a 90-day intensive learning challenge covering data analysis fundamentals, SQL, Python, visualization, and real-world problem-solving with daily progress tracking.",
+    category: "Data Analytics",
+    techStack: ["SQL", "Python", "Data Analysis", "HTML", "Data Visualization"],
+    keyInsight: "Completed 90 consecutive daily analytics challenges demonstrating consistent learning progression.",
+    github: "https://github.com/komalharshita/90-Days-Data-Analytics-Challenge",
+  },
+  // Business Analytics & Process Projects
+  {
+    id: "celonis-ap-value",
+    name: "Celonis AP Value Framing",
+    description: "Business process mining and accounts payable optimization analysis",
+    longDescription: "Process mining project using Celonis platform to analyze and optimize accounts payable workflows, identifying bottlenecks and opportunities for process improvement and cost reduction.",
+    category: "BI",
+    techStack: ["Celonis", "Process Mining", "Business Analytics", "Data Modeling"],
+    keyInsight: "Identified process inefficiencies resulting in 25% potential cost savings opportunity.",
+    github: "https://github.com/komalharshita/celonis-ap-value-framing",
+  },
 ];
 
-const categories = ["All", ...Array.from(new Set(projectsData.map((p) => p.category)))];
+const categories = ["All", "Featured", ...Array.from(new Set(projectsData.map((p) => p.category)))];
 const categoryColors: Record<string, string> = {
+  Featured: "bg-amber-500/20 text-amber-700 dark:text-amber-400 border-amber-500/30",
   Python: "bg-blue-500/20 text-blue-700 dark:text-blue-400 border-blue-500/30",
   "Data Analytics": "bg-green-500/20 text-green-700 dark:text-green-400 border-green-500/30",
   BI: "bg-purple-500/20 text-purple-700 dark:text-purple-400 border-purple-500/30",

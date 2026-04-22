@@ -118,29 +118,52 @@ const SQLPlayground = () => {
     const init = async () => {
       try {
         const SQL = await initSqlJs({
-          locateFile: () => '/sql-wasm.wasm',
+          locateFile: (file: string) => {
+            // Handle WASM file location with fallback strategies
+            if (file.endsWith('.wasm')) {
+              return `https://sql.js.org/dist/${file}`;
+            }
+            return file;
+          },
         });
         const db = new SQL.Database();
         db.run(INIT_SQL);
         dbRef.current = db;
         setLoading(false);
-      } catch {
-        setError("Failed to initialize SQL engine.");
+        setError("");
+      } catch (err: any) {
+        console.error("[v0] SQL.js initialization failed:", err);
+        setError(`Database initialization failed: ${err?.message || 'Unknown error'}. Please refresh the page.`);
         setLoading(false);
       }
     };
     init();
-    return () => { dbRef.current?.close(); };
+    return () => { 
+      try {
+        dbRef.current?.close();
+      } catch (e) {
+        console.error("[v0] Error closing database:", e);
+      }
+    };
   }, []);
 
   const runQuery = useCallback(() => {
-    if (!dbRef.current) return;
+    if (!dbRef.current) {
+      setError("Database not initialized. Please refresh the page.");
+      return;
+    }
     setRunning(true);
     setError("");
     setResult(null);
     setIsEasterEgg(false);
 
     const trimmed = query.trim().replace(/;$/, "").trim();
+
+    if (!trimmed) {
+      setError("Please enter a SQL query.");
+      setRunning(false);
+      return;
+    }
 
     // Check easter eggs
     const eggKey = Object.keys(EASTER_EGG_MAP).find(
@@ -154,13 +177,13 @@ const SQLPlayground = () => {
     }
 
     try {
-      const res = dbRef.current.exec(query.trim());
+      const res = dbRef.current!.exec(query.trim());
       if (res.length === 0) {
         setResult({ columns: ["Result"], rows: [["Query executed successfully. No rows returned."]] });
       } else {
         setResult({
           columns: res[0].columns,
-          rows: res[0].values.map((r) => r.map(String)),
+          rows: res[0].values.map((r) => r.map((v: any) => String(v))),
         });
       }
     } catch (e: any) {
@@ -249,6 +272,17 @@ const SQLPlayground = () => {
         {loading ? (
           <div className="flex items-center gap-2 py-8 justify-center text-sm text-muted-foreground">
             <Loader2 className="h-4 w-4 animate-spin" /> Initializing komal_portfolio_db...
+          </div>
+        ) : error && !result ? (
+          <div className="p-4 rounded-lg bg-destructive/10 border border-destructive/20 text-destructive text-sm">
+            <p className="font-semibold mb-1">Initialization Error</p>
+            <p className="text-xs">{error}</p>
+            <button
+              onClick={() => window.location.reload()}
+              className="mt-3 px-3 py-1.5 text-xs rounded bg-destructive/20 hover:bg-destructive/30 transition-colors"
+            >
+              Reload Page
+            </button>
           </div>
         ) : (
           <>
