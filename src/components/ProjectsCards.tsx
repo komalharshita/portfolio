@@ -16,67 +16,16 @@ interface Project {
 }
 
 const projectsData: Project[] = [
-  // Featured Projects
-  {
-    id: "pocket-pilot",
-    name: "PocketPilot AI",
-    description: "AI-powered personal finance assistant",
-    longDescription: "AI-powered finance assistant that helps students track expenses, visualize spending, and get smart insights through a Gemini-powered chatbot. Built using Python, Google Gemini, Firebase, Document AI (demo), Pandas, and Plotly.",
-    category: "Python",
-    techStack: ["Python", "Google Gemini", "Firebase", "Pandas", "Plotly"],
-    keyInsight: "Students using AI-assisted tracking reduced unnecessary spending by ~30% in pilot tests.",
-    github: "https://github.com/komalharshita",
-  },
+  // Featured Projects - Top 3
   {
     id: "prodigy-flow",
     name: "ProdigyFlow",
-    description: "Automated analytics pipeline",
+    description: "Automated analytics pipeline with Gen AI",
     longDescription: "Lightweight, modular multi-agent pipeline that automates common data-analysis workflows: loading raw CSV data, generating a guided cleaning plan, applying cleaning steps, performing exploratory analysis, and producing visualizations and a shareable report.",
     category: "Python",
     techStack: ["Python", "EDA", "Gen AI", "LangGraph"],
     keyInsight: "Automating the EDA pipeline cut analysis time from hours to under 5 minutes per dataset.",
     github: "https://github.com/komalharshita/prodigyflow",
-  },
-  {
-    id: "urban-sustainability",
-    name: "Urban Sustainability Analysis",
-    description: "Sustainability pattern exploration across global cities",
-    longDescription: "Explores sustainability indicators across global cities using structured EDA, data cleaning workflows, pattern exploration and visual analytics.",
-    category: "Data Analytics",
-    techStack: ["Python", "Pandas", "Seaborn"],
-    keyInsight: "Cities with higher green cover show 25% better air quality indices on average.",
-    github: "https://github.com/komalharshita/CitiesOfTomorrow_EDA",
-  },
-  {
-    id: "powerbi-resume",
-    name: "Interactive Power BI Resume",
-    description: "Data-driven storytelling resume with interactive dashboards",
-    longDescription: "Interactive analytics resume designed in Power BI with storytelling layouts, dynamic visual elements and user-centered dashboard design.",
-    category: "BI",
-    techStack: ["Power BI", "DAX", "Data Modeling"],
-    keyInsight: "Visual resumes get 40% more recruiter engagement compared to traditional PDF formats.",
-    github: "https://github.com/komalharshita/yourdatastory-powerbi-resume",
-  },
-  // Data Analysis & EDA Projects
-  {
-    id: "black-friday-sales",
-    name: "Black Friday Sales Data Analysis",
-    description: "Comprehensive analysis of Black Friday shopping patterns and sales trends",
-    longDescription: "In-depth exploratory data analysis of Black Friday sales data, identifying customer purchasing patterns, product preferences, and revenue drivers through statistical analysis and data visualization.",
-    category: "Data Analytics",
-    techStack: ["Python", "Pandas", "Matplotlib", "Seaborn", "Statistical Analysis"],
-    keyInsight: "Identified peak shopping hours and product categories driving 70% of total revenue.",
-    github: "https://github.com/komalharshita/Black-Friday-Sales-Data-Analysis",
-  },
-  {
-    id: "sugarcane-eda",
-    name: "Sugarcane Production EDA",
-    description: "Exploratory analysis of sugarcane crop production and yield factors",
-    longDescription: "Detailed exploratory data analysis examining sugarcane production metrics, seasonal variations, environmental factors, and yield optimization patterns using structured analytical workflows.",
-    category: "Data Analytics",
-    techStack: ["Python", "Pandas", "NumPy", "Matplotlib", "EDA"],
-    keyInsight: "Rainfall and temperature patterns account for 65% of yield variance across regions.",
-    github: "https://github.com/komalharshita/EDA-Sugarcane-Project",
   },
   {
     id: "heart-disease-eda",
@@ -98,38 +47,6 @@ const projectsData: Project[] = [
     keyInsight: "Random Forest classifier achieved 97% accuracy in species classification.",
     github: "https://github.com/komalharshita/iris-flower-classification",
   },
-  // Data Visualization & Learning Projects
-  {
-    id: "30-days-data-viz",
-    name: "30 Days of Data Visualization",
-    description: "Structured learning journey in data visualization with Python",
-    longDescription: "A comprehensive 30-day hands-on learning program mastering data visualization techniques using Python, Seaborn, and Matplotlib with guided notebooks, EDA workflows, and interview-focused analytical thinking.",
-    category: "Data Analytics",
-    techStack: ["Python", "Seaborn", "Matplotlib", "Data Visualization"],
-    keyInsight: "Completed 30 structured visualization projects covering basic to advanced techniques.",
-    github: "https://github.com/komalharshita/30-Days-of-Data-Visualization",
-  },
-  {
-    id: "90-days-challenge",
-    name: "90 Days Data Analytics Challenge",
-    description: "Comprehensive 90-day journey into data analytics practice",
-    longDescription: "Documentation of a 90-day intensive learning challenge covering data analysis fundamentals, SQL, Python, visualization, and real-world problem-solving with daily progress tracking.",
-    category: "Data Analytics",
-    techStack: ["SQL", "Python", "Data Analysis", "HTML", "Data Visualization"],
-    keyInsight: "Completed 90 consecutive daily analytics challenges demonstrating consistent learning progression.",
-    github: "https://github.com/komalharshita/90-Days-Data-Analytics-Challenge",
-  },
-  // Business Analytics & Process Projects
-  {
-    id: "celonis-ap-value",
-    name: "Celonis AP Value Framing",
-    description: "Business process mining and accounts payable optimization analysis",
-    longDescription: "Process mining project using Celonis platform to analyze and optimize accounts payable workflows, identifying bottlenecks and opportunities for process improvement and cost reduction.",
-    category: "BI",
-    techStack: ["Celonis", "Process Mining", "Business Analytics", "Data Modeling"],
-    keyInsight: "Identified process inefficiencies resulting in 25% potential cost savings opportunity.",
-    github: "https://github.com/komalharshita/celonis-ap-value-framing",
-  },
 ];
 
 const categories = ["All", "Featured", ...Array.from(new Set(projectsData.map((p) => p.category)))];
@@ -146,14 +63,14 @@ const ProjectsCards = () => {
   const [expandedId, setExpandedId] = useState<string | null>(null);
 
   const filtered = useMemo(() => {
-    return projectsData.filter(
-      (p) =>
+    return projectsData.filter((p) => {
+      const matchesSearch =
         p.name.toLowerCase().includes(search.toLowerCase()) ||
-        p.description.toLowerCase().includes(search.toLowerCase()) ||
-        (selectedCategory === "All" || p.category === selectedCategory)
-    ).sort((a, b) => {
-      if (selectedCategory === "All") return 0;
-      return a.category === selectedCategory ? -1 : 1;
+        p.description.toLowerCase().includes(search.toLowerCase());
+      
+      const matchesCategory = selectedCategory === "All" || p.category === selectedCategory;
+      
+      return matchesSearch && matchesCategory;
     });
   }, [search, selectedCategory]);
 
@@ -186,11 +103,10 @@ const ProjectsCards = () => {
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`whitespace-nowrap px-4 py-2 rounded-lg border transition-all font-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary/60 focus:ring-offset-2 focus:ring-offset-background ${
-                  selectedCategory === cat
+                className={`whitespace-nowrap px-4 py-2 rounded-lg border transition-all font-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary/60 focus:ring-offset-2 focus:ring-offset-background ${selectedCategory === cat
                     ? "bg-primary text-primary-foreground border-primary"
                     : "bg-card border-border hover:border-primary/50 text-foreground"
-                }`}
+                  }`}
                 aria-pressed={selectedCategory === cat}
                 aria-label={`Filter by ${cat} category`}
               >
@@ -231,9 +147,8 @@ const ProjectsCards = () => {
                   {/* Category Badge */}
                   <div className="flex items-start justify-between mb-4">
                     <span
-                      className={`text-xs font-semibold px-3 py-1 rounded-full border ${
-                        categoryColors[project.category] || "bg-secondary/50 text-foreground border-border"
-                      }`}
+                      className={`text-xs font-semibold px-3 py-1 rounded-full border ${categoryColors[project.category] || "bg-secondary/50 text-foreground border-border"
+                        }`}
                       aria-label={`Project category: ${project.category}`}
                     >
                       {project.category}
