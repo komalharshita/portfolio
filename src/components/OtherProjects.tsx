@@ -10,6 +10,7 @@ interface OtherProject {
   github: string;
   liveLink?: string;
   stars?: number;
+  badge?: string;
 }
 
 const otherProjectsData: OtherProject[] = [
@@ -21,6 +22,7 @@ const otherProjectsData: OtherProject[] = [
     technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Firebase"],
     github: "https://github.com/komalharshita/fempreneuer-launchpad",
     stars: 5,
+    badge: "SHEBuilds Lovable'26",
   },
   {
     id: "devpath",
@@ -30,6 +32,7 @@ const otherProjectsData: OtherProject[] = [
     technologies: ["React", "Node.js", "MongoDB", "Express", "JavaScript"],
     github: "https://github.com/komalharshita/devpath",
     stars: 3,
+    badge: "GSSOC '26",
   },
 ];
 
@@ -55,6 +58,15 @@ const OtherProjects = () => {
                 className="absolute -right-12 -top-12 w-32 h-32 rounded-full bg-accent/10 blur-2xl group-hover:bg-accent/20 transition-all"
                 aria-hidden="true"
               />
+
+              {/* Glassmorphism Badge */}
+              {project.badge && (
+                <div className="absolute top-4 right-4 z-20 -rotate-12">
+                  <div className="px-3 py-1.5 rounded-lg text-xs font-semibold text-white backdrop-blur-md bg-white/20 border border-white/30 shadow-lg hover:bg-white/30 transition-all">
+                    {project.badge}
+                  </div>
+                </div>
+              )}
 
               <div className="relative z-10">
                 {/* Category Badge */}
