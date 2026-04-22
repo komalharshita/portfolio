@@ -61,7 +61,7 @@ const OtherProjects = () => {
 
               {/* Glassmorphism Badge */}
               {project.badge && (
-                <div className="absolute top-4 right-4 z-20 -rotate-12">
+                <div className="absolute top-4 left-4 z-20 -rotate-12">
                   <div className="px-3 py-1.5 rounded-lg text-xs font-semibold text-white backdrop-blur-md bg-white/20 border border-white/30 shadow-lg hover:bg-white/30 transition-all">
                     {project.badge}
                   </div>
