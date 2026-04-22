@@ -125,7 +125,7 @@ const projectsData: Project[] = [
     name: "Celonis AP Value Framing",
     description: "Business process mining and accounts payable optimization analysis",
     longDescription: "Process mining project using Celonis platform to analyze and optimize accounts payable workflows, identifying bottlenecks and opportunities for process improvement and cost reduction.",
-    category: "BI",
+    category: "Data Analytics",
     techStack: ["Celonis", "Process Mining", "Business Analytics", "Data Modeling"],
     keyInsight: "Identified process inefficiencies resulting in 25% potential cost savings opportunity.",
     github: "https://github.com/komalharshita/celonis-ap-value-framing",
@@ -186,11 +186,10 @@ const ProjectsCards = () => {
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`whitespace-nowrap px-4 py-2 rounded-lg border transition-all font-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary/60 focus:ring-offset-2 focus:ring-offset-background ${
-                  selectedCategory === cat
+                className={`whitespace-nowrap px-4 py-2 rounded-lg border transition-all font-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary/60 focus:ring-offset-2 focus:ring-offset-background ${selectedCategory === cat
                     ? "bg-primary text-primary-foreground border-primary"
                     : "bg-card border-border hover:border-primary/50 text-foreground"
-                }`}
+                  }`}
                 aria-pressed={selectedCategory === cat}
                 aria-label={`Filter by ${cat} category`}
               >
@@ -231,9 +230,8 @@ const ProjectsCards = () => {
                   {/* Category Badge */}
                   <div className="flex items-start justify-between mb-4">
                     <span
-                      className={`text-xs font-semibold px-3 py-1 rounded-full border ${
-                        categoryColors[project.category] || "bg-secondary/50 text-foreground border-border"
-                      }`}
+                      className={`text-xs font-semibold px-3 py-1 rounded-full border ${categoryColors[project.category] || "bg-secondary/50 text-foreground border-border"
+                        }`}
                       aria-label={`Project category: ${project.category}`}
                     >
                       {project.category}

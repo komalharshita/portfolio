@@ -58,7 +58,7 @@ const educationData: EducationEntry[] = [
     duration: "Apr 2013 – Jul 2022",
     startDate: "2013",
     endDate: "2022",
-    achievement: ["Class 10th Board School Topper", "English Marathon State level Merit holder"],
+    achievement: ["Class 10th Board School Topper", " English Marathon State level Merit holder"],
     highlights: ["Poetry Writing", "Speech & Elocution Competitions"],
     icon: <BookMarked className="h-5 w-5" />,
     order: 4,
