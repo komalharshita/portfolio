@@ -1,26 +1,54 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Light Mode Palette (Pastels inspired by Kawaii/reference) */
+  --bg-color: #fdf2f8; /* Soft pink tint */
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --accent-primary: #9333ea; /* Purple */
+  --accent-secondary: #db2777; /* Pink */
+  --accent-tertiary: #3b82f6; /* Blue */
+  --glass-bg: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+  --font-sans: 'Inter', sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+[data-theme="dark"] {
+  /* Dark Mode Palette (Neon/Cyberpunk glow) */
+  --bg-color: #0d0914; /* Deep charcoal with purple tint */
+  --text-primary: #f9fafb;
+  --text-secondary: #9ca3af;
+  --accent-primary: #c084fc;
+  --accent-secondary: #f472b6;
+  --accent-tertiary: #60a5fa;
+  --glass-bg: rgba(25, 18, 38, 0.5);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-sans);
 }
