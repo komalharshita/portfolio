@@ -24,6 +24,15 @@ export default function Projects() {
           {portfolioData.projects.map((project, idx) => (
             <FadeIn key={idx} delay={idx * 0.1}>
               <div className="liquid-glass p-8 flex flex-col h-full group">
+                {project.image && (
+                  <div className="w-full h-48 overflow-hidden rounded-2xl mb-6 border border-[var(--glass-border)] relative">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                )}
                 <h2 className="text-2xl font-bold mb-4">{project.title}</h2>
                 
                 <div className="flex flex-wrap gap-2 mb-6">

@@ -72,20 +72,20 @@ export default function CaseStudyModal({ project, onClose }) {
         {/* Content Sections */}
         <div className="space-y-8">
           {/* Challenge Section */}
-          <section className="p-5 md:p-6 rounded-2xl border border-red-500/10 bg-red-500/5 dark:bg-red-500/5 relative overflow-hidden">
+          <section className="p-5 md:p-6 rounded-2xl case-study-challenge-box relative overflow-hidden">
             <div className="flex items-center gap-3 mb-3">
               <div className="p-2 rounded-lg bg-red-500/10 text-red-500">
                 <Target size={20} />
               </div>
               <h3 className="text-lg font-bold text-red-500">The Challenge</h3>
             </div>
-            <p className="text-[var(--text-secondary)] text-sm md:text-base leading-relaxed pl-1">
+            <p className="case-study-text text-sm md:text-base leading-relaxed pl-1 font-medium">
               {project.caseStudy.challenge}
             </p>
           </section>
 
           {/* Approach Section */}
-          <section className="p-5 md:p-6 rounded-2xl border border-purple-500/10 bg-purple-500/5 dark:bg-purple-500/5">
+          <section className="p-5 md:p-6 rounded-2xl case-study-approach-box">
             <div className="flex items-center gap-3 mb-5">
               <div className="p-2 rounded-lg bg-purple-500/10 text-[var(--accent-primary)]">
                 <Compass size={20} />
@@ -108,11 +108,11 @@ export default function CaseStudyModal({ project, onClose }) {
                       )}
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-[var(--text-primary)]">
+                      <h4 className="text-sm font-bold case-study-highlight-text">
                         {title}
                       </h4>
                       {desc && (
-                        <p className="text-xs md:text-sm text-[var(--text-secondary)] mt-1 leading-relaxed">
+                        <p className="text-xs md:text-sm case-study-text mt-1 leading-relaxed">
                           {desc.trim()}
                         </p>
                       )}
@@ -124,7 +124,7 @@ export default function CaseStudyModal({ project, onClose }) {
           </section>
 
           {/* Results Section */}
-          <section className="p-5 md:p-6 rounded-2xl border border-emerald-500/10 bg-emerald-500/5 dark:bg-emerald-500/5">
+          <section className="p-5 md:p-6 rounded-2xl case-study-results-box">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 rounded-lg bg-emerald-500/10 text-emerald-500">
                 <Award size={20} />
@@ -136,7 +136,7 @@ export default function CaseStudyModal({ project, onClose }) {
               {project.caseStudy.results.map((result, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <span className="mt-1.5 w-2 h-2 rounded-full bg-emerald-500 shrink-0 shadow-[0_0_8px_rgba(16,185,129,0.8)]" />
-                  <span className="text-sm md:text-base text-[var(--text-secondary)] leading-relaxed">
+                  <span className="text-sm md:text-base case-study-text leading-relaxed">
                     {result}
                   </span>
                 </li>

@@ -27,8 +27,17 @@ export default function ProjectsPreview() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: idx * 0.1 }}
-            className="glass-card p-6 flex flex-col h-full group"
+            className="liquid-glass p-6 flex flex-col h-full group"
           >
+            {project.image && (
+              <div className="w-full h-48 overflow-hidden rounded-2xl mb-6 border border-[var(--glass-border)] relative">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            )}
             <h3 className="text-xl font-bold mb-3">{project.title}</h3>
             
             <div className="flex flex-wrap gap-2 mb-4">
