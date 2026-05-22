@@ -27,7 +27,7 @@ export default function Projects() {
         <FadeIn>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">My Projects</h1>
           <p className="text-[var(--text-secondary)] text-lg mb-12 max-w-2xl">
-            A deep dive into the data, analysis, and tools I've used to solve complex problems and build automated pipelines.
+            A deep dive into the data, analysis, and tools I&apos;ve used to solve complex problems and build automated pipelines.
           </p>
         </FadeIn>
 

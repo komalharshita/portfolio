@@ -42,7 +42,7 @@ export default function Hero() {
           }}
         >
           <div className="mb-6 inline-block">
-            <span className="glass-pill text-[var(--accent-secondary)]">Hello, I'm {portfolioData.personal.name.split(" ")[0]}</span>
+            <span className="glass-pill text-[var(--accent-secondary)]">Hello, I&apos;m {portfolioData.personal.name.split(" ")[0]}</span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
             A <span className="text-gradient">Data Analyst</span>

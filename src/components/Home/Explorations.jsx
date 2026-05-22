@@ -241,7 +241,7 @@ export default function Explorations() {
             }}
             className="group relative inline-flex items-center gap-2 rounded-full px-6 py-3 text-xs font-semibold uppercase tracking-wider text-[var(--text-primary)] border border-[var(--glass-border)] transition-all duration-300 hover:scale-105 cursor-pointer"
           >
-            Let's Collaborate <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
+            Let&apos;s Collaborate <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
           </button>
         </div>
       </div>

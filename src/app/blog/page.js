@@ -35,7 +35,7 @@ export default async function Blog() {
         <FadeIn delay={0.2}>
           <div className="glass-card p-12 text-center">
             <h3 className="text-xl font-semibold mb-2">No posts yet!</h3>
-            <p className="text-[var(--text-secondary)]">I'm currently working on my first data analysis article. Check back soon!</p>
+            <p className="text-[var(--text-secondary)]">I&apos;m currently working on my first data analysis article. Check back soon!</p>
             <a href="https://komalharshita.medium.com" target="_blank" rel="noopener noreferrer" className="inline-block mt-6 glass-button secondary">
               Follow me on Medium
             </a>
