@@ -127,7 +127,7 @@ export default function Projects() {
                       className="w-full h-44 overflow-hidden rounded-2xl border border-[var(--glass-border)] shadow-xl relative cursor-pointer group"
                     >
                       <img 
-                        src="/prodigyflow-architecture.png" 
+                        src="/arch.png" 
                         alt="ProdigyFlow System Architecture"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
