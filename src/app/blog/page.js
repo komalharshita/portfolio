@@ -19,6 +19,45 @@ async function getMediumPosts() {
   }
 }
 
+function getAestheticThumbnail(post, idx) {
+  // Ignore empty strings or Medium tracking pixels
+  if (post.thumbnail && !post.thumbnail.includes("stat?event=post") && post.thumbnail.trim() !== "") {
+    return post.thumbnail;
+  }
+
+  const title = (post.title || "").toLowerCase();
+  
+  // 1. Imagen / Creative AI Application
+  if (title.includes("imagen") || title.includes("image generator") || title.includes("creative")) {
+    return "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80"; // Premium abstract liquid gradient
+  }
+  
+  // 2. Gemini API / Coding / Function Calling
+  if (title.includes("api") || title.includes("function calling") || title.includes("python")) {
+    return "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80"; // Glowing neon cyber-tech circuit
+  }
+  
+  // 3. Multimodality / RAG / Data nodes
+  if (title.includes("multimodality") || title.includes("rag") || title.includes("rich documents")) {
+    return "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&q=80"; // Cyber connected node structure
+  }
+  
+  // 4. Prompt Design / Prompt Engineering / LLMs
+  if (title.includes("prompt design") || title.includes("prompt engineering") || title.includes("prompt")) {
+    return "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80"; // Vertically streaming purple code binary logic
+  }
+
+  // Curated fallbacks matching site theme colors (Purple, Pink, Cyan, Violet)
+  const fallbacks = [
+    "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80"
+  ];
+  
+  return fallbacks[idx % fallbacks.length];
+}
+
 export default async function Blog() {
   const posts = await getMediumPosts();
 
@@ -30,7 +69,7 @@ export default async function Blog() {
           My thoughts, tutorials, and insights on data analysis, machine learning, and navigating the tech industry.
         </p>
       </FadeIn>
-
+ 
       {posts.length === 0 ? (
         <FadeIn delay={0.2}>
           <div className="glass-card p-12 text-center">
@@ -44,8 +83,8 @@ export default async function Blog() {
       ) : (
         <div className="grid gap-8">
           {posts.map((post, idx) => {
-            // Clean up medium thumbnail or use fallback
-            const thumbnail = post.thumbnail || 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80';
+            // Map custom cyber-aesthetic thumbnail based on post theme
+            const thumbnail = getAestheticThumbnail(post, idx);
             const date = new Date(post.pubDate).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
             
             return (
