@@ -107,7 +107,7 @@
   "projects": [
     {
       "title": "Urban Sustainability Analysis",
-      "image": "/project-sustainability.png",
+      "image": "/project-sustainability.jpg",
       "tech": [
         "Python",
         "Pandas",
@@ -193,6 +193,38 @@
           "Reduced the time required for initial raw dataset profiling from hours to under 30 seconds.",
           "Built a robust, zero-code tool accessible to non-technical business partners.",
           "Streamlined repeating analytics workflows through fully reusable, standardized pipelines."
+        ]
+      }
+    },
+    {
+      "title": "Sugarcane Production Analysis",
+      "image": "/project-sugarcane.png",
+      "tech": [
+        "Pandas",
+        "Matplotlib",
+        "Seaborn"
+      ],
+      "links": {
+        "github": "https://github.com/komalharshita/Sugarcane_Production_EDA",
+        "kaggle": "https://www.kaggle.com/code/komalharshita/sugarcane-production-eda"
+      },
+      "points": [
+        "Performed Exploratory Data Analysis (EDA) on a global sugarcane production statistics dataset across countries and continents.",
+        "Analyzed how production volume, cultivated acreage, and yield efficiency vary across tropical and subtropical regions.",
+        "Streamlined string formatting, type conversion, and handling of European formatted stats using Pandas."
+      ],
+      "caseStudy": {
+        "challenge": "Raw sugarcane statistics use inconsistent European formatting (. as thousands separator, , as decimal), special characters in column names, and contain missing records, preventing direct global comparison of crop yield and acreage statistics.",
+        "approach": [
+          "Data Cleaning & Type Conversion: cleaned string formatting and cast production, acreage, and yield columns to float.",
+          "Continent-wise Country Count: grouped and plotted the distribution of sugarcane-producing nations per continent.",
+          "Distribution & Boxplot Analysis: created histograms + KDEs and spread boxplots to detect outliers and extreme skewness.",
+          "Summary Statistics & Profiling: quantified mean, std, and quartiles across yield efficiency and per-capita production."
+        ],
+        "results": [
+          "Discovered that Asia and South America dominate total sugarcane volume, with Brazil and India acting as massive outliers.",
+          "Identified that while absolute production is heavily right-skewed, yield efficiency (Kg/Hectare) remains highly competitive among smaller-acreage nations.",
+          "Recommended log-transformation of highly skewed features to prepare data for robust downstream predictive modeling."
         ]
       }
     }
