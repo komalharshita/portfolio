@@ -27,32 +27,32 @@ function getAestheticThumbnail(post, idx) {
 
   const title = (post.title || "").toLowerCase();
   
-  // 1. Imagen / Creative AI Application
+  // 1. Gemini and Imagen (GenAI Apps)
   if (title.includes("imagen") || title.includes("image generator") || title.includes("creative")) {
-    return "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80"; // Premium abstract liquid gradient
+    return "/blog/blog-gemini-imagen.png";
   }
   
-  // 2. Gemini API / Coding / Function Calling
+  // 2. Gemini API / Coding / Function Calling / Python
   if (title.includes("api") || title.includes("function calling") || title.includes("python")) {
-    return "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80"; // Glowing neon cyber-tech circuit
+    return "/blog/blog-gemini-api.png";
   }
   
   // 3. Multimodality / RAG / Data nodes
   if (title.includes("multimodality") || title.includes("rag") || title.includes("rich documents")) {
-    return "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&q=80"; // Cyber connected node structure
+    return "/blog/blog-multimodality.png";
   }
   
   // 4. Prompt Design / Prompt Engineering / LLMs
   if (title.includes("prompt design") || title.includes("prompt engineering") || title.includes("prompt")) {
-    return "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80"; // Vertically streaming purple code binary logic
+    return "/blog/blog-prompt-design.png";
   }
 
-  // Curated fallbacks matching site theme colors (Purple, Pink, Cyan, Violet)
+  // Premium fallbacks using local theme-matched blog images
   const fallbacks = [
-    "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80"
+    "/blog/blog-gemini-imagen.png",
+    "/blog/blog-gemini-api.png",
+    "/blog/blog-multimodality.png",
+    "/blog/blog-prompt-design.png"
   ];
   
   return fallbacks[idx % fallbacks.length];
