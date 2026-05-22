@@ -19,8 +19,8 @@ export default function DashboardGallery() {
 
   const dashboards = [
     { id: 1, label: "Sales & Revenue Analytics", color: "rgba(157, 78, 221, 0.4)" },
-    { id: 2, label: "Customer Segmentation", color: "rgba(255, 97, 210, 0.4)" },
-    { id: 3, label: "Supply Chain Operations", color: "rgba(0, 240, 255, 0.4)" },
+    { id: 2, label: "Customer Call Service Segmentation", color: "rgba(255, 97, 210, 0.4)" },
+    { id: 3, label: "Supply Chain Sales Operations", color: "rgba(0, 240, 255, 0.4)" },
   ];
 
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-65%"]);
@@ -29,7 +29,7 @@ export default function DashboardGallery() {
     <div id="gallery-section">
       <div className="intro-section max-w-5xl mx-auto px-6">
         <FadeIn>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Interactive Dashboards</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">My Dashboards</h2>
           <p className="text-[var(--text-secondary)] text-lg max-w-2xl">
             Scroll down to explore interactive BI visualizations built for business intelligence and reporting.
           </p>
@@ -47,12 +47,12 @@ export default function DashboardGallery() {
                   className="gallery-item liquid-glass group"
                   style={{
                     "--item-color": item.color,
-                    "--item-image": `url('/dashboard-${item.id}.jpg')`
+                    "--item-image": `url('/dashboard-${item.id}.png')`
                   }}
                 >
                   {/* Hidden image element to detect if dashboard image exists/loads */}
                   <img
-                    src={`/dashboard-${item.id}.jpg`}
+                    src={`/dashboard-${item.id}.png`}
                     alt=""
                     className="hidden"
                     onLoad={() => handleImageLoad(item.id)}
@@ -69,12 +69,9 @@ export default function DashboardGallery() {
                   <div className="item-content relative z-10">
                     <span className="item-number">0{item.id}</span>
                     <h2 className="text-3xl font-bold mb-2 text-white">{item.label}</h2>
-                    {!isLoaded && (
-                      <p className="text-[var(--text-secondary)] text-sm max-w-sm mt-4">
-                        Upload your landscape image as <code className="text-white bg-[var(--glass-border)] px-1 py-0.5 rounded">/dashboard-{item.id}.jpg</code> to replace this placeholder.
-                      </p>
-                    )}
+                    
                   </div>
+
                 </div>
               );
             })}

@@ -11,9 +11,9 @@ export default function About() {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.9 }}
       >
-        <h2 className="text-3xl font-bold mb-10 text-center">About & Education</h2>
+        <h2 className="text-3xl font-bold mb-10 text-center">About Me</h2>
         
         {/* About Summary Block & Profile Image */}
         <div className="max-w-5xl mx-auto mb-16 flex flex-col-reverse md:flex-row items-center gap-10">

@@ -84,7 +84,7 @@ export default function Skills() {
         viewport={{ once: true }}
         className="text-center mb-16"
       >
-        <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Data Pipeline</h2>
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Skills & Expertise</h2>
         <p className="text-[var(--text-secondary)] text-lg max-w-2xl mx-auto">
           The flow of data from raw storage, through rigorous transformation and modeling, to actionable business insights.
         </p>

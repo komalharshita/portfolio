@@ -25,7 +25,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="text-center mt-6 text-sm text-[var(--text-secondary)]">
-        &copy; {new Date().getFullYear()} Komal Harshita Karanakota. Built with Next.js.
+        &copy; {new Date().getFullYear()} Komal Harshita Karanakota
       </div>
     </footer>
   );

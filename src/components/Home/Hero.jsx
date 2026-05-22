@@ -33,7 +33,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 3.0, ease: "easeOut" }}
+          transition={{ duration: 0.9, delay: 5.0, ease: "easeOut" }}
           className="w-full text-center backdrop-blur-xl p-8 md:p-10 rounded-3xl transition-all duration-300"
           style={{
             backgroundColor: "var(--hero-card-bg)",
@@ -45,7 +45,7 @@ export default function Hero() {
             <span className="glass-pill text-[var(--accent-secondary)]">Hello, I'm {portfolioData.personal.name.split(" ")[0]}</span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
-            Aspiring <span className="text-gradient">Data Analyst</span>
+            A <span className="text-gradient">Data Analyst</span>
           </h1>
           <p className="text-base md:text-lg text-[var(--text-secondary)] mb-10 max-w-xl mx-auto leading-relaxed font-light">
             Bridging the gap between raw datasets and business insights using SQL, Python, Excel, and Power BI.

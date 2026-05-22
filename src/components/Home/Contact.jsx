@@ -17,7 +17,7 @@ export default function Contact() {
   return (
     <section className="py-20 px-6 max-w-5xl mx-auto" id="contact">
       <div className="mb-12 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">Contact Me</h2>
         <p className="text-[var(--text-secondary)] text-lg max-w-2xl mx-auto">
           Interested in collaborating or have a data-driven project in mind? I'd love to hear from you.
         </p>
