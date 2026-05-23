@@ -1,176 +1,174 @@
 <div align="center">
 
 <!-- Header Banner -->
-<img width="100%" src="https://github.com/user-attachments/assets/10fdbd18-c7d2-4cf3-8386-dfe613d95ff1" />
-
+<img width="100%" src="https://github.com/user-attachments/assets/10fdbd18-c7d2-4cf3-8386-dfe613d95ff1" alt="Komal Harshita Banner" />
 
 <!-- Typing Animation -->
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=9B72F0&center=true&vCenter=true&width=600&lines==VLOOKUP(%22me%22%2C+portfolio_data%2C+2%2C+FALSE);McKinsey+Forward+Learner;Data+Analytics+%7C+Business+Intelligence;CSE+Sophomore+%40+NMIET" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=a855f7&center=true&vCenter=true&width=600&lines==VLOOKUP(%22me%22%2C+portfolio_data%2C+2%2C+FALSE);Data+Analytics+%7C+Business+Intelligence;McKinsey+Forward+Learner;CSE+Sophomore+%40+NMIET" alt="Typing SVG" />
 </a>
 
 <br/>
 
-[![Portfolio](https://img.shields.io/badge/🌐_Portfolio-komalharshita.vercel.app-6C3FC8?style=for-the-badge&logoColor=white)](https://komalharshita.vercel.app/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-4A1F8C?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/komalharshita)
-[![GitHub](https://img.shields.io/badge/GitHub-2D1457?style=for-the-badge&logo=github&logoColor=white)](https://github.com/komalharshita)
+[![Portfolio](https://img.shields.io/badge/🌐_Live_Portfolio-komalharshita.vercel.app-a855f7?style=for-the-badge&logoColor=white)](https://komalharshita.vercel.app/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-db2777?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/komalharshita)
+[![GitHub](https://img.shields.io/badge/GitHub-06b6d4?style=for-the-badge&logo=github&logoColor=white)](https://github.com/komalharshita)
 
 </div>
 
 ---
 
-## `=VLOOKUP("about_me", portfolio_data, 2, FALSE)`
+## 🛰️ `=VLOOKUP("terminal_init", profile_status, 2, FALSE)`
 
 ```excel
-📊 KomalHarshita_Portfolio.xlsx  |  Sheet: About Me
+📊 KomalHarshita_Portfolio.xlsx | Sheet: Terminal Overview
 ```
 
-Hi there! 👋 I'm **Komal Harshita** — a CSE Sophomore at **NMIET** exploring the world of **Data & Business Analytics**. I'm currently building skills in SQL, Excel, Python (Pandas), and Power BI.
-
-I enjoy understanding patterns in data and solving analytical problems. I learn through consistent daily practice, small exercises, and hands-on exploration. I'm actively contributing to communities and open to opportunities in **Data Analytics & Business Intelligence**.
+Hi there! 👋 I'm **Komal Harshita** — a Computer Science Sophomore at **NMIET** exploring the intersection of **Data Engineering & Business Intelligence**. I specialize in parsing messy datasets and building clean, high-performance dashboards that tell compelling stories.
 
 <div align="center">
 
-| 🏢 Role | 📍 Location | 🎓 Education |
+| 🏢 Current Program | 📍 Location | 🎓 Education |
 |:---:|:---:|:---:|
-| Harvard ALP '26 | India | CSE Sophomore, NMIET |
+| **Harvard ALP '26** | India | CSE Sophomore, NMIET |
 
 </div>
 
 ---
 
-## `=VLOOKUP("tech_stack", portfolio_data, 2, FALSE)`
+## 🟣 `=VLOOKUP("data_pipeline", skills_pipeline, 2, FALSE)`
 
 ```excel
-📊 KomalHarshita_Portfolio.xlsx  |  Sheet: My Skills
+📊 KomalHarshita_Portfolio.xlsx | Sheet: Skills Node Architecture
 ```
 
-### 🐍 Languages & Libraries
+*In my portfolio, I view technical skills not just as a list, but as a continuous **Data Pipeline**. Here is my core architecture:*
 
-<div align="center">
+```text
+┌─────────────────────────────────┐       ┌─────────────────────────────────┐       ┌─────────────────────────────────┐
+│     🟣 NODE 1: EXTRACTION       │ ───▶  │      💗 NODE 2: PROCESSING       │ ───▶  │     🔵 NODE 3: VISUALS          │
+├─────────────────────────────────┤       ├─────────────────────────────────┤       ├─────────────────────────────────┤
+│ • SQL (MySQL / PostgreSQL)      │       │ • Python (Pandas, NumPy)        │       │ • Power BI (DAX, Modeling)      │
+│ • Excel Ingestion & ETL         │       │ • Data Cleaning & Parsing       │       │ • Tableau                       │
+│ • Schema Design & Normalization │       │ • Exploratory Data Analysis     │       │ • Interactive Storytelling      │
+└─────────────────────────────────┘       └─────────────────────────────────┘       └─────────────────────────────────┘
+```
 
-![Python](https://img.shields.io/badge/Python-6C3FC8?style=for-the-badge&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-4A1F8C?style=for-the-badge&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-7B4FD8?style=for-the-badge&logo=numpy&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-9B72F0?style=for-the-badge&logo=mysql&logoColor=white)
-
-</div>
-
-### 📊 Data & BI Tools
-
-<div align="center">
-
-![Power BI](https://img.shields.io/badge/Power_BI-7B4FD8?style=for-the-badge&logo=powerbi&logoColor=white)
-![Microsoft Excel](https://img.shields.io/badge/Microsoft_Excel-4A1F8C?style=for-the-badge&logo=microsoft-excel&logoColor=white)
-![Tableau](https://img.shields.io/badge/Tableau-9B72F0?style=for-the-badge&logo=tableau&logoColor=white)
-![Google Sheets](https://img.shields.io/badge/Google_Sheets-6C3FC8?style=for-the-badge&logo=google-sheets&logoColor=white)
-
-</div>
-
-### 🛠️ Dev & Tools
-
-<div align="center">
-
-![VS Code](https://img.shields.io/badge/VS_Code-6C3FC8?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-![Jupyter](https://img.shields.io/badge/Jupyter-7B4FD8?style=for-the-badge&logo=jupyter&logoColor=white)
-![Git](https://img.shields.io/badge/Git-4A1F8C?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-2D1457?style=for-the-badge&logo=github&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-9B72F0?style=for-the-badge&logo=vercel&logoColor=white)
-
-</div>
-
-### 🌐 Web Portfolio Stack
-
-<div align="center">
-
-![HTML5](https://img.shields.io/badge/HTML5-6C3FC8?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-4A1F8C?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-9B72F0?style=for-the-badge&logo=javascript&logoColor=white)
-
-</div>
+### 🛠️ Developer Environment & Tools
+*   **Editor/Terminal:** VS Code, Jupyter Notebooks
+*   **Version Control & CI/CD:** Git, GitHub, Vercel
+*   **Web Stack:** HTML5, CSS3, ES6 JavaScript, Next.js, TailwindCSS
 
 ---
 
-## `=VLOOKUP("achievements", portfolio_data, 2, FALSE)`
+## 📁 `=VLOOKUP("capstone_showcases", projects_index, 2, FALSE)`
 
 ```excel
-📊 KomalHarshita_Portfolio.xlsx  |  Sheet: Achievements
+📊 KomalHarshita_Portfolio.xlsx | Sheet: Capstone Analytics
+```
+
+*Click on a project to expand its technical overview, architecture metrics, and key data results:*
+
+<details>
+<summary>🚀 <b>Capstone: ProdigyFlow — AI-Driven Data Pipeline & Process Optimization</b></summary>
+<br/>
+
+> **An advanced automated process-mining and ingestion model showcasing next-generation pipeline telemetry.**
+
+*   **Key Metrics:**
+    *   ⚡ **40% reduction** in process bottlenecks & workflow latency.
+    *   🎯 **99.8% ingestion accuracy** across dynamic multi-format feeds.
+*   **Tech Stack:** `Python (Pandas/NumPy)`, `SQL`, `Next.js`, `Framer Motion`
+*   **Core Challenge:** Real-time data pipeline tracking and analysis of heterogeneous system logs without performance degradation.
+*   **Approach:** Built a custom data pipeline connecting simulated client-side events with a modern glassmorphic visualization console.
+</details>
+
+<details>
+<summary>📊 <b>Celonis Process Mining & Supply Chain Analysis</b></summary>
+<br/>
+
+> **Process mapping and bottleneck discovery for global supply chain log files.**
+
+*   **Key Metrics:**
+    *   💰 Identified **$45K+ in annual overhead savings** through optimized paths.
+    *   🕒 Uncovered **18-hour avg delay** in purchase order approvals.
+*   **Tech Stack:** `Celonis PQL`, `SQL`, `Process Query Language`
+*   **Core Challenge:** Mapping messy event logs containing out-of-order timestamps and non-standard status fields.
+*   **Approach:** Constructed custom activity queries to filter loop cycles and trace deviations from perfect golden paths.
+</details>
+
+<details>
+<summary>🌾 <b>Sugarcane Global Production & Harvest Efficiency EDA</b></summary>
+<br/>
+
+> **Exploratory Data Analysis parsing 100+ years of crop volumes, land acreage, and country-level yield efficiency.**
+
+*   **Key Metrics:**
+    *   🧹 **Cleaned 12,000+ rows** of legacy European formatted strings.
+    *   🌍 Mapped global crop patterns, identifying top yield countries by land usage.
+*   **Tech Stack:** `Python`, `Jupyter Notebook`, `Seaborn`, `Matplotlib`
+*   **Core Challenge:** Numerical columns formatting conflicts (swapped decimal/thousands separators) preventing aggregations.
+*   **Approach:** Conducted Regex string cleaning in Pandas and implemented dynamic yield density distributions across continents.
+</details>
+
+---
+
+## 🏆 `=VLOOKUP("achievements", portfolio_data, 2, FALSE)`
+
+```excel
+📊 KomalHarshita_Portfolio.xlsx | Sheet: Certifications
 ```
 
 <div align="center">
 
-| 🏆 Achievement | 🏢 Organization | 📅 Status |
+| 🏆 Professional Milestone | 🏢 Issued By | 📅 Status |
 |:---|:---|:---:|
-| 📈 McKinsey Forward Learner | McKinsey & Company | ✅ Certified |
-| 🚀 Pragati Scholar · Cohort 7 | Infosys Springboard | ✅ Certified |
+| 📈 **McKinsey Forward Learner** | McKinsey & Company | ✅ Certified |
+| 🚀 **Pragati Scholar · Cohort 7** | Infosys Springboard | ✅ Scholar |
 
 </div>
 
 ---
 
-## `=VLOOKUP("portfolio_site", portfolio_data, 2, FALSE)`
+## 📡 `=VLOOKUP("telemetry", github_monitoring, 2, FALSE)`
 
 ```excel
-📊 KomalHarshita_Portfolio.xlsx  |  Sheet: Projects
-```
-
-> 🎨 **This portfolio itself** is built with a creative **spreadsheet-themed UI** — complete with a formula bar, cell references, and tab navigation — mirroring the Excel environment I work in every day!
-
-**Site features:**
-- 📋 `About Me` — Background, bio & current role
-- 🛠️ `My Skills` — Tools, languages & proficiencies
-- 📁 `Projects` — Data analytics & BI projects
-- 📊 `Visualizations` — Charts, dashboards & insights
-- 🏆 `Achievements` — Certifications & milestones
-- 📬 `Contact` — Get in touch
-
----
-
-## `=VLOOKUP("github_stats", portfolio_data, 2, FALSE)`
-
-```excel
-📊 KomalHarshita_Portfolio.xlsx  |  Sheet: Visualizations
+📊 KomalHarshita_Portfolio.xlsx | Sheet: System Performance
 ```
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=komalharshita&show_icons=true&theme=tokyonight&bg_color=1a0a2e&title_color=9B72F0&icon_color=9B72F0&text_color=c4a8ff&border_color=6C3FC8&hide_border=false" height="165" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=komalharshita&layout=compact&theme=tokyonight&bg_color=1a0a2e&title_color=9B72F0&text_color=c4a8ff&border_color=6C3FC8" height="165" />
+<img src="https://github-readme-stats.vercel.app/api?username=komalharshita&show_icons=true&theme=tokyonight&bg_color=0b0914&title_color=a855f7&icon_color=db2777&text_color=e4e4e7&border_color=3b0764&hide_border=false" height="165" alt="GitHub Stats" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=komalharshita&layout=compact&theme=tokyonight&bg_color=0b0914&title_color=a855f7&text_color=e4e4e7&border_color=3b0764" height="165" alt="Top Languages" />
 
-</div>
+<br/>
 
-<div align="center">
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=komalharshita&theme=tokyonight&background=1a0a2e&ring=9B72F0&fire=9B72F0&currStreakLabel=c4a8ff&border=6C3FC8" />
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=komalharshita&theme=tokyonight&background=0b0914&ring=a855f7&fire=db2777&currStreakLabel=06b6d4&sideNums=e4e4e7&sideLabels=e4e4e7&border=3b0764" alt="GitHub Streak" />
 
 </div>
 
 ---
 
-## `=VLOOKUP("contact", portfolio_data, 2, FALSE)`
+## 📬 `=VLOOKUP("handshake", connection_gateway, 2, FALSE)`
 
 ```excel
-📊 KomalHarshita_Portfolio.xlsx  |  Sheet: Contact
+📊 KomalHarshita_Portfolio.xlsx | Sheet: Connect
 ```
 
 <div align="center">
 
-💼 Open to **internship** and **collaboration** opportunities in Data Analytics & Business Intelligence!
+💼 Always open to **Internship**, **Mentorship**, and **Data Consulting** opportunities!
 
-[![Email](https://img.shields.io/badge/Email_Me-4A1F8C?style=for-the-badge&logo=gmail&logoColor=white)](mailto:komalharshita@email.com)
-[![LinkedIn](https://img.shields.io/badge/Connect_on_LinkedIn-7B4FD8?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/komalharshita)
-[![Portfolio](https://img.shields.io/badge/Visit_Portfolio-6C3FC8?style=for-the-badge&logo=vercel&logoColor=white)](https://komalharshita.vercel.app/)
+[![Email Me](https://img.shields.io/badge/Email_Me-db2777?style=for-the-badge&logo=gmail&logoColor=white)](mailto:komalharshita@email.com)
+[![Connect on LinkedIn](https://img.shields.io/badge/LinkedIn-06b6d4?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/komalharshita)
+[![Visit Live Site](https://img.shields.io/badge/Visit_Portfolio-a855f7?style=for-the-badge&logo=vercel&logoColor=white)](https://komalharshita.vercel.app/)
 
-</div>
-
----
-
-<div align="center">
+<br/>
 
 ```excel
 =IF(you_like_my_work, "⭐ Star this repo!", "Let's connect anyway 😊")
 ```
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=6C3FC8&height=100&section=footer&fontColor=ffffff" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=3b0764&height=100&section=footer&fontColor=ffffff" alt="Footer Waves" />
 
 </div>
