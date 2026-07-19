@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
 import Grainient from "../components/Grainient/Grainient";
+import { SmoothCursor } from "../components/ui/smooth-cursor";
 
 export const metadata = {
   title: "Komal Harshita | Data Analyst",
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="dark" suppressHydrationWarning>
       <body>
+        <SmoothCursor />
         <Navbar />
         <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -1, pointerEvents: 'none', overflow: 'hidden' }}>
           <Grainient
