@@ -15,33 +15,31 @@ export default function RootLayout({ children }) {
     <html lang="en" data-theme="dark" suppressHydrationWarning>
       <body>
         <Navbar />
-        <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -1, pointerEvents: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
-          <div style={{ width: '1080px', height: '1080px', position: 'relative', flexShrink: 0 }}>
-            <Grainient
-              color1="#7C3AED"
-              color2="#06001e"
-              color3="#e4c3ec"
-              timeSpeed={0.35}
-              colorBalance={-0.09}
-              warpStrength={1.05}
-              warpFrequency={3.6}
-              warpSpeed={1.6}
-              warpAmplitude={50}
-              blendAngle={0}
-              blendSoftness={0.14}
-              rotationAmount={300}
-              noiseScale={2}
-              grainAmount={0.1}
-              grainScale={2}
-              grainAnimated={false}
-              contrast={1.5}
-              gamma={1}
-              saturation={1}
-              centerX={0}
-              centerY={0}
-              zoom={0.9}
-            />
-          </div>
+        <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -1, pointerEvents: 'none', overflow: 'hidden' }}>
+          <Grainient
+            color1="#7C3AED"
+            color2="#06001e"
+            color3="#e4c3ec"
+            timeSpeed={0.35}
+            colorBalance={-0.09}
+            warpStrength={1.05}
+            warpFrequency={3.6}
+            warpSpeed={1.6}
+            warpAmplitude={50}
+            blendAngle={0}
+            blendSoftness={0.14}
+            rotationAmount={300}
+            noiseScale={2}
+            grainAmount={0.1}
+            grainScale={2}
+            grainAnimated={false}
+            contrast={1.5}
+            gamma={1}
+            saturation={1}
+            centerX={0}
+            centerY={0}
+            zoom={0.9}
+          />
         </div>
         <main className="pt-32 pb-16 min-h-[calc(100vh-200px)]">
           {children}

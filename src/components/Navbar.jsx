@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import ThemeToggle from "./ThemeToggle";
 import { motion, useScroll, useSpring } from "framer-motion";
 
 export default function Navbar() {
@@ -36,7 +35,6 @@ export default function Navbar() {
             <Link href="/#about" className="text-sm font-medium hover:text-[var(--accent-primary)] transition-colors hidden md:block">About</Link>
             <Link href="/projects" className="text-sm font-medium hover:text-[var(--accent-primary)] transition-colors hidden md:block">Projects</Link>
             <Link href="/blog" className="text-sm font-medium hover:text-[var(--accent-primary)] transition-colors hidden md:block">Blog</Link>
-            <ThemeToggle />
             <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="glass-button secondary hidden sm:block !py-2 !px-4 !text-sm">
               View Resume
             </a>
