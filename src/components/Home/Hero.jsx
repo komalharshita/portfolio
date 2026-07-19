@@ -5,7 +5,7 @@ import portfolioData from "../../data/portfolio.json";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[80vh] flex flex-col justify-center items-center px-6 pt-20 pb-10 overflow-hidden" id="home">
+    <section className="relative min-h-[80vh] flex flex-col justify-center items-center px-6 pt-20 pb-10 overflow-hidden" id="home" style={{ backgroundColor: "var(--bg-color)" }}>
       {/* Background Video */}
       <video
         autoPlay
