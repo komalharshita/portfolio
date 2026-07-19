@@ -212,7 +212,7 @@ export default function Explorations() {
     <section 
       id="explorations"
       ref={sectionRef}
-      className="relative min-h-[300vh] w-full overflow-hidden border-b border-[var(--glass-border)] bg-[var(--bg-color)] transition-colors duration-300"
+      className="relative min-h-[300vh] w-full overflow-hidden border-b border-[var(--glass-border)] bg-transparent transition-colors duration-300"
     >
       {/* LAYER 1: PINNED CENTER */}
       <div 
