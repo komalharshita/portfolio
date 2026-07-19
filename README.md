@@ -1,7 +1,6 @@
 <div align="center">
 
-<!-- Header Banner -->
-<img width="100%" src="https://github.com/user-attachments/assets/10fdbd18-c7d2-4cf3-8386-dfe613d95ff1" alt="Komal Harshita Banner" />
+<img width="100%" src="https://github.com/user-attachments/assets/750067b3-e053-4dd1-a51f-b55c46ed524a" alt="Komal Harshita Banner" />
 
 <!-- Typing Animation -->
 <a href="https://git.io/typing-svg">
