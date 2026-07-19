@@ -16,6 +16,8 @@ export default function Hero() {
         style={{
           opacity: "var(--video-opacity)",
           mixBlendMode: "var(--video-blend-mode)",
+          maskImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%)",
+          WebkitMaskImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%)"
         }}
       >
         <source src="/hero-bg.mp4" type="video/mp4" />
@@ -25,7 +27,9 @@ export default function Hero() {
       <div 
         className="absolute inset-0 z-0 pointer-events-none transition-all duration-300"
         style={{
-          background: "linear-gradient(to bottom, var(--hero-overlay-start) 0%, var(--hero-overlay-mid) 50%, var(--hero-overlay-end) 100%)"
+          background: "linear-gradient(to bottom, rgba(6, 0, 30, 0.8) 0%, rgba(6, 0, 30, 0.25) 50%, rgba(6, 0, 30, 0.8) 100%)",
+          maskImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%)",
+          WebkitMaskImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%)"
         }}
       ></div>
 
