@@ -1,3 +1,4 @@
+import { Bricolage_Grotesque, Onest } from "next/font/google";
 import "./globals.css";
 import "./glass.css";
 import Navbar from "../components/Navbar";
@@ -6,6 +7,16 @@ import ScrollToTop from "../components/ScrollToTop";
 import Grainient from "../components/Grainient/Grainient";
 import { SmoothCursor } from "../components/ui/smooth-cursor";
 
+const bricolage = Bricolage_Grotesque({
+  subsets: ["latin"],
+  variable: "--font-bricolage",
+});
+
+const onest = Onest({
+  subsets: ["latin"],
+  variable: "--font-onest",
+});
+
 export const metadata = {
   title: "Komal Harshita | Data Analyst",
   description: "Portfolio of Komal Harshita Karanakota, an aspiring Data Analyst proficient in SQL, Python, Power BI, and Excel.",
@@ -13,7 +24,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-theme="dark" suppressHydrationWarning>
+    <html lang="en" data-theme="dark" suppressHydrationWarning className={`${bricolage.variable} ${onest.variable}`}>
+
       <body>
         <SmoothCursor />
         <Navbar />

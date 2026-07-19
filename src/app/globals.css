@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
+@theme {
+  --font-sans: var(--font-onest), sans-serif;
+  --font-display: var(--font-bricolage), sans-serif;
+}
+
 :root {
   /* Light Mode Palette (Pastels inspired by Kawaii/reference) */
   --bg-color: #fdf2f8; /* Soft pink tint */
@@ -12,7 +17,8 @@
   --glass-bg: rgba(255, 255, 255, 0.82); /* Increased opacity for readability */
   --glass-border: rgba(255, 255, 255, 0.5);
   --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
-  --font-sans: 'Inter', sans-serif;
+  --font-sans: var(--font-onest, 'Inter', sans-serif);
+  --font-display: var(--font-bricolage, 'Inter', sans-serif);
 
   /* Hero background video and overlay theme variables */
   --hero-overlay-start: rgba(253, 242, 248, 0.85);
@@ -28,8 +34,8 @@
 [data-theme="dark"] {
   /* Cyber-Analytical Liquid Glass Palette */
   --bg-color: #0B0914;
-  --text-primary: #f9fafb;
-  --text-secondary: #a1a1aa;
+  --text-primary: #ffffff;
+  --text-secondary: #e2e8f0;
   --accent-primary: #9D4EDD; /* Butterfly Purple */
   --accent-secondary: #FF61D2; /* Neon Pink */
   --accent-tertiary: #00F0FF; /* Electric Cyan */
